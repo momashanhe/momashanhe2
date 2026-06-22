@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-06-20T01:16:32.000Z">
-<meta property="article:modified_time" content="2026-04-16T02:38:35.138Z">
+<meta property="article:modified_time" content="2026-06-18T09:46:53.796Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="MySQL">
 <meta property="article:tag" content="MVCC">
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2550,23 +2550,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h3 id="2-2-概念"><a href="#2-2-概念" class="headerlink" title="2.2 概念"></a>2.2 概念</h3><h4 id="2-2-1-隐藏字段"><a href="#2-2-1-隐藏字段" class="headerlink" title="2.2.1 隐藏字段"></a>2.2.1 隐藏字段</h4><p>在创建表时，除了创建显示定义的字段，还会默认创建隐藏字段：</p>
 <ul>
-<li>trx_id：事务ID，记录最近修改和插入这条记录的事务ID，事务ID遵循递增机制。</li>
-<li>roll_pointer：回滚指针，记录最近修改这条记录的上一版本，通过这个字段可以在Undo日志中找到最近的历史版本。</li>
-<li>row_id：隐藏主键，如果数据表没有主键，InnoDB会在这个字段创建聚簇索引。</li>
-<li>deleted_bit：删除标识，删除时将其标记为删除，事务提交后会有线程将标记为删除的数据彻底删除，事务回滚后恢复原值，避免频繁修改索引树的结构。</li>
+<li><code>trx_id</code>：事务ID，记录最近修改和插入这条记录的事务ID，事务ID遵循递增机制。</li>
+<li><code>roll_pointer</code>：回滚指针，记录最近修改这条记录的上一版本，通过这个字段可以在Undo日志中找到最近的历史版本。</li>
+<li><code>row_id</code>：隐藏主键，如果数据表没有主键，InnoDB会在这个字段创建聚簇索引。</li>
+<li><code>deleted_bit</code>：删除标识，删除时将其标记为删除，事务提交后会有线程将标记为删除的数据彻底删除，事务回滚后恢复原值，避免频繁修改索引树的结构。</li>
 </ul>
 <h4 id="2-2-2-Undo日志"><a href="#2-2-2-Undo日志" class="headerlink" title="2.2.2 Undo日志"></a>2.2.2 Undo日志</h4><p>Undo日志可以看做一个版本链，用于保存修改和插入的历史版本，节点可以看做表中记录的拷贝，通过roll_pointer字段行成链式结构。</p>
 <p>在执行快照读时，会根据roll_pointer遍历版本链，直到找到符合要求的历史版本。</p>
 <h4 id="2-2-3-Read视图"><a href="#2-2-3-Read视图" class="headerlink" title="2.2.3 Read视图"></a>2.2.3 Read视图</h4><p>在执行查询操作时，MVCC会生成一个Read视图，可以看做一个事务快照，当前系统中活跃的事务对应的Read视图组成一个快照列表。</p>
 <p>因为事务ID是按先后顺序生成的，所以比较要查询的记录的trx_id字段上的事务ID和Read视图列表中的事务ID即可判断数据的来源：</p>
 <ul>
-<li>如果trx_id小于Read视图列表的最小值，说明最近更新这条记录的事务发生在过去已提交，执行当前读。</li>
-<li>如果trx_id在Read视图列表范围中，需要进一步判断：<ul>
+<li><p>如果trx_id小于Read视图列表的最小值，说明最近更新这条记录的事务发生在过去已提交，执行当前读。</p>
+</li>
+<li><p>如果trx_id在Read视图列表范围中，需要进一步判断：</p>
+<ul>
 <li>如果在Read视图列表中能找到trx_id则表示事务未提交，执行快照读。</li>
 <li>如果在Read视图列表中找不到trx_id则表示事务已提交，执行当前读。</li>
 </ul>
 </li>
-<li>如果trx_id大于Read视图列表的最小值，说明最近更新这条记录的事务发生在未来未提交，执行快照读。</li>
+<li><p>如果trx_id大于Read视图列表的最小值，说明最近更新这条记录的事务发生在未来未提交，执行快照读。</p>
+</li>
 </ul>
 <h3 id="2-3-分析"><a href="#2-3-分析" class="headerlink" title="2.3 分析"></a>2.3 分析</h3><h4 id="2-3-1-查询操作"><a href="#2-3-1-查询操作" class="headerlink" title="2.3.1 查询操作"></a>2.3.1 查询操作</h4><p>执行查询操作时，生成Read视图，对比数据行上的trx_id字段，进行当前读或者快照读。</p>
 <p>在快照读时，如果找到的历史版本的删除标志字段不为空，并且删除事务已提交，说明记录已被删除，不需要返回数据。</p>
@@ -2610,7 +2613,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3417,7 +3420,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B05/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250620/091632/","name":"多版本并发控制"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"多版本并发控制","description":"摘要：本文学习了InnoBD存储引擎独有的多版本并发控制机制。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250620/091632/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250620/091632/","wordCount":31,"datePublished":"2025-06-20T01:16:32.000Z","dateModified":"2026-04-16T02:38:35.138Z","articleSection":"数据库","keywords":"MySQL,MVCC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B05/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250620/091632/","name":"多版本并发控制"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"多版本并发控制","description":"摘要：本文学习了InnoBD存储引擎独有的多版本并发控制机制。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250620/091632/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250620/091632/","wordCount":31,"datePublished":"2025-06-20T01:16:32.000Z","dateModified":"2026-06-18T09:46:53.796Z","articleSection":"数据库","keywords":"MySQL,MVCC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

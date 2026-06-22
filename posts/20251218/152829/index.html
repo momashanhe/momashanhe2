@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-12-18T07:28:29.000Z">
-<meta property="article:modified_time" content="2026-04-16T03:39:14.560Z">
+<meta property="article:modified_time" content="2026-06-18T09:53:17.513Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Spring">
 <meta property="article:tag" content="IoC">
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2538,125 +2538,173 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="1-基本流程"><a href="#1-基本流程" class="headerlink" title="1 基本流程"></a>1 基本流程</h2><p>Spring容器的启动流程是围绕AnnotationConfigApplicationContext展开的，它是一个专门用于注解配置的应用程序上下文。</p>
 <p>核心流程：</p>
 <ul>
-<li>1 创建容器，初始化基本对象。</li>
-<li>2 注册配置类。</li>
-<li>3 启动容器刷新流程。</li>
-<li>3.1 获取对象工厂，进行基础配置。</li>
-<li>3.2 执行对象工厂后置处理器。</li>
-<li>3.3 实例化对象。</li>
-<li>3.3.1 获取对象名称列表。</li>
-<li>3.3.2 遍历对象名称列表，根据对象名称判断是否工厂对象：<ul>
-<li>如果不是工厂对象，使用对象名称获取对象。</li>
-<li>如果是工厂对象，使用工厂前缀获取对象，判断对象是否工厂类型：<ul>
+<li><p>1 创建容器，初始化基本对象。</p>
+</li>
+<li><p>2 注册配置类。</p>
+</li>
+<li><p>3 启动容器刷新流程。</p>
+</li>
+<li><p>3.1 获取对象工厂，进行基础配置。</p>
+</li>
+<li><p>3.2 执行对象工厂后置处理器。</p>
+</li>
+<li><p>3.3 实例化对象。</p>
+</li>
+<li><p>3.3.1 获取对象名称列表。</p>
+</li>
+<li><p>3.3.2 遍历对象名称列表，根据对象名称判断是否工厂对象：</p>
+<ul>
+<li><p>如果不是工厂对象，使用对象名称获取对象。</p>
+</li>
+<li><p>如果是工厂对象，使用工厂前缀获取对象，判断对象是否工厂类型：</p>
+<ul>
 <li>如果是工厂类型，使用对象名称获取对象。</li>
 <li>如果不是工厂类型，不作处理。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>3.3.2.1 获取缓存对象，入参允许提前引用。</li>
-<li>3.3.2.1.1 从一级缓存获取成熟对象：<ul>
+<li><p>3.3.2.1 获取缓存对象，入参允许提前引用。</p>
+</li>
+<li><p>3.3.2.1.1 从一级缓存获取成熟对象：</p>
+<ul>
 <li>如果成熟对象存在，返回对象。</li>
 <li>如果成熟对象不存在，并且对象正在创建，继续获取缓存对象。</li>
 </ul>
 </li>
-<li>3.3.2.1.2 从二级缓存获取早期对象：<ul>
+<li><p>3.3.2.1.2 从二级缓存获取早期对象：</p>
+<ul>
 <li>如果早期对象存在，返回对象。</li>
 <li>如果早期对象不存在，并且入参允许提前引用，继续获取缓存对象。</li>
 </ul>
 </li>
-<li>3.3.2.1.3 对一级缓存加锁，保证并发安全。</li>
-<li>3.3.2.1.4 再次从一级缓存和二级缓存获取对象：<ul>
+<li><p>3.3.2.1.3 对一级缓存加锁，保证并发安全。</p>
+</li>
+<li><p>3.3.2.1.4 再次从一级缓存和二级缓存获取对象：</p>
+<ul>
 <li>如果对象存在，返回对象。</li>
 <li>如果对象不存在，继续获取缓存对象。</li>
 </ul>
 </li>
-<li>3.3.2.1.5 从三级缓存获取代理工厂：<ul>
+<li><p>3.3.2.1.5 从三级缓存获取代理工厂：</p>
+<ul>
 <li>如果代理工厂不存在，返回空对象。</li>
 <li>如果代理工厂存在，获取早期对象。</li>
 </ul>
 </li>
-<li>3.3.2.1.5.1 通过代理工厂获取早期对象，判断对象是否被代理：<ul>
+<li><p>3.3.2.1.5.1 通过代理工厂获取早期对象，判断对象是否被代理：</p>
+<ul>
 <li>如果没被代理，返回早期对象。</li>
 <li>如果被代理，返回包装为代理对象的早期对象。</li>
 </ul>
 </li>
-<li>3.3.2.1.5.2 将早期对象放到二级缓存。</li>
-<li>3.3.2.1.5.3 从三级缓存移除代理工厂。</li>
-<li>3.3.2.2 判断缓存对象是否存在：<ul>
+<li><p>3.3.2.1.5.2 将早期对象放到二级缓存。</p>
+</li>
+<li><p>3.3.2.1.5.3 从三级缓存移除代理工厂。</p>
+</li>
+<li><p>3.3.2.2 判断缓存对象是否存在：</p>
+<ul>
 <li>如果缓存对象存在，转换缓存对象，返回对象。</li>
 <li>如果缓存对象不存在，继续创建对象。</li>
 </ul>
 </li>
-<li>3.3.2.3 根据对象名称检查是否正在创建原型对象：<ul>
+<li><p>3.3.2.3 根据对象名称检查是否正在创建原型对象：</p>
+<ul>
 <li>如果正在创建原型对象，抛出循环依赖异常。</li>
 <li>如果没有正在创建，或者不是原型对象，继续创建对象。</li>
 </ul>
 </li>
-<li>3.3.2.4 判断上级工厂是否存在，以及当前工厂是否包含对象定义：<ul>
+<li><p>3.3.2.4 判断上级工厂是否存在，以及当前工厂是否包含对象定义：</p>
+<ul>
 <li>如果上级工厂存在并且当前工厂不包含对象定义，使用上级工厂创建对象，返回对象。</li>
 <li>如果上级工厂不存在，或者当前工厂包含对象定义，继续创建对象。</li>
 </ul>
 </li>
-<li>3.3.2.5 获取对象的显示依赖对象，遍历显示依赖对象，判断是否存在循环显示依赖：<ul>
+<li><p>3.3.2.5 获取对象的显示依赖对象，遍历显示依赖对象，判断是否存在循环显示依赖：</p>
+<ul>
 <li>如果存在循环显示依赖，抛出循环显示依赖异常。</li>
 <li>如果不存在循环显示依赖，注册显示依赖关系，创建显示依赖对象，继续创建对象。</li>
 </ul>
 </li>
-<li>3.3.2.6 根据作用域使用不同策略创建对象：<ul>
+<li><p>3.3.2.6 根据作用域使用不同策略创建对象：</p>
+<ul>
 <li>如果是单例模式，获取单例对象，转换单例对象，返回对象。</li>
 <li>如果是原型模式，创建原型对象，转换原型对象，返回对象。</li>
 <li>如果是其他模式，通过作用域创建原型对象，转换原型对象，返回对象。</li>
 </ul>
 </li>
-<li>3.3.2.6.1 对一级缓存加锁，保证并发安全。</li>
-<li>3.3.2.6.2 从一级缓存获取成熟对象：<ul>
+<li><p>3.3.2.6.1 对一级缓存加锁，保证并发安全。</p>
+</li>
+<li><p>3.3.2.6.2 从一级缓存获取成熟对象：</p>
+<ul>
 <li>如果成熟对象存在，返回对象。</li>
 <li>如果成熟对象不存在，继续创建对象。</li>
 </ul>
 </li>
-<li>3.3.2.6.3 标记单例对象正在创建。</li>
-<li>3.3.2.6.4 通过单例工厂创建单例对象。</li>
-<li>3.3.2.6.4.1 判断对象后置处理器的执行结果：<ul>
+<li><p>3.3.2.6.3 标记单例对象正在创建。</p>
+</li>
+<li><p>3.3.2.6.4 通过单例工厂创建单例对象。</p>
+</li>
+<li><p>3.3.2.6.4.1 判断对象后置处理器的执行结果：</p>
+<ul>
 <li>如果对象存在，返回对象。</li>
 <li>如果对象不存在，继续创建对象。</li>
 </ul>
 </li>
-<li>3.3.2.6.4.2 获取原始对象，完成原始对象的实例化。</li>
-<li>3.3.2.6.4.3 判断是否需要提前释放对象，只有单例对象，并且允许循环依赖，并且对象正在创建，才允许提前释放对象：<ul>
+<li><p>3.3.2.6.4.2 获取原始对象，完成原始对象的实例化。</p>
+</li>
+<li><p>3.3.2.6.4.3 判断是否需要提前释放对象，只有单例对象，并且允许循环依赖，并且对象正在创建，才允许提前释放对象：</p>
+<ul>
 <li>如果不允许提前释放对象，继续创建对象。</li>
 <li>如果允许提前释放对象，缓存代理工厂。</li>
 </ul>
 </li>
-<li>3.3.2.6.4.3.1 对一级缓存加锁，保证并发安全。</li>
-<li>3.3.2.6.4.3.2 判断一级缓存是否存在成熟对象：<ul>
+<li><p>3.3.2.6.4.3.1 对一级缓存加锁，保证并发安全。</p>
+</li>
+<li><p>3.3.2.6.4.3.2 判断一级缓存是否存在成熟对象：</p>
+<ul>
 <li>如果成熟对象存在，不作处理。</li>
 <li>如果成熟对象不存在，缓存代理工厂。</li>
 </ul>
 </li>
-<li>3.3.2.6.4.3.2.1 将代理工厂放到三级缓存。</li>
-<li>3.3.2.6.4.3.2.2 从二级缓存移除早期对象。</li>
-<li>3.3.2.6.4.4 将暴露对象设置为原始对象。</li>
-<li>3.3.2.6.4.5 填充属性值，成为早期对象：<ul>
+<li><p>3.3.2.6.4.3.2.1 将代理工厂放到三级缓存。</p>
+</li>
+<li><p>3.3.2.6.4.3.2.2 从二级缓存移除早期对象。</p>
+</li>
+<li><p>3.3.2.6.4.4 将暴露对象设置为原始对象。</p>
+</li>
+<li><p>3.3.2.6.4.5 填充属性值，成为早期对象：</p>
+<ul>
 <li>如果没有引用对象的属性，不需要执行<code>3.3.2.X</code>创建属性对象。</li>
 <li>如果有引用类型的属性，需要执行<code>3.3.2.X</code>创建属性对象。</li>
 </ul>
 </li>
-<li>3.3.2.6.4.6 初始化对象，成为成熟对象。</li>
-<li>3.3.2.6.4.6.1 给对象注入容器相关信息。</li>
-<li>3.3.2.6.4.6.2 执行对象后置处理器，在对象初始化之前执行。</li>
-<li>3.3.2.6.4.6.3 执行对象初始化方法。</li>
-<li>3.3.2.6.4.6.4 执行对象后置处理器，在对象初始化之后执行。</li>
-<li>3.3.2.6.4.7 判断是否需要提前释放对象：<ul>
+<li><p>3.3.2.6.4.6 初始化对象，成为成熟对象。</p>
+</li>
+<li><p>3.3.2.6.4.6.1 给对象注入容器相关信息。</p>
+</li>
+<li><p>3.3.2.6.4.6.2 执行对象后置处理器，在对象初始化之前执行。</p>
+</li>
+<li><p>3.3.2.6.4.6.3 执行对象初始化方法。</p>
+</li>
+<li><p>3.3.2.6.4.6.4 执行对象后置处理器，在对象初始化之后执行。</p>
+</li>
+<li><p>3.3.2.6.4.7 判断是否需要提前释放对象：</p>
+<ul>
 <li>如果不允许提前释放对象，继续创建对象。</li>
 <li>如果允许提前释放对象，需要执行<code>3.3.2.1</code>获取缓存对象，入参不允许提前引用。</li>
 </ul>
 </li>
-<li>3.3.2.6.4.8 判断缓存对象是否存在：<ul>
-<li>如果缓存对象不存在，继续创建对象。</li>
-<li>如果缓存对象存在，判断初始化对象是否存在代理：<ul>
-<li>如果不存在代理，暴露对象使用早期对象。</li>
-<li>如果存在代理，判断有无实际注入依赖的其他对象：<ul>
+<li><p>3.3.2.6.4.8 判断缓存对象是否存在：</p>
+<ul>
+<li><p>如果缓存对象不存在，继续创建对象。</p>
+</li>
+<li><p>如果缓存对象存在，判断初始化对象是否存在代理：</p>
+<ul>
+<li><p>如果不存在代理，暴露对象使用早期对象。</p>
+</li>
+<li><p>如果存在代理，判断有无实际注入依赖的其他对象：</p>
+<ul>
 <li>如果有实际注入依赖的其他对象，抛出循环依赖异常。</li>
 <li>如果没有实际注入依赖的其他对象，暴露对象使用存在代理的初始化对象。</li>
 </ul>
@@ -2665,19 +2713,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 </li>
-<li>3.3.2.6.4.9 返回暴露对象。</li>
-<li>3.3.2.6.5 标记新的单例对象。</li>
-<li>3.3.2.6.6 标记单例对象完成创建。</li>
-<li>3.3.2.6.7 判断是否新的单例对象：<ul>
+<li><p>3.3.2.6.4.9 返回暴露对象。</p>
+</li>
+<li><p>3.3.2.6.5 标记新的单例对象。</p>
+</li>
+<li><p>3.3.2.6.6 标记单例对象完成创建。</p>
+</li>
+<li><p>3.3.2.6.7 判断是否新的单例对象：</p>
+<ul>
 <li>如果不是新的单例对象，返回对象。</li>
 <li>如果是新的单例对象，缓存单例对象。</li>
 </ul>
 </li>
-<li>3.3.2.6.7.1 对一级缓存加锁，保证并发安全。</li>
-<li>3.3.2.6.7.2 将成熟对象放到一级缓存。</li>
-<li>3.3.2.6.7.3 从二级缓存移除早期对象。</li>
-<li>3.3.2.6.7.4 从三级缓存移除代理工厂。</li>
-<li>3.3.2.6.8 返回单例对象。</li>
+<li><p>3.3.2.6.7.1 对一级缓存加锁，保证并发安全。</p>
+</li>
+<li><p>3.3.2.6.7.2 将成熟对象放到一级缓存。</p>
+</li>
+<li><p>3.3.2.6.7.3 从二级缓存移除早期对象。</p>
+</li>
+<li><p>3.3.2.6.7.4 从三级缓存移除代理工厂。</p>
+</li>
+<li><p>3.3.2.6.8 返回单例对象。</p>
+</li>
 </ul>
 <h2 id="2-源码分析"><a href="#2-源码分析" class="headerlink" title="2 源码分析"></a>2 源码分析</h2><h3 id="2-1-容器实例化"><a href="#2-1-容器实例化" class="headerlink" title="2.1 容器实例化"></a>2.1 容器实例化</h3><p>从创建AnnotationConfigApplicationContext对象开始：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">AnnotationConfigApplicationContext</span><span class="params">(Class&lt;?&gt;... componentClasses)</span> &#123;</span><br><span class="line">    <span class="comment">// 初始化基本对象</span></span><br><span class="line">    <span class="built_in">this</span>();</span><br><span class="line">    <span class="comment">// 注册配置类</span></span><br><span class="line">    register(componentClasses);</span><br><span class="line">    <span class="comment">// 启动容器刷新流程</span></span><br><span class="line">    refresh();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2845,7 +2902,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3604,7 +3661,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251218/152829/","name":"启动流程"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"启动流程","description":"摘要：本文学习了Spring容器的启动流程。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251218/152829/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251218/152829/","wordCount":22,"datePublished":"2025-12-18T07:28:29.000Z","dateModified":"2026-04-16T03:39:14.560Z","articleSection":"后端","keywords":"Spring,IoC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251218/152829/","name":"启动流程"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"启动流程","description":"摘要：本文学习了Spring容器的启动流程。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251218/152829/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251218/152829/","wordCount":22,"datePublished":"2025-12-18T07:28:29.000Z","dateModified":"2026-06-18T09:53:17.513Z","articleSection":"后端","keywords":"Spring,IoC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

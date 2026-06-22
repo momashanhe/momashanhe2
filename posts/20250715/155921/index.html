@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-07-15T07:59:21.000Z">
-<meta property="article:modified_time" content="2026-04-16T02:42:51.193Z">
+<meta property="article:modified_time" content="2026-06-18T08:15:07.746Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2557,27 +2557,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>说明出现了并发修改异常。</p>
 <h2 id="2-线程安全的集合"><a href="#2-线程安全的集合" class="headerlink" title="2 线程安全的集合"></a>2 线程安全的集合</h2><p>JUC下有关Collection的类：</p>
 <ul>
-<li>CopyOnWriteArrayList：实现了List接口，相当于线程安全的ArrayList。</li>
-<li>CopyOnWriteArraySet：继承于AbstractSet类，实现了Set接口，相当于线程安全的HashSet。通过CopyOnWriteArrayList实现。</li>
-<li>ConcurrentSkipListSet：继承于AbstractSet类，实现了NavigableSet接口，相当于线程安全的TreeSet。通过ConcurrentSkipListMap实现。</li>
-<li>ConcurrentLinkedQueue：继承于AbstractQueue类，实现了Queue接口，是单向链表实现的线程安全的无界队列，该队列支持FIFO方式操作元素。</li>
-<li>ConcurrentLinkedDeque：继承于AbstractCollection类，实现了Deque接口，是双向链表实现的线程安全的无界队列，该队列支持FIFO和FILO方式操作元素，相当于线程安全的LinkedList。</li>
-<li>ArrayBlockingQueue：实现了BlockingQueue接口，是数组实现的线程安全的有界阻塞队列。</li>
-<li>LinkedBlockingQueue：实现了BlockingQueue接口，是单向链表实现的线程安全的无界阻塞队列，该队列支持FIFO方式操作元素。</li>
-<li>LinkedBlockingDeque：实现了BlockingDeque接口，是双向链表实现的线程安全的无界阻塞队列，该队列支持FIFO和FILO方式操作元素。</li>
-<li>SynchronousQueue：实现了BlockingQueue接口，是不存储元素的阻塞队列，put操作必须等待take操作，否则不能添加元素并产生中断抛出异常。</li>
-<li>DelayQueue：实现了BlockingQueue接口，是支持延迟获取的阻塞队列。</li>
+<li><code>CopyOnWriteArrayList</code>：实现了List接口，相当于线程安全的ArrayList。</li>
+<li><code>CopyOnWriteArraySet</code>：继承于AbstractSet类，实现了Set接口，相当于线程安全的HashSet。通过CopyOnWriteArrayList实现。</li>
+<li><code>ConcurrentSkipListSet</code>：继承于AbstractSet类，实现了NavigableSet接口，相当于线程安全的TreeSet。通过ConcurrentSkipListMap实现。</li>
+<li><code>ConcurrentLinkedQueue</code>：继承于AbstractQueue类，实现了Queue接口，是单向链表实现的线程安全的无界队列，该队列支持FIFO方式操作元素。</li>
+<li><code>ConcurrentLinkedDeque</code>：继承于AbstractCollection类，实现了Deque接口，是双向链表实现的线程安全的无界队列，该队列支持FIFO和FILO方式操作元素，相当于线程安全的LinkedList。</li>
+<li><code>ArrayBlockingQueue</code>：实现了BlockingQueue接口，是数组实现的线程安全的有界阻塞队列。</li>
+<li><code>LinkedBlockingQueue</code>：实现了BlockingQueue接口，是单向链表实现的线程安全的无界阻塞队列，该队列支持FIFO方式操作元素。</li>
+<li><code>LinkedBlockingDeque</code>：实现了BlockingDeque接口，是双向链表实现的线程安全的无界阻塞队列，该队列支持FIFO和FILO方式操作元素。</li>
+<li><code>SynchronousQueue</code>：实现了BlockingQueue接口，是不存储元素的阻塞队列，put操作必须等待take操作，否则不能添加元素并产生中断抛出异常。</li>
+<li><code>DelayQueue</code>：实现了BlockingQueue接口，是支持延迟获取的阻塞队列。</li>
 </ul>
 <p>JUC下有关Map的类：</p>
 <ul>
-<li>ConcurrentHashMap：继承于AbstractMap类，相当于线程安全的HashMap，是线程安全的哈希表。使用数组加链表加红黑树结构和CAS操作实现。</li>
-<li>ConcurrentSkipListMap：继承于AbstractMap类，相当于线程安全的TreeMap，是线程安全的有序的哈希表。通过跳表实现的。</li>
+<li><code>ConcurrentHashMap</code>：继承于AbstractMap类，相当于线程安全的HashMap，是线程安全的哈希表。使用数组加链表加红黑树结构和CAS操作实现。</li>
+<li><code>ConcurrentSkipListMap</code>：继承于AbstractMap类，相当于线程安全的TreeMap，是线程安全的有序的哈希表。通过跳表实现的。</li>
 </ul>
 <p>Collections工具类下的方法：</p>
 <ul>
-<li><code>synchronizedList()</code>方法：将普通的List转换为线程安全的List，通过synchronized同步锁保证对集合的访问是线程安全的。</li>
-<li><code>synchronizedSet()</code>方法：将普通的Set转换为线程安全的Set，通过synchronized同步锁保证对集合的访问是线程安全的。</li>
-<li><code>synchronizedMap()</code>方法：将普通的Map转换为线程安全的Map，通过synchronized同步锁保证对集合的访问是线程安全的。</li>
+<li>&#96;&#96;synchronizedList()<code>方法</code>：将普通的List转换为线程安全的List，通过synchronized同步锁保证对集合的访问是线程安全的。</li>
+<li>&#96;&#96;synchronizedSet()<code>方法</code>：将普通的Set转换为线程安全的Set，通过synchronized同步锁保证对集合的访问是线程安全的。</li>
+<li>&#96;&#96;synchronizedMap()<code>方法</code>：将普通的Map转换为线程安全的Map，通过synchronized同步锁保证对集合的访问是线程安全的。</li>
 </ul>
 <h2 id="3-典型分析"><a href="#3-典型分析" class="headerlink" title="3 典型分析"></a>3 典型分析</h2><h3 id="2-1-CopyOnWriteArrayList"><a href="#2-1-CopyOnWriteArrayList" class="headerlink" title="2.1 CopyOnWriteArrayList"></a>2.1 CopyOnWriteArrayList</h3><h4 id="2-1-1-说明"><a href="#2-1-1-说明" class="headerlink" title="2.1.1 说明"></a>2.1.1 说明</h4><p>CopyOnWriteArrayList使用写时复制技术，其内部有个volatile修饰的数组用于保存数据，在操作数据时会创建新数组，并将更新后的数据拷贝到新数组中，最后再将该数组赋值给原数组。</p>
 <p>通过volatile关键字保证数据修改时的可见性，通过在操作数据前使用Lock互斥锁来保护数据。所以涉及到修改数据的操作，CopyOnWriteArrayList效率很低。</p>
@@ -2595,18 +2595,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>在JDK1.8之后，ConcurrentHashMap使用与HashMap类似的数组配合链表或红黑树的方式实现，加锁采用CAS自旋锁和synchronized可重入锁等机制实现。</p>
 <h4 id="2-2-2-属性"><a href="#2-2-2-属性" class="headerlink" title="2.2.2 属性"></a>2.2.2 属性</h4><p>使用sizeCtl属性表示标志控制符，这个参数非常重要，出现在ConcurrentHashMap的各个阶段，不同取值的含义：</p>
 <ul>
-<li>负数：表示正在进行初始化或扩容操作：<ul>
-<li>-1表示正在进行初始化操作。</li>
-<li>-N表示正在进行扩容操作：高16位是扩容标识，与数组长度有关，最高位固定为1，低16位减1表示扩容线程数。</li>
+<li><p><code>负数</code>：表示正在进行初始化或扩容操作：</p>
+<ul>
+<li><code>-1</code>：表示正在进行初始化操作。</li>
+<li><code>-N</code>：表示正在进行扩容操作：高16位是扩容标识，与数组长度有关，最高位固定为1，低16位减1表示扩容线程数。</li>
 </ul>
 </li>
-<li>0：表示数组还未初始化。</li>
-<li>正数：表示下一次进行扩容的大小，类似于扩容阈值。它的值始终是当前容量的0.75倍，如果数组节点个数大于等于sizeCtl，则进行扩容。</li>
+<li><p><code>0</code>：表示数组还未初始化。</p>
+</li>
+<li><p><code>正数</code>：表示下一次进行扩容的大小，类似于扩容阈值。它的值始终是当前容量的0.75倍，如果数组节点个数大于等于sizeCtl，则进行扩容。</p>
+</li>
 </ul>
 <p>内部类Node中的hash属性：</p>
 <ul>
-<li>负数：-1表示该节点为转发节点，-2表示该节点为红黑树节点。</li>
-<li>正数：表示根据key计算得到的hash值。</li>
+<li><code>负数</code>：-1表示该节点为转发节点，-2表示该节点为红黑树节点。</li>
+<li><code>正数</code>：表示根据key计算得到的hash值。</li>
 </ul>
 <h4 id="2-2-3-源码"><a href="#2-2-3-源码" class="headerlink" title="2.2.3 源码"></a>2.2.3 源码</h4><h5 id="2-2-3-1-构造方法"><a href="#2-2-3-1-构造方法" class="headerlink" title="2.2.3.1 构造方法"></a>2.2.3.1 构造方法</h5><p>需要说明的是，在构造方法里并没有对集合进行初始化操作，而是等到了添加节点的时候才进行初始化，属于懒汉式的加载方式。</p>
 <p>另外，loadFactor参数在JDK1.8中不再有加载因子的意义，仅为了兼容以前的版本，加载因子默认为0.75并通过移位运算计算，不支持修改。</p>
@@ -2708,7 +2711,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3575,7 +3578,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250715/155921/","name":"线程安全集合"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"线程安全集合","description":"摘要：本文学习了能在高并发场景下使用的线程安全集合。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250715/155921/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250715/155921/","wordCount":26,"datePublished":"2025-07-15T07:59:21.000Z","dateModified":"2026-04-16T02:42:51.193Z","articleSection":"后端","keywords":"Java","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250715/155921/","name":"线程安全集合"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"线程安全集合","description":"摘要：本文学习了能在高并发场景下使用的线程安全集合。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250715/155921/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250715/155921/","wordCount":26,"datePublished":"2025-07-15T07:59:21.000Z","dateModified":"2026-06-18T08:15:07.746Z","articleSection":"后端","keywords":"Java","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

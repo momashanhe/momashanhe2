@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-03-16T01:11:58.000Z">
-<meta property="article:modified_time" content="2026-04-16T02:38:35.138Z">
+<meta property="article:modified_time" content="2026-06-18T05:53:12.982Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2619,10 +2619,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="3-数据类型"><a href="#3-数据类型" class="headerlink" title="3 数据类型"></a>3 数据类型</h2><h3 id="3-1-String"><a href="#3-1-String" class="headerlink" title="3.1 String"></a>3.1 String</h3><p>最基本的数据类型，可以存储字符串，也可以存储数字。</p>
 <p>使用场景：</p>
 <ul>
-<li>缓存：缓存热点数据，减少数据库压力。</li>
-<li>会话：存储用户会话信息，支持分布式会话。</li>
-<li>计数器：使用INCR命令实现计数器。</li>
-<li>分布式锁：使用SET命令的NX选项实现分布式锁。</li>
+<li><code>缓存</code>：缓存热点数据，减少数据库压力。</li>
+<li><code>会话</code>：存储用户会话信息，支持分布式会话。</li>
+<li><code>计数器</code>：使用INCR命令实现计数器。</li>
+<li><code>分布式锁</code>：使用SET命令的NX选项实现分布式锁。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2642,7 +2642,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-2-Hash"><a href="#3-2-Hash" class="headerlink" title="3.2 Hash"></a>3.2 Hash</h3><p>键值对集合，存储键值对集合，每个键值对都由Field和Value组成。</p>
 <p>使用场景：</p>
 <ul>
-<li>存储对象：使用HSET命令存储对象的属性和值。</li>
+<li><code>存储对象</code>：使用HSET命令存储对象的属性和值。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2661,7 +2661,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-3-List"><a href="#3-3-List" class="headerlink" title="3.3 List"></a>3.3 List</h3><p>可重复的有序双向链表，支持存储类型不同的元素。</p>
 <p>使用场景：</p>
 <ul>
-<li>任务队列：使用LPUSH命令将任务插入到队列的左侧，使用RPOP命令从队列的右侧弹出任务。</li>
+<li><code>任务队列</code>：使用LPUSH命令将任务插入到队列的左侧，使用RPOP命令从队列的右侧弹出任务。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2681,8 +2681,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-4-Set"><a href="#3-4-Set" class="headerlink" title="3.4 Set"></a>3.4 Set</h3><p>自动去重的无序集合，支持交并差运算。</p>
 <p>使用场景：</p>
 <ul>
-<li>去重：使用SADD命令存储唯一的元素，自动去重。</li>
-<li>抽奖：使用SRANDMEMBER命令随机获取集合中的元素。</li>
+<li><code>去重</code>：使用SADD命令存储唯一的元素，自动去重。</li>
+<li><code>抽奖</code>：使用SRANDMEMBER命令随机获取集合中的元素。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2702,7 +2702,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-5-ZSet"><a href="#3-5-ZSet" class="headerlink" title="3.5 ZSet"></a>3.5 ZSet</h3><p>自动去重的有序集合，根据分数排序。</p>
 <p>使用场景：</p>
 <ul>
-<li>排行榜：使用ZRANGE命令根据分数对排行榜排序。</li>
+<li><code>排行榜</code>：使用ZRANGE命令根据分数对排行榜排序。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2719,7 +2719,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-6-HyperLogLog"><a href="#3-6-HyperLogLog" class="headerlink" title="3.6 HyperLogLog"></a>3.6 HyperLogLog</h3><p>概率型数据结构，用于统计去重后的元素数量，即统计基数。在大数据量的基数统计场景中，能以极其节省内存的方式提供较高精度的估算值。</p>
 <p>使用场景：</p>
 <ul>
-<li>访问统计：使用PFCOUNT命令获取去重后的元素数量。</li>
+<li><code>访问统计</code>：使用PFCOUNT命令获取去重后的元素数量。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2730,8 +2730,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-7-Geo"><a href="#3-7-Geo" class="headerlink" title="3.7 Geo"></a>3.7 Geo</h3><p>地理位置数据结构，支持高效的地理距离计算，底层使用ZSet数据结构，使用Haversine公式计算距离。</p>
 <p>使用场景：</p>
 <ul>
-<li>附近位置：使用GEOSEARCH命令查询指定半径内的位置。</li>
-<li>距离计算：使用GEODIST命令计算两个位置之间的距离。</li>
+<li><code>附近位置</code>：使用GEOSEARCH命令查询指定半径内的位置。</li>
+<li><code>距离计算</code>：使用GEODIST命令计算两个位置之间的距离。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2767,7 +2767,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-8-Bitmap"><a href="#3-8-Bitmap" class="headerlink" title="3.8 Bitmap"></a>3.8 Bitmap</h3><p>对String类型的扩展，用于将字符串当做二进制位数组处理。</p>
 <p>使用场景：</p>
 <ul>
-<li>在线统计：使用BITCOUNT命令统计指定范围内的位值为1的个数，实现在线统计。</li>
+<li><code>在线统计</code>：使用BITCOUNT命令统计指定范围内的位值为1的个数，实现在线统计。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2780,7 +2780,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>使用Bitmap只能操作数组上单个的数据，使用Bitfield可以操作数组上任意宽度的数据。</p>
 <p>使用场景：</p>
 <ul>
-<li>紧凑存储：使用BITFIELD将多个数据存储在一个字符串中，每个数据占用的内存更少。</li>
+<li><code>紧凑存储</code>：使用BITFIELD将多个数据存储在一个字符串中，每个数据占用的内存更少。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2813,7 +2813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-10-Stream"><a href="#3-10-Stream" class="headerlink" title="3.10 Stream"></a>3.10 Stream</h3><p>日志型数据结构，支持存储多个元素，每个元素都有唯一的标识ID。</p>
 <p>使用场景：</p>
 <ul>
-<li>消息队列：使用XREADGROUP读取消息，使用XACK确认消息。</li>
+<li><code>消息队列</code>：使用XREADGROUP读取消息，使用XACK确认消息。</li>
 </ul>
 <p>常用命令：</p>
 <ul>
@@ -2873,7 +2873,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3608,7 +3608,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260316/091158/","name":"使用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用","description":"摘要：本文学习了Redis的基本使用方法，包括简单配置和基本操作。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260316/091158/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260316/091158/","wordCount":33,"datePublished":"2026-03-16T01:11:58.000Z","dateModified":"2026-04-16T02:38:35.138Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260316/091158/","name":"使用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用","description":"摘要：本文学习了Redis的基本使用方法，包括简单配置和基本操作。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260316/091158/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260316/091158/","wordCount":33,"datePublished":"2026-03-16T01:11:58.000Z","dateModified":"2026-06-18T05:53:12.982Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

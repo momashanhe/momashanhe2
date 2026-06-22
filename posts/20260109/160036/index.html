@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-01-09T08:00:36.000Z">
-<meta property="article:modified_time" content="2026-04-16T03:39:53.951Z">
+<meta property="article:modified_time" content="2026-06-18T05:53:12.983Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Spring MVC">
 <meta name="twitter:card" content="summary">
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2535,7 +2535,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             </details>
 
 <h2 id="1-基本流程"><a href="#1-基本流程" class="headerlink" title="1 基本流程"></a>1 基本流程</h2><p>Spring MVC的工作流程是围绕DispatcherServlet前端控制器展开的，由它统一处理所有请求。</p>
-<p>核心流程：<br><img src="/@image/B04004001/003-20260112103332.jpg" alt="20260112103332-核心流程"></p>
+<p>核心流程：</p>
+<p><img src="/@image/B04004001/003-20260112103332.jpg" alt="20260112103332-核心流程"></p>
 <p>说明：</p>
 <ol>
 <li>发送请求。服务器接受用户请求，DispatcherServlet捕获请求。</li>
@@ -2549,7 +2550,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>返回视图。使用View视图填充Model模型数据，处理响应。</li>
 <li>响应请求。将响应返回给用户。</li>
 </ol>
-<p>详细流程：<br><img src="/@image/B04004001/003-20260112103517.jpg" alt="20260112103517-详细流程"></p>
+<p>详细流程：</p>
+<p><img src="/@image/B04004001/003-20260112103517.jpg" alt="20260112103517-详细流程"></p>
 <h2 id="2-源码分析"><a href="#2-源码分析" class="headerlink" title="2 源码分析"></a>2 源码分析</h2><h3 id="2-1-请求接收"><a href="#2-1-请求接收" class="headerlink" title="2.1 请求接收"></a>2.1 请求接收</h3><p>根据<code>web.xml</code>配置文件中的配置，使用DispatcherServlet匹配<code>/</code>请求，所有请求都会经过DispatcherServlet处理。</p>
 <h3 id="2-2-准备处理请求"><a href="#2-2-准备处理请求" class="headerlink" title="2.2 准备处理请求"></a>2.2 准备处理请求</h3><p>DispatcherServlet继承自FrameworkServlet，FrameworkServlet间接继承自HttpServlet，请求会调用<code>service()</code>方法。</p>
 <p>DispatcherServlet没有实现<code>service()</code>方法，所以调用FrameworkServlet的<code>service()</code>方法：</p>
@@ -2578,11 +2580,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>HandlerMapping用于根据请求获取处理器，有多种实现类：</p>
 <ul>
-<li>SimpleUrlHandlerMapping：基于URL配置映射，需要显示配置映射，支持集中配置URL映射，支持通配符，支持批量配置。</li>
-<li>RequestMappingHandlerMapping：基于<code>@RequestMapping</code>注解配置映射，最常用的映射器。</li>
-<li>RouterFunctionMapping：基于函数式编程配置映射，支持根据请求路径动态配置映射。</li>
-<li>BeanNameUrlHandlerMapping：基于对象名称配置映射，默认自带映射。</li>
-<li>也支持通过实现HandlerMapping接口的方式自定义映射器。</li>
+<li><code>SimpleUrlHandlerMapping</code>：基于URL配置映射，需要显示配置映射，支持集中配置URL映射，支持通配符，支持批量配置。</li>
+<li><code>RequestMappingHandlerMapping</code>：基于<code>@RequestMapping</code>注解配置映射，最常用的映射器。</li>
+<li><code>RouterFunctionMapping</code>：基于函数式编程配置映射，支持根据请求路径动态配置映射。</li>
+<li><code>BeanNameUrlHandlerMapping</code>：基于对象名称配置映射，默认自带映射。</li>
+<li><code>HandlerMapping</code>：也支持通过实现HandlerMapping接口的方式自定义映射器。</li>
 </ul>
 <h4 id="2-4-2-获取处理器"><a href="#2-4-2-获取处理器" class="headerlink" title="2.4.2 获取处理器"></a>2.4.2 获取处理器</h4><p>调用AbstractHandlerMethodMapping的<code>getHandlerInternal()</code>方法，获取处理器：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> HandlerMethod <span class="title function_">getHandlerInternal</span><span class="params">(HttpServletRequest request)</span></span><br><span class="line">        <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="comment">// 获取请求路径</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">lookupPath</span> <span class="operator">=</span> initLookupPath(request);</span><br><span class="line">    <span class="comment">// 根据请求路径获取处理器</span></span><br><span class="line">    <span class="type">HandlerMethod</span> <span class="variable">handlerMethod</span> <span class="operator">=</span> lookupHandlerMethod(lookupPath, request);</span><br><span class="line">    <span class="comment">// 返回处理器</span></span><br><span class="line">    <span class="keyword">return</span> (handlerMethod != <span class="literal">null</span> ? handlerMethod.createWithResolvedBean() : <span class="literal">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2601,12 +2603,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>HandlerAdapter用于根据处理器执行业务逻辑，有多种实现类：</p>
 <ul>
-<li>RequestMappingHandlerAdapter：支持基于<code>@RequestMapping</code>注解的使用方式。最常用的适配器。</li>
-<li>HandlerFunctionAdapter：支持基于函数式编程的使用方式。</li>
-<li>HttpRequestHandlerAdapter：支持实现HttpRequestHandler接口的使用方式。</li>
-<li>SimpleControllerHandlerAdapter：支持实现Controller接口的使用方式，早期适配器。</li>
-<li>SimpleServletHandlerAdapter：支持实现Servlet接口的使用方式，早期适配器。</li>
-<li>也支持通过实现HandlerAdapter接口的方式自定义处理。</li>
+<li><code>RequestMappingHandlerAdapter</code>：支持基于<code>@RequestMapping</code>注解的使用方式。最常用的适配器。</li>
+<li><code>HandlerFunctionAdapter</code>：支持基于函数式编程的使用方式。</li>
+<li><code>HttpRequestHandlerAdapter</code>：支持实现HttpRequestHandler接口的使用方式。</li>
+<li><code>SimpleControllerHandlerAdapter</code>：支持实现Controller接口的使用方式，早期适配器。</li>
+<li><code>SimpleServletHandlerAdapter</code>：支持实现Servlet接口的使用方式，早期适配器。</li>
+<li><code>HandlerAdapter</code>：也支持通过实现HandlerAdapter接口的方式自定义处理。</li>
 </ul>
 <h3 id="2-6-处理业务逻辑"><a href="#2-6-处理业务逻辑" class="headerlink" title="2.6 处理业务逻辑"></a>2.6 处理业务逻辑</h3><p>调用AbstractHandlerMethodAdapter的<code>handle()</code>方法，处理业务逻辑：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> ModelAndView <span class="title function_">handle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span></span><br><span class="line">        <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="comment">// 处理业务逻辑</span></span><br><span class="line">    <span class="keyword">return</span> handleInternal(request, response, (HandlerMethod) handler);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2634,18 +2636,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>HandlerMethodArgumentResolver用于将请求参数转换为方法参数值，有多种实现类：</p>
 <ul>
-<li>RequestParamMethodArgumentResolver：支持处理使用<code>@RequestParam</code>注解的简单类型的参数。</li>
-<li>RequestParamMapMethodArgumentResolver：支持处理使用<code>@RequestParam</code>注解的Map类型的参数。</li>
-<li>PathVariableMethodArgumentResolver：支持处理使用<code>@PathVariable</code>注解的简单类型的参数。</li>
-<li>PathVariableMapMethodArgumentResolver：支持处理使用<code>@PathVariable</code>注解的Map类型的参数。</li>
-<li>RequestHeaderMethodArgumentResolver：支持处理使用<code>@RequestHeader</code>注解的简单类型的参数。</li>
-<li>RequestHeaderMapMethodArgumentResolver：支持处理使用<code>@RequestHeader</code>注解的Map类型的参数。</li>
-<li>ServletModelAttributeMethodProcessor：支持处理使用<code>@ModelAttribute</code>注解的参数。</li>
-<li>ServletCookieValueMethodArgumentResolver：支持处理使用<code>@CookieValue</code>注解的参数。</li>
-<li>RequestResponseBodyMethodProcessor：支持处理使用<code>@RequestBody</code>注解的参数。</li>
-<li>HttpEntityMethodProcessor：支持处理使用RequestEntity类型的参数。</li>
-<li>ModelMethodProcessor：支持处理使用Model类型的参数。</li>
-<li>MapMethodProcessor：支持处理使用Map类型的参数。</li>
+<li><code>RequestParamMethodArgumentResolver</code>：支持处理使用<code>@RequestParam</code>注解的简单类型的参数。</li>
+<li><code>RequestParamMapMethodArgumentResolver</code>：支持处理使用<code>@RequestParam</code>注解的Map类型的参数。</li>
+<li><code>PathVariableMethodArgumentResolver</code>：支持处理使用<code>@PathVariable</code>注解的简单类型的参数。</li>
+<li><code>PathVariableMapMethodArgumentResolver</code>：支持处理使用<code>@PathVariable</code>注解的Map类型的参数。</li>
+<li><code>RequestHeaderMethodArgumentResolver</code>：支持处理使用<code>@RequestHeader</code>注解的简单类型的参数。</li>
+<li><code>RequestHeaderMapMethodArgumentResolver</code>：支持处理使用<code>@RequestHeader</code>注解的Map类型的参数。</li>
+<li><code>ServletModelAttributeMethodProcessor</code>：支持处理使用<code>@ModelAttribute</code>注解的参数。</li>
+<li><code>ServletCookieValueMethodArgumentResolver</code>：支持处理使用<code>@CookieValue</code>注解的参数。</li>
+<li><code>RequestResponseBodyMethodProcessor</code>：支持处理使用<code>@RequestBody</code>注解的参数。</li>
+<li><code>HttpEntityMethodProcessor</code>：支持处理使用RequestEntity类型的参数。</li>
+<li><code>ModelMethodProcessor</code>：支持处理使用Model类型的参数。</li>
+<li><code>MapMethodProcessor</code>：支持处理使用Map类型的参数。</li>
 </ul>
 <h5 id="2-7-1-2-解析参数值"><a href="#2-7-1-2-解析参数值" class="headerlink" title="2.7.1.2 解析参数值"></a>2.7.1.2 解析参数值</h5><h6 id="2-7-1-2-1-解析请求体"><a href="#2-7-1-2-1-解析请求体" class="headerlink" title="2.7.1.2.1 解析请求体"></a>2.7.1.2.1 解析请求体</h6><p>如果是<code>@RequestBody</code>注解的参数，需要使用<code>RequestResponseBodyMethodProcessor</code>解析参数值。</p>
 <p>调用RequestResponseBodyMethodProcessor的<code>resolveArgument()</code>方法，解析请求体：</p>
@@ -2665,18 +2667,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>HandlerMethodReturnValueHandler用于根据返回类型处理返回值，有多种实现类：</p>
 <ul>
-<li>ModelAndViewMethodReturnValueHandler：支持处理使用ModelAndView类型的返回值，用于返回使用数据的视图页面。</li>
-<li>ViewMethodReturnValueHandler：支持处理使用View类型的返回值，用于返回视图页面。</li>
-<li>ViewNameMethodReturnValueHandler：支持处理使用String类型的返回值，用于返回视图页面。</li>
-<li>ModelMethodProcessor：支持处理使用Model类型的返回值，用于返回模型数据。</li>
-<li>MapMethodProcessor：支持处理使用Map类型的返回值，用于返回模型数据。</li>
-<li>RequestResponseBodyMethodProcessor：支持处理使用<code>@ResponseBody</code>注解的返回值，用于返回JSON数据。</li>
-<li>HttpEntityMethodProcessor：支持处理使用HttpEntity类型的返回值，用于返回响应实体。</li>
-<li>AsyncTaskMethodReturnValueHandler：支持处理使用WebAsyncTask类型的返回值，用于异步处理返回值。</li>
-<li>DeferredResultMethodReturnValueHandler：支持处理使用DeferredResult类型的返回值，用于异步处理返回值。</li>
-<li>CallableMethodReturnValueHandler：支持处理使用Callable类型的返回值，用于异步处理返回值。</li>
-<li>ModelAttributeMethodProcessor：支持处理使用<code>@ModelAttribute</code>注解的返回值，用于设置模型数据。</li>
-<li>也支持通过实现HandlerMethodReturnValueHandler接口的方式自定义处理器。</li>
+<li><code>ModelAndViewMethodReturnValueHandler</code>：支持处理使用ModelAndView类型的返回值，用于返回使用数据的视图页面。</li>
+<li><code>ViewMethodReturnValueHandler</code>：支持处理使用View类型的返回值，用于返回视图页面。</li>
+<li><code>ViewNameMethodReturnValueHandler</code>：支持处理使用String类型的返回值，用于返回视图页面。</li>
+<li><code>ModelMethodProcessor</code>：支持处理使用Model类型的返回值，用于返回模型数据。</li>
+<li><code>MapMethodProcessor</code>：支持处理使用Map类型的返回值，用于返回模型数据。</li>
+<li><code>RequestResponseBodyMethodProcessor</code>：支持处理使用<code>@ResponseBody</code>注解的返回值，用于返回JSON数据。</li>
+<li><code>HttpEntityMethodProcessor</code>：支持处理使用HttpEntity类型的返回值，用于返回响应实体。</li>
+<li><code>AsyncTaskMethodReturnValueHandler</code>：支持处理使用WebAsyncTask类型的返回值，用于异步处理返回值。</li>
+<li><code>DeferredResultMethodReturnValueHandler</code>：支持处理使用DeferredResult类型的返回值，用于异步处理返回值。</li>
+<li><code>CallableMethodReturnValueHandler</code>：支持处理使用Callable类型的返回值，用于异步处理返回值。</li>
+<li><code>ModelAttributeMethodProcessor</code>：支持处理使用<code>@ModelAttribute</code>注解的返回值，用于设置模型数据。</li>
+<li><code>HandlerMethodReturnValueHandler</code>：也支持通过实现HandlerMethodReturnValueHandler接口的方式自定义处理器。</li>
 </ul>
 <h5 id="2-7-2-2-设置响应内容"><a href="#2-7-2-2-设置响应内容" class="headerlink" title="2.7.2.2 设置响应内容"></a>2.7.2.2 设置响应内容</h5><h6 id="2-7-2-2-1-普通视图"><a href="#2-7-2-2-1-普通视图" class="headerlink" title="2.7.2.2.1 普通视图"></a>2.7.2.2.1 普通视图</h6><p>如果是普通视图的返回类型，使用ViewNameMethodReturnValueHandler处理返回值。</p>
 <p>调用ViewNameMethodReturnValueHandler的<code>handleReturnValue()</code>方法，处理视图：</p>
@@ -2691,10 +2693,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>HttpMessageConverter用于设置返回值和媒体类型，有多种实现类：</p>
 <ul>
-<li>ByteArrayHttpMessageConverter：用于处理字节数组。</li>
-<li>StringHttpMessageConverter：用于处理字符串。</li>
-<li>MappingJackson2HttpMessageConverter：用于处理JSON格式的响应，需要导入JSON依赖：<figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Jackson --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-databind<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.13.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>MappingJackson2XmlHttpMessageConverter：用于处理XML格式的响应，需要导入XML依赖。<figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Jackson XML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.dataformat<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-dataformat-xml<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.13.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>ByteArrayHttpMessageConverter</code>：用于处理字节数组。</p>
+</li>
+<li><p><code>StringHttpMessageConverter</code>：用于处理字符串。</p>
+</li>
+<li><p><code>MappingJackson2HttpMessageConverter</code>：用于处理JSON格式的响应，需要导入JSON依赖：</p>
+<figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Jackson --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-databind<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.13.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>MappingJackson2XmlHttpMessageConverter</code>：用于处理XML格式的响应，需要导入XML依赖：</p>
+<figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Jackson XML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.dataformat<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-dataformat-xml<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.13.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="2-8-处理模型视图"><a href="#2-8-处理模型视图" class="headerlink" title="2.8 处理模型视图"></a>2.8 处理模型视图</h3><p>调用RequestMappingHandlerAdapter的<code>getModelAndView()</code>方法，处理模型视图：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> ModelAndView <span class="title function_">getModelAndView</span><span class="params">(ModelAndViewContainer mavContainer, ModelFactory modelFactory, NativeWebRequest webRequest)</span></span><br><span class="line">        <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="comment">// 使用模型工厂更新模型数据</span></span><br><span class="line">    modelFactory.updateModel(webRequest, mavContainer);</span><br><span class="line">    <span class="comment">// 如果请求已经被处理，比如@ResponseBody注解，则返回null</span></span><br><span class="line">    <span class="keyword">if</span> (mavContainer.isRequestHandled()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 获取模型数据</span></span><br><span class="line">    <span class="type">ModelMap</span> <span class="variable">model</span> <span class="operator">=</span> mavContainer.getModel();</span><br><span class="line">    <span class="comment">// 创建模型视图</span></span><br><span class="line">    <span class="type">ModelAndView</span> <span class="variable">mav</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ModelAndView</span>(mavContainer.getViewName(), model, mavContainer.getStatus());</span><br><span class="line">    <span class="comment">// 处理视图</span></span><br><span class="line">    <span class="keyword">if</span> (!mavContainer.isViewReference()) &#123;</span><br><span class="line">        mav.setView((View) mavContainer.getView());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 处理重定向视图用到的闪存属性</span></span><br><span class="line">    <span class="keyword">if</span> (model <span class="keyword">instanceof</span> RedirectAttributes) &#123;</span><br><span class="line">        Map&lt;String, ?&gt; flashAttributes = ((RedirectAttributes) model).getFlashAttributes();</span><br><span class="line">        <span class="type">HttpServletRequest</span> <span class="variable">request</span> <span class="operator">=</span> webRequest.getNativeRequest(HttpServletRequest.class);</span><br><span class="line">        <span class="keyword">if</span> (request != <span class="literal">null</span>) &#123;</span><br><span class="line">            RequestContextUtils.getOutputFlashMap(request).putAll(flashAttributes);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 返回模型视图</span></span><br><span class="line">    <span class="keyword">return</span> mav;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2710,11 +2717,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>ViewResolver用于将视图名称解析为视图对象，有多种实现类：</p>
 <ul>
-<li>InternalResourceViewResolver：支持解析JSP页面。最常见的解析器。</li>
-<li>BeanNameViewResolver：支持将逻辑视图名解析为Bean对象。</li>
-<li>XmlViewResolver：支持解析XML文件。</li>
-<li>ResourceBundleViewResolver：支持解析属性文件。</li>
-<li>也支持通过实现ViewResolver接口的方式自定义处理。</li>
+<li><code>InternalResourceViewResolver</code>：支持解析JSP页面。最常见的解析器。</li>
+<li><code>BeanNameViewResolver</code>：支持将逻辑视图名解析为Bean对象。</li>
+<li><code>XmlViewResolver</code>：支持解析XML文件。</li>
+<li><code>ResourceBundleViewResolver</code>：支持解析属性文件。</li>
+<li><code>ViewResolver</code>：也支持通过实现ViewResolver接口的方式自定义处理。</li>
 </ul>
 <h5 id="2-9-2-2-通过对象获取视图"><a href="#2-9-2-2-通过对象获取视图" class="headerlink" title="2.9.2.2 通过对象获取视图"></a>2.9.2.2 通过对象获取视图</h5><p>调用ModelAndView的<code>getView()</code>方法，通过对象获取视图：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> View <span class="title function_">getView</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 返回视图对象</span></span><br><span class="line">    <span class="keyword">return</span> (<span class="built_in">this</span>.view <span class="keyword">instanceof</span> View ? (View) <span class="built_in">this</span>.view : <span class="literal">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2751,7 +2758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3498,7 +3505,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260109/160036/","name":"工作流程"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"工作流程","description":"摘要：本文分析了Spring MVC的工作流程，包括请求处理的各个阶段和核心对象的协作机制。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260109/160036/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260109/160036/","wordCount":46,"datePublished":"2026-01-09T08:00:36.000Z","dateModified":"2026-04-16T03:39:53.951Z","articleSection":"后端","keywords":"Spring MVC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260109/160036/","name":"工作流程"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"工作流程","description":"摘要：本文分析了Spring MVC的工作流程，包括请求处理的各个阶段和核心对象的协作机制。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260109/160036/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260109/160036/","wordCount":46,"datePublished":"2026-01-09T08:00:36.000Z","dateModified":"2026-06-18T05:53:12.983Z","articleSection":"后端","keywords":"Spring MVC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-01-05T03:22:40.000Z">
-<meta property="article:modified_time" content="2026-04-16T03:39:53.951Z">
+<meta property="article:modified_time" content="2026-06-18T05:53:12.983Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Spring MVC">
 <meta name="twitter:card" content="summary">
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2536,13 +2536,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p>Spring MVC是Spring为展现层提供的基于MVC设计理念的优秀的Web框架，是目前最主流的MVC框架。</p>
 <h2 id="2-MVC"><a href="#2-MVC" class="headerlink" title="2 MVC"></a>2 MVC</h2><p>MVC是一种软件设计模式，它将应用程序分为三个核心组件，这种分离有助于实现关注点分离，使应用程序更易于管理、测试和扩展。</p>
-<p>传统Servlet加JSP的开发方式属于两层架构，通过Servlet查询数据，通过JSP渲染页面：<br><img src="/@image/B04004001/001-20260104170401.jpg" alt="20260104170401-两层架构"></p>
-<p>两层架构只适合处理小型项目，大型项目使用三层架构，通过Controller接收请求，通过Model处理数据，通过View渲染页面：<br><img src="/@image/B04004001/001-20260104170620.jpg" alt="20260104170620-三层架构"></p>
+<p>传统Servlet加JSP的开发方式属于两层架构，通过Servlet查询数据，通过JSP渲染页面：</p>
+<p><img src="/@image/B04004001/001-20260104170401.jpg" alt="20260104170401-两层架构"></p>
+<p>两层架构只适合处理小型项目，大型项目使用三层架构，通过Controller接收请求，通过Model处理数据，通过View渲染页面：</p>
+<p><img src="/@image/B04004001/001-20260104170620.jpg" alt="20260104170620-三层架构"></p>
 <p>组件介绍：</p>
 <ul>
-<li>模型（Model）：模型负责存储数据以及处理用户请求的业务逻辑。模型不依赖于视图或控制器，具有良好的可重用性。</li>
-<li>视图（View）：视图负责从模型获取数据并将其展示给用户。</li>
-<li>控制器（Controller）：控制器负责处理用户交互，接收用户请求后调用模型处理数据，并选择合适的视图来展示处理结果。</li>
+<li><code>模型（Model）</code>：模型负责存储数据以及处理用户请求的业务逻辑。模型不依赖于视图或控制器，具有良好的可重用性。</li>
+<li><code>视图（View）</code>：视图负责从模型获取数据并将其展示给用户。</li>
+<li><code>控制器（Controller）</code>：控制器负责处理用户交互，接收用户请求后调用模型处理数据，并选择合适的视图来展示处理结果。</li>
 </ul>
 <p>工作流程：</p>
 <ol>
@@ -2554,11 +2556,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <p>特点：</p>
 <ul>
-<li>分离关注点：将MVC分离，使得代码更清晰，并且更易于维护</li>
-<li>可重用性：模型可以被多个视图重用</li>
-<li>并行开发：不同团队成员可以同时开发不同层次的功能</li>
-<li>易于测试：各个功能可以独立测试</li>
-<li>灵活性：可以轻松更改用户界面，而不需要修改业务逻辑</li>
+<li><code>分离关注点</code>：将MVC分离，使得代码更清晰，并且更易于维护</li>
+<li><code>可重用性</code>：模型可以被多个视图重用</li>
+<li><code>并行开发</code>：不同团队成员可以同时开发不同层次的功能</li>
+<li><code>易于测试</code>：各个功能可以独立测试</li>
+<li><code>灵活性</code>：可以轻松更改用户界面，而不需要修改业务逻辑</li>
 </ul>
 
   </div>
@@ -2590,7 +2592,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3337,7 +3339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260105/112240/","name":"概述"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"概述","description":"摘要：本文了解了什么是Spring MVC。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260105/112240/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260105/112240/","wordCount":22,"datePublished":"2026-01-05T03:22:40.000Z","dateModified":"2026-04-16T03:39:53.951Z","articleSection":"后端","keywords":"Spring MVC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260105/112240/","name":"概述"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"概述","description":"摘要：本文了解了什么是Spring MVC。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260105/112240/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260105/112240/","wordCount":22,"datePublished":"2026-01-05T03:22:40.000Z","dateModified":"2026-06-18T05:53:12.983Z","articleSection":"后端","keywords":"Spring MVC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-12-16T07:33:58.000Z">
-<meta property="article:modified_time" content="2026-04-16T03:39:14.559Z">
+<meta property="article:modified_time" content="2026-06-18T05:17:11.533Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Spring">
 <meta property="article:tag" content="IoC">
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2541,21 +2541,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="1-2-ApplicationContext"><a href="#1-2-ApplicationContext" class="headerlink" title="1.2 ApplicationContext"></a>1.2 ApplicationContext</h3><p>BeanFactory的扩展，提供更多企业级功能。</p>
 <p>ApplicationContext在初始化上下文时就实例化所有的单例对象，主要的实现类：</p>
 <ul>
-<li>ClassPathXmlApplicationContext：从类路径加载XML配置。</li>
-<li>FileSystemXmlApplicationContext：从文件系统加载XML配置。</li>
-<li>AnnotationConfigApplicationContext：基于注解配置。</li>
+<li><code>ClassPathXmlApplicationContext</code>：从类路径加载XML配置。</li>
+<li><code>FileSystemXmlApplicationContext</code>：从文件系统加载XML配置。</li>
+<li><code>AnnotationConfigApplicationContext</code>：基于注解配置。</li>
 </ul>
 <h2 id="2-配置方式"><a href="#2-配置方式" class="headerlink" title="2 配置方式"></a>2 配置方式</h2><p>在容器中，配置主要有三种方式：</p>
 <ul>
-<li>XML配置：这是Spring最早支持的配置方式。在XML文件中声明对象，并描述它们之间的依赖关系。</li>
-<li>半注解配置：从2.5版本开始引入了注解驱动的配置。通过扫描类路径下的注解，自动注册对象。</li>
-<li>全注解配置：从3.0版本开始引入了全注解配置，使用配置类代替配置文件，使用<code>@Configuration</code>注解和<code>@Bean</code>注解。</li>
+<li><code>XML配置</code>：这是Spring最早支持的配置方式。在XML文件中声明对象，并描述它们之间的依赖关系。</li>
+<li><code>半注解配置</code>：从2.5版本开始引入了注解驱动的配置。通过扫描类路径下的注解，自动注册对象。</li>
+<li><code>全注解配置</code>：从3.0版本开始引入了全注解配置，使用配置类代替配置文件，使用<code>@Configuration</code>注解和<code>@Bean</code>注解。</li>
 </ul>
 <h2 id="3-依赖注入"><a href="#3-依赖注入" class="headerlink" title="3 依赖注入"></a>3 依赖注入</h2><p>在容器中，注入对象主要有三种方式：</p>
 <ul>
-<li>构造器注入：通过构造器注入依赖。这是Spring推荐的方式，特别是必选依赖的情况。</li>
-<li>方法注入：通过方法注入依赖。这种方式适用于可选依赖，或者需要改变依赖的情况。</li>
-<li>字段注入：通过在字段上使用注解注入依赖。这种方式非常简洁，但有一些缺点。</li>
+<li><code>构造器注入</code>：通过构造器注入依赖。这是Spring推荐的方式，特别是必选依赖的情况。</li>
+<li><code>方法注入</code>：通过方法注入依赖。这种方式适用于可选依赖，或者需要改变依赖的情况。</li>
+<li><code>字段注入</code>：通过在字段上使用注解注入依赖。这种方式非常简洁，但有一些缺点。</li>
 </ul>
 <h2 id="4-入门案例"><a href="#4-入门案例" class="headerlink" title="4 入门案例"></a>4 入门案例</h2><p>目录结构：</p>
 <figure class="highlight plaintext"><figcaption><span>code</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">demo-spring/</span><br><span class="line">├── src/</span><br><span class="line">│   ├── main/</span><br><span class="line">│   │   ├── java/</span><br><span class="line">│   │   │   └── com/</span><br><span class="line">│   │   │       └── example/</span><br><span class="line">│   │   │           ├── bean/</span><br><span class="line">│   │   │           │   └── User.java</span><br><span class="line">│   │   │           └── DemoApplication.java</span><br><span class="line">│   │   └── resources/</span><br><span class="line">│   │       └── spring.xml</span><br><span class="line">│   └── test/</span><br><span class="line">└── pom.xml</span><br></pre></td></tr></table></figure>
@@ -2603,7 +2603,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3362,7 +3362,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251216/153358/","name":"简单使用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"简单使用","description":"摘要：本文学习了Spring中控制反转和依赖注入的基本概念和使用方法。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251216/153358/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251216/153358/","wordCount":35,"datePublished":"2025-12-16T07:33:58.000Z","dateModified":"2026-04-16T03:39:14.559Z","articleSection":"后端","keywords":"Spring,IoC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251216/153358/","name":"简单使用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"简单使用","description":"摘要：本文学习了Spring中控制反转和依赖注入的基本概念和使用方法。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251216/153358/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251216/153358/","wordCount":35,"datePublished":"2025-12-16T07:33:58.000Z","dateModified":"2026-06-18T05:17:11.533Z","articleSection":"后端","keywords":"Spring,IoC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-01-15T08:33:50.000Z">
-<meta property="article:modified_time" content="2026-04-16T03:39:53.951Z">
+<meta property="article:modified_time" content="2026-06-22T02:17:43.179Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Spring MVC">
 <meta name="twitter:card" content="summary">
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2464,7 +2464,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>6.1k 字</p>
+      <p>6k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2693,10 +2693,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-3-内容类型"><a href="#3-3-内容类型" class="headerlink" title="3.3 内容类型"></a>3.3 内容类型</h3><h4 id="3-3-1-请求内容类型"><a href="#3-3-1-请求内容类型" class="headerlink" title="3.3.1 请求内容类型"></a>3.3.1 请求内容类型</h4><p>通过<code>consumes</code>属性可以指定处理请求的内容类型。</p>
 <p>常用取值：</p>
 <ul>
-<li>MediaType.APPLICATION_JSON_VALUE：对应<code>application/json</code>，接收JSON格式数据。</li>
-<li>MediaType.APPLICATION_XML_VALUE：对应<code>application/xml</code>，接收XML格式数据。</li>
-<li>MediaType.APPLICATION_FORM_URLENCODED_VALUE：对应<code>application/x-www-form-urlencoded</code>，接收表单格式数据。</li>
-<li>MediaType.MULTIPART_FORM_DATA_VALUE：对应<code>multipart/form-data</code>，接收文件上传。</li>
+<li><code>MediaType.APPLICATION_JSON_VALUE</code>：对应<code>application/json</code>，接收JSON格式数据。</li>
+<li><code>MediaType.APPLICATION_XML_VALUE</code>：对应<code>application/xml</code>，接收XML格式数据。</li>
+<li><code>MediaType.APPLICATION_FORM_URLENCODED_VALUE</code>：对应<code>application/x-www-form-urlencoded</code>，接收表单格式数据。</li>
+<li><code>MediaType.MULTIPART_FORM_DATA_VALUE</code>：对应<code>multipart/form-data</code>，接收文件上传。</li>
 <li>*&#x2F;*：接收任意内容类型，默认值。</li>
 </ul>
 <p>示例：</p>
@@ -2705,11 +2705,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="3-3-2-响应内容类型"><a href="#3-3-2-响应内容类型" class="headerlink" title="3.3.2 响应内容类型"></a>3.3.2 响应内容类型</h4><p>通过<code>produces</code>属性可以指定响应的内容类型。</p>
 <p>常用取值：</p>
 <ul>
-<li>MediaType.APPLICATION_JSON_VALUE：对应<code>application/json</code>，返回JSON格式数据。</li>
-<li>MediaType.APPLICATION_XML_VALUE：对应<code>application/xml</code>，返回XML格式数据。</li>
-<li>MediaType.TEXT_HTML_VALUE：对应<code>text/html</code>，返回HTML格式数据。</li>
-<li>MediaType.TEXT_PLAIN_VALUE：对应<code>text/plain</code>，返回纯文本数据。</li>
-<li>MediaType.APPLICATION_OCTET_STREAM_VALUE：对应<code>application/octet-stream</code>，返回二进制文件流，用于文件下载。</li>
+<li><code>MediaType.APPLICATION_JSON_VALUE</code>：对应<code>application/json</code>，返回JSON格式数据。</li>
+<li><code>MediaType.APPLICATION_XML_VALUE</code>：对应<code>application/xml</code>，返回XML格式数据。</li>
+<li><code>MediaType.TEXT_HTML_VALUE</code>：对应<code>text/html</code>，返回HTML格式数据。</li>
+<li><code>MediaType.TEXT_PLAIN_VALUE</code>：对应<code>text/plain</code>，返回纯文本数据。</li>
+<li><code>MediaType.APPLICATION_OCTET_STREAM_VALUE</code>：对应<code>application/octet-stream</code>，返回二进制文件流，用于文件下载。</li>
 <li>*&#x2F;*：返回任意内容类型，默认值。</li>
 </ul>
 <p>示例：</p>
@@ -2736,7 +2736,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <tr>
       <td>required</td>
       <td>是否必填</td>
-      <td>默认为true表示必填，设置为false表示非必填</td>
+      <td>默认为true表示必填</td>
     </tr>
     <tr>
       <td>defaultValue</td>
@@ -2769,7 +2769,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <tr>
       <td>required</td>
       <td>是否必填</td>
-      <td>默认为true表示必填，设置为false表示非必填</td>
+      <td>默认为true表示必填</td>
     </tr>
   </tbody>
 </table>
@@ -2797,7 +2797,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <tr>
       <td>required</td>
       <td>是否必填</td>
-      <td>默认为true表示必填，设置为false表示非必填</td>
+      <td>默认为true表示必填</td>
     </tr>
     <tr>
       <td>defaultValue</td>
@@ -2830,7 +2830,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <tr>
       <td>binding</td>
       <td>是否绑定</td>
-      <td>默认为true表示绑定，设置为false表示非绑定</td>
+      <td>默认为true表示绑定</td>
     </tr>
   </tbody>
 </table>
@@ -2860,7 +2860,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <tr>
       <td>required</td>
       <td>是否必填</td>
-      <td>默认为true表示必填，设置为false表示非必填</td>
+      <td>默认为true表示必填</td>
     </tr>
     <tr>
       <td>defaultValue</td>
@@ -2891,7 +2891,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <tr>
       <td>required</td>
       <td>是否必填</td>
-      <td>默认为true表示必填，设置为false表示非必填</td>
+      <td>默认为true表示必填</td>
     </tr>
   </tbody>
 </table>
@@ -2920,9 +2920,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="5-1-Valid"><a href="#5-1-Valid" class="headerlink" title="5.1 @Valid"></a>5.1 @Valid</h3><p><code>@Valid</code>注解用于数据校验，是Java标准注解，需要引入相应的Maven依赖。</p>
 <p>使用方式：</p>
 <ul>
-<li>验证对象参数：支持在方法参数上使用，只能验证对象参数，需要在对象属性上添加约束注解。</li>
-<li>验证对象嵌套：支持在对象属性上使用，只能验证对象属性，需要在对象属性的属性上添加约束注解。使用<code>@Valid</code>注解只能在对象存在时验证对象属性，如果对象不存在，就不会验证对象属性，所以需要同时使用<code>@NotNull</code>注解保证对象存在。</li>
-<li>验证对象分组：不支持。</li>
+<li><code>验证对象参数</code>：支持在方法参数上使用，只能验证对象参数，需要在对象属性上添加约束注解。</li>
+<li><code>验证对象嵌套</code>：支持在对象属性上使用，只能验证对象属性，需要在对象属性的属性上添加约束注解。使用<code>@Valid</code>注解只能在对象存在时验证对象属性，如果对象不存在，就不会验证对象属性，所以需要同时使用<code>@NotNull</code>注解保证对象存在。</li>
+<li><code>验证对象分组</code>：不支持。</li>
 </ul>
 <h4 id="5-1-1-验证对象参数"><a href="#5-1-1-验证对象参数" class="headerlink" title="5.1.1 验证对象参数"></a>5.1.1 验证对象参数</h4><p>验证对象参数，如果验证失败抛出Spring提供的BindException异常：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserController</span> &#123;</span><br><span class="line">    <span class="comment">// id=1&amp;name=张三</span></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/test&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">test</span><span class="params">(<span class="meta">@Valid</span> User user)</span> &#123;</span><br><span class="line">        System.out.println(user);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;success&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2939,10 +2939,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="5-2-Validated"><a href="#5-2-Validated" class="headerlink" title="5.2 @Validated"></a>5.2 @Validated</h3><p><code>@Validated</code>注解用于数据校验，是Spring框架提供的注解。</p>
 <p>使用方式：</p>
 <ul>
-<li>验证简单参数：支持在类上使用，只能验证简单参数，需要在方法参数上添加约束注解，还需要配置方法验证后置处理器。</li>
-<li>验证对象参数：支持在方法参数上使用，只能验证对象参数，需要在对象属性上添加约束注解。</li>
-<li>验证对象嵌套：不支持，需要配合<code>@Valid</code>注解使用。</li>
-<li>验证对象分组：支持在方法参数上使用并且需要指定分组，只能验证对象参数，需要在对象属性上添加约束注解并且指定分组。</li>
+<li><code>验证简单参数</code>：支持在类上使用，只能验证简单参数，需要在方法参数上添加约束注解，还需要配置方法验证后置处理器。</li>
+<li><code>验证对象参数</code>：支持在方法参数上使用，只能验证对象参数，需要在对象属性上添加约束注解。</li>
+<li><code>验证对象嵌套</code>：不支持，需要配合<code>@Valid</code>注解使用。</li>
+<li><code>验证对象分组</code>：支持在方法参数上使用并且需要指定分组，只能验证对象参数，需要在对象属性上添加约束注解并且指定分组。</li>
 </ul>
 <h4 id="5-2-1-验证简单参数"><a href="#5-2-1-验证简单参数" class="headerlink" title="5.2.1 验证简单参数"></a>5.2.1 验证简单参数</h4><p>验证简单参数需要配置后置处理器，建议配置为静态方法：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableWebMvc</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;com.example.controller&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebConfig</span> <span class="keyword">implements</span> <span class="title class_">WebMvcConfigurer</span> &#123;</span><br><span class="line">    <span class="comment">// 后置处理器需要处理对象的初始化，要在所有对象实例化之前创建，包括配置类</span></span><br><span class="line">    <span class="comment">// 配置类会在解析@Bean注解时进行实例化</span></span><br><span class="line">    <span class="comment">// 将后置处理器配置为静态方法，保证在不实例化配置类的情况下调用，避免警告</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> MethodValidationPostProcessor <span class="title function_">methodValidationPostProcessor</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">MethodValidationPostProcessor</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3025,10 +3025,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>使用<code>@ExceptionHandler</code>注解修饰的方法支持多种返回类型，方法支持多种参数类型，并且同时可以处理多种异常类型。</p>
 <p>支持的参数类型：</p>
 <ul>
-<li>HttpServletRequest：请求对象</li>
-<li>HttpServletResponse：响应对象</li>
-<li>Model：模型对象</li>
-<li>Exception：异常类型，通常与<code>@ExceptionHandler</code>注解指定的异常类型一致</li>
+<li><code>HttpServletRequest</code>：请求对象</li>
+<li><code>HttpServletResponse</code>：响应对象</li>
+<li><code>Model</code>：模型对象</li>
+<li><code>Exception</code>：异常类型，通常与<code>@ExceptionHandler</code>注解指定的异常类型一致</li>
 </ul>
 <p>示例：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// id=1</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;/test&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">test</span><span class="params">(User user)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="keyword">if</span> (user.getName() == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Exception</span>(<span class="string">&quot;姓名不能为空&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;success&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@ExceptionHandler(Exception.class)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">handleException</span><span class="params">(Exception e, Model model)</span> &#123;</span><br><span class="line">    model.addAttribute(<span class="string">&quot;message&quot;</span>, e.getMessage());</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;error&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3084,7 +3084,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月22日</div>
               </div>
               
               
@@ -3879,7 +3879,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260115/163350/","name":"处理请求"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"处理请求","description":"摘要：本文学习了使用Spring MVC如何解析请求。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260115/163350/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260115/163350/","wordCount":27,"datePublished":"2026-01-15T08:33:50.000Z","dateModified":"2026-04-16T03:39:53.951Z","articleSection":"后端","keywords":"Spring MVC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260115/163350/","name":"处理请求"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"处理请求","description":"摘要：本文学习了使用Spring MVC如何解析请求。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260115/163350/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260115/163350/","wordCount":27,"datePublished":"2026-01-15T08:33:50.000Z","dateModified":"2026-06-22T02:17:43.179Z","articleSection":"后端","keywords":"Spring MVC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

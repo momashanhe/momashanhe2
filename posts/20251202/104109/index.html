@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-12-02T02:41:09.000Z">
-<meta property="article:modified_time" content="2026-04-16T03:38:47.267Z">
+<meta property="article:modified_time" content="2026-06-22T02:20:25.658Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="JavaWeb">
 <meta property="article:tag" content="Servlet">
@@ -2022,7 +2022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2541,7 +2541,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>相比于HTML页面，JSP最直观的功能是可以在页面中使用变量，这些变量一般都是从域对象中获取，变量可以使页面动态的显示信息。</p>
 <p>JSP更加善于处理显示页面，Servlet更擅长处理业务逻辑，两种技术各有专长，所以一般我们会将Servlet和JSP结合使用，Servlet负责业务，JSP负责显示。</p>
 <h3 id="1-2-本质"><a href="#1-2-本质" class="headerlink" title="1.2 本质"></a>1.2 本质</h3><p>JSP页面本质上是一个Servlet程序，在第一次访问页面的时候，Servlet容器会将JSP页面转换为Servlet文件，然后再将Java文件编译为字节码文件。</p>
-<p>对于index.jsp页面，在Tomcat的工作目录下能看到转换后的文件：<br>jsp<br>├── index_jsp.class<br>└── index_jsp.java</p>
+<p>对于index.jsp页面，在Tomcat的工作目录下能看到转换后的文件：</p>
+<p>jsp<br>├── index_jsp.class<br>└── index_jsp.java</p>
 <p>打开Java文件：</p>
 <figure class="highlight java"><figcaption><span>index_jsp.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">index_jsp</span> <span class="keyword">extends</span> <span class="title class_">org</span>.apache.jasper.runtime.HttpJspBase</span><br></pre></td></tr></table></figure>
 
@@ -2618,7 +2619,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <tr>
       <td>session</td>
       <td>设置当前页面的session内置对象是否可用</td>
-      <td>默认为<code>true</code>表示session可用，设置为<code>false</code>表示session不可用</td>
+      <td>默认为<code>true</code>表示session可用</td>
     </tr>
     <tr>
       <td>errorPage</td>
@@ -2860,23 +2861,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="6-隐式对象"><a href="#6-隐式对象" class="headerlink" title="6 隐式对象"></a>6 隐式对象</h2><p>隐式对象是JSP容器为每个页面提供的Java对象，开发者可以直接使用它们而不用显式声明。隐式对象也被称为内置对象。</p>
 <p>JSP内置的九大隐式对象：</p>
 <ul>
-<li>request：HttpServletRequest接口的实例，用于封装客户端请求信息。</li>
-<li>response：HttpServletResponse接口的实例，用于封装服务器响应信息。</li>
-<li>session：HttpSession接口的实例，用于封装用户会话信息。</li>
-<li>application：ServletContext接口的实例，用于封装Web应用程序的信息。</li>
-<li>out：JspWriter接口的实例，用于向客户端输出内容。</li>
-<li>pageContext：PageContext接口的实例，用于封装当前页面的信息。</li>
-<li>config：ServletConfig接口的实例，用于封装当前页面的配置信息。</li>
-<li>page：Object类型的实例，用于封装当前页面的信息。</li>
-<li>exception：Throwable类型的实例，用于封装当前页面的异常信息。</li>
+<li><code>request</code>：HttpServletRequest接口的实例，用于封装客户端请求信息。</li>
+<li><code>response</code>：HttpServletResponse接口的实例，用于封装服务器响应信息。</li>
+<li><code>session</code>：HttpSession接口的实例，用于封装用户会话信息。</li>
+<li><code>application</code>：ServletContext接口的实例，用于封装Web应用程序的信息。</li>
+<li><code>out</code>：JspWriter接口的实例，用于向客户端输出内容。</li>
+<li><code>pageContext</code>：PageContext接口的实例，用于封装当前页面的信息。</li>
+<li><code>config</code>：ServletConfig接口的实例，用于封装当前页面的配置信息。</li>
+<li><code>page</code>：Object类型的实例，用于封装当前页面的信息。</li>
+<li><code>exception</code>：Throwable类型的实例，用于封装当前页面的异常信息。</li>
 </ul>
 <h2 id="7-域对象"><a href="#7-域对象" class="headerlink" title="7 域对象"></a>7 域对象</h2><p>域对象可以在不同的Web资源之间共享数据。</p>
 <p>域对象有四个：</p>
 <ul>
-<li>page域：当前页面范围的域对象，对应的是pageContext对象。</li>
-<li>request域：请求范围的域对象，对应的是request对象。</li>
-<li>session域：会话范围的域对象，对应的是session对象。</li>
-<li>application域：应用程序范围的域对象，对应的是application对象。</li>
+<li><code>page</code>：当前页面范围的域对象，对应的是pageContext对象。</li>
+<li><code>request</code>：请求范围的域对象，对应的是request对象。</li>
+<li><code>session</code>：会话范围的域对象，对应的是session对象。</li>
+<li><code>application</code>：应用程序范围的域对象，对应的是application对象。</li>
 </ul>
 <p>域对象都有以下三个方法：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置属性名和属性对象</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">setAttribute</span><span class="params">(String name , Object value)</span>;</span><br><span class="line"><span class="comment">// 根据属性名获取属性值</span></span><br><span class="line">Object <span class="title function_">getAttribute</span><span class="params">(String name)</span>;</span><br><span class="line"><span class="comment">// 根据属性名移除属性</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">removeAtrribute</span><span class="params">(String name)</span>;</span><br></pre></td></tr></table></figure>
@@ -2910,7 +2911,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月22日</div>
               </div>
               
               
@@ -3645,7 +3646,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251202/104109/","name":"JSP基础"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JSP基础","description":"摘要：本文介绍了JSP的基本概念、生命周期、语法、指令和动作，以及常用的九个隐式对象和四个域对象。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251202/104109/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251202/104109/","wordCount":49,"datePublished":"2025-12-02T02:41:09.000Z","dateModified":"2026-04-16T03:38:47.267Z","articleSection":"后端","keywords":"JavaWeb,Servlet,JSP","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251202/104109/","name":"JSP基础"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JSP基础","description":"摘要：本文介绍了JSP的基本概念、生命周期、语法、指令和动作，以及常用的九个隐式对象和四个域对象。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251202/104109/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251202/104109/","wordCount":49,"datePublished":"2025-12-02T02:41:09.000Z","dateModified":"2026-06-22T02:20:25.658Z","articleSection":"后端","keywords":"JavaWeb,Servlet,JSP","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

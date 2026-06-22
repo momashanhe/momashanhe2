@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-12-03T06:39:30.000Z">
-<meta property="article:modified_time" content="2026-04-16T03:38:47.267Z">
+<meta property="article:modified_time" content="2026-06-18T05:51:40.839Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="JavaWeb">
 <meta property="article:tag" content="Listener">
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2540,31 +2540,34 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="2-原理"><a href="#2-原理" class="headerlink" title="2 原理"></a>2 原理</h2><p>Listener基于观察者模式，所谓观察者模式，就是当被观察的特定事件触发后，会通过调用观察者的方法通知观察者，观察者可以在方法中对事件做一些处理。</p>
 <p>在JavaWeb中，被观察的对象有三个：</p>
 <ul>
-<li>ServletRequest：对应请求的生命周期事件。</li>
-<li>HttpSession：对应会话的生命周期事件。</li>
-<li>ServletContext：对应应用程序的生命周期事件。</li>
+<li><code>ServletRequest</code>：对应请求的生命周期事件。</li>
+<li><code>HttpSession</code>：对应会话的生命周期事件。</li>
+<li><code>ServletContext</code>：对应应用程序的生命周期事件。</li>
 </ul>
 <h2 id="3-分类"><a href="#3-分类" class="headerlink" title="3 分类"></a>3 分类</h2><p>对象生命周期监听器：</p>
 <ul>
-<li>ServletRequestListener：监听ServletRequest对象的创建和销毁。</li>
-<li>HttpSessionListener：监听HttpSession对象的创建和销毁。</li>
-<li>ServletContextListener：监听ServletContext对象的创建和销毁。</li>
+<li><code>ServletRequestListener</code>：监听ServletRequest对象的创建和销毁。</li>
+<li><code>HttpSessionListener</code>：监听HttpSession对象的创建和销毁。</li>
+<li><code>ServletContextListener</code>：监听ServletContext对象的创建和销毁。</li>
 </ul>
 <p>属性变化监听器：</p>
 <ul>
-<li>ServletRequestAttributeListener：监听ServletRequest域中属性的变化。</li>
-<li>HttpSessionAttributeListener：监听HttpSession域中属性的变化。</li>
-<li>ServletContextAttributeListener：监听ServletContext域中属性的变化。</li>
+<li><code>ServletRequestAttributeListener</code>：监听ServletRequest域中属性的变化。</li>
+<li><code>HttpSessionAttributeListener</code>：监听HttpSession域中属性的变化。</li>
+<li><code>ServletContextAttributeListener</code>：监听ServletContext域中属性的变化。</li>
 </ul>
 <p>特殊会话监听器：</p>
 <ul>
-<li>HttpSessionActivationListener：监听Session中对象的活化和钝化。</li>
-<li>HttpSessionBindingListener：监听Session中对象的绑定和解绑。</li>
+<li><code>HttpSessionActivationListener</code>：监听Session中对象的活化和钝化。</li>
+<li><code>HttpSessionBindingListener</code>：监听Session中对象的绑定和解绑。</li>
 </ul>
 <h2 id="4-注册"><a href="#4-注册" class="headerlink" title="4 注册"></a>4 注册</h2><p>实现监听器接口后，还需要注册监听器才能生效，注册方式有两种：</p>
 <ul>
-<li>通过配置文件注册，在<code>web.xml</code>配置文件中配置监听器：<figure class="highlight xml"><figcaption><span>web.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>com.example.listener.XxxListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>通过注解注册，使用<code>@WebListener</code>注解：<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">XxxListener</span> <span class="keyword">implements</span> <span class="title class_">XxxListener</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>通过配置文件注册，在<code>web.xml</code>配置文件中配置监听器：</p>
+<figure class="highlight xml"><figcaption><span>web.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>com.example.listener.XxxListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过注解注册，使用<code>@WebListener</code>注解：</p>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">XxxListener</span> <span class="keyword">implements</span> <span class="title class_">XxxListener</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>特殊会话监听器不需要创建监听器和注册监听器，但是需要被监听的Bean实现监听接口。</p>
 <h2 id="5-使用"><a href="#5-使用" class="headerlink" title="5 使用"></a>5 使用</h2><h3 id="5-1-对象生命周期监听器"><a href="#5-1-对象生命周期监听器" class="headerlink" title="5.1 对象生命周期监听器"></a>5.1 对象生命周期监听器</h3><h4 id="5-1-1-ServletRequestListener"><a href="#5-1-1-ServletRequestListener" class="headerlink" title="5.1.1 ServletRequestListener"></a>5.1.1 ServletRequestListener</h4><p>ServletRequestListener监听器用于监听HttpServletRequest对象的创建和销毁事件。</p>
@@ -2597,8 +2600,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="5-3-特殊会话监听器"><a href="#5-3-特殊会话监听器" class="headerlink" title="5.3 特殊会话监听器"></a>5.3 特殊会话监听器</h3><h4 id="5-3-1-HttpSessionActivationListener"><a href="#5-3-1-HttpSessionActivationListener" class="headerlink" title="5.3.1 HttpSessionActivationListener"></a>5.3.1 HttpSessionActivationListener</h4><p>HttpSessionActivationListener监听器用于监听Session中对象的活化和钝化。</p>
 <p>概念：</p>
 <ul>
-<li>钝化（Passivate）：将会话对象从内存序列化到磁盘。</li>
-<li>活化（Activate）：将会话对象从磁盘反序列化到内存。</li>
+<li><code>钝化（Passivate）</code>：将会话对象从内存序列化到磁盘。</li>
+<li><code>活化（Activate）</code>：将会话对象从磁盘反序列化到内存。</li>
 </ul>
 <p>监听方法，不需要注册，但是需要被监听的Bean实现序列化接口和监听接口：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span>, HttpSessionActivationListener &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Student&#123;&quot;</span> + <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&quot;&#x27;&quot;</span> + <span class="string">&quot;&#125;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionWillPassivate</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Student对象即将钝化&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionDidActivate</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Student对象已经活化&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2636,7 +2639,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3371,7 +3374,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251203/143930/","name":"Listener"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Listener","description":"摘要：本文学习了Listener的原理和使用方法。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251203/143930/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251203/143930/","wordCount":25,"datePublished":"2025-12-03T06:39:30.000Z","dateModified":"2026-04-16T03:38:47.267Z","articleSection":"后端","keywords":"JavaWeb,Listener","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251203/143930/","name":"Listener"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Listener","description":"摘要：本文学习了Listener的原理和使用方法。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251203/143930/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251203/143930/","wordCount":25,"datePublished":"2025-12-03T06:39:30.000Z","dateModified":"2026-06-18T05:51:40.839Z","articleSection":"后端","keywords":"JavaWeb,Listener","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

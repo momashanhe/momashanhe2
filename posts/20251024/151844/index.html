@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-10-24T07:18:44.000Z">
-<meta property="article:modified_time" content="2026-04-16T02:47:57.077Z">
+<meta property="article:modified_time" content="2026-06-18T07:57:50.946Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="XML">
 <meta property="article:tag" content="DOM">
@@ -2022,7 +2022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2541,8 +2541,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>简单来说，XML解析就是读取内容并提取信息的过程。</p>
 <h2 id="2-类型"><a href="#2-类型" class="headerlink" title="2 类型"></a>2 类型</h2><p>XML解析主要分为两大主流方式：</p>
 <ul>
-<li>DOM（Document Object Model，文档对象模型）：将整个XML文档加载到内存中，构建成一棵完整的文档对象树，程序可以通过操作这棵树来访问和修改XML中的任何节点。</li>
-<li>SAX（Simple API for XML，XML简单接口）：基于事件驱动的解析方式，逐行读取XML文档，当遇到标签开始、标签结束、文本内容等事件时触发相应的回调函数。</li>
+<li><code>DOM（Document Object Model，文档对象模型）</code>：将整个XML文档加载到内存中，构建成一棵完整的文档对象树，程序可以通过操作这棵树来访问和修改XML中的任何节点。</li>
+<li><code>SAX（Simple API for XML，XML简单接口）</code>：基于事件驱动的解析方式，逐行读取XML文档，当遇到标签开始、标签结束、文本内容等事件时触发相应的回调函数。</li>
 </ul>
 <p>比较：</p>
 <table>
@@ -2590,12 +2590,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>除上述两种外，还有JDOM、DOM4J等基于DOM或SAX封装的解析框架，它们提供了更简洁的API，简化了解析代码的编写。</p>
 <p>常见的解析框架：</p>
 <ul>
-<li>DOM：XML解析标准，Java原生支持，将XML加载为树形DOM结构，支持读写和修改节点，但内存占用较高，适用于小型XML文件及需频繁修改XML结构的场景。</li>
-<li>SAX：XML解析标准，Java原生支持，基于事件驱动的推模式逐行解析文档，内存占用低，但仅支持读取，适用于大型XML文件及内存有限的场景。</li>
-<li>StAX：XML解析标准，Java在JDK1.6及以上版本原生支持，基于流模式和拉模式，支持双向解析，支持读写，适用于大型XML文件及需灵活控制解析流程的场景。</li>
-<li>JDom：属于DOM标准，需导入jdom.jar，内存占用低于原生DOM，适合中小型项目及追求开发效率的XML解析场景。</li>
-<li>Dom4J：属于DOM标准，需导入dom4j.jar，支持XPath，兼容SAX，是Java领域主流的XML解析框架，适用于企业级项目及复杂XML处理。</li>
-<li>PULL：属于SAX标准，Android原生支持，主动拉取式事件驱动，比SAX更灵活，适用于Android开发及需灵活控制解析流程的场景。</li>
+<li><code>DOM</code>：XML解析标准，Java原生支持，将XML加载为树形DOM结构，支持读写和修改节点，但内存占用较高，适用于小型XML文件及需频繁修改XML结构的场景。</li>
+<li><code>SAX</code>：XML解析标准，Java原生支持，基于事件驱动的推模式逐行解析文档，内存占用低，但仅支持读取，适用于大型XML文件及内存有限的场景。</li>
+<li><code>StAX</code>：XML解析标准，Java在JDK1.6及以上版本原生支持，基于流模式和拉模式，支持双向解析，支持读写，适用于大型XML文件及需灵活控制解析流程的场景。</li>
+<li><code>JDom</code>：属于DOM标准，需导入jdom.jar，内存占用低于原生DOM，适合中小型项目及追求开发效率的XML解析场景。</li>
+<li><code>Dom4J</code>：属于DOM标准，需导入dom4j.jar，支持XPath，兼容SAX，是Java领域主流的XML解析框架，适用于企业级项目及复杂XML处理。</li>
+<li><code>PULL</code>：属于SAX标准，Android原生支持，主动拉取式事件驱动，比SAX更灵活，适用于Android开发及需灵活控制解析流程的场景。</li>
 </ul>
 <h2 id="3-概念"><a href="#3-概念" class="headerlink" title="3 概念"></a>3 概念</h2><h3 id="3-1-JAXP"><a href="#3-1-JAXP" class="headerlink" title="3.1 JAXP"></a>3.1 JAXP</h3><p>JAXP（Java API for XML Processing）是Java官方提供的一套XML处理标准API，是Java平台对XML操作的统一接口封装。</p>
 <p>JAXP整合了DOM和SAX解析方式，后期纳入了StAX解析方式。</p>
@@ -2631,7 +2631,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3378,7 +3378,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251024/151844/","name":"简介"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"简介","description":"摘要：本文介绍了XML解析的含义，以及常见的解析方式优缺点。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251024/151844/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251024/151844/","wordCount":30,"datePublished":"2025-10-24T07:18:44.000Z","dateModified":"2026-04-16T02:47:57.077Z","articleSection":"前端","keywords":"XML,DOM,SAX","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251024/151844/","name":"简介"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"简介","description":"摘要：本文介绍了XML解析的含义，以及常见的解析方式优缺点。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251024/151844/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251024/151844/","wordCount":30,"datePublished":"2025-10-24T07:18:44.000Z","dateModified":"2026-06-18T07:57:50.946Z","articleSection":"前端","keywords":"XML,DOM,SAX","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

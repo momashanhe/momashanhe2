@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-10T06:15:20.000Z">
-<meta property="article:modified_time" content="2026-04-16T02:49:24.252Z">
+<meta property="article:modified_time" content="2026-06-18T05:17:11.535Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="GitHub">
@@ -2022,7 +2022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2544,16 +2544,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>创建一个用于存储静态资源的仓库。</p>
 <p>点击右上角个人头像，在下拉列表中点击<code>Settings</code>进入设置界面。</p>
 <p>点击左侧菜单栏底部的<code>Developer Settings</code>进入开发者界面。</p>
-<p>点击<code>Personal access tokens</code>选项，然后点击<code>Tokens (classic)</code>菜单，并在右侧点击<code>Generate new token</code>下拉列表中的<code>Generate new token (classic)</code>按钮：<br><img src="/@image/B02001002/007-20240314132103.jpg" alt="20240314132103-创建Token"></p>
-<p>在<code>Note</code>中输入对Token使用的描述，把<code>Expiration</code>设置为<code>No expiration</code>永不过期，然后给下面的<code>Select scopes</code>勾选<code>repo</code>选框：<br><img src="/@image/B02001002/007-20240314135621.jpg" alt="20240314135621-勾选作用域"></p>
+<p>点击<code>Personal access tokens</code>选项，然后点击<code>Tokens (classic)</code>菜单，并在右侧点击<code>Generate new token</code>下拉列表中的<code>Generate new token (classic)</code>按钮：</p>
+<p><img src="/@image/B02001002/007-20240314132103.jpg" alt="20240314132103-创建Token"></p>
+<p>在<code>Note</code>中输入对Token使用的描述，把<code>Expiration</code>设置为<code>No expiration</code>永不过期，然后给下面的<code>Select scopes</code>勾选<code>repo</code>选框：</p>
+<p><img src="/@image/B02001002/007-20240314135621.jpg" alt="20240314135621-勾选作用域"></p>
 <p>最后点击底部的<code>Generate token</code>创建Token，并将页面上展示的Token进行复制保存，这个Token只会出现这一次，忘记只能重新生成。</p>
 <p>将静态资源文件上传到仓库里。</p>
 <h2 id="3-NPM"><a href="#3-NPM" class="headerlink" title="3 NPM"></a>3 NPM</h2><h3 id="3-1-注册"><a href="#3-1-注册" class="headerlink" title="3.1 注册"></a>3.1 注册</h3><p>NPM官网：<a target="_blank" rel="noopener" href="https://www.npmjs.com/">https://www.npmjs.com/</a></p>
-<p>注册NPM账号：<br><img src="/@image/B02001002/007-20240314140338.jpg" alt="20240314140338-注册NPM"></p>
+<p>注册NPM账号：</p>
+<p><img src="/@image/B02001002/007-20240314140338.jpg" alt="20240314140338-注册NPM"></p>
 <p>新账号注册后需要配置2FA认证：</p>
 <figure class="highlight txt"><figcaption><span>txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You don’t have two-factor authentication (2FA) enabled on your account. Configure 2FA or visit our docs to learn more.</span><br></pre></td></tr></table></figure>
 
-<p>点击2FA认证链接，选择使用<code>Authenticator app</code>的方式认证：<br><img src="/@image/B02001002/007-20240314141025.jpg" alt="20240314141025-2FA认证"></p>
+<p>点击2FA认证链接，选择使用<code>Authenticator app</code>的方式认证：</p>
+<p><img src="/@image/B02001002/007-20240314141025.jpg" alt="20240314141025-2FA认证"></p>
 <p>在手机上下载<code>Authenticator</code>并安装，打开后选择<code>扫描QR码</code>然后扫描网页上的二维码，将生成的一次性密码代码输入底部的密码框中。</p>
 <p>保存好生成的恢复代码，这里只出现一次，忘记需要重新生成。</p>
 <h3 id="3-2-本地仓库"><a href="#3-2-本地仓库" class="headerlink" title="3.2 本地仓库"></a>3.2 本地仓库</h3><p>进入静态资源的本地仓库，执行以下命名切换回原生源：</p>
@@ -2572,26 +2576,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>执行初始化命令，将仓库打包，按照指示进行配置：</p>
 <figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
 
-<p>根据实际情况填写，红框内的使用默认就好：<br><img src="/@image/B02001002/007-20240314141236.jpg" alt="20240314141236-包初始化"></p>
+<p>根据实际情况填写，红框内的使用默认就好：</p>
+<p><img src="/@image/B02001002/007-20240314141236.jpg" alt="20240314141236-包初始化"></p>
 <p>注意名称不要使用带有年月日的数字，不然会被认为垃圾名称发布失败，尽量是用<code>-</code>短横线分隔。</p>
 <p>最后输入<code>yes</code>即可。</p>
-<p>打包以后就可以发布了，执行命令：</p>
+<p>打包以后就可以发布了，执行命令并输入<code>Authenticator</code>里的密码：</p>
 <figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish --otp=123456</span><br></pre></td></tr></table></figure>
 
-<p>命令说明：</p>
-<ul>
-<li>–otp：需要输入Authenticator生成的一次性密码。</li>
-</ul>
-<p>发布成功提示：<br><img src="/@image/B02001002/007-20240314141308.jpg" alt="20240314141308-发布成功"></p>
+<p>发布成功提示：</p>
+<p><img src="/@image/B02001002/007-20240314141308.jpg" alt="20240314141308-发布成功"></p>
 <p>发布成功后，可以寻找NPM的节点使用，比如可以按照下面的方式使用：</p>
 <figure class="highlight plaintext"><figcaption><span>url</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://unpkg.com/:package@:version/:file</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-3-升级仓库"><a href="#3-3-升级仓库" class="headerlink" title="3.3 升级仓库"></a>3.3 升级仓库</h3><p>以后使用静态资源的时候，先在本地试用，然后将静态资源同步到GitHub上，再发布NPM升级包。</p>
 <p>使用命令增加NPM版本，版本由3位组成，从左到右分别是：</p>
 <ul>
-<li>major：主要版本，左边首位，不会向后兼容的重大改动。</li>
-<li>minor：次要版本，中间位，向后兼容的新增功能。</li>
-<li>patch：补丁版本，右边首位，向后兼容的缺陷修复。</li>
+<li><code>major</code>：主要版本，左边首位，不会向后兼容的重大改动。</li>
+<li><code>minor</code>：次要版本，中间位，向后兼容的新增功能。</li>
+<li><code>patch</code>：补丁版本，右边首位，向后兼容的缺陷修复。</li>
 </ul>
 <p>如果需要更新补丁版本，执行如下命令即可，会自动给版本的<code>patch</code>部分加一：</p>
 <figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm version patch</span><br></pre></td></tr></table></figure>
@@ -2650,7 +2652,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3445,7 +3447,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"建站"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240310/141520/","name":"使用GitHub图床存放博客静态资源"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用GitHub图床存放博客静态资源","description":"摘要：本文介绍了如何使用GitHub图床存放静态资源，并对静态资源的获取进行加速。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240310/141520/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240310/141520/","wordCount":41,"datePublished":"2024-03-10T06:15:20.000Z","dateModified":"2026-04-16T02:49:24.252Z","articleSection":"建站","keywords":"Hexo,GitHub,NPM","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"建站"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240310/141520/","name":"使用GitHub图床存放博客静态资源"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用GitHub图床存放博客静态资源","description":"摘要：本文介绍了如何使用GitHub图床存放静态资源，并对静态资源的获取进行加速。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240310/141520/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240310/141520/","wordCount":41,"datePublished":"2024-03-10T06:15:20.000Z","dateModified":"2026-06-18T05:17:11.535Z","articleSection":"建站","keywords":"Hexo,GitHub,NPM","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

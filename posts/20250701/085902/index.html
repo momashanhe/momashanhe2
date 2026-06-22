@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-07-01T00:59:02.000Z">
-<meta property="article:modified_time" content="2026-04-16T02:46:34.821Z">
+<meta property="article:modified_time" content="2026-06-18T05:53:12.983Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="JDBC">
@@ -2022,7 +2022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2548,22 +2548,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>为了方便开发，Sun公司提供了JDBC接口，让数据库厂商实现JDBC接口，程序员通过JDBC接口就可以操作不同的数据库，不需要关注底层数据库驱动的安装，从而大大简化和加快了开发过程。</p>
 <h3 id="2-2-架构"><a href="#2-2-架构" class="headerlink" title="2.2 架构"></a>2.2 架构</h3><p>JDBC接口包括两个层次：</p>
 <ul>
-<li>JDBC API：即面向应用的API，这是一个抽象的接口，用于给程序员使用，提供了程序到JDBC管理器的连接。</li>
-<li>JDBC Driver API：即面向数据库驱动的API，数据库厂商需要实现这个接口，提供了JDBC管理器到数据库驱动程序的连接。</li>
+<li><code>JDBC API</code>：即面向应用的API，这是一个抽象的接口，用于给程序员使用，提供了程序到JDBC管理器的连接。</li>
+<li><code>JDBC Driver API</code>：即面向数据库驱动的API，数据库厂商需要实现这个接口，提供了JDBC管理器到数据库驱动程序的连接。</li>
 </ul>
-<p>架构图：<br><img src="/@image/B04001005/001-20250701095527.jpg" alt="20250701095527-架构"></p>
+<p>架构图：</p>
+<p><img src="/@image/B04001005/001-20250701095527.jpg" alt="20250701095527-架构"></p>
 <h3 id="2-3-规范"><a href="#2-3-规范" class="headerlink" title="2.3 规范"></a>2.3 规范</h3><p>JDBC相关的接口在<code>java.sql</code>包下。</p>
 <p>主要有四个核心对象：</p>
 <ul>
-<li>DriverManager类：用于加载驱动，创建连接对象。</li>
-<li>Connection接口：表示与数据库创建的连接。</li>
-<li>Statement接口：执行数据库SQL语句，并返回相应结果的对象。</li>
-<li>ResultSet接口：结果集或一张虚拟表，用于存储表数据的对象。</li>
+<li><code>DriverManager</code>：用于加载驱动，创建连接对象。</li>
+<li><code>Connection</code>：表示与数据库创建的连接。</li>
+<li><code>Statement</code>：执行数据库SQL语句，并返回相应结果的对象。</li>
+<li><code>ResultSet</code>：结果集或一张虚拟表，用于存储表数据的对象。</li>
 </ul>
 <p>其中，Statement接口还有两个子接口：</p>
 <ul>
-<li>PreparedStatement接口：预编译对象，是Statement接口的子接口，用于解决SQL注入问题。</li>
-<li>CallableStatement接口：支持带参数的SQL操作，支持调用存储过程，是PreparedStatement接口的子接口。</li>
+<li><code>PreparedStatement</code>：预编译对象，是Statement接口的子接口，用于解决SQL注入问题。</li>
+<li><code>CallableStatement</code>：支持带参数的SQL操作，支持调用存储过程，是PreparedStatement接口的子接口。</li>
 </ul>
 <h2 id="3-建立连接"><a href="#3-建立连接" class="headerlink" title="3 建立连接"></a>3 建立连接</h2><p>下面的说明以连接MySQL数据库为例。</p>
 <h3 id="3-1-准备工作"><a href="#3-1-准备工作" class="headerlink" title="3.1 准备工作"></a>3.1 准备工作</h3><p>安装MySQL数据库，保证配置文件包含如下配置：</p>
@@ -2575,7 +2576,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>创建数据表并插入数据，字符集和配置文件保持一致：</p>
 <figure class="highlight sql"><figcaption><span>sql</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `<span class="keyword">user</span>`  (</span><br><span class="line">  `id` <span class="type">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT COMMENT <span class="string">&#x27;id&#x27;</span>,</span><br><span class="line">  `username` <span class="type">varchar</span>(<span class="number">255</span>) COMMENT <span class="string">&#x27;用户名称&#x27;</span>,</span><br><span class="line">  `password` <span class="type">varchar</span>(<span class="number">255</span>) COMMENT <span class="string">&#x27;用户密码&#x27;</span>,</span><br><span class="line">  `create_time` datetime COMMENT <span class="string">&#x27;创建时间&#x27;</span>,</span><br><span class="line">  `update_time` datetime COMMENT <span class="string">&#x27;修改时间&#x27;</span>,</span><br><span class="line">  <span class="keyword">PRIMARY</span> KEY (`id`) <span class="keyword">USING</span> BTREE</span><br><span class="line">) ENGINE <span class="operator">=</span> InnoDB COMMENT <span class="operator">=</span> <span class="string">&#x27;用户表&#x27;</span>;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `<span class="keyword">user</span>` <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="string">&#x27;张三&#x27;</span>, <span class="string">&#x27;123456&#x27;</span>, <span class="string">&#x27;2020-12-17 16:35:23&#x27;</span>, <span class="string">&#x27;2020-12-17 16:35:23&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
-<p>使用IDEA创建Java项目，然后在<code>File | Settings | Editor | File Encodings</code>里修改编码：<br><img src="/@image/B04001005/001-20250702100301.jpg" alt="20250702100301-架构"></p>
+<p>使用IDEA创建Java项目，然后在<code>File | Settings | Editor | File Encodings</code>里修改编码：</p>
+<p><img src="/@image/B04001005/001-20250702100301.jpg" alt="20250702100301-架构"></p>
 <p>在Java项目中创建src目录，在src目录创建JDBCTest类，在类中创建<code>main()</code>方法。</p>
 <h3 id="3-2-导入Jar包"><a href="#3-2-导入Jar包" class="headerlink" title="3.2 导入Jar包"></a>3.2 导入Jar包</h3><p>下载用于连接数据库的驱动Jar包，下载地址：</p>
 <ul>
@@ -2585,7 +2587,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>本地安装的数据库是5.7.40版本，对应下载5.1.49版本的驱动Jar包即可，将下载后的文件解压，目录中的<code>mysql-connector-java-5.1.49.jar</code>文件就是所需的驱动Jar包。</p>
 <p>创建lib目录，需要先将下载的<code>mysql-connector-java-5.1.49.jar</code>文件复制到lib目录，然后才能在lib目录右键找到<code>Add as Library...</code>选项，将lib目录设置为<code>Project Library</code>并保存。</p>
 <h3 id="3-3-编写代码"><a href="#3-3-编写代码" class="headerlink" title="3.3 编写代码"></a>3.3 编写代码</h3><p>示例：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">// 加载驱动</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 建立连接</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql://127.0.0.1:3306/test?useSSL=false&amp;serverTimezone=GMT%2B8&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">user</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;123456&quot;</span>;</span><br><span class="line">    <span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        conn = DriverManager.getConnection(url, user, password);</span><br><span class="line">        <span class="comment">// 执行增删改查操作</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 释放连接</span></span><br><span class="line">            conn.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">// 加载驱动</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 建立连接</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql://localhost:3306/test?useSSL=false&amp;serverTimezone=GMT%2B8&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">user</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;123456&quot;</span>;</span><br><span class="line">    <span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        conn = DriverManager.getConnection(url, user, password);</span><br><span class="line">        <span class="comment">// 执行增删改查操作</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 释放连接</span></span><br><span class="line">            conn.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>步骤：</p>
 <ol>
@@ -2595,7 +2597,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>释放连接，主动关闭连接资源，避免内存泄漏。</li>
 </ol>
 <h3 id="3-4-配置文件"><a href="#3-4-配置文件" class="headerlink" title="3.4 配置文件"></a>3.4 配置文件</h3><p>如果不想将配置文件写在代码中，可以在src目录下创建<code>jdbc.properties</code>配置文件：</p>
-<figure class="highlight properties"><figcaption><span>jdbc.properties</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">driverClass</span>=<span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="attr">url</span>=<span class="string">jdbc:mysql://127.0.0.1:3306/test?useSSL=false&amp;serverTimezone=GMT%2B8</span></span><br><span class="line"><span class="attr">username</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">password</span>=<span class="string">123456</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight properties"><figcaption><span>jdbc.properties</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">driverClass</span>=<span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="attr">url</span>=<span class="string">jdbc:mysql://localhost:3306/test?useSSL=false&amp;serverTimezone=GMT%2B8</span></span><br><span class="line"><span class="attr">username</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">password</span>=<span class="string">123456</span></span><br></pre></td></tr></table></figure>
 
 <p>通过配置文件建立连接：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">// 读取配置文件</span></span><br><span class="line">    <span class="type">Properties</span> <span class="variable">pros</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        pros.load(JDBCTest.class.getClassLoader().getResourceAsStream(<span class="string">&quot;jdbc.properties&quot;</span>));</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 加载驱动</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Class.forName(pros.getProperty(<span class="string">&quot;driverClass&quot;</span>));</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 建立连接</span></span><br><span class="line">    <span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> pros.getProperty(<span class="string">&quot;url&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">user</span> <span class="operator">=</span> pros.getProperty(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> pros.getProperty(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        conn = DriverManager.getConnection(url, user, password);</span><br><span class="line">        <span class="comment">// 执行增删改查操作</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 释放连接</span></span><br><span class="line">            conn.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2603,23 +2605,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="4-核心接口"><a href="#4-核心接口" class="headerlink" title="4 核心接口"></a>4 核心接口</h2><h3 id="4-1-加载驱动"><a href="#4-1-加载驱动" class="headerlink" title="4.1 加载驱动"></a>4.1 加载驱动</h3><p>加载驱动程序的目的是为了注册驱动程序，使得JDBC能够识别并与特定的数据库进行交互。</p>
 <p>在加载驱动时，不同数据库对应不同驱动名称：</p>
 <ul>
-<li>MySQL驱动：com.mysql.jdbc.Driver</li>
-<li>Oracle驱动：oracle.jdbc.driver.OracleDriver</li>
-<li>SQLServer驱动：com.microsoft.sqlserver.jdbc.SQLServerDriver</li>
-<li>PostgreSQL驱动：org.postgresql.Driver</li>
-<li>DB2驱动：com.ibm.db2.jdbc.net.DB2Driver</li>
-<li>Sybase驱动：com.sybase.jdbc.SybDriver</li>
+<li><code>MySQL驱动</code>：com.mysql.jdbc.Driver</li>
+<li><code>Oracle驱动</code>：oracle.jdbc.driver.OracleDriver</li>
+<li><code>SQLServer驱动</code>：com.microsoft.sqlserver.jdbc.SQLServerDriver</li>
+<li><code>PostgreSQL驱动</code>：org.postgresql.Driver</li>
+<li><code>DB2驱动</code>：com.ibm.db2.jdbc.net.DB2Driver</li>
+<li><code>Sybase驱动</code>：com.sybase.jdbc.SybDriver</li>
 </ul>
 <p>从JDK1.6开始，不再需要显式地调用加载驱动，只要在类路径中集成了数据库对应的Jar文件，程序会自动在初始化时注册驱动程序。</p>
 <h3 id="4-2-建立连接"><a href="#4-2-建立连接" class="headerlink" title="4.2 建立连接"></a>4.2 建立连接</h3><p>Connection接口是JDBC的重要接口，用于建立与数据库的通信通道。</p>
 <p>在建立连接时，不同的数据库对应不同URL协议：</p>
 <ul>
-<li>MySQL格式：jdbc:mysql:&#x2F;&#x2F;地址或主机名:端口号&#x2F;数据库名</li>
-<li>Oracle格式：jdbc:oracle:thin:@地址或主机名:端口号:数据库名</li>
-<li>SQLServer格式：jdbc:sqlserver:&#x2F;&#x2F;地址或主机名:端口号;databaseName&#x3D;数据库名</li>
-<li>PostgreSQL格式：jdbc:postgresql:&#x2F;&#x2F;地址或主机名:端口号&#x2F;数据库名</li>
-<li>DB2格式：jdbc:db2:地址或主机名:端口号&#x2F;数据库名</li>
-<li>Sybase格式：jdbc:sybase:Tds:地址或主机名:端口号&#x2F;数据库名</li>
+<li><code>MySQL格式</code>：jdbc:mysql:&#x2F;&#x2F;地址或主机名:端口号&#x2F;数据库名</li>
+<li><code>Oracle格式</code>：jdbc:oracle:thin:@地址或主机名:端口号:数据库名</li>
+<li><code>SQLServer格式</code>：jdbc:sqlserver:&#x2F;&#x2F;地址或主机名:端口号;databaseName&#x3D;数据库名</li>
+<li><code>PostgreSQL格式</code>：jdbc:postgresql:&#x2F;&#x2F;地址或主机名:端口号&#x2F;数据库名</li>
+<li><code>DB2格式</code>：jdbc:db2:地址或主机名:端口号&#x2F;数据库名</li>
+<li><code>Sybase格式</code>：jdbc:sybase:Tds:地址或主机名:端口号&#x2F;数据库名</li>
 </ul>
 <p>连接MySQL数据库：</p>
 <ul>
@@ -2635,8 +2637,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="4-3-执行SQL语句"><a href="#4-3-执行SQL语句" class="headerlink" title="4.3 执行SQL语句"></a>4.3 执行SQL语句</h3><h4 id="4-3-1-说明"><a href="#4-3-1-说明" class="headerlink" title="4.3.1 说明"></a>4.3.1 说明</h4><p>Statement接口用于执行SQL语句并获取执行结果。</p>
 <p>获取的结果可以是一个或多个：</p>
 <ul>
-<li>查询：返回的是ResultSet结果集。</li>
-<li>增删改：返回的是受影响的行数。</li>
+<li><code>查询</code>：返回的是ResultSet结果集。</li>
+<li><code>增删改</code>：返回的是受影响的行数。</li>
 </ul>
 <p>使用后需要手动关闭。</p>
 <h4 id="4-3-2-增删改查"><a href="#4-3-2-增删改查" class="headerlink" title="4.3.2 增删改查"></a>4.3.2 增删改查</h4><p>执行增删改查示例：</p>
@@ -2652,9 +2654,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h3 id="4-4-执行预编译SQL语句"><a href="#4-4-执行预编译SQL语句" class="headerlink" title="4.4 执行预编译SQL语句"></a>4.4 执行预编译SQL语句</h3><h4 id="4-4-1-说明"><a href="#4-4-1-说明" class="headerlink" title="4.4.1 说明"></a>4.4.1 说明</h4><p>PreparedStatement是Statement接口的子接口，用于执行预编译的SQL查询，作用如下：</p>
 <ul>
-<li>预编译SQL语句：在创建PreparedStatement时，会根据模板预编译SQL语句，后续只能填充参数，不能拼接。</li>
-<li>防止SQL注入：在使用PreparedStatement时，会通过<code>?</code>占位符将传入的参数使用单引号包裹起来，有效防止SQL注入问题。</li>
-<li>性能提升：预编译SQL语句在多次执行的情况下可以复用，不必每次重新编译和解析。</li>
+<li><code>预编译SQL语句</code>：在创建PreparedStatement时，会根据模板预编译SQL语句，后续只能填充参数，不能拼接。</li>
+<li><code>防止SQL注入</code>：在使用PreparedStatement时，会通过<code>?</code>占位符将传入的参数使用单引号包裹起来，有效防止SQL注入问题。</li>
+<li><code>性能提升</code>：预编译SQL语句在多次执行的情况下可以复用，不必每次重新编译和解析。</li>
 </ul>
 <p>使用后需要手动关闭。</p>
 <h4 id="4-4-2-增删改查"><a href="#4-4-2-增删改查" class="headerlink" title="4.4.2 增删改查"></a>4.4.2 增删改查</h4><p>使用参数新增示例：</p>
@@ -2680,16 +2682,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>使用后需要手动关闭。</p>
 <h2 id="5-使用事务"><a href="#5-使用事务" class="headerlink" title="5 使用事务"></a>5 使用事务</h2><h3 id="5-1-基础知识"><a href="#5-1-基础知识" class="headerlink" title="5.1 基础知识"></a>5.1 基础知识</h3><p>事务有四种特性：</p>
 <ul>
-<li>原子性（Atomicity）：指事务包含的所有操作要么全部成功提交，要么全部失败回滚。</li>
-<li>一致性（Consistency）：指事务必须使数据库的数据和资源从一个一致性状态变换到另一个一致性状态。</li>
-<li>隔离性（Isolation）：指当多个用户并发访问数据库并且操作同一张表时，数据库为每一个用户开启事务，不会被其他事务的操作干扰，多个并发事务之间相互隔离。</li>
-<li>持久性（Durability）：指一个事务一旦被提交了，对数据的改变就是永久性的，哪怕数据库遇到故障也不会丢失提交的改动。</li>
+<li><code>原子性（Atomicity）</code>：指事务包含的所有操作要么全部成功提交，要么全部失败回滚。</li>
+<li><code>一致性（Consistency）</code>：指事务必须使数据库的数据和资源从一个一致性状态变换到另一个一致性状态。</li>
+<li><code>隔离性（Isolation）</code>：指当多个用户并发访问数据库并且操作同一张表时，数据库为每一个用户开启事务，不会被其他事务的操作干扰，多个并发事务之间相互隔离。</li>
+<li><code>持久性（Durability）</code>：指一个事务一旦被提交了，对数据的改变就是永久性的，哪怕数据库遇到故障也不会丢失提交的改动。</li>
 </ul>
 <p>涉及事务的几个术语：</p>
 <ul>
-<li>保存点（Savepoint）：指在事务执行前或者事务执行后，数据在数据库里的存储情况，有时也称为状态。</li>
-<li>回退（Rollback）：指撤销事务的操作，事务期间执行的操作都将失效，事务恢复到上个状态。</li>
-<li>提交（Commit）：指提交事务的操作，事务期间执行的操作全部生效，事务进入新的状态。</li>
+<li><code>保存点（Savepoint）</code>：指在事务执行前或者事务执行后，数据在数据库里的存储情况，有时也称为状态。</li>
+<li><code>回退（Rollback）</code>：指撤销事务的操作，事务期间执行的操作都将失效，事务恢复到上个状态。</li>
+<li><code>提交（Commit）</code>：指提交事务的操作，事务期间执行的操作全部生效，事务进入新的状态。</li>
 </ul>
 <h3 id="5-2-操作事务"><a href="#5-2-操作事务" class="headerlink" title="5.2 操作事务"></a>5.2 操作事务</h3><p>常用方法：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询事务隔离级别</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">getTransactionIsolation</span><span class="params">()</span>;</span><br><span class="line"><span class="comment">// 设置事务隔离级别</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">setTransactionIsolation</span><span class="params">(<span class="type">int</span> level)</span>;</span><br><span class="line"><span class="comment">// 查询自动提交状态</span></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">getAutoCommit</span><span class="params">()</span>;</span><br><span class="line"><span class="comment">// 设置自动提交状态</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">setAutoCommit</span><span class="params">(<span class="type">boolean</span> autoCommit)</span>;</span><br><span class="line"><span class="comment">// 创建还原点</span></span><br><span class="line">Savepoint <span class="title function_">setSavepoint</span><span class="params">()</span>;</span><br><span class="line"><span class="comment">// 创建指定名称的还原点</span></span><br><span class="line">Savepoint <span class="title function_">setSavepoint</span><span class="params">(String name)</span>;</span><br><span class="line"><span class="comment">// 删除指定名称的还原点</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">releaseSavepoint</span><span class="params">(Savepoint savepoint)</span>;</span><br><span class="line"><span class="comment">// 提交</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">commit</span><span class="params">()</span>;</span><br><span class="line"><span class="comment">// 回滚</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">rollback</span><span class="params">()</span>;</span><br><span class="line"><span class="comment">// 回滚到指定名称的还原点</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">rollback</span><span class="params">(Savepoint savepoint)</span>;</span><br></pre></td></tr></table></figure>
@@ -2726,7 +2728,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3461,7 +3463,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250701/085902/","name":"连接数据库"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"连接数据库","description":"摘要：本文学习了如何使用JDBC连接数据库。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250701/085902/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250701/085902/","wordCount":22,"datePublished":"2025-07-01T00:59:02.000Z","dateModified":"2026-04-16T02:46:34.821Z","articleSection":"后端","keywords":"Java,JDBC,MySQL","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250701/085902/","name":"连接数据库"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"连接数据库","description":"摘要：本文学习了如何使用JDBC连接数据库。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250701/085902/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250701/085902/","wordCount":22,"datePublished":"2025-07-01T00:59:02.000Z","dateModified":"2026-06-18T05:53:12.983Z","articleSection":"后端","keywords":"Java,JDBC,MySQL","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

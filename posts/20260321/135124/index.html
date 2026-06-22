@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-03-21T05:51:24.000Z">
-<meta property="article:modified_time" content="2026-04-16T02:38:35.138Z">
+<meta property="article:modified_time" content="2026-06-18T09:47:23.031Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2545,26 +2545,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <h2 id="3-原理"><a href="#3-原理" class="headerlink" title="3 原理"></a>3 原理</h2><p>监控：</p>
 <ul>
-<li>定期检查：哨兵定期向主节点和从节点发送<code>PING</code>命令，检查它们的健康状态。</li>
-<li>主观下线：当哨兵在一定时间内没有收到主节点的回复时，会将主节点标记为主观下线（Subjectively Down，SDOWN）。</li>
-<li>客观下线：当标记主观下线的哨兵数量超过仲裁票数时，会将主节点标记为客观下线（Objectively Down，ODOWN）。</li>
-<li>故障转移：当主节点被标记为客观下线时，哨兵会启动故障转移，选举一个从节点作为新的主节点。</li>
+<li><code>定期检查</code>：哨兵定期向主节点和从节点发送<code>PING</code>命令，检查它们的健康状态。</li>
+<li><code>主观下线</code>：当哨兵在一定时间内没有收到主节点的回复时，会将主节点标记为主观下线（Subjectively Down，SDOWN）。</li>
+<li><code>客观下线</code>：当标记主观下线的哨兵数量超过仲裁票数时，会将主节点标记为客观下线（Objectively Down，ODOWN）。</li>
+<li><code>故障转移</code>：当主节点被标记为客观下线时，哨兵会启动故障转移，选举一个从节点作为新的主节点。</li>
 </ul>
 <p>故障转移：</p>
 <ul>
-<li>选举领导哨兵：多个哨兵通过投票选举领导哨兵，由领导哨兵负责故障转移。</li>
-<li>选择新主节点：领导哨兵会在所有从节点中选择新的主节点：<ul>
+<li><p><code>选举领导哨兵</code>：多个哨兵通过投票选举领导哨兵，由领导哨兵负责故障转移。</p>
+</li>
+<li><p><code>选择新主节点</code>：领导哨兵会在所有从节点中选择新的主节点：</p>
+<ul>
 <li>排除状态异常的从节点。</li>
 <li>按照从节点的优先级、复制偏移量、运行ID进行排序，选择排名最高的从节点作为新的主节点。</li>
 </ul>
 </li>
-<li>执行故障转移：领导哨兵会执行以下操作：<ul>
+<li><p><code>执行故障转移</code>：领导哨兵会执行以下操作：</p>
+<ul>
 <li>使用<code>REPLICAOF NO ONE</code>命令将被选中的从节点设置为新的主节点。</li>
 <li>使用<code>REPLICAOF 主节点IP地址 主节点端口</code>命令将其他从节点的主节点设置为新的主节点。</li>
 <li>更新内部配置，记录新的主节点信息。</li>
 </ul>
 </li>
-<li>通知应用：哨兵会通知应用程序主节点的变更。</li>
+<li><p><code>通知应用</code>：哨兵会通知应用程序主节点的变更。</p>
+</li>
 </ul>
 <h2 id="4-配置"><a href="#4-配置" class="headerlink" title="4 配置"></a>4 配置</h2><p>修改安装目录下的<code>sentinel.conf</code>配置文件。</p>
 <h3 id="4-1-安全模式"><a href="#4-1-安全模式" class="headerlink" title="4.1 安全模式"></a>4.1 安全模式</h3><p>默认配置，禁用安全模式：</p>
@@ -2644,7 +2648,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3439,7 +3443,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260321/135124/","name":"哨兵模式"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"哨兵模式","description":"摘要：本文介绍了Redis的哨兵模式。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260321/135124/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260321/135124/","wordCount":19,"datePublished":"2026-03-21T05:51:24.000Z","dateModified":"2026-04-16T02:38:35.138Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260321/135124/","name":"哨兵模式"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"哨兵模式","description":"摘要：本文介绍了Redis的哨兵模式。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260321/135124/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260321/135124/","wordCount":19,"datePublished":"2026-03-21T05:51:24.000Z","dateModified":"2026-06-18T09:47:23.031Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-10-17T08:14:09.000Z">
-<meta property="article:modified_time" content="2026-04-16T02:47:57.078Z">
+<meta property="article:modified_time" content="2026-06-18T08:14:10.028Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="XML">
 <meta property="article:tag" content="XPath">
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776322939097),
+    lastupdate: new Date(1782106458480),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2567,32 +2567,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h2 id="3-概念"><a href="#3-概念" class="headerlink" title="3 概念"></a>3 概念</h2><p>XPath的核心概念：</p>
 <ul>
-<li>节点（Node）：XML文档中的每个部分都可以看做节点</li>
-<li>表达式（Expression）：选择节点的路径表达式</li>
-<li>轴（Axis）：定义节点间的关系</li>
+<li><code>节点（Node）</code>：XML文档中的每个部分都可以看做节点</li>
+<li><code>表达式（Expression）</code>：选择节点的路径表达式</li>
+<li><code>轴（Axis）</code>：定义节点间的关系</li>
 </ul>
 <p>XPath将XML文档视为节点树，包含七种节点类型：</p>
 <ul>
-<li>根节点（Root Node）：节点树的起点，包含所有节点，无父节点，唯一的顶层节点。</li>
-<li>元素节点（Element Nodes）：节点数的核心节点，包含子元素。</li>
-<li>属性节点（Attribute Nodes）：元素的属性，包含属性名和属性值。</li>
-<li>文本节点（Text Nodes）：元素的内容，包含文本内容。</li>
-<li>命名空间节点 (Namespace Nodes)：XML文档中的命名空间声明。</li>
-<li>处理指令节点 (Processing Instruction Nodes)：XML文档中的处理指令。</li>
-<li>注释节点 (Comment Nodes)：XML文档中的注释。</li>
+<li><code>根节点（Root Node）</code>：节点树的起点，包含所有节点，无父节点，唯一的顶层节点。</li>
+<li><code>元素节点（Element Nodes）</code>：节点数的核心节点，包含子元素。</li>
+<li><code>属性节点（Attribute Nodes）</code>：元素的属性，包含属性名和属性值。</li>
+<li><code>文本节点（Text Nodes）</code>：元素的内容，包含文本内容。</li>
+<li><code>命名空间节点 (Namespace Nodes)</code>：XML文档中的命名空间声明。</li>
+<li><code>处理指令节点 (Processing Instruction Nodes)</code>：XML文档中的处理指令。</li>
+<li><code>注释节点 (Comment Nodes)</code>：XML文档中的注释。</li>
 </ul>
 <p>节点之间的关系：</p>
 <ul>
-<li>父节点（Parent）：每个元素和属性都有一个父节点</li>
-<li>子节点（Children）：元素节点可有零个、一个或多个子节点</li>
-<li>兄弟节点（Siblings）：拥有相同父节点的节点</li>
-<li>祖先节点（Ancestors）：当前节点的直接父节点和间接父节点</li>
-<li>后代节点（Descendants）：当前节点的直接子节点和间接子节点</li>
+<li><code>父节点（Parent）</code>：每个元素和属性都有一个父节点</li>
+<li><code>子节点（Children）</code>：元素节点可有零个、一个或多个子节点</li>
+<li><code>兄弟节点（Siblings）</code>：拥有相同父节点的节点</li>
+<li><code>祖先节点（Ancestors）</code>：当前节点的直接父节点和间接父节点</li>
+<li><code>后代节点（Descendants）</code>：当前节点的直接子节点和间接子节点</li>
 </ul>
 <h2 id="4-案例"><a href="#4-案例" class="headerlink" title="4 案例"></a>4 案例</h2><p>以一个简单的XML文档为例：</p>
 <figure class="highlight xml"><figcaption><span>school.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">school</span> <span class="attr">address</span>=<span class="string">&quot;北京市海淀区&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>阳光小学<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">teachers</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">teacher</span> <span class="attr">id</span>=<span class="string">&quot;teacher_1&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>李明<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">subject</span>&gt;</span>语文<span class="tag">&lt;/<span class="name">subject</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">teacher</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">teacher</span> <span class="attr">id</span>=<span class="string">&quot;teacher_2&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>赵强<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">subject</span>&gt;</span>数学<span class="tag">&lt;/<span class="name">subject</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">teacher</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">teachers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">students</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span> <span class="attr">id</span>=<span class="string">&quot;student_1&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>张婷<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">gender</span>&gt;</span>女<span class="tag">&lt;/<span class="name">gender</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">age</span>&gt;</span>13<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">hobbies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hobby</span>&gt;</span>画画<span class="tag">&lt;/<span class="name">hobby</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hobby</span>&gt;</span>弹琴<span class="tag">&lt;/<span class="name">hobby</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">hobbies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span> <span class="attr">id</span>=<span class="string">&quot;student_2&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>王浩<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">gender</span>&gt;</span>男<span class="tag">&lt;/<span class="name">gender</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">age</span>&gt;</span>14<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">hobbies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hobby</span>&gt;</span>跑步<span class="tag">&lt;/<span class="name">hobby</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hobby</span>&gt;</span>游泳<span class="tag">&lt;/<span class="name">hobby</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">hobbies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">students</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">school</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>测试网站：<br><a target="_blank" rel="noopener" href="https://magictool.ai/tool/xpath-tester/zh/">https://magictool.ai/tool/xpath-tester/zh/</a></p>
+<p>测试网站：<a target="_blank" rel="noopener" href="https://magictool.ai/tool/xpath-tester/zh/">https://magictool.ai/tool/xpath-tester/zh/</a></p>
 <h2 id="5-语法"><a href="#5-语法" class="headerlink" title="5 语法"></a>5 语法</h2><h3 id="5-1-表达式"><a href="#5-1-表达式" class="headerlink" title="5.1 表达式"></a>5.1 表达式</h3><p>XPath使用表达式来选取XML文档中的节点或节点集。</p>
 <p>语法：</p>
 <figure class="highlight xpath"><figcaption><span>xpath</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">轴名称::节点测试[谓语]</span><br></pre></td></tr></table></figure>
@@ -2644,9 +2644,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h5 id="5-2-1-5-运算符"><a href="#5-2-1-5-运算符" class="headerlink" title="5.2.1.5 运算符"></a>5.2.1.5 运算符</h5><p>运算符：</p>
 <ul>
-<li>数学运算符：支持数学加减乘除运算符</li>
-<li>比较运算符：支持比较运算符</li>
-<li>条件运算符：支持条件运算符</li>
+<li><code>数学运算符</code>：支持数学加减乘除运算符</li>
+<li><code>比较运算符</code>：支持比较运算符</li>
+<li><code>条件运算符</code>：支持条件运算符</li>
 </ul>
 <p>示例：</p>
 <ul>
@@ -2656,9 +2656,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h4 id="5-2-2-位置选择器"><a href="#5-2-2-位置选择器" class="headerlink" title="5.2.2 位置选择器"></a>5.2.2 位置选择器</h4><p>函数：</p>
 <ul>
-<li>last()：获取最后一个元素节点</li>
-<li>position()：获取节点位置，从1开始</li>
-<li>count()：计算节点数量</li>
+<li><code>last()</code>：获取最后一个元素节点</li>
+<li><code>position()</code>：获取节点位置，从1开始</li>
+<li><code>count()</code>：计算节点数量</li>
 </ul>
 <p>示例：</p>
 <ul>
@@ -2669,8 +2669,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h4 id="5-2-3-文本选择器"><a href="#5-2-3-文本选择器" class="headerlink" title="5.2.3 文本选择器"></a>5.2.3 文本选择器</h4><p>函数：</p>
 <ul>
-<li>text()：获取节点文本内容</li>
-<li>contains(字符串1, 字符串2)：检查字符串1是否包含字符串2，返回布尔值</li>
+<li><code>text()</code>：获取节点文本内容</li>
+<li><code>contains(字符串1, 字符串2)</code>：检查字符串1是否包含字符串2，返回布尔值</li>
 </ul>
 <p>示例：</p>
 <ul>
@@ -2723,7 +2723,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年4月16日</div>
+                <div class="license-meta-text">2026年6月18日</div>
               </div>
               
               
@@ -3446,7 +3446,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251017/161409/","name":"XPath"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"XPath","description":"摘要：本文学习了如何使用XPath在XML文档中定位和选择节点。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251017/161409/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251017/161409/","wordCount":32,"datePublished":"2025-10-17T08:14:09.000Z","dateModified":"2026-04-16T02:47:57.078Z","articleSection":"前端","keywords":"XML,XPath","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251017/161409/","name":"XPath"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"XPath","description":"摘要：本文学习了如何使用XPath在XML文档中定位和选择节点。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251017/161409/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251017/161409/","wordCount":32,"datePublished":"2025-10-17T08:14:09.000Z","dateModified":"2026-06-18T08:14:10.028Z","articleSection":"前端","keywords":"XML,XPath","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
