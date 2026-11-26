@@ -1,0 +1,15 @@
+* text=auto eol=lf
+
+# 图片文件
+*.svg           -text
+*.ico           -text
+*.jpg           -text
+*.png           -text
+*.webp          -text
+
+# 字体文件
+*.dfont         -text
+*.ttc           -text
+*.ttf           -text
+*.woff          -text
+*.woff2         -text
