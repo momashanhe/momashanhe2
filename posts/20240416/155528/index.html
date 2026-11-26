@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>CSS3新特性 - 墨码山河</title>
   <meta name="keywords" content="HTML,CSS,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了CSS3的一些新特性。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS3新特性">
 <meta property="og:url" content="https://momashanhe.com/posts/20240416/155528/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了CSS3的一些新特性。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-04-16T07:55:28.000Z">
-<meta property="article:modified_time" content="2026-06-22T02:04:37.155Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.698Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="HTML">
 <meta property="article:tag" content="CSS">
@@ -1855,7 +1855,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2471,7 +2471,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>42 分钟</p>
+      <p>43 分钟</p>
     </a>
   </div>
 
@@ -2486,7 +2486,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20240416/155528/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2499,20 +2499,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20240416/155528/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20240416/155528/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2526,7 +2512,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了CSS3的一些新特性。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2536,7 +2522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             </details>
 
 <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><h3 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1 概述"></a>1.1 概述</h3><p>CSS3是CSS2的升级版本，它在CSS2的基础上，新增了很多强大的新功能，从而解决一些实际面临的问题。</p>
-<p>CSS3在未来会按照模块化的方式去发展，官方说明：<a target="_blank" rel="noopener" href="https://www.w3.org/Style/CSS/current-work.html">说明文档</a></p>
+<p>CSS3在未来会按照模块化的方式去发展，官方说明：<a target="_blank" rel="noopener" href="https://www.w3.org/Style/CSS/current-work.html">https://www.w3.org/Style/CSS/current-work.html</a></p>
 <p>CSS3的新特性如下：</p>
 <ul>
 <li>新增了更加实用的选择器，例如伪类选择器和伪元素选择器等。</li>
@@ -2554,14 +2540,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>常见浏览器私有前缀：</p>
 <ul>
-<li><code>Chrome浏览器</code>：<code>-webkit-</code></li>
-<li><code>Safari浏览器</code>：<code>-webkit-</code></li>
-<li><code>Firefox浏览器</code>：<code>-moz-</code></li>
-<li><code>Edge浏览器</code>：<code>-webkit-</code></li>
-<li><code>Opera浏览器</code>：<code>-o-</code></li>
-<li><code>IE浏览器</code>：<code>-ms-</code></li>
+<li><strong>Chrome浏览器</strong>：<code>-webkit-</code></li>
+<li><strong>Safari浏览器</strong>：<code>-webkit-</code></li>
+<li><strong>Firefox浏览器</strong>：<code>-moz-</code></li>
+<li><strong>Edge浏览器</strong>：<code>-webkit-</code></li>
+<li><strong>Opera浏览器</strong>：<code>-o-</code></li>
+<li><strong>IE浏览器</strong>：<code>-ms-</code></li>
 </ul>
-<p>查询CSS3兼容性的网站：<a target="_blank" rel="noopener" href="https://caniuse.com/">caniuse</a></p>
+<p>查询CSS3兼容性的网站：<a target="_blank" rel="noopener" href="https://caniuse.com/">https://caniuse.com/</a></p>
 <p>注意：</p>
 <ul>
 <li>在编码时，不用过于关注浏览器私有前缀，因为主流浏览器都支持常用的CSS3新特性。</li>
@@ -2569,11 +2555,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h2 id="2-增强"><a href="#2-增强" class="headerlink" title="2 增强"></a>2 增强</h2><h3 id="2-1-新增长度单位"><a href="#2-1-新增长度单位" class="headerlink" title="2.1 新增长度单位"></a>2.1 新增长度单位</h3><p>新增长度单位：</p>
 <ul>
-<li><code>rem</code>：根元素字体大小的倍数，只与根元素字体大小有关，根元素就是<code>html</code>元素</li>
-<li><code>vw</code>：视口宽度的百分之多少，10vw就是视口宽度的10%</li>
-<li><code>vh</code>：视口高度的百分之多少，10vh就是视口高度的10%</li>
-<li><code>vmax</code>：视口宽高中大的那个的百分之多少</li>
-<li><code>vmin</code>：视口宽高中小的那个的百分之多少</li>
+<li><strong>rem</strong>：根元素字体大小的倍数，只与根元素字体大小有关，根元素就是<code>html</code>元素</li>
+<li><strong>vw</strong>：视口宽度的百分之多少，10vw就是视口宽度的10%</li>
+<li><strong>vh</strong>：视口高度的百分之多少，10vh就是视口高度的10%</li>
+<li><strong>vmax</strong>：视口宽高中大的那个的百分之多少</li>
+<li><strong>vmin</strong>：视口宽高中小的那个的百分之多少</li>
 </ul>
 <h3 id="2-2-新增颜色表示"><a href="#2-2-新增颜色表示" class="headerlink" title="2.2 新增颜色表示"></a>2.2 新增颜色表示</h3><p>CSS3新增了三种颜色设置方式，分别是RGBA、HSL、HSLA，参考：<a href="/posts/20240402/144927/#5-2-%E9%A2%9C%E8%89%B2">CSS2入门-5-2-颜色</a></p>
 <h3 id="2-3-新增选择器"><a href="#2-3-新增选择器" class="headerlink" title="2.3 新增选择器"></a>2.3 新增选择器</h3><p>CSS3新增的选择器有伪类选择器和伪元素选择器，参考：<a href="/posts/20240402/144927/#3-4-%E9%AB%98%E7%BA%A7%E9%80%89%E6%8B%A9%E5%99%A8">CSS2入门-3-4-高级选择器</a></p>
@@ -3088,7 +3074,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;定制字体&quot;</span>;</span><br><span class="line">  <span class="attribute">font-display</span>: swap;</span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&quot;webfont.eot&quot;</span>); <span class="comment">/* IE9 */</span></span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&quot;webfont.eot?#iefix&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;embedded-opentype&quot;</span>), <span class="comment">/* IE6-IE8 */</span></span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&quot;webfont.woff2&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;woff2&quot;</span>),</span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&quot;webfont.woff&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;woff&quot;</span>), <span class="comment">/* Chrome, Firefox */</span></span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&quot;webfont.ttf&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;truetype&quot;</span>), <span class="comment">/* Chrome, Firefox, Opera, Safari, Android*/</span></span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&quot;webfont.svg#webfont&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;svg&quot;</span>); <span class="comment">/* IOS 4.1- */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="2-8-2-定制字体"><a href="#2-8-2-定制字体" class="headerlink" title="2.8.2 定制字体"></a>2.8.2 定制字体</h4><p>中文的字体文件很大，使用完整的字体文件不现实，通常针对某几个文字进行单独定制。</p>
-<p>可使用阿里Web字体定制工具：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/webfont">阿里Web字体定制</a></p>
+<p>可使用阿里Web字体定制工具：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/webfont">https://www.iconfont.cn/webfont</a></p>
 <h4 id="2-8-3-字体图标"><a href="#2-8-3-字体图标" class="headerlink" title="2.8.3 字体图标"></a>2.8.3 字体图标</h4><p>好处：</p>
 <ul>
 <li>相比图片更加清晰，因为字体图标是矢量图，不会在放大后失真。</li>
@@ -3097,8 +3083,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>常用字体图标库：</p>
 <ul>
-<li><code>Font Awesome，优点是版权清晰，缺点是数量比较少，官网地址</code>：<a target="_blank" rel="noopener" href="https://fontawesome.com/">Font Awesome</a></li>
-<li>阿里图标，优点是数量多，种类多，缺点是版权不清晰，并且需要登录，官网地址：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/">阿里图标官网</a></li>
+<li>Font Awesome，优点是版权清晰，缺点是数量比较少，官网地址：<a target="_blank" rel="noopener" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
+<li>阿里图标，优点是数量多，种类多，缺点是版权不清晰，并且需要登录，官网地址：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/">https://www.iconfont.cn/</a></li>
 </ul>
 <p>使用图标库：</p>
 <div class="tabs" id="tab-tab-id-1"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1-1">Font Awesome</a></li><li class="tab"><a class="#tab-id-1-2">阿里图标</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1-1"><p>使用步骤：</p>
@@ -3115,13 +3101,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>使用方式：</p>
 <ul>
-<li><p><code>方式一</code>：在元素（通常是<code>i</code>元素）中使用<code>class</code>属性，通过样式和名称使用，样式支持简写：</p>
+<li><p><strong>方式一</strong>：在元素（通常是<code>i</code>元素）中使用<code>class</code>属性，通过样式和名称使用，样式支持简写：</p>
 <figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa-solid fa-car&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-car&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>方式二</code>：通过CSS样式选择器选中元素后，通过伪元素设置编码和字体使用，支持颜色和外边距等其他样式：</p>
+<li><p><strong>方式二</strong>：通过CSS样式选择器选中元素后，通过伪元素设置编码和字体使用，支持颜色和外边距等其他样式：</p>
 <figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;\f1b9&quot;</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;Font Awesome 5 Free&quot;</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">900</span>;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>方式三</code>：还可以通过实体的方式使用，不过不太常用：</p>
+<li><p><strong>方式三</strong>：还可以通过实体的方式使用，不过不太常用：</p>
 <figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fas&quot;</span>&gt;</span>&amp;#xf1b9<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>图标说明：</p>
@@ -3240,9 +3226,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>和相对定位的比较：</p>
 <ul>
-<li><code>位移与相对定位的相同</code>：都不脱离文档流，不会影响到其它元素。</li>
-<li><code>位移与相对定位的区别</code>：位移的百分比值参考的是其自身，相对定位的百分比值参考的是其父元素。</li>
-<li><code>浏览器处理的区别</code>：浏览器针对位移有优化，处理位移的效率比相对定位更高。</li>
+<li><strong>位移与相对定位的相同</strong>：都不脱离文档流，不会影响到其它元素。</li>
+<li><strong>位移与相对定位的区别</strong>：位移的百分比值参考的是其自身，相对定位的百分比值参考的是其父元素。</li>
+<li><strong>浏览器处理的区别</strong>：浏览器针对位移有优化，处理位移的效率比相对定位更高。</li>
 </ul>
 <p>位移配合定位，可实现子元素在父元素中同时水平居中和垂直居中：</p>
 <figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>,-<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3611,9 +3597,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>注意：</p>
 <ul>
-<li>父元素作为盒子，两个子元素分别表示前面和后面，开启定位让两个子元素在同一位置，后面元素在前面元素上层，并且不会随父元素旋转而改变。</li>
-<li><code>上层元素预先旋转</code>：上层元素在父元素旋转前显示正面，上层元素在父元素旋转后显示背面。所以先将上层元素进行旋转显示背面，这样在父元素旋转后就能显示正面。</li>
-<li><code>上层元素背面不可见</code>：将上层元素进行旋转，并且上层元素的背面不可见后，显示下层元素的正面，父元素旋转后，上层元素显示正面，挡住了下层元素，所以下层元素背面是否可见是不影响的。</li>
+<li><strong>父元素作为盒子</strong>：两个子元素分别表示前面和后面，开启定位让两个子元素在同一位置，后面元素在前面元素上层，并且不会随父元素旋转而改变。</li>
+<li><strong>上层元素预先旋转</strong>：上层元素在父元素旋转前显示正面，上层元素在父元素旋转后显示背面。所以先将上层元素进行旋转显示背面，这样在父元素旋转后就能显示正面。</li>
+<li><strong>上层元素背面不可见</strong>：将上层元素进行旋转，并且上层元素的背面不可见后，显示下层元素的正面，父元素旋转后，上层元素显示正面，挡住了下层元素，所以下层元素背面是否可见是不影响的。</li>
 </ul>
 <h2 id="4-过渡"><a href="#4-过渡" class="headerlink" title="4 过渡"></a>4 过渡</h2><p>过渡可以在不使用Flash动画，不使用JS的情况下，让元素从一种样式平滑过渡为另一种样式。</p>
 <p>常用属性：</p>
@@ -3698,7 +3684,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>贝塞尔曲线：</p>
 <ul>
 <li>贝塞尔曲线（Bezier Curve），又称贝兹曲线或贝济埃曲线，可以通过二维坐标系描述曲线。</li>
-<li>在线制作贝赛尔曲线：<a target="_blank" rel="noopener" href="https://cubic-bezier.com/">cubic-bezier</a></li>
+<li>可以在<a target="_blank" rel="noopener" href="https://cubic-bezier.com/">https://cubic-bezier.com</a>这个网址在线制作贝赛尔曲线。</li>
 </ul>
 <h2 id="5-动画"><a href="#5-动画" class="headerlink" title="5 动画"></a>5 动画</h2><h3 id="5-1-帧和关键帧"><a href="#5-1-帧和关键帧" class="headerlink" title="5.1 帧和关键帧"></a>5.1 帧和关键帧</h3><p>一段动画，就是一段时间内连续播放多个画面，每一张画面称为一帧。同样时间内，播放的帧数越多，画面看起来越流畅。</p>
 <p>关键帧指的是，在构成一段动画的若干帧中，起到决定性作用的2-3帧，可以理解为和前后有明显差别的帧。</p>
@@ -3706,10 +3692,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="5-2-基本使用"><a href="#5-2-基本使用" class="headerlink" title="5.2 基本使用"></a>5.2 基本使用</h3><h4 id="5-2-1-定义动画"><a href="#5-2-1-定义动画" class="headerlink" title="5.2.1 定义动画"></a>5.2.1 定义动画</h4><p>定义动画实际上指的是定义一组关键帧，使用<code>@keyframes</code>设置动画名，可以定义多个动画名，但动画名不可以重复。</p>
 <p>有两种方式：</p>
 <ul>
-<li><p>第一种，简单方式定义：</p>
+<li><p><strong>第一种，简单方式定义</strong>：</p>
 <figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 动画名 &#123;</span><br><span class="line">  <span class="selector-tag">from</span> &#123;</span><br><span class="line">    <span class="comment">/*property1:value1*/</span></span><br><span class="line">    <span class="comment">/*property2:value2*/</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="comment">/*property1:value1*/</span></span><br><span class="line">    <span class="comment">/*property2:value2*/</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>第二种，完整方式定义：</p>
+<li><p><strong>第二种，完整方式定义</strong>：</p>
 <figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 动画名 &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;</span><br><span class="line">    <span class="comment">/*property1:value1*/</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">20%</span> &#123;</span><br><span class="line">    <span class="comment">/*property1:value1*/</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">40%</span> &#123;</span><br><span class="line">    <span class="comment">/*property1:value1*/</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">60%</span> &#123;</span><br><span class="line">    <span class="comment">/*property1:value1*/</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">80%</span> &#123;</span><br><span class="line">    <span class="comment">/*property1:value1*/</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="comment">/*property1:value1*/</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="5-2-2-给元素应用动画"><a href="#5-2-2-给元素应用动画" class="headerlink" title="5.2.2 给元素应用动画"></a>5.2.2 给元素应用动画</h4><p>常用属性：</p>
@@ -3950,9 +3936,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>布局方式：</p>
 <div class="tabs" id="tab-tab-id-2"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-2-1">传统布局</a></li><li class="tab"><a class="#tab-id-2-2">弹性布局</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-2-1"><p>传统模型布局分三种模型，并且这三种模型紧密联系：</p>
 <ul>
-<li><code>流动模型（Flow）</code>：默认的网页布局模式，块级元素宽度总是100%，并且自上而下垂直分布，行内元素在包含元素内从左到右水平分布。</li>
-<li><code>浮动模型（Float）</code>：当元素设置了<code>float</code>属性，就会依照浮动的位置进行特定的定位。</li>
-<li><code>层模型（Layer）</code>：当元素设置了<code>position</code>属性，就会依照定位类型进行特定的定位。</li>
+<li><strong>流动模型（Flow）</strong>：默认的网页布局模式，块级元素宽度总是100%，并且自上而下垂直分布，行内元素在包含元素内从左到右水平分布。</li>
+<li><strong>浮动模型（Float）</strong>：当元素设置了<code>float</code>属性，就会依照浮动的位置进行特定的定位。</li>
+<li><strong>层模型（Layer）</strong>：当元素设置了<code>position</code>属性，就会依照定位类型进行特定的定位。</li>
 </ul>
 <p>因此，传统模型布局主要基于传统盒子模型、<code>display</code>属性、<code>float</code>属性、<code>position</code>属性。</p></div><div class="tab-pane" id="tab-id-2-2"><p>弹性布局可以为盒状模型提供最大的灵活性，目前在移动端应用比较广泛，因为传统布局不能很好的呈现在移动设备上。</p></div></div></div>
 
@@ -3960,8 +3946,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>无论原来是哪种元素（块、行内块、行内），一旦成为了弹性项目，全都会块状化，如果没有设置宽度和高度，默认由内容撑开。</p>
 <h3 id="7-3-主轴与侧轴"><a href="#7-3-主轴与侧轴" class="headerlink" title="7.3 主轴与侧轴"></a>7.3 主轴与侧轴</h3><p>概念：</p>
 <ul>
-<li><code>主轴</code>：项目沿主轴排列，默认方向是水平从左到右。</li>
-<li><code>侧轴</code>：与主轴垂直的就是侧轴，默认方向是垂直从上到下。</li>
+<li><strong>主轴</strong>：项目沿主轴排列，默认方向是水平从左到右。</li>
+<li><strong>侧轴</strong>：与主轴垂直的就是侧轴，默认方向是垂直从上到下。</li>
 </ul>
 <p>主轴换行相关属性：</p>
 <table>
@@ -4142,9 +4128,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>基准长度显示规则：</p>
 <ul>
-<li>默认情况：以内容作为宽度显示。</li>
-<li>如果设置项目宽度：以项目宽度显示。</li>
-<li>如果设置项目宽度，又设置基准长度：如果内容长度小于等于基准长度，以基准长度显示；如果内容长度大于基准长度，比较项目宽度和内容长度，以最小值显示。</li>
+<li><strong>默认情况</strong>：以内容作为宽度显示。</li>
+<li><strong>如果设置项目宽度</strong>：以项目宽度显示。</li>
+<li><strong>如果设置项目宽度，又设置基准长度</strong>：如果内容长度小于等于基准长度，以基准长度显示；如果内容长度大于基准长度，比较项目宽度和内容长度，以最小值显示。</li>
 </ul>
 <p>按权重放大规则：</p>
 <ul>
@@ -4254,7 +4240,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月22日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -4285,10 +4271,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B03/">前端</a>
+    <a class="category-link" href="/categories/B02/">前端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B03/" itemprop="url"><span itemprop="name">前端</span></a>
+        <a href="/categories/B02/" itemprop="url"><span itemprop="name">前端</span></a>
       </span>
     
   </div>
@@ -4328,13 +4314,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20240519/094423/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Less</p>
-          <p class='content'>摘要：本文介绍了Less预处理器，它通过变量、嵌套、混合和运算等功能增强CSS，使样式表更加高效和可维护。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20240414/221920/'>
           <p class='title'>HTML5新特性<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了HTML5的一些新特性。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -4445,7 +4431,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B03002001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:CSS:基础</span></a>
+      <a href='/groups/B02002001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:CSS:基础</span></a>
     
   </header>
 
@@ -4686,50 +4672,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -5001,7 +4976,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240416/155528/","name":"CSS3新特性"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CSS3新特性","description":"摘要：本文介绍了CSS3的一些新特性。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240416/155528/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240416/155528/","wordCount":19,"datePublished":"2024-04-16T07:55:28.000Z","dateModified":"2026-06-22T02:04:37.155Z","articleSection":"前端","keywords":"HTML,CSS","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240416/155528/","name":"CSS3新特性"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CSS3新特性","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240416/155528/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240416/155528/","wordCount":5,"datePublished":"2024-04-16T07:55:28.000Z","dateModified":"2026-09-26T23:29:37.698Z","articleSection":"前端","keywords":"HTML,CSS","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

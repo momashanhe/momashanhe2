@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>进阶 - 墨码山河</title>
   <meta name="keywords" content="HTML,CSS,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了HTML常见的元素及其特点。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="进阶">
 <meta property="og:url" content="https://momashanhe.com/posts/20240314/163125/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了HTML常见的元素及其特点。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-14T08:31:25.000Z">
-<meta property="article:modified_time" content="2026-06-22T01:34:59.939Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.694Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="HTML">
 <meta property="article:tag" content="CSS">
@@ -1855,7 +1855,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2486,7 +2486,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20240314/163125/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2499,20 +2499,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20240314/163125/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20240314/163125/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2526,7 +2512,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了HTML常见的元素及其特点。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2667,9 +2653,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h3 id="2-2-路径"><a href="#2-2-路径" class="headerlink" title="2.2 路径"></a>2.2 路径</h3><p>图片路径也称为图片地址，分为相对路径和绝对路径，以及网络地址：</p>
 <ul>
-<li><code>相对路径</code>：从当前页面文件所在的位置开始，能够访问图片资源的路径。</li>
-<li><code>绝对路径</code>：从当前页面文件所在的磁盘的根目录开始，能够访问图片资源的路径。</li>
-<li><code>网络地址</code>：相对路径和绝对路径都是本地图片，如果是网络图片则需要使用图片的网络地址进行访问。</li>
+<li><strong>相对路径</strong>：从当前页面文件所在的位置开始，能够访问图片资源的路径。</li>
+<li><strong>绝对路径</strong>：从当前页面文件所在的磁盘的根目录开始，能够访问图片资源的路径。</li>
+<li><strong>网络地址</strong>：相对路径和绝对路径都是本地图片，如果是网络图片则需要使用图片的网络地址进行访问。</li>
 </ul>
 <p>如果是本地图片，需要注意图片被移动会导致路径失效，如果是网络图片，需要注意在开启防盗链后会导致图片不可访问。</p>
 <h3 id="2-3-图片格式"><a href="#2-3-图片格式" class="headerlink" title="2.3 图片格式"></a>2.3 图片格式</h3><h4 id="2-3-1-jpg"><a href="#2-3-1-jpg" class="headerlink" title="2.3.1 jpg"></a>2.3.1 jpg</h4><p>说明：扩展名为<code>jpg</code>和<code>jpeg</code>，有损压缩，丢弃了肉眼观察不到的细节。</p>
@@ -2855,7 +2841,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="5-表格"><a href="#5-表格" class="headerlink" title="5 表格"></a>5 表格</h2><h3 id="5-1-基本结构"><a href="#5-1-基本结构" class="headerlink" title="5.1 基本结构"></a>5.1 基本结构</h3><p>一个完整的表格由四部分组成：表格标题、表格头部、表格主体、表格脚注。</p>
 <p>表格的某些部分可以省略，各个部分都属于块级元素。</p>
 <p>表格结构如图：</p>
-<p><img src="/@image/B03001001/002-20240401155240.jpg" alt="20240401155240-表格结构"></p>
+<p><img src="/@image/B02001001/002-20240401155240.jpg" alt="20240401155240-表格结构"></p>
 <p>常用元素：</p>
 <table>
   <thead>
@@ -2910,7 +2896,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </table>
 
 <p>表格详细结构如图：</p>
-<p><img src="/@image/B03001001/002-20240401163046.jpg" alt="20240401163046-表格头部"><br><img src="/@image/B03001001/002-20240401163104.jpg" alt="20240401163104-表格主体"><br><img src="/@image/B03001001/002-20240401163215.jpg" alt="20240401163215-表格脚注"></p>
+<p><img src="/@image/B02001001/002-20240401163046.jpg" alt="20240401163046-表格头部"><br><img src="/@image/B02001001/002-20240401163104.jpg" alt="20240401163104-表格主体"><br><img src="/@image/B02001001/002-20240401163215.jpg" alt="20240401163215-表格脚注"></p>
 <p>示例：</p>
 <figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 表格标题 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">caption</span>&gt;</span>学生信息<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 表格头部 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>性别<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>年龄<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>民族<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>政治面貌<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 表格主体 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>男<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>18<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>汉族<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>团员<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>女<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>20<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>满族<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>群众<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>王五<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>男<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>20<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>回族<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>党员<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>赵六<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>女<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>21<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>壮族<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>团员<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 表格脚注 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tfoot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>共计：4人<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tfoot</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -3647,7 +3633,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>一般来说，在<code>html</code>元素中设置<code>lang</code>属性设置语言即可，很少会在其他元素中使用<code>lang</code>属性，除非想要使用其他语言显示某个元素。</p>
 <p>虽然这些属性是全局属性，但是在一些特殊元素上使用是没有意义的，不建议使用，也没有必要使用，比如<code>html</code>元素，以及<code>head</code>元素及其内部元素，等一些其他特殊元素。</p>
-<p>完整的全局属性可以参考文档：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes">MDN全局属性</a></p>
+<p>完整的全局属性可以参考文档：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes</a></p>
 <h2 id="9-元数据"><a href="#9-元数据" class="headerlink" title="9 元数据"></a>9 元数据</h2><h3 id="9-1-基本结构"><a href="#9-1-基本结构" class="headerlink" title="9.1 基本结构"></a>9.1 基本结构</h3><p>元数据就是描述数据的数据，对于HTML而言，元数据就是描述HTML页面的数据。</p>
 <p>常用元素：</p>
 <table>
@@ -3746,7 +3732,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>配置网页版权信息：</p>
 <figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;copyright&quot;</span> <span class="attr">content</span>=<span class="string">&quot;2020-2050©版权所有&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>完整的网页元数据可以参考文档：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta">MDN元数据</a></p>
+<p>完整的网页元数据可以参考文档：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta</a></p>
 
   </div>
   
@@ -3777,7 +3763,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月22日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -3808,10 +3794,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B03/">前端</a>
+    <a class="category-link" href="/categories/B02/">前端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B03/" itemprop="url"><span itemprop="name">前端</span></a>
+        <a href="/categories/B02/" itemprop="url"><span itemprop="name">前端</span></a>
       </span>
     
   </div>
@@ -3851,13 +3837,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20240402/144927/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>入门</p>
-          <p class='content'>摘要：本文介绍了CSS的语法规范和选择器，三大特性以及常用属性。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
-        <a class='next' href='/posts/20240314/144908/'>
-          <p class='title'>博客文章加密<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了如何对博客文章进行加密。</p>
+        <a class='next' href='/posts/20240314/143553/'>
+          <p class='title'>入门<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -3968,7 +3954,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B03001001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:HTML:基础</span></a>
+      <a href='/groups/B02001001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:HTML:基础</span></a>
     
   </header>
 
@@ -4197,50 +4183,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -4512,7 +4487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240314/163125/","name":"进阶"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"进阶","description":"摘要：本文介绍了HTML常见的元素及其特点。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240314/163125/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240314/163125/","wordCount":22,"datePublished":"2024-03-14T08:31:25.000Z","dateModified":"2026-06-22T01:34:59.939Z","articleSection":"前端","keywords":"HTML,CSS","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240314/163125/","name":"进阶"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"进阶","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240314/163125/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240314/163125/","wordCount":5,"datePublished":"2024-03-14T08:31:25.000Z","dateModified":"2026-09-26T23:29:37.694Z","articleSection":"前端","keywords":"HTML,CSS","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

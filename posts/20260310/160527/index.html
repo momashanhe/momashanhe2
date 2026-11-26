@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>Thymeleaf - 墨码山河</title>
   <meta name="keywords" content="Spring Boot,Thymeleaf,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了如何在Spring Boot中使用Thymeleaf模板引擎。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Thymeleaf">
 <meta property="og:url" content="https://momashanhe.com/posts/20260310/160527/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了如何在Spring Boot中使用Thymeleaf模板引擎。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-03-10T08:05:27.000Z">
-<meta property="article:modified_time" content="2026-06-18T05:17:11.532Z">
+<meta property="article:modified_time" content="2026-10-14T09:27:37.004Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Spring Boot">
 <meta property="article:tag" content="Thymeleaf">
@@ -1855,7 +1855,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2486,7 +2486,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20260310/160527/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2499,20 +2499,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20260310/160527/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20260310/160527/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2526,7 +2512,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了如何在Spring Boot中使用Thymeleaf模板引擎。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2539,11 +2525,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>Spring Boot官方推荐使用Thymeleaf作为默认引擎，无需额外配置即可使用。</p>
 <p>与JSP相比，Thymeleaf更轻量级，从Spring Boot的3.0版本开始，移除了对JSP的支持，使用JSP需要手动配置。</p>
 <p>官网地址：<a target="_blank" rel="noopener" href="https://www.thymeleaf.org/">https://www.thymeleaf.org/</a></p>
-<h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2 使用"></a>2 使用</h2><h3 id="2-1-项目结构"><a href="#2-1-项目结构" class="headerlink" title="2.1 项目结构"></a>2.1 项目结构</h3><h3 id="2-2-配置依赖"><a href="#2-2-配置依赖" class="headerlink" title="2.2 配置依赖"></a>2.2 配置依赖</h3><p>配置依赖：</p>
+<h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2 使用"></a>2 使用</h2><h3 id="2-1-项目结构"><a href="#2-1-项目结构" class="headerlink" title="2.1 项目结构"></a>2.1 项目结构</h3><p>项目结构：</p>
+<figure class="highlight plaintext"><figcaption><span>code</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">demo-thymeleaf</span><br><span class="line">├── src/</span><br><span class="line">│   ├── main/</span><br><span class="line">│   │   ├── java/</span><br><span class="line">│   │   │   └── com/</span><br><span class="line">│   │   │       └── example/</span><br><span class="line">│   │   │           ├── entity/</span><br><span class="line">│   │   │           │   └── User.java</span><br><span class="line">│   │   │           ├── controller/</span><br><span class="line">│   │   │           │   └── DemoController.java</span><br><span class="line">│   │   │           └── DemoApplication.java</span><br><span class="line">│   │   └── resources/</span><br><span class="line">│   │       ├── application.yml</span><br><span class="line">│   │       ├── public/</span><br><span class="line">│   │       │   ├── favicon.ico</span><br><span class="line">│   │       │   └── index.html</span><br><span class="line">│   │       ├── static/</span><br><span class="line">│   │       │   └── js/</span><br><span class="line">│   │       │       └── demo.js</span><br><span class="line">│   │       └── templates/</span><br><span class="line">│   │           ├── common/</span><br><span class="line">│   │           │   └── common.html</span><br><span class="line">│   │           └── demo.html</span><br><span class="line">│   └── test/</span><br><span class="line">└── pom.xml</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-配置依赖"><a href="#2-2-配置依赖" class="headerlink" title="2.2 配置依赖"></a>2.2 配置依赖</h3><p>配置依赖：</p>
 <figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Spring Boot Web --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Spring Boot Thymeleaf --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-thymeleaf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="2-3-配置文件"><a href="#2-3-配置文件" class="headerlink" title="2.3 配置文件"></a>2.3 配置文件</h3><p>增加配置：</p>
-<figure class="highlight properties"><figcaption><span>application.properties</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启支持，默认开启</span></span><br><span class="line"><span class="attr">spring.thymeleaf.enabled</span>=<span class="string">true</span></span><br><span class="line"><span class="comment"># 模板文件存放路径，默认为类路径下的/templates/目录</span></span><br><span class="line"><span class="attr">spring.thymeleaf.prefix</span>=<span class="string">classpath:/templates/</span></span><br><span class="line"><span class="comment"># 模板文件后缀，默认为html格式</span></span><br><span class="line"><span class="attr">spring.thymeleaf.suffix</span>=<span class="string">.html</span></span><br><span class="line"><span class="comment"># 模板编码</span></span><br><span class="line"><span class="attr">spring.thymeleaf.encoding</span>=<span class="string">UTF-8</span></span><br><span class="line"><span class="comment"># 关闭缓存，默认开启，生产环境关闭</span></span><br><span class="line"><span class="attr">spring.thymeleaf.cache</span>=<span class="string">false</span></span><br><span class="line"><span class="comment"># 检查模板位置是否存在</span></span><br><span class="line"><span class="attr">spring.thymeleaf.check-template-location</span>=<span class="string">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><figcaption><span>application.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">thymeleaf:</span></span><br><span class="line">    <span class="comment"># 开启支持，默认开启</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># 模板文件存放路径，默认为类路径下的/templates/目录</span></span><br><span class="line">    <span class="attr">prefix:</span> <span class="string">classpath:/templates/</span></span><br><span class="line">    <span class="comment"># 模板文件后缀，默认为html格式</span></span><br><span class="line">    <span class="attr">suffix:</span> <span class="string">.html</span></span><br><span class="line">    <span class="comment"># 模板编码</span></span><br><span class="line">    <span class="attr">encoding:</span> <span class="string">UTF-8</span></span><br><span class="line">    <span class="comment"># 关闭缓存，默认开启，生产环境关闭</span></span><br><span class="line">    <span class="attr">cache:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 检查模板位置是否存在</span></span><br><span class="line">    <span class="attr">check-template-location:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="2-4-视图控制"><a href="#2-4-视图控制" class="headerlink" title="2.4 视图控制"></a>2.4 视图控制</h3><p>创建Controller文件：</p>
 <figure class="highlight java"><figcaption><span>DemoController.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoController</span> &#123;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;/demo&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">demo</span><span class="params">(Model model)</span> &#123;</span><br><span class="line">        model.addAttribute(<span class="string">&quot;msg&quot;</span>, <span class="string">&quot;欢迎&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;demo&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2556,11 +2545,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h3 id="3-2-表达式"><a href="#3-2-表达式" class="headerlink" title="3.2 表达式"></a>3.2 表达式</h3><p>表达式语法：</p>
 <ul>
-<li><code>$&#123;表达式&#125;</code>：变量表达式，用于获取模型中的属性，支持级联获取属性。</li>
-<li><code>*&#123;表达式&#125;</code>：选择表达式，用于获取当前对象的属性。</li>
-<li><code>#&#123;表达式&#125;</code>：消息表达式，用于获取消息资源，实现国际化。</li>
-<li><code>@&#123;表达式&#125;</code>：链接表达式，用于生成链接。</li>
-<li><code>~&#123;表达式&#125;</code>：资源表达式，用于加载静态资源。</li>
+<li>**${表达式}**：变量表达式，用于获取模型中的属性，支持级联获取属性。</li>
+<li>***{表达式}**：选择表达式，用于获取当前对象的属性。</li>
+<li>**#{表达式}**：消息表达式，用于获取消息资源，实现国际化。</li>
+<li>**@{表达式}**：链接表达式，用于生成链接。</li>
+<li>**~{表达式}**：资源表达式，用于加载静态资源。</li>
 </ul>
 <h4 id="3-2-1-变量表达式"><a href="#3-2-1-变量表达式" class="headerlink" title="3.2.1 变量表达式"></a>3.2.1 变量表达式</h4><p>示例：</p>
 <figure class="highlight html"><figcaption><span>demo.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;msg&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -2572,17 +2561,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight html"><figcaption><span>demo.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;#&#123;msg&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="3-2-4-链接表达式"><a href="#3-2-4-链接表达式" class="headerlink" title="3.2.4 链接表达式"></a>3.2.4 链接表达式</h4><p>示例：</p>
-<figure class="highlight html"><figcaption><span>demo.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">&quot;@&#123;/demo&#125;&quot;</span>&gt;</span>请求接口<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">&quot;@&#123;/index.html&#125;&quot;</span>&gt;</span>访问首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/favicon.ico&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>demo.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">&quot;@&#123;/demo&#125;&quot;</span>&gt;</span>请求接口<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">&quot;@&#123;/index.html&#125;&quot;</span>&gt;</span>访问首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/favicon.ico&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/js/demo.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="3-2-5-资源表达式"><a href="#3-2-5-资源表达式" class="headerlink" title="3.2.5 资源表达式"></a>3.2.5 资源表达式</h4><p>示例：</p>
 <figure class="highlight html"><figcaption><span>demo.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:replace</span>=<span class="string">&quot;~&#123;common/common::header&#125;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;replace&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="3-3-指令"><a href="#3-3-指令" class="headerlink" title="3.3 指令"></a>3.3 指令</h3><h4 id="3-3-1-文本指令"><a href="#3-3-1-文本指令" class="headerlink" title="3.3.1 文本指令"></a>3.3.1 文本指令</h4><p>常用指令：</p>
 <ul>
-<li><code>th:text</code>：用于设置元素的文本内容。</li>
-<li><code>th:utext</code>：用于设置元素的文本内容，支持HTML标签。</li>
-<li><code>th:value</code>：用于设置元素的value属性值。</li>
-<li><code>th:attr</code>：用于设置元素的任意属性值。</li>
+<li><strong>th:text</strong>：用于设置元素的文本内容。</li>
+<li><strong>th:utext</strong>：用于设置元素的文本内容，支持HTML标签。</li>
+<li><strong>th:value</strong>：用于设置元素的value属性值。</li>
+<li><strong>th:attr</strong>：用于设置元素的任意属性值。</li>
 </ul>
 <p>视图控制：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/demo&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">demo</span><span class="params">(Model model)</span> &#123;</span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">    user.setId(<span class="number">1</span>);</span><br><span class="line">    user.setName(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">    model.addAttribute(<span class="string">&quot;user&quot;</span>, user);</span><br><span class="line">    model.addAttribute(<span class="string">&quot;msg&quot;</span>, <span class="string">&quot;&lt;strong&gt;欢迎&lt;/strong&gt;&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;demo&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2592,10 +2581,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h4 id="3-3-2-属性指令"><a href="#3-3-2-属性指令" class="headerlink" title="3.3.2 属性指令"></a>3.3.2 属性指令</h4><p>常用指令：</p>
 <ul>
-<li><code>th:checked</code>：用于设置复选框或单选框的选中状态。</li>
-<li><code>th:selected</code>：用于设置下拉列表框的选中状态。</li>
-<li><code>th:readonly</code>：用于设置元素的只读状态。</li>
-<li><code>th:disabled</code>：用于设置元素的禁用状态。</li>
+<li><strong>th:checked</strong>：用于设置复选框或单选框的选中状态。</li>
+<li><strong>th:selected</strong>：用于设置下拉列表框的选中状态。</li>
+<li><strong>th:readonly</strong>：用于设置元素的只读状态。</li>
+<li><strong>th:disabled</strong>：用于设置元素的禁用状态。</li>
 </ul>
 <p>视图控制：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/demo&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">demo</span><span class="params">(Model model)</span> &#123;</span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">    user.setGender(<span class="string">&quot;男&quot;</span>);</span><br><span class="line">    user.setHobbies(Arrays.asList(<span class="string">&quot;看书&quot;</span>, <span class="string">&quot;画画&quot;</span>));</span><br><span class="line">    model.addAttribute(<span class="string">&quot;user&quot;</span>, user);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;demo&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2605,10 +2594,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h4 id="3-3-3-条件指令"><a href="#3-3-3-条件指令" class="headerlink" title="3.3.3 条件指令"></a>3.3.3 条件指令</h4><p>常用指令：</p>
 <ul>
-<li><code>th:if</code>：用于根据结果判断是否显示元素。</li>
-<li><code>th:unless</code>：用于根据结果判断是否显示元素，与<code>th:if</code>相反。</li>
-<li><code>th:switch</code>：用于根据结果判断多个条件。</li>
-<li><code>th:case</code>：用于根据结果判断是否显示元素，只能判断固定值，只能在<code>th:switch</code>中使用。</li>
+<li><strong>th:if</strong>：用于根据结果判断是否显示元素。</li>
+<li><strong>th:unless</strong>：用于根据结果判断是否显示元素，与<code>th:if</code>相反。</li>
+<li><strong>th:switch</strong>：用于根据结果判断多个条件。</li>
+<li><strong>th:case</strong>：用于根据结果判断是否显示元素，只能判断固定值，只能在<code>th:switch</code>中使用。</li>
 </ul>
 <p>视图控制：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/demo&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">demo</span><span class="params">(Model model)</span> &#123;</span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">    user.setAge(<span class="number">20</span>);</span><br><span class="line">    user.setStatus(<span class="number">0</span>);</span><br><span class="line">    model.addAttribute(<span class="string">&quot;user&quot;</span>, user);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;demo&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2618,7 +2607,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h4 id="3-3-4-循环指令"><a href="#3-3-4-循环指令" class="headerlink" title="3.3.4 循环指令"></a>3.3.4 循环指令</h4><p>常用指令：</p>
 <ul>
-<li><code>th:each</code>：用于遍历集合，将每个元素赋值给指定的变量。</li>
+<li><strong>th:each</strong>：用于遍历集合，将每个元素赋值给指定的变量。</li>
 </ul>
 <p>视图控制：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/demo&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">demo</span><span class="params">(Model model)</span> &#123;</span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">    user.setHobbies(Arrays.asList(<span class="string">&quot;看书&quot;</span>, <span class="string">&quot;画画&quot;</span>));</span><br><span class="line">    model.addAttribute(<span class="string">&quot;user&quot;</span>, user);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;demo&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2628,9 +2617,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h4 id="3-3-5-片段指令"><a href="#3-3-5-片段指令" class="headerlink" title="3.3.5 片段指令"></a>3.3.5 片段指令</h4><p>常用指令：</p>
 <ul>
-<li><code>th:fragment</code>：用于定义复用片段。</li>
-<li><code>th:replace</code>：用于替换复用片段。</li>
-<li><code>th:insert</code>：用于插入复用片段。</li>
+<li><strong>th:fragment</strong>：用于定义复用片段。</li>
+<li><strong>th:replace</strong>：用于替换复用片段。</li>
+<li><strong>th:insert</strong>：用于插入复用片段。</li>
 </ul>
 <p>定义片段：</p>
 <figure class="highlight html"><figcaption><span>common.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:fragment</span>=<span class="string">&quot;header&quot;</span> <span class="attr">class</span>=<span class="string">&quot;fragment&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>定义片段<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -2643,25 +2632,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h3 id="3-4-内置对象"><a href="#3-4-内置对象" class="headerlink" title="3.4 内置对象"></a>3.4 内置对象</h3><p>域对象：</p>
 <ul>
-<li><code>session</code>：会话对象，用于获取会话相关的属性。</li>
-<li><code>application</code>：应用对象，用于获取应用相关的属性。</li>
+<li><strong>session</strong>：会话对象，用于获取会话相关的属性。</li>
+<li><strong>application</strong>：应用对象，用于获取应用相关的属性。</li>
 </ul>
 <p>原生对象：</p>
 <ul>
-<li><code>#request</code>：请求对象，用于获取请求相关的属性。</li>
-<li><code>#response</code>：响应对象，用于获取响应相关的属性。</li>
+<li><strong>#request</strong>：请求对象，用于获取请求相关的属性。</li>
+<li><strong>#response</strong>：响应对象，用于获取响应相关的属性。</li>
 </ul>
 <p>工具类：</p>
 <ul>
-<li><code>#strings</code>：字符串工具类，用于处理字符串。</li>
-<li><code>#numbers</code>：数字工具类，用于处理数字。</li>
-<li><code>#bools</code>：布尔工具类，用于处理布尔值。</li>
-<li><code>#dates</code>：日期工具类，用于处理日期。</li>
-<li><code>#arrays</code>：数组工具类，用于处理数组。</li>
-<li><code>#lists</code>：列表工具类，用于处理列表。</li>
-<li><code>#sets</code>：集合工具类，用于处理集合。</li>
-<li><code>#maps</code>：映射工具类，用于处理映射。</li>
-<li><code>#objects</code>：对象工具类，用于处理对象。</li>
+<li><strong>#strings</strong>：字符串工具类，用于处理字符串。</li>
+<li><strong>#numbers</strong>：数字工具类，用于处理数字。</li>
+<li><strong>#bools</strong>：布尔工具类，用于处理布尔值。</li>
+<li><strong>#dates</strong>：日期工具类，用于处理日期。</li>
+<li><strong>#arrays</strong>：数组工具类，用于处理数组。</li>
+<li><strong>#lists</strong>：列表工具类，用于处理列表。</li>
+<li><strong>#sets</strong>：集合工具类，用于处理集合。</li>
+<li><strong>#maps</strong>：映射工具类，用于处理映射。</li>
+<li><strong>#objects</strong>：对象工具类，用于处理对象。</li>
 </ul>
 
   </div>
@@ -2693,7 +2682,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年10月14日</div>
               </div>
               
               
@@ -2724,10 +2713,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2765,15 +2754,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/20260312/141747/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>入门</p>
-          <p class='content'>摘要：本文学习了Redis的基础知识。</p>
+        <a class='prev' href='/posts/20260311/154637/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Actuator</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20260308/152123/'>
           <p class='title'>MVC<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了如何在Spring Boot中使用Spring MVC进行Web开发。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2884,7 +2873,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04008004/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Spring Boot:模板引擎</span></a>
+      <a href='/groups/B03008004/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Spring Boot:模板引擎</span></a>
     
   </header>
 
@@ -3089,50 +3078,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3404,7 +3382,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260310/160527/","name":"Thymeleaf"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Thymeleaf","description":"摘要：本文学习了如何在Spring Boot中使用Thymeleaf模板引擎。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260310/160527/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260310/160527/","wordCount":39,"datePublished":"2026-03-10T08:05:27.000Z","dateModified":"2026-06-18T05:17:11.532Z","articleSection":"后端","keywords":"Spring Boot,Thymeleaf","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260310/160527/","name":"Thymeleaf"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Thymeleaf","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260310/160527/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260310/160527/","wordCount":5,"datePublished":"2026-03-10T08:05:27.000Z","dateModified":"2026-10-14T09:27:37.004Z","articleSection":"后端","keywords":"Spring Boot,Thymeleaf","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

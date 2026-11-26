@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>给博客添加徽标 - 墨码山河</title>
   <meta name="keywords" content="Hexo,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了如何给博客添加自定义徽标。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="给博客添加徽标">
 <meta property="og:url" content="https://momashanhe.com/posts/20240303/102543/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了如何给博客添加自定义徽标。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-03T02:25:43.000Z">
-<meta property="article:modified_time" content="2026-06-22T01:31:36.699Z">
+<meta property="article:modified_time" content="2026-10-19T06:23:28.546Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2470,7 +2470,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>6 分钟</p>
+      <p>5 分钟</p>
     </a>
   </div>
 
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20240303/102543/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20240303/102543/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20240303/102543/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了如何给博客添加自定义徽标。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2604,16 +2590,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>参数沿用静态徽标的参数，并且新增了<code>url</code>参数，用于请求地址。</p>
 <p>请求地址需要响应的内容：</p>
 <ul>
-<li><code>schemaVersion</code>：版本，必填，总是设置为1。</li>
-<li><code>style</code>：类型，非必填，默认为<code>flat</code>表示扁平风格。</li>
-<li><code>label</code>：左侧标签内容，可以设置为空字符串，必填。</li>
-<li><code>message</code>：右侧标签内容，不能设置为空字符串，必填。</li>
-<li><code>labelColor</code>：左侧标签颜色，非必填，默认为<code>grey</code>表示灰色。</li>
-<li><code>color</code>：右侧标签颜色，非必填，默认为<code>lightgrey</code>表示亮灰色。</li>
-<li><code>namedLogo</code>：LOGO对应名字，非必填，默认不传。</li>
-<li><code>logoSvg</code>：LOGO对应的SVG字符串，非必填，默认不传。</li>
-<li><code>logoColor</code>：LOGO颜色，非必填，默认不传。</li>
-<li><code>isError</code>：非必填，默认为<code>false</code>表示非错误徽章。</li>
+<li><strong>schemaVersion</strong>：版本，必填，总是设置为1。</li>
+<li><strong>style</strong>：类型，非必填，默认为flat表示扁平风格。</li>
+<li><strong>label</strong>：左侧标签内容，可以设置为空字符串，必填。</li>
+<li><strong>message</strong>：右侧标签内容，不能设置为空字符串，必填。</li>
+<li><strong>labelColor</strong>：左侧标签颜色，非必填，默认为grey表示灰色。</li>
+<li><strong>color</strong>：右侧标签颜色，非必填，默认为lightgrey表示亮灰色。</li>
+<li><strong>namedLogo</strong>：LOGO对应名字，非必填，默认不传。</li>
+<li><strong>logoSvg</strong>：LOGO对应的SVG字符串，非必填，默认不传。</li>
+<li><strong>logoColor</strong>：LOGO颜色，非必填，默认不传。</li>
+<li><strong>isError</strong>：非必填，默认为false表示非错误徽章。</li>
 </ul>
 <p>请求url得到的响应内容：</p>
 <figure class="highlight json"><figcaption><span>json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;schemaVersion&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span> <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;is it monday&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;no&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;color&quot;</span><span class="punctuation">:</span> <span class="string">&quot;orange&quot;</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
@@ -2670,7 +2656,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月22日</div>
+                <div class="license-meta-text">2026年10月19日</div>
               </div>
               
               
@@ -2701,10 +2687,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B02/">建站</a>
+    <a class="category-link" href="/categories/B01/">建站</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B02/" itemprop="url"><span itemprop="name">建站</span></a>
+        <a href="/categories/B01/" itemprop="url"><span itemprop="name">建站</span></a>
       </span>
     
   </div>
@@ -2744,13 +2730,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20240303/112321/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>使用Vercel托管博客</p>
-          <p class='content'>摘要：本文介绍了Vercel平台的使用，包括注册和部署以及如何设置自定义域名。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20240226/223923/'>
           <p class='title'>设置博客主题<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了如何设置博客主题。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2861,7 +2847,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B02001002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:建站:Hexo:折腾</span></a>
+      <a href='/groups/B01001002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:建站:Hexo:折腾</span></a>
     
   </header>
 
@@ -2929,6 +2915,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         </a></li>
       
+        <li><a class="flat-box" title="/posts/20261124/145507/" href="/posts/20261124/145507/"
+          
+          
+          active-action="action-posts20261124145507"
+          >
+          <div class='name'>
+            
+            将Waline评论迁移至TiDB存储
+          </div>
+          
+        </a></li>
+      
         <li><a class="flat-box" title="/posts/20240310/113145/" href="/posts/20240310/113145/"
           
           
@@ -2949,18 +2947,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <div class='name'>
             
             使用GitHub图床存放博客静态资源
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/posts/20240314/144908/" href="/posts/20240314/144908/"
-          
-          
-          active-action="action-posts20240314144908"
-          >
-          <div class='name'>
-            
-            博客文章加密
           </div>
           
         </a></li>
@@ -3150,50 +3136,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3465,7 +3440,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"建站"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240303/102543/","name":"给博客添加徽标"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"给博客添加徽标","description":"摘要：本文介绍了如何给博客添加自定义徽标。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240303/102543/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240303/102543/","wordCount":21,"datePublished":"2024-03-03T02:25:43.000Z","dateModified":"2026-06-22T01:31:36.699Z","articleSection":"建站","keywords":"Hexo","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B01/","name":"建站"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240303/102543/","name":"给博客添加徽标"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"给博客添加徽标","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240303/102543/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240303/102543/","wordCount":5,"datePublished":"2024-03-03T02:25:43.000Z","dateModified":"2026-10-19T06:23:28.546Z","articleSection":"建站","keywords":"Hexo","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

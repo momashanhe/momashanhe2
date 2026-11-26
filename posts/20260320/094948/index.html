@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>主从复制 - 墨码山河</title>
   <meta name="keywords" content="Redis,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了Redis的主从复制。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="主从复制">
 <meta property="og:url" content="https://momashanhe.com/posts/20260320/094948/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了Redis的主从复制。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-03-20T01:49:48.000Z">
-<meta property="article:modified_time" content="2026-06-22T02:33:13.073Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.861Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20260320/094948/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20260320/094948/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20260320/094948/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了Redis的主从复制。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2585,9 +2571,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>共享缓冲区在内存中分成了多个数据块，每个数据块都有一个引用计数，用于记录有多少个从节点正在使用该数据块，系统会定期释放未被使用的数据块。</p>
 <p>改变说明：</p>
 <ul>
-<li><code>共享缓冲区</code>：存储真实数据，头部用于保留历史数据块，中部用于释放未被使用的数据块，尾部的用于追加新的数据块。</li>
-<li><code>积压缓冲区</code>：不再存储真实数据，而是存储共享缓冲区的指针，用于在从节点断开重连时判断是否执行增量同步。</li>
-<li><code>复制缓冲区</code>：不再存储真实数据，而是存储共享缓冲区的指针，用于在从节点读取命令时判断是否执行命令。</li>
+<li><strong>共享缓冲区</strong>：存储真实数据，头部用于保留历史数据块，中部用于释放未被使用的数据块，尾部的用于追加新的数据块。</li>
+<li><strong>积压缓冲区</strong>：不再存储真实数据，而是存储共享缓冲区的指针，用于在从节点断开重连时判断是否执行增量同步。</li>
+<li><strong>复制缓冲区</strong>：不再存储真实数据，而是存储共享缓冲区的指针，用于在从节点读取命令时判断是否执行命令。</li>
 </ul>
 <h3 id="3-4-触发逻辑"><a href="#3-4-触发逻辑" class="headerlink" title="3.4 触发逻辑"></a>3.4 触发逻辑</h3><p>触发全量复制的情况：</p>
 <ul>
@@ -2614,44 +2600,44 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>主节点显示结果：</p>
 <ul>
-<li><code># Replication</code>：复制状态</li>
-<li><code>role:master</code>：节点角色，master表示主节点</li>
-<li><code>connected_slaves:1</code>：已连接的从节点数量</li>
-<li><code>slave0:ip=127.0.0.1,port=6381,state=online,offset=728,lag=1</code>：从节点:IP地址、端口号、状态、复制偏移量、复制延迟，单位是秒</li>
-<li><code>master_failover_state:no-failover</code>：故障转移状态，no-failover表示未发生故障转移</li>
-<li><code>master_replid:805f3a2e734fooc7bf4e5103a5867189c695d2c2</code>：主节点的复制ID，建立主从关系后生成新的ID</li>
-<li><code>master_replid2:0000000000000000000000000000000000000000</code>：发生故障转移时，原主节点的复制ID</li>
-<li><code>master_repl_offset:728</code>：主节点的复制偏移量</li>
-<li><code>second_repl_offset:-1</code>：发生故障转移时，原主节点的复制偏移量</li>
-<li><code>repl_backlog_active:1</code>：是否激活积压缓冲区，1表示已激活</li>
-<li><code>repl_backlog_size:1048576</code>：积压缓冲区大小</li>
-<li><code>repl_backlog_first_byte_offset:1</code>：积压缓冲区中第一个字节对应的复制偏移量</li>
-<li><code>repl_backlog_histlen:728</code>：积压缓冲区中实际存储的有效数据量，单位是字节</li>
+<li><strong># Replication</strong>：复制状态</li>
+<li><strong>role:master</strong>：节点角色，master表示主节点</li>
+<li><strong>connected_slaves:1</strong>：已连接的从节点数量</li>
+<li><strong>slave0:ip&#x3D;127.0.0.1,port&#x3D;6381,state&#x3D;online,offset&#x3D;728,lag&#x3D;1</strong>：从节点:IP地址、端口号、状态、复制偏移量、复制延迟，单位是秒</li>
+<li><strong>master_failover_state:no-failover</strong>：故障转移状态，no-failover表示未发生故障转移</li>
+<li><strong>master_replid:805f3a2e734fooc7bf4e5103a5867189c695d2c2</strong>：主节点的复制ID，建立主从关系后生成新的ID</li>
+<li><strong>master_replid2:0000000000000000000000000000000000000000</strong>：发生故障转移时，原主节点的复制ID</li>
+<li><strong>master_repl_offset:728</strong>：主节点的复制偏移量</li>
+<li><strong>second_repl_offset:-1</strong>：发生故障转移时，原主节点的复制偏移量</li>
+<li><strong>repl_backlog_active:1</strong>：是否激活积压缓冲区，1表示已激活</li>
+<li><strong>repl_backlog_size:1048576</strong>：积压缓冲区大小</li>
+<li><strong>repl_backlog_first_byte_offset:1</strong>：积压缓冲区中第一个字节对应的复制偏移量</li>
+<li><strong>repl_backlog_histlen:728</strong>：积压缓冲区中实际存储的有效数据量，单位是字节</li>
 </ul>
 <p>从节点显示结果：</p>
 <ul>
-<li><code># Replication</code>：复制状态</li>
-<li><code>role:slave</code>：节点角色，slave表示从节点</li>
-<li><code>master_host:127.0.0.1</code>：主节点的IP地址</li>
-<li><code>master_port:6379</code>：主节点的端口号</li>
-<li><code>master_link_status:up</code>：主从连接状态，up表示正常</li>
-<li><code>master_last_io_seconds_ago:1</code>：上次与主节点通信的时间，单位是秒</li>
-<li><code>master_sync_in_progress:0</code>：是否正在同步数据，0表示空闲</li>
-<li><code>slave_read_repl_offset:728</code>：从节点已接收的复制偏移量</li>
-<li><code>slave_repl_offset:728</code>：从节点已执行的复制偏移量</li>
-<li><code>slave_priority:100</code>：从节点的优先级</li>
-<li><code>slave_read_only:1</code>：从节点是否只读，1表示只读</li>
-<li><code>replica_announced:1</code>：从节点是否显示，1表示显示</li>
-<li><code>connected_slaves:0</code>：已连接的从节点数量</li>
-<li><code>master_failover_state:no-failover</code>：故障转移状态，no-failover表示未发生故障转移</li>
-<li><code>master_replid:805f3a2e734fooc7bf4e5103a5867189c695d2c2</code>：主节点的复制ID，建立主从关系后生成新的ID</li>
-<li><code>master_replid2:0000000000000000000000000000000000000000</code>：发生故障转移时，原主节点的复制ID</li>
-<li><code>master_repl_offset:728</code>：主节点的复制偏移量</li>
-<li><code>second_repl_offset:-1</code>：发生故障转移时，原主节点的复制偏移量</li>
-<li><code>repl_backlog_active:1</code>：是否激活积压缓冲区，1表示已激活</li>
-<li><code>repl_backlog_size:1048576</code>：积压缓冲区大小</li>
-<li><code>repl_backlog_first_byte_offset:15</code>：积压缓冲区中第一个字节对应的复制偏移量</li>
-<li><code>repl_backlog_histlen:714</code>：积压缓冲区中实际存储的有效数据量，单位是字节</li>
+<li><strong># Replication</strong>：复制状态</li>
+<li><strong>role:slave</strong>：节点角色，slave表示从节点</li>
+<li><strong>master_host:127.0.0.1</strong>：主节点的IP地址</li>
+<li><strong>master_port:6379</strong>：主节点的端口号</li>
+<li><strong>master_link_status:up</strong>：主从连接状态，up表示正常</li>
+<li><strong>master_last_io_seconds_ago:1</strong>：上次与主节点通信的时间，单位是秒</li>
+<li><strong>master_sync_in_progress:0</strong>：是否正在同步数据，0表示空闲</li>
+<li><strong>slave_read_repl_offset:728</strong>：从节点已接收的复制偏移量</li>
+<li><strong>slave_repl_offset:728</strong>：从节点已执行的复制偏移量</li>
+<li><strong>slave_priority:100</strong>：从节点的优先级</li>
+<li><strong>slave_read_only:1</strong>：从节点是否只读，1表示只读</li>
+<li><strong>replica_announced:1</strong>：从节点是否显示，1表示显示</li>
+<li><strong>connected_slaves:0</strong>：已连接的从节点数量</li>
+<li><strong>master_failover_state:no-failover</strong>：故障转移状态，no-failover表示未发生故障转移</li>
+<li><strong>master_replid:805f3a2e734fooc7bf4e5103a5867189c695d2c2</strong>：主节点的复制ID，建立主从关系后生成新的ID</li>
+<li><strong>master_replid2:0000000000000000000000000000000000000000</strong>：发生故障转移时，原主节点的复制ID</li>
+<li><strong>master_repl_offset:728</strong>：主节点的复制偏移量</li>
+<li><strong>second_repl_offset:-1</strong>：发生故障转移时，原主节点的复制偏移量</li>
+<li><strong>repl_backlog_active:1</strong>：是否激活积压缓冲区，1表示已激活</li>
+<li><strong>repl_backlog_size:1048576</strong>：积压缓冲区大小</li>
+<li><strong>repl_backlog_first_byte_offset:15</strong>：积压缓冲区中第一个字节对应的复制偏移量</li>
+<li><strong>repl_backlog_histlen:714</strong>：积压缓冲区中实际存储的有效数据量，单位是字节</li>
 </ul>
 <h2 id="6-最佳实践"><a href="#6-最佳实践" class="headerlink" title="6 最佳实践"></a>6 最佳实践</h2><p>对于生产环境，建议使用哨兵模式，实现主节点的自动故障转移。</p>
 
@@ -2684,7 +2670,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月22日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2715,10 +2701,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2758,13 +2744,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20260321/135124/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>哨兵模式</p>
-          <p class='content'>摘要：本文介绍了Redis的哨兵模式。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20260319/121545/'>
           <p class='title'>持久化<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了Redis的持久化机制，包括RDB和AOF两种方式。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2875,7 +2861,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B05003002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:Redis:高级</span></a>
+      <a href='/groups/B04003002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:Redis:高级</span></a>
     
   </header>
 
@@ -3164,50 +3150,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3479,7 +3454,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260320/094948/","name":"主从复制"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"主从复制","description":"摘要：本文介绍了Redis的主从复制。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260320/094948/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260320/094948/","wordCount":19,"datePublished":"2026-03-20T01:49:48.000Z","dateModified":"2026-06-22T02:33:13.073Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260320/094948/","name":"主从复制"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"主从复制","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260320/094948/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260320/094948/","wordCount":5,"datePublished":"2026-03-20T01:49:48.000Z","dateModified":"2026-09-26T23:29:37.861Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

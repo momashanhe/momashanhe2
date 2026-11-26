@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>集群模式 - 墨码山河</title>
   <meta name="keywords" content="Redis,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了Redis的集群模式。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="集群模式">
 <meta property="og:url" content="https://momashanhe.com/posts/20260322/103416/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了Redis的集群模式。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-03-22T02:34:16.000Z">
-<meta property="article:modified_time" content="2026-06-22T02:34:19.113Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.863Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20260322/103416/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20260322/103416/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20260322/103416/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了Redis的集群模式。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2553,13 +2539,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h3 id="3-2-节点类型"><a href="#3-2-节点类型" class="headerlink" title="3.2 节点类型"></a>3.2 节点类型</h3><p>集群中的节点分为两种类型：</p>
 <ul>
-<li><code>主节点</code>：负责处理读写请求，维护哈希槽。</li>
-<li><code>从节点</code>：作为主节点的备份，当主节点发生故障时可以升级为主节点。</li>
+<li><strong>主节点</strong>：负责处理读写请求，维护哈希槽。</li>
+<li><strong>从节点</strong>：作为主节点的备份，当主节点发生故障时可以升级为主节点。</li>
 </ul>
 <p>对于主节点来说，存在两种特殊情况：</p>
 <ul>
-<li><code>孤立主节点</code>：指的是只有哈希槽，没有从节点的主节点，有数据但是缺少从节点。</li>
-<li><code>空壳主节点</code>：指的是没有哈希槽，只有从节点的主节点，无数据所以从节点闲置。</li>
+<li><strong>孤立主节点</strong>：指的是只有哈希槽，没有从节点的主节点，有数据但是缺少从节点。</li>
+<li><strong>空壳主节点</strong>：指的是没有哈希槽，只有从节点的主节点，无数据所以从节点闲置。</li>
 </ul>
 <h3 id="3-3-通信机制"><a href="#3-3-通信机制" class="headerlink" title="3.3 通信机制"></a>3.3 通信机制</h3><p>集群中的节点通过Gossip协议进行通信：</p>
 <ul>
@@ -2580,10 +2566,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>对于能够参与故障转移的从节点，会根据复制偏移量排序，复制偏移量越大，说明数据越新，成为主节点的概率越高。</p>
 <h3 id="3-6-客户端支持"><a href="#3-6-客户端支持" class="headerlink" title="3.6 客户端支持"></a>3.6 客户端支持</h3><p>为了简化客户端的使用，许多高级客户端（Jedis、Lettuce）实现了智能客户端（Smart Client）的功能，它能够：</p>
 <ul>
-<li><code>缓存槽位映射</code>：首次连接时，从集群中获取并缓存槽位和节点的映射关系。</li>
-<li><code>自动计算槽位</code>：计算键对应的槽位，将请求发往正确的节点，避免重定向开销。</li>
-<li><code>自动更新拓扑</code>：当集群拓扑发生变化时，客户端能感知并更新本地的槽位映射。</li>
-<li><code>自动重定向</code>：自动处理MOVED和ASK（槽位迁移中的临时重定向）错误。</li>
+<li><strong>缓存槽位映射</strong>：首次连接时，从集群中获取并缓存槽位和节点的映射关系。</li>
+<li><strong>自动计算槽位</strong>：计算键对应的槽位，将请求发往正确的节点，避免重定向开销。</li>
+<li><strong>自动更新拓扑</strong>：当集群拓扑发生变化时，客户端能感知并更新本地的槽位映射。</li>
+<li><strong>自动重定向</strong>：自动处理MOVED和ASK（槽位迁移中的临时重定向）错误。</li>
 </ul>
 <h2 id="4-配置"><a href="#4-配置" class="headerlink" title="4 配置"></a>4 配置</h2><p>修改每个节点的<code>redis.conf</code>配置文件，启用集群模式：</p>
 <figure class="highlight plaintext"><figcaption><span>redis.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"># 启用集群模式</span><br><span class="line">cluster-enabled yes</span><br><span class="line"></span><br><span class="line"># 集群配置文件路径，不同的节点需要不同的配置文件</span><br><span class="line">cluster-config-file nodes-6379.conf</span><br><span class="line"></span><br><span class="line"># 集群节点超时时间，默认为15000毫秒</span><br><span class="line"># cluster-node-timeout 15000</span><br><span class="line"></span><br><span class="line"># 集群端口，默认为0表示使用主端口+10000作为集群端口</span><br><span class="line"># cluster-port 0</span><br><span class="line"></span><br><span class="line"># 集群节点检查因素，默认为10，建议设置为0，保证所有从节点都会参与故障转移，避免没有主节点参与故障转移的极端困境</span><br><span class="line"># cluster-replica-validity-factor 10</span><br><span class="line"></span><br><span class="line"># 集群从节点迁移阈值，默认为1：</span><br><span class="line"># 设置为固定值：避免出现孤立主节点，当主节点的从节点数量超过阈值时，就会将其中某个从节点迁移到孤立主节点</span><br><span class="line"># 设置为非常大的值：禁止迁移，允许出现孤立主节点</span><br><span class="line"># 设置为0：会导致从节点随时可能迁移到孤立主节点，从而导致出现更多孤立主节点，引发集群震荡，生产环境不建议使用</span><br><span class="line"># cluster-migration-barrier 1</span><br><span class="line"></span><br><span class="line"># 集群是否允许从节点迁移：</span><br><span class="line"># yes：默认值，允许从节点迁移，避免出现孤立主节点</span><br><span class="line"># no：禁止从节点迁移，也禁止从空壳主节点迁移从节点到孤立主节点，允许出现孤立主节点</span><br><span class="line"># cluster-allow-replica-migration yes</span><br><span class="line"></span><br><span class="line"># 集群是否要求所有槽位都可用：</span><br><span class="line"># yes：默认值，要求所有槽位都可用，不允许有空槽位，某个主节点故障并且无法产生新的主节点，整个集群将停止运行</span><br><span class="line"># no：允许有槽位不可用，某个主节点故障并且无法产生新的主节点，整个集群将继续运行</span><br><span class="line"># cluster-require-full-coverage yes</span><br><span class="line"></span><br><span class="line"># 集群是否禁止从节点故障转移：</span><br><span class="line"># yes：表示禁止从节点故障转移，从节点不能成为主节点，宁愿降低可用性也要追求数据绝对正确，可以防止脑裂问题，在多数据中心场景下建议使用</span><br><span class="line"># no：默认值，表示允许从节点故障转移，从节点可以成为主节点，追求极致可用性可以牺牲数据一致性</span><br><span class="line"># cluster-replica-no-failover no</span><br><span class="line"></span><br><span class="line"># 集群因为槽位失效导致整体下线时，是否允许处理读取请求：</span><br><span class="line"># yes：表示允许读取数据，保证高可用</span><br><span class="line"># no：默认值，表示不允许读取数据</span><br><span class="line"># cluster-allow-reads-when-down no</span><br><span class="line"></span><br><span class="line"># 集群因为槽位失效导致整体下线时，是否允许处理发布订阅请求：</span><br><span class="line"># yes：默认值，表示允许处理发布订阅请求，保证高可用</span><br><span class="line"># no：表示不允许处理发布订阅请求</span><br><span class="line"># cluster-allow-pubsubshard-when-down yes</span><br><span class="line"></span><br><span class="line"># 集群节点发送缓冲区大小，超过限制将会释放集群链路，默认为0表示不限制</span><br><span class="line"># 超过限制说明节点接收消息过慢，防止缓冲区无限增长，推荐最小限制为1GB，至少能容纳单条消息（单条消息默认为1GB）</span><br><span class="line"># cluster-link-sendbuf-limit 0</span><br><span class="line"></span><br><span class="line"># 集群域名，解决IP地址变化但是域名固定的问题</span><br><span class="line"># cluster-announce-hostname &quot;&quot;</span><br><span class="line"></span><br><span class="line"># 集群节点名称，让日志和命令更容易阅读</span><br><span class="line"># cluster-announce-human-nodename &quot;&quot;</span><br><span class="line"></span><br><span class="line"># 集群连接方式：</span><br><span class="line"># ip：默认值，表示使用IP地址连接</span><br><span class="line"># hostname：表示使用域名连接，需要设置集群域名</span><br><span class="line"># unknown-endpoint：表示连接方式不固定，使用上次连接方式</span><br><span class="line"># cluster-preferred-endpoint-type ip</span><br></pre></td></tr></table></figure>
@@ -2598,8 +2584,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>说明：</p>
 <ul>
-<li><code>--cluster-replicas 1</code>：表示每个主节点都有1个从节点。</li>
-<li><code>--cluster-yes</code>：表示自动确认创建集群，不需要手动确认。</li>
+<li><strong>–cluster-replicas 1</strong>：表示每个主节点都有1个从节点。</li>
+<li><strong>–cluster-yes</strong>：表示自动确认创建集群，不需要手动确认。</li>
 </ul>
 <p>示例：</p>
 <figure class="highlight cmd"><figcaption><span>cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli --cluster create <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6381</span> <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6382</span> <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6383</span> <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6384</span> <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6385</span> <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6386</span> --cluster-replicas <span class="number">1</span> --cluster-yes</span><br></pre></td></tr></table></figure>
@@ -2625,22 +2611,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>显示结果：</p>
 <ul>
-<li><code>cluster_state:ok</code>：集群状态，ok表示正常</li>
-<li><code>cluster_slots_assigned:16384</code>：已分配的哈希槽数量</li>
-<li><code>cluster_slots_ok:16384</code>：状态正常的哈希槽数量</li>
-<li><code>cluster_slots_pfail:0</code>：可能失败的哈希槽数量</li>
-<li><code>cluster_slots_fail:0</code>：确认失败的哈希槽数量</li>
-<li><code>cluster_known_nodes:6</code>：已知的节点数量，包括主节点和从节点</li>
-<li><code>cluster_size:3</code>：主节点数量</li>
-<li><code>cluster_current_epoch:6</code>：当前纪元，用于故障转移和节点选举，值越大说明发生变更的次数越多</li>
-<li><code>cluster_my_epoch:1</code>：当前节点的纪元</li>
-<li><code>cluster_stats_messages_ping_sent:541</code>：发送的PING消息数量</li>
-<li><code>cluster_stats_messages_pong_sent:562</code>：发送的PONG消息数量</li>
-<li><code>cluster_stats_messages_sent:1103</code>：发送的消息总数</li>
-<li><code>cluster_stats_messages_ping_received:557</code>：接收的PING消息数量</li>
-<li><code>cluster_stats_messages_pong_received:541</code>：接收的PONG消息数量</li>
-<li><code>cluster_stats_messages_meet_received:5</code>：接收的MEET消息数量</li>
-<li><code>cluster_stats_messages_received:1103</code>：接收的消息总数</li>
+<li><strong>cluster_state:ok</strong>：集群状态，ok表示正常</li>
+<li><strong>cluster_slots_assigned:16384</strong>：已分配的哈希槽数量</li>
+<li><strong>cluster_slots_ok:16384</strong>：状态正常的哈希槽数量</li>
+<li><strong>cluster_slots_pfail:0</strong>：可能失败的哈希槽数量</li>
+<li><strong>cluster_slots_fail:0</strong>：确认失败的哈希槽数量</li>
+<li><strong>cluster_known_nodes:6</strong>：已知的节点数量，包括主节点和从节点</li>
+<li><strong>cluster_size:3</strong>：主节点数量</li>
+<li><strong>cluster_current_epoch:6</strong>：当前纪元，用于故障转移和节点选举，值越大说明发生变更的次数越多</li>
+<li><strong>cluster_my_epoch:1</strong>：当前节点的纪元</li>
+<li><strong>cluster_stats_messages_ping_sent:541</strong>：发送的PING消息数量</li>
+<li><strong>cluster_stats_messages_pong_sent:562</strong>：发送的PONG消息数量</li>
+<li><strong>cluster_stats_messages_sent:1103</strong>：发送的消息总数</li>
+<li><strong>cluster_stats_messages_ping_received:557</strong>：接收的PING消息数量</li>
+<li><strong>cluster_stats_messages_pong_received:541</strong>：接收的PONG消息数量</li>
+<li><strong>cluster_stats_messages_meet_received:5</strong>：接收的MEET消息数量</li>
+<li><strong>cluster_stats_messages_received:1103</strong>：接收的消息总数</li>
 </ul>
 <h3 id="6-3-查看节点状态"><a href="#6-3-查看节点状态" class="headerlink" title="6.3 查看节点状态"></a>6.3 查看节点状态</h3><p>使用命令查看集群的节点状态：</p>
 <figure class="highlight cmd"><figcaption><span>cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CLUSTER NODES</span><br></pre></td></tr></table></figure>
@@ -2653,10 +2639,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>说明：</p>
 <ul>
-<li><code>--cluster-from 源节点ID,...,源节点ID</code>：指定要迁移的源节点ID，多个节点用逗号分隔，使用all表示全部节点平均迁移。</li>
-<li><code>--cluster-to 目标节点ID</code>：指定要迁移的目标节点ID。</li>
-<li><code>--cluster-slots 迁移槽位数量</code>：指定要迁移的槽位数量。</li>
-<li><code>--cluster-yes</code>：表示自动确认迁移槽位，不需要手动确认。</li>
+<li><strong>–cluster-from 源节点ID,…,源节点ID</strong>：指定要迁移的源节点ID，多个节点用逗号分隔，使用all表示全部节点平均迁移。</li>
+<li><strong>–cluster-to 目标节点ID</strong>：指定要迁移的目标节点ID。</li>
+<li><strong>–cluster-slots 迁移槽位数量</strong>：指定要迁移的槽位数量。</li>
+<li><strong>–cluster-yes</strong>：表示自动确认迁移槽位，不需要手动确认。</li>
 </ul>
 <p>如果不使用参数，会通过交互方式迁移槽位。</p>
 <h3 id="7-2-平衡集群"><a href="#7-2-平衡集群" class="headerlink" title="7.2 平衡集群"></a>7.2 平衡集群</h3><p>语法：</p>
@@ -2664,10 +2650,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>说明：</p>
 <ul>
-<li><code>--cluster-use-empty-masters</code>：把槽位分配给当前没有槽位的主节点，扩容后负载均衡的常用选项。</li>
-<li><code>--cluster-weight 节点ID=权重 ... 节点ID=权重</code>：根据权重分配槽位给节点，权重支持整数和浮点数。</li>
-<li><code>--cluster-threshold 百分比</code>：设置触发平衡的阈值，避免微小波动引起不必要的数据迁移，只有节点槽位偏离平均值超过阈值时才会触发平衡，默认是2。</li>
-<li><code>--cluster-simulate</code>：模拟执行模式，显示将要执行的数据迁移计划，是生产环境操作前进行安全评估的首选工具。</li>
+<li><strong>–cluster-use-empty-masters</strong>：把槽位分配给当前没有槽位的主节点，扩容后负载均衡的常用选项。</li>
+<li><strong>–cluster-weight 节点ID&#x3D;权重 … 节点ID&#x3D;权重</strong>：根据权重分配槽位给节点，权重支持整数和浮点数。</li>
+<li><strong>–cluster-threshold 百分比</strong>：设置触发平衡的阈值，避免微小波动引起不必要的数据迁移，只有节点槽位偏离平均值超过阈值时才会触发平衡，默认是2。</li>
+<li><strong>–cluster-simulate</strong>：模拟执行模式，显示将要执行的数据迁移计划，是生产环境操作前进行安全评估的首选工具。</li>
 </ul>
 <p>如果不使用参数，只会平衡已有槽位并且偏离平均值2%的主节点，不会处理空节点。</p>
 <h3 id="7-3-添加节点"><a href="#7-3-添加节点" class="headerlink" title="7.3 添加节点"></a>7.3 添加节点</h3><p>语法：</p>
@@ -2675,8 +2661,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>说明：</p>
 <ul>
-<li><code>--cluster-slave</code>：表示添加从节点，默认添加主节点。</li>
-<li><code>--cluster-master-id 主节点ID</code>：指定主节点的ID，默认随机主节点。</li>
+<li><strong>–cluster-slave</strong>：表示添加从节点，默认添加主节点。</li>
+<li><strong>–cluster-master-id 主节点ID</strong>：指定主节点的ID，默认随机主节点。</li>
 </ul>
 <p>添加主节点后，需要迁移槽位或者平衡集群。</p>
 <h3 id="7-4-删除节点"><a href="#7-4-删除节点" class="headerlink" title="7.4 删除节点"></a>7.4 删除节点</h3><p>语法：</p>
@@ -2727,7 +2713,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月22日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2758,10 +2744,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2801,13 +2787,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20260324/153817/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>发布订阅</p>
-          <p class='content'>摘要：本文介绍了Redis的发布订阅。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20260321/135124/'>
           <p class='title'>哨兵模式<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了Redis的哨兵模式。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2918,7 +2904,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B05003002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:Redis:高级</span></a>
+      <a href='/groups/B04003002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:Redis:高级</span></a>
     
   </header>
 
@@ -3207,50 +3193,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3522,7 +3497,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260322/103416/","name":"集群模式"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"集群模式","description":"摘要：本文介绍了Redis的集群模式。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260322/103416/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260322/103416/","wordCount":19,"datePublished":"2026-03-22T02:34:16.000Z","dateModified":"2026-06-22T02:34:19.113Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260322/103416/","name":"集群模式"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"集群模式","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260322/103416/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260322/103416/","wordCount":5,"datePublished":"2026-03-22T02:34:16.000Z","dateModified":"2026-09-26T23:29:37.863Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

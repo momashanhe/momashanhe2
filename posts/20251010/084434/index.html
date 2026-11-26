@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>概述 - 墨码山河</title>
   <meta name="keywords" content="Maven,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了Maven相关的知识。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="概述">
 <meta property="og:url" content="https://momashanhe.com/posts/20251010/084434/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了Maven相关的知识。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-10-10T00:44:34.000Z">
-<meta property="article:modified_time" content="2026-06-18T05:48:02.509Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.867Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Maven">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20251010/084434/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20251010/084434/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20251010/084434/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了Maven相关的知识。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2537,33 +2523,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><h3 id="1-1-说明"><a href="#1-1-说明" class="headerlink" title="1.1 说明"></a>1.1 说明</h3><p>Maven是Apache基金会旗下的纯Java开源项目管理工具，基于项目对象模型（Project Object Model，POM）概念，通过中央配置文件统一管理项目的构建、依赖、报告与文档等全生命周期流程。</p>
 <h3 id="1-2-核心"><a href="#1-2-核心" class="headerlink" title="1.2 核心"></a>1.2 核心</h3><p>Maven的核心价值体现在两大维度：</p>
 <ul>
-<li><code>构建自动化</code>：替代手动执行编译、测试、打包等重复步骤，通过一条命令完成全流程构建。</li>
-<li><code>依赖管理规范化</code>：自动管理项目依赖的第三方Jar包，解决传统依赖管理的查找难、冲突多、嵌套复杂等问题。</li>
+<li><strong>构建自动化</strong>：替代手动执行编译、测试、打包等重复步骤，通过一条命令完成全流程构建。</li>
+<li><strong>依赖管理规范化</strong>：自动管理项目依赖的第三方Jar包，解决传统依赖管理的查找难、冲突多、嵌套复杂等问题。</li>
 </ul>
 <h2 id="2-项目构建"><a href="#2-项目构建" class="headerlink" title="2 项目构建"></a>2 项目构建</h2><h3 id="2-1-含义"><a href="#2-1-含义" class="headerlink" title="2.1 含义"></a>2.1 含义</h3><p>构建并不是创建，创建一个项目并不等于构建一个项目，构建是将项目源码、资源文件等转化为可运行产物的完整流程。</p>
-<p>拿Java语言开发来说，构建就是将Java源代码进行编译，将编译后的文件以及其他的资源文件封装成JAR包或WAR包，然后放到服务器上部署运行。</p>
+<p>拿Java语言开发来说，构建就是将Java源代码进行编译，将编译后的文件以及其他的资源文件封装成Jar包或War包，然后放到服务器上部署运行。</p>
 <h3 id="2-2-对比"><a href="#2-2-对比" class="headerlink" title="2.2 对比"></a>2.2 对比</h3><p>传统构建过程的几个环节：</p>
 <ul>
-<li><code>清理</code>：删除以前的编译结果，为重新编译做好准备。</li>
-<li><code>编译</code>：将Java源程序编译为字节码文件。</li>
-<li><code>测试</code>：针对项目中的关键点进行测试，确保项目在迭代开发过程中关键点的正确性。</li>
-<li><code>打包</code>：将一个包含诸多文件的工程封装为一个压缩文件用于安装或部署。Java工程对应JAR包，Web工程对应WAR包。</li>
-<li><code>部署</code>：将打包的结果部署到远程仓库或将WAR包部署到服务器上运行。</li>
+<li><strong>清理</strong>：删除以前的编译结果，为重新编译做好准备。</li>
+<li><strong>编译</strong>：将Java源程序编译为字节码文件。</li>
+<li><strong>测试</strong>：针对项目中的关键点进行测试，确保项目在迭代开发过程中关键点的正确性。</li>
+<li><strong>打包</strong>：将一个包含诸多文件的工程封装为一个压缩文件用于安装或部署。Java工程对应Jar包，Web工程对应War包。</li>
+<li><strong>部署</strong>：将打包的结果部署到远程仓库或将War包部署到服务器上运行。</li>
 </ul>
 <p>同传统的构建过程不同，Maven可以自动构建，只需要一条命令即可完成所有的构建过程。</p>
 <h2 id="3-依赖管理"><a href="#3-依赖管理" class="headerlink" title="3 依赖管理"></a>3 依赖管理</h2><h3 id="3-1-含义"><a href="#3-1-含义" class="headerlink" title="3.1 含义"></a>3.1 含义</h3><p>在Java项目里面，可能依赖了第三方的Jar包，依赖管理就是将项目所依赖的Jar包按照一定的规则进行规范化管理。</p>
 <h3 id="3-2-对比"><a href="#3-2-对比" class="headerlink" title="3.2 对比"></a>3.2 对比</h3><p>传统的依赖管理就是简单的将所依赖的Jar包下载到本地，然后添加到项目里，这种方式有很多缺点：</p>
 <ul>
-<li><code>查找困难</code>：需手动在网上搜索Jar包，部分Jar包下载过程复杂麻烦。</li>
-<li><code>版本冲突</code>：不同依赖引用同一Jar包的不同版本会导致冲突，手动排查成本高。</li>
-<li><code>嵌套依赖</code>：一个Jar包可能依赖其他Jar包，使用一个Jar包需要同时下载其所依赖的Jar包。</li>
-<li><code>项目臃肿</code>：如果项目依赖的Jar包过多，会导致项目体积庞大，版本控制仓库负担过重。</li>
+<li><strong>查找困难</strong>：需手动在网上搜索Jar包，部分Jar包下载过程复杂麻烦。</li>
+<li><strong>版本冲突</strong>：不同依赖引用同一Jar包的不同版本会导致冲突，手动排查成本高。</li>
+<li><strong>嵌套依赖</strong>：一个Jar包可能依赖其他Jar包，使用一个Jar包需要同时下载其所依赖的Jar包。</li>
+<li><strong>项目臃肿</strong>：如果项目依赖的Jar包过多，会导致项目体积庞大，版本控制仓库负担过重。</li>
 </ul>
 <p>Maven维护了一个中央仓库，只需要在项目中添加pom.xml文件，在文件中以坐标的方式定位Jar包，就可以自动的从中央仓库中根据坐标下载该Jar包，并且会同时下载其所依赖的其他Jar包。</p>
 <h2 id="4-目录结构"><a href="#4-目录结构" class="headerlink" title="4 目录结构"></a>4 目录结构</h2><p>在开发中，第三方工具或框架如果需要识别项目资源，可以通过两种方式：</p>
 <ul>
-<li><code>基于配置</code>：通过配置手动告诉工具资源的位置。</li>
-<li><code>基于约定</code>：工具预设一套目录规则，开发者按规则存放文件，工具自动识别。</li>
+<li><strong>基于配置</strong>：通过配置手动告诉工具资源的位置。</li>
+<li><strong>基于约定</strong>：工具预设一套目录规则，开发者按规则存放文件，工具自动识别。</li>
 </ul>
 <p>Maven遵循“约定优于配置”的理念，定义标准化目录结构，避免手动配置资源位置，确保工具能自动识别源码、资源、测试代码等。</p>
 <p>Maven项目标准目录结构：</p>
@@ -2598,7 +2584,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2629,10 +2615,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B01/">工具</a>
+    <a class="category-link" href="/categories/B05/">研发设施</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B01/" itemprop="url"><span itemprop="name">工具</span></a>
+        <a href="/categories/B05/" itemprop="url"><span itemprop="name">研发设施</span></a>
       </span>
     
   </div>
@@ -2670,15 +2656,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/20251010/102700/'>
+        <a class='prev' href='/posts/20251010/102724/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>基本使用</p>
-          <p class='content'>摘要：本文学习了Maven的安装配置以及在项目中的简单使用。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20250928/152257/'>
           <p class='title'>SeaJS<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了前端模块化工具SeaJS的核心思想和使用方式，以及与其他模块化工具的区别。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2789,7 +2775,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B01001001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:工具:Maven:使用</span></a>
+      <a href='/groups/B05001001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:研发设施:Maven:使用</span></a>
     
   </header>
 
@@ -2809,10 +2795,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         </a></li>
       
-        <li><a class="flat-box" title="/posts/20251010/102700/" href="/posts/20251010/102700/"
+        <li><a class="flat-box" title="/posts/20251010/102724/" href="/posts/20251010/102724/"
           
           
-          active-action="action-posts20251010102700"
+          active-action="action-posts20251010102724"
           >
           <div class='name'>
             
@@ -2840,7 +2826,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-            配置文件
+            配置管理
           </div>
           
         </a></li>
@@ -3030,50 +3016,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3345,7 +3320,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B01/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251010/084434/","name":"概述"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"概述","description":"摘要：本文学习了Maven相关的知识。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251010/084434/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251010/084434/","wordCount":19,"datePublished":"2025-10-10T00:44:34.000Z","dateModified":"2026-06-18T05:48:02.509Z","articleSection":"工具","keywords":"Maven","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B05/","name":"研发设施"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251010/084434/","name":"概述"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"概述","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251010/084434/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251010/084434/","wordCount":5,"datePublished":"2025-10-10T00:44:34.000Z","dateModified":"2026-09-26T23:29:37.867Z","articleSection":"研发设施","keywords":"Maven","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

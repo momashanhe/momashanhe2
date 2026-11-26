@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>Jackson - 墨码山河</title>
   <meta name="keywords" content="Java,JSON,Jackson,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了如何在Java中使用Jackson进行JSON的序列化和反序列化操作。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jackson">
 <meta property="og:url" content="https://momashanhe.com/posts/20251121/133611/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了如何在Java中使用Jackson进行JSON的序列化和反序列化操作。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-11-21T05:36:11.000Z">
-<meta property="article:modified_time" content="2026-06-22T01:40:37.789Z">
+<meta property="article:modified_time" content="2026-10-18T10:12:29.399Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="JSON">
@@ -1856,7 +1856,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2022,7 +2022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2487,7 +2487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20251121/133611/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2500,20 +2500,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20251121/133611/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20251121/133611/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2527,7 +2513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了如何在Java中使用Jackson进行JSON的序列化和反序列化操作。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2539,9 +2525,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p>Jackson是一个高性能的JSON处理库，用于将Java对象与JSON数据格式进行相互转换。它提供了灵活的API，方便开发者在Java应用程序中处理JSON数据。</p>
 <h2 id="2-基础使用"><a href="#2-基础使用" class="headerlink" title="2 基础使用"></a>2 基础使用</h2><p>核心组件：</p>
 <ul>
-<li><code>jackson-core</code>：提供底层的API接口。</li>
-<li><code>jackson-annotations</code>：提供丰富的注解。</li>
-<li><code>jackson-databind</code>：提供数据绑定功能，包含上面两个组件。</li>
+<li><strong>jackson-core</strong>：提供底层的API接口。</li>
+<li><strong>jackson-annotations</strong>：提供丰富的注解。</li>
+<li><strong>jackson-databind</strong>：提供数据绑定功能，包含上面两个组件。</li>
 </ul>
 <p>添加依赖：</p>
 <figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Jackson --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-databind<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.13.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -2585,23 +2571,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>SerializationFeature常用取值：</p>
 <ul>
-<li><code>SerializationFeature.INDENT_OUTPUT</code>：序列化时格式化输出，默认禁用，启用后格式化输出</li>
-<li><code>SerializationFeature.WRITE_NULL_MAP_VALUES</code>：序列化时保留值为null的键值对，默认启用，禁用后忽略值为null的键值对</li>
-<li><code>SerializationFeature.WRITE_EMPTY_JSON_ARRAYS</code>：序列化时保留空数组，默认启用，禁用后忽略空数组</li>
-<li><code>SerializationFeature.WRITE_DATES_AS_TIMESTAMPS</code>：序列化时将日期转为时间戳，默认启用，禁用后输出字符串</li>
+<li><strong>SerializationFeature.INDENT_OUTPUT</strong>：序列化时格式化输出，默认禁用，启用后格式化输出</li>
+<li><strong>SerializationFeature.WRITE_NULL_MAP_VALUES</strong>：序列化时保留值为null的键值对，默认启用，禁用后忽略值为null的键值对</li>
+<li><strong>SerializationFeature.WRITE_EMPTY_JSON_ARRAYS</strong>：序列化时保留空数组，默认启用，禁用后忽略空数组</li>
+<li><strong>SerializationFeature.WRITE_DATES_AS_TIMESTAMPS</strong>：序列化时将日期转为时间戳，默认启用，禁用后输出字符串</li>
 </ul>
 <p>DeserializationFeature常用取值：</p>
 <ul>
-<li><code>DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES</code>：反序列化时如果存在对象未定义字段则抛出异常，默认启用，禁用后忽略未定义字段</li>
-<li><code>DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT</code>：反序列化时将空字符串转换为null，默认禁用，启用后将空字符串转换为null</li>
+<li><strong>DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES</strong>：反序列化时如果存在对象未定义字段则抛出异常，默认启用，禁用后忽略未定义字段</li>
+<li><strong>DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT</strong>：反序列化时将空字符串转换为null，默认禁用，启用后将空字符串转换为null</li>
 </ul>
 <p>JsonInclude.Include常用取值：</p>
 <ul>
-<li><code>ALWAYS</code>：默认值，处理所有属性</li>
-<li><code>NON_NULL</code>：排除属性值为null的属性</li>
-<li><code>NON_ABSENT</code>：排除属性值为null的属性，排除在逻辑上不存在的属性</li>
-<li><code>NON_EMPTY</code>：排除属性值为null的属性，排除在逻辑上不存在的属性，排除空字符串，排除空集合和空数组</li>
-<li><code>NON_DEFAULT</code>：排除属性值为默认值的属性</li>
+<li><strong>ALWAYS</strong>：默认值，处理所有属性</li>
+<li><strong>NON_NULL</strong>：排除属性值为null的属性</li>
+<li><strong>NON_ABSENT</strong>：排除属性值为null的属性，排除在逻辑上不存在的属性</li>
+<li><strong>NON_EMPTY</strong>：排除属性值为null的属性，排除在逻辑上不存在的属性，排除空字符串，排除空集合和空数组</li>
+<li><strong>NON_DEFAULT</strong>：排除属性值为默认值的属性</li>
 </ul>
 <p>示例：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">    <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">    student.setName(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">    student.setAge(<span class="number">20</span>);</span><br><span class="line">    student.setHobbies(Arrays.asList(<span class="string">&quot;阅读&quot;</span>, <span class="string">&quot;编程&quot;</span>, <span class="string">&quot;运动&quot;</span>));</span><br><span class="line">    <span class="type">ObjectMapper</span> <span class="variable">objectMapper</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectMapper</span>();</span><br><span class="line">    <span class="comment">// 序列化配置</span></span><br><span class="line">    objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, <span class="literal">false</span>);</span><br><span class="line">    <span class="comment">// 反序列化配置</span></span><br><span class="line">    objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, <span class="literal">false</span>)</span><br><span class="line">            .configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, <span class="literal">true</span>);</span><br><span class="line">    <span class="comment">// 通用处理逻辑</span></span><br><span class="line">    objectMapper.setDefaultPropertyInclusion(JsonInclude.Include.NON_DEFAULT);</span><br><span class="line">    <span class="comment">// 日期格式全局配置</span></span><br><span class="line">    objectMapper.setDateFormat(<span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-MM-dd&quot;</span>));</span><br><span class="line">    <span class="comment">// 序列化结果</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">jsonString</span> <span class="operator">=</span> objectMapper.writeValueAsString(student);</span><br><span class="line">    System.out.println(<span class="string">&quot;序列化结果: &quot;</span> + jsonString);</span><br><span class="line">    <span class="comment">// 反序列化结果</span></span><br><span class="line">    <span class="type">Student</span> <span class="variable">jsonObject</span> <span class="operator">=</span> objectMapper.readValue(jsonString, Student.class);</span><br><span class="line">    System.out.println(<span class="string">&quot;反序列化结果: &quot;</span> + jsonObject.getName() + <span class="string">&quot;, &quot;</span> + jsonObject.getAge() + <span class="string">&quot;, &quot;</span> + jsonObject.getHobbies());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2619,7 +2605,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>使用<code>@JsonSetter</code>注解指定Java字段名对应的JSON键名，只在反序列化生效。</li>
 </ul>
 <p>指定JSON键名：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="meta">@JsonGetter(&quot;student_name&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@JsonSetter(&quot;student_name&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="meta">@JsonGetter(&quot;student_name&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@JsonSetter(&quot;student_name&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="6-2-忽略字段"><a href="#6-2-忽略字段" class="headerlink" title="6.2 忽略字段"></a>6.2 忽略字段</h3><p>使用<code>@JsonIgnore</code>注解忽略Java字段，不参与序列化和反序列化。</p>
 <p>忽略Java字段：</p>
@@ -2630,13 +2616,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonIgnoreProperties(value = &#123;&quot;name&quot;&#125;, ignoreUnknown = true)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; hobbies;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="7-自定义处理"><a href="#7-自定义处理" class="headerlink" title="7 自定义处理"></a>7 自定义处理</h2><h3 id="7-1-序列化"><a href="#7-1-序列化" class="headerlink" title="7.1 序列化"></a>7.1 序列化</h3><p>继承StdSerializer类自定义序列化：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StudentSerializer</span> <span class="keyword">extends</span> <span class="title class_">StdSerializer</span>&lt;Student&gt; &#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="title function_">StudentSerializer</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(Student.class);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">serialize</span><span class="params">(Student student, JsonGenerator jsonGenerator, SerializerProvider serializerProvider)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        jsonGenerator.writeStartObject();</span><br><span class="line">        jsonGenerator.writeStringField(<span class="string">&quot;name&quot;</span>, student.getName());</span><br><span class="line">        jsonGenerator.writeNumberField(<span class="string">&quot;age&quot;</span>, student.getAge());</span><br><span class="line">        jsonGenerator.writeArrayFieldStart(<span class="string">&quot;hobbies&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (String hobby : student.getHobbies()) &#123;</span><br><span class="line">            jsonGenerator.writeString(hobby);</span><br><span class="line">        &#125;</span><br><span class="line">        jsonGenerator.writeEndArray();</span><br><span class="line">        jsonGenerator.writeEndObject();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StudentSerializer</span> <span class="keyword">extends</span> <span class="title class_">StdSerializer</span>&lt;Student&gt; &#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="title function_">StudentSerializer</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(Student.class);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">serialize</span><span class="params">(Student student, JsonGenerator jsonGenerator, SerializerProvider serializerProvider)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        jsonGenerator.writeStartObject();</span><br><span class="line">        jsonGenerator.writeStringField(<span class="string">&quot;name&quot;</span>, student.getName());</span><br><span class="line">        jsonGenerator.writeNumberField(<span class="string">&quot;age&quot;</span>, student.getAge());</span><br><span class="line">        jsonGenerator.writeArrayFieldStart(<span class="string">&quot;hobbies&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (String hobby : student.getHobbies()) &#123;</span><br><span class="line">            jsonGenerator.writeString(hobby);</span><br><span class="line">        &#125;</span><br><span class="line">        jsonGenerator.writeEndArray();</span><br><span class="line">        jsonGenerator.writeEndObject();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>使用自定义序列化器：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">// 创建Student对象</span></span><br><span class="line">    <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">    student.setName(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">    student.setAge(<span class="number">20</span>);</span><br><span class="line">    student.setHobbies(Arrays.asList(<span class="string">&quot;阅读&quot;</span>, <span class="string">&quot;编程&quot;</span>, <span class="string">&quot;运动&quot;</span>));</span><br><span class="line">    <span class="comment">// 创建自定义序列化器并注册模块</span></span><br><span class="line">    <span class="type">StudentSerializer</span> <span class="variable">studentSerializer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StudentSerializer</span>();</span><br><span class="line">    <span class="type">SimpleModule</span> <span class="variable">module</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleModule</span>();</span><br><span class="line">    <span class="keyword">module</span>.addSerializer(Student.class, studentSerializer);</span><br><span class="line">    <span class="comment">// 创建ObjectMapper对象</span></span><br><span class="line">    <span class="type">ObjectMapper</span> <span class="variable">objectMapper</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectMapper</span>();</span><br><span class="line">    objectMapper.registerModule(<span class="keyword">module</span>);</span><br><span class="line">    <span class="comment">// 将对象序列化为JSON字符串</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">json</span> <span class="operator">=</span> objectMapper.writeValueAsString(student);</span><br><span class="line">        System.out.println(<span class="string">&quot;序列化结果: &quot;</span> + json);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="7-2-反序列化"><a href="#7-2-反序列化" class="headerlink" title="7.2 反序列化"></a>7.2 反序列化</h3><p>继承StudentDeserializer类自定义反序列化：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StudentDeserializer</span> <span class="keyword">extends</span> <span class="title class_">StdDeserializer</span>&lt;Student&gt; &#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="title function_">StudentDeserializer</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(Student.class);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Student <span class="title function_">deserialize</span><span class="params">(JsonParser jsonParser, DeserializationContext deserializationContext)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        <span class="keyword">while</span> (jsonParser.nextToken() != JsonToken.END_OBJECT) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">fieldName</span> <span class="operator">=</span> jsonParser.getCurrentName();</span><br><span class="line">            jsonParser.nextToken();</span><br><span class="line">            <span class="keyword">switch</span> (fieldName) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;name&quot;</span>:</span><br><span class="line">                    student.setName(jsonParser.getText());</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;age&quot;</span>:</span><br><span class="line">                    student.setAge(jsonParser.getIntValue());</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;hobbies&quot;</span>:</span><br><span class="line">                    List&lt;String&gt; hobbies = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">                    <span class="keyword">while</span> (jsonParser.nextToken() != JsonToken.END_ARRAY) &#123;</span><br><span class="line">                        hobbies.add(jsonParser.getText());</span><br><span class="line">                    &#125;</span><br><span class="line">                    student.setHobbies(hobbies);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    jsonParser.skipChildren();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> student;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StudentDeserializer</span> <span class="keyword">extends</span> <span class="title class_">StdDeserializer</span>&lt;Student&gt; &#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="title function_">StudentDeserializer</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(Student.class);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Student <span class="title function_">deserialize</span><span class="params">(JsonParser jsonParser, DeserializationContext deserializationContext)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        <span class="keyword">while</span> (jsonParser.nextToken() != JsonToken.END_OBJECT) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">fieldName</span> <span class="operator">=</span> jsonParser.getCurrentName();</span><br><span class="line">            jsonParser.nextToken();</span><br><span class="line">            <span class="keyword">switch</span> (fieldName) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;name&quot;</span>:</span><br><span class="line">                    student.setName(jsonParser.getText());</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;age&quot;</span>:</span><br><span class="line">                    student.setAge(jsonParser.getIntValue());</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;hobbies&quot;</span>:</span><br><span class="line">                    List&lt;String&gt; hobbies = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">                    <span class="keyword">while</span> (jsonParser.nextToken() != JsonToken.END_ARRAY) &#123;</span><br><span class="line">                        hobbies.add(jsonParser.getText());</span><br><span class="line">                    &#125;</span><br><span class="line">                    student.setHobbies(hobbies);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    jsonParser.skipChildren();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> student;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>使用自定义反序列化器：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">// 创建JSON字符串</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">json</span> <span class="operator">=</span> <span class="string">&quot;&#123;\&quot;name\&quot;:\&quot;张三\&quot;,\&quot;age\&quot;:20,\&quot;hobbies\&quot;:[\&quot;阅读\&quot;,\&quot;编程\&quot;,\&quot;运动\&quot;]&#125;&quot;</span>;</span><br><span class="line">    <span class="comment">// 创建自定义反序列化器并注册模块</span></span><br><span class="line">    <span class="type">StudentDeserializer</span> <span class="variable">studentDeserializer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StudentDeserializer</span>();</span><br><span class="line">    <span class="type">SimpleModule</span> <span class="variable">module</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleModule</span>();</span><br><span class="line">    <span class="keyword">module</span>.addDeserializer(Student.class, studentDeserializer);</span><br><span class="line">    <span class="comment">// 创建ObjectMapper对象</span></span><br><span class="line">    <span class="type">ObjectMapper</span> <span class="variable">objectMapper</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectMapper</span>();</span><br><span class="line">    objectMapper.registerModule(<span class="keyword">module</span>);</span><br><span class="line">    <span class="comment">// 将JSON字符串反序列化为Student对象</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> objectMapper.readValue(json, Student.class);</span><br><span class="line">        System.out.println(<span class="string">&quot;反序列化结果: &quot;</span> + student.getName() + <span class="string">&quot;, &quot;</span> + student.getAge() + <span class="string">&quot;, &quot;</span> + student.getHobbies());</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2670,7 +2656,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月22日</div>
+                <div class="license-meta-text">2026年10月18日</div>
               </div>
               
               
@@ -2701,10 +2687,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B03/">前端</a>
+    <a class="category-link" href="/categories/B02/">前端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B03/" itemprop="url"><span itemprop="name">前端</span></a>
+        <a href="/categories/B02/" itemprop="url"><span itemprop="name">前端</span></a>
       </span>
     
   </div>
@@ -2744,13 +2730,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20251123/081401/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>概述</p>
-          <p class='content'>摘要：本文介绍了JavaWeb的基本概念和组成部分。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20251113/110830/'>
           <p class='title'>Gson<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了如何在Java中使用Gson进行JSON的序列化和反序列化操作。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2861,7 +2847,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B03006002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:JSON:解析</span></a>
+      <a href='/groups/B02006002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:JSON:解析</span></a>
     
   </header>
 
@@ -3078,50 +3064,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3393,7 +3368,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251121/133611/","name":"Jackson"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Jackson","description":"摘要：本文介绍了如何在Java中使用Jackson进行JSON的序列化和反序列化操作。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251121/133611/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251121/133611/","wordCount":43,"datePublished":"2025-11-21T05:36:11.000Z","dateModified":"2026-06-22T01:40:37.789Z","articleSection":"前端","keywords":"Java,JSON,Jackson","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251121/133611/","name":"Jackson"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Jackson","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251121/133611/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251121/133611/","wordCount":5,"datePublished":"2025-11-21T05:36:11.000Z","dateModified":"2026-10-18T10:12:29.399Z","articleSection":"前端","keywords":"Java,JSON,Jackson","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>备份和还原 - 墨码山河</title>
   <meta name="keywords" content="MySQL,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了数据库的备份和还原。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="备份和还原">
 <meta property="og:url" content="https://momashanhe.com/posts/20250621/150430/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了数据库的备份和还原。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-06-21T07:04:30.000Z">
-<meta property="article:modified_time" content="2026-06-22T02:25:53.904Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.856Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20250621/150430/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20250621/150430/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20250621/150430/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了数据库的备份和还原。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2536,20 +2522,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h2 id="1-分类"><a href="#1-分类" class="headerlink" title="1 分类"></a>1 分类</h2><p>按备份类型可以分为两种：</p>
 <ul>
-<li><p><code>完全备份</code>：完全备份指的是备份整个数据集，即整个数据库。</p>
+<li><p><strong>完全备份</strong>：完全备份指的是备份整个数据集，即整个数据库。</p>
 </li>
-<li><p><code>部分备份</code>：部分备份指的是备份部分数据集，支持指定表。部分备份可以细分两种：</p>
+<li><p><strong>部分备份</strong>：部分备份指的是备份部分数据集，支持指定表。部分备份可以细分两种：</p>
 </li>
-<li><p><code>增量备份</code>：增量备份指的是备份自上一次增量备份或完全备份以来变化的数据。其特点是节约空间，但是还原麻烦。</p>
+<li><p><strong>增量备份</strong>：增量备份指的是备份自上一次增量备份或完全备份以来变化的数据。其特点是节约空间，但是还原麻烦。</p>
 </li>
-<li><p><code>差异备份</code>：差异备份指的是备份自上一次完全备份以来变化的数据。其特点是浪费空间，但是还原比增量备份简单。</p>
+<li><p><strong>差异备份</strong>：差异备份指的是备份自上一次完全备份以来变化的数据。其特点是浪费空间，但是还原比增量备份简单。</p>
 </li>
 </ul>
 <p>按备份方式可以分为三种：</p>
 <ul>
-<li><code>热备份</code>：热备份指的是当数据库进行备份时，数据库的读写操作均不是受影响。MyISAM引擎不支持，InnoDB引擎支持。</li>
-<li><code>温备份</code>：温备份指的是当数据库进行备份时，数据库的读操作可以执行，但是不能执行写操作。MyISAM引擎和InnoDB引擎都支持。</li>
-<li><code>冷备份</code>：冷备份指的是当数据库进行备份时，数据库不能进行读写操作，即数据库要下线。MyISAM引擎和InnoDB引擎都支持。</li>
+<li><strong>热备份</strong>：热备份指的是当数据库进行备份时，数据库的读写操作均不是受影响。MyISAM引擎不支持，InnoDB引擎支持。</li>
+<li><strong>温备份</strong>：温备份指的是当数据库进行备份时，数据库的读操作可以执行，但是不能执行写操作。MyISAM引擎和InnoDB引擎都支持。</li>
+<li><strong>冷备份</strong>：冷备份指的是当数据库进行备份时，数据库不能进行读写操作，即数据库要下线。MyISAM引擎和InnoDB引擎都支持。</li>
 </ul>
 <h2 id="2-策略"><a href="#2-策略" class="headerlink" title="2 策略"></a>2 策略</h2><p>针对不同的场景，应该制定不同的备份策略：</p>
 <ul>
@@ -2563,30 +2549,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>连接选项：</p>
 <ul>
-<li><code>--user, -u</code>：用户名。登录数据库的用户名，当前用户可省略该配置。</li>
-<li><code>--password, -p</code>：密码。登录数据库的密码。</li>
-<li><code>--host, -h</code>：主机地址。设置数据库所在的主机地址。</li>
-<li><code>--port, -P</code>：端口号。设置用于连接的端口号。</li>
-<li><code>--protocol</code>：连接协议。设置使用的连接协议，取值有TCP、SOCKET、PIPE、MEMORY四种。</li>
+<li><strong>–user, -u</strong>：用户名。登录数据库的用户名，当前用户可省略该配置。</li>
+<li><strong>–password, -p</strong>：密码。登录数据库的密码。</li>
+<li><strong>–host, -h</strong>：主机地址。设置数据库所在的主机地址。</li>
+<li><strong>–port, -P</strong>：端口号。设置用于连接的端口号。</li>
+<li><strong>–protocol</strong>：连接协议。设置使用的连接协议，取值有TCP、SOCKET、PIPE、MEMORY四种。</li>
 </ul>
 <p>导出选项：</p>
 <ul>
-<li><code>--all-databases, -A</code>：导出全部数据库。</li>
-<li><code>--databases, -B</code>：导出指定数据库。</li>
-<li><code>--tables</code>：导出指定表。</li>
-<li><code>--ignore-table</code>：忽略指定表，多个表时需要重复多次，每个表都要指定数据库和表名。</li>
-<li><code>--no-create-db</code>：不添加创建数据库语句。</li>
-<li><code>--add-drop-database</code>：添加删除数据库语句。</li>
-<li><code>--no-create-info</code>：不添加创建表语句。</li>
-<li><code>--skip-add-drop-table</code>：不添加删除表语句。</li>
-<li><code>--skip-extended-insert</code>：不合并多个插入语句，一个插入语句插入一行数据。</li>
-<li><code>--no-data</code>：不导出数据只导出表结构。</li>
-<li><code>--default-character-set</code>：设置字符集，默认为<code>utf8</code>字符集。</li>
-<li><code>--where</code>：只导出符合指定条件的记录。如果条件包含命令解释符专用空格或字符，将条件引用起来。</li>
-<li><code>--complete-insert</code>：使用包含列名称的完整插入语句，默认不使用列名插入，不使用列名能提高插入效率，但是可能会受到<code>max_allowed_packet</code>参数的影响而导致插入失败。</li>
-<li><code>--max_allowed_packet</code>：服务器发送和接受的最大包长度，通信的缓存区最大为1GB。</li>
-<li><code>--insert-ignore</code>：忽略插入错误，在插入语句中添加忽略错误语句。</li>
-<li><code>--force, -f</code>：强制插入，在表转储过程中，即使出现SQL错误也继续。</li>
+<li><strong>–all-databases, -A</strong>：导出全部数据库。</li>
+<li><strong>–databases, -B</strong>：导出指定数据库。</li>
+<li><strong>–tables</strong>：导出指定表。</li>
+<li><strong>–ignore-table</strong>：忽略指定表，多个表时需要重复多次，每个表都要指定数据库和表名。</li>
+<li><strong>–no-create-db</strong>：不添加创建数据库语句。</li>
+<li><strong>–add-drop-database</strong>：添加删除数据库语句。</li>
+<li><strong>–no-create-info</strong>：不添加创建表语句。</li>
+<li><strong>–skip-add-drop-table</strong>：不添加删除表语句。</li>
+<li><strong>–skip-extended-insert</strong>：不合并多个插入语句，一个插入语句插入一行数据。</li>
+<li><strong>–no-data</strong>：不导出数据只导出表结构。</li>
+<li><strong>–default-character-set</strong>：设置字符集，默认为<code>utf8</code>字符集。</li>
+<li><strong>–where</strong>：只导出符合指定条件的记录。如果条件包含命令解释符专用空格或字符，将条件引用起来。</li>
+<li><strong>–complete-insert</strong>：使用包含列名称的完整插入语句，默认不使用列名插入，不使用列名能提高插入效率，但是可能会受到<code>max_allowed_packet</code>参数的影响而导致插入失败。</li>
+<li><strong>–max_allowed_packet</strong>：服务器发送和接受的最大包长度，通信的缓存区最大为1GB。</li>
+<li><strong>–insert-ignore</strong>：忽略插入错误，在插入语句中添加忽略错误语句。</li>
+<li><strong>–force, -f</strong>：强制插入，在表转储过程中，即使出现SQL错误也继续。</li>
 </ul>
 <p>导出全部数据库：</p>
 <figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u root -p --all-databases &gt; db_back.sql</span><br></pre></td></tr></table></figure>
@@ -2648,7 +2634,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月22日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2679,10 +2665,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B05/">数据库</a>
+    <a class="category-link" href="/categories/B04/">数据库</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B05/" itemprop="url"><span itemprop="name">数据库</span></a>
+        <a href="/categories/B04/" itemprop="url"><span itemprop="name">数据库</span></a>
       </span>
     
   </div>
@@ -2722,13 +2708,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20250701/085902/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>连接数据库</p>
-          <p class='content'>摘要：本文学习了如何使用JDBC连接数据库。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20250620/091632/'>
           <p class='title'>多版本并发控制<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了InnoBD存储引擎独有的多版本并发控制机制。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2839,7 +2825,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B05002002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:MySQL:高级</span></a>
+      <a href='/groups/B04002002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:MySQL:高级</span></a>
     
   </header>
 
@@ -2951,6 +2937,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <div class='name'>
             
             备份和还原
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/posts/20260420/123156/" href="/posts/20260420/123156/"
+          
+          
+          active-action="action-posts20260420123156"
+          >
+          <div class='name'>
+            
+            在线DDL
           </div>
           
         </a></li>
@@ -3140,50 +3138,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3455,7 +3442,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B05/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250621/150430/","name":"备份和还原"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"备份和还原","description":"摘要：本文学习了数据库的备份和还原。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250621/150430/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250621/150430/","wordCount":18,"datePublished":"2025-06-21T07:04:30.000Z","dateModified":"2026-06-22T02:25:53.904Z","articleSection":"数据库","keywords":"MySQL","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250621/150430/","name":"备份和还原"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"备份和还原","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250621/150430/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250621/150430/","wordCount":5,"datePublished":"2025-06-21T07:04:30.000Z","dateModified":"2026-09-26T23:29:37.856Z","articleSection":"数据库","keywords":"MySQL","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

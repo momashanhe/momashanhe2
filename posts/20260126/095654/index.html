@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>表单标签 - 墨码山河</title>
   <meta name="keywords" content="Spring MVC,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了如何在Spring MVC中使用表单标签。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="表单标签">
 <meta property="og:url" content="https://momashanhe.com/posts/20260126/095654/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了如何在Spring MVC中使用表单标签。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-01-26T01:56:54.000Z">
-<meta property="article:modified_time" content="2026-06-18T05:49:31.087Z">
+<meta property="article:modified_time" content="2026-10-18T10:24:57.613Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Spring MVC">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2464,7 +2464,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>735 字</p>
+      <p>719 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20260126/095654/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20260126/095654/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20260126/095654/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了如何在Spring MVC中使用表单标签。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2541,27 +2527,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>前缀可以自定义，通常使用<code>form</code>作为前缀。</p>
 <h2 id="3-标签"><a href="#3-标签" class="headerlink" title="3 标签"></a>3 标签</h2><p>核心标签：</p>
 <ul>
-<li><code>form</code>：创建表单。</li>
-<li><code>input</code>：创建输入框。</li>
-<li><code>password</code>：创建密码输入框。</li>
-<li><code>textarea</code>：创建多行文本输入框。</li>
-<li><code>hidden</code>：创建隐藏输入框。</li>
-<li><code>radio</code>：创建单选框。</li>
-<li><code>checkbox</code>：创建复选框。</li>
-<li><code>select</code>：创建下拉列表框。</li>
-<li><code>option</code>：创建下拉列表框的选项。</li>
-<li><code>button</code>：创建按钮。</li>
+<li><strong>form</strong>：创建表单。</li>
+<li><strong>input</strong>：创建输入框。</li>
+<li><strong>password</strong>：创建密码输入框。</li>
+<li><strong>textarea</strong>：创建多行文本输入框。</li>
+<li><strong>hidden</strong>：创建隐藏输入框。</li>
+<li><strong>radio</strong>：创建单选框。</li>
+<li><strong>checkbox</strong>：创建复选框。</li>
+<li><strong>select</strong>：创建下拉列表框。</li>
+<li><strong>option</strong>：创建下拉列表框的选项。</li>
+<li><strong>button</strong>：创建按钮。</li>
 </ul>
 <p>通用属性：</p>
 <ul>
-<li><code>id</code>：指定表单字段的ID属性。</li>
-<li><code>path</code>：指定表单字段的路径，用于绑定表单数据的模型属性，支持级联属性。</li>
+<li><strong>id</strong>：指定表单字段的ID属性。</li>
+<li><strong>path</strong>：指定表单字段的路径，用于绑定表单数据的模型属性，支持级联属性。</li>
 </ul>
 <h2 id="4-使用"><a href="#4-使用" class="headerlink" title="4 使用"></a>4 使用</h2><p>后端配置：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> Filter[] getServletFilters() &#123;</span><br><span class="line">    <span class="comment">// 注册字符编码过滤器</span></span><br><span class="line">    <span class="type">CharacterEncodingFilter</span> <span class="variable">encodingFilter</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CharacterEncodingFilter</span>();</span><br><span class="line">    encodingFilter.setEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">    encodingFilter.setForceEncoding(<span class="literal">true</span>);</span><br><span class="line">    <span class="comment">// 注册隐藏HTTP方法过滤器</span></span><br><span class="line">    <span class="type">HiddenHttpMethodFilter</span> <span class="variable">hiddenHttpMethodFilter</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HiddenHttpMethodFilter</span>();</span><br><span class="line">    <span class="comment">// 设置过滤器</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Filter</span>[] &#123;encodingFilter, hiddenHttpMethodFilter&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>后端接口：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserController</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Map&lt;Integer, User&gt; userMap = Arrays.asList(</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">1</span>, <span class="string">&quot;张三&quot;</span>, <span class="keyword">new</span> <span class="title class_">Date</span>(), <span class="string">&quot;男&quot;</span>, Arrays.asList(<span class="string">&quot;跑步&quot;</span>, <span class="string">&quot;看书&quot;</span>)),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">2</span>, <span class="string">&quot;李四&quot;</span>, <span class="keyword">new</span> <span class="title class_">Date</span>(), <span class="string">&quot;女&quot;</span>, Arrays.asList(<span class="string">&quot;看书&quot;</span>, <span class="string">&quot;画画&quot;</span>))</span><br><span class="line">        ).stream().collect(Collectors.toMap(User::getId, user -&gt; user));</span><br><span class="line">    <span class="comment">// 修改用户页面</span></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/user/edit/&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toEditPage</span><span class="params">(<span class="meta">@PathVariable</span> Integer id, Model model)</span> &#123;</span><br><span class="line">        <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> userMap.get(id);</span><br><span class="line">        model.addAttribute(<span class="string">&quot;user&quot;</span>, user);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;user/edit&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 修改用户接口</span></span><br><span class="line">    <span class="meta">@PutMapping(&quot;/user/&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">updateUser</span><span class="params">(<span class="meta">@PathVariable</span> Integer id, User user)</span> &#123;</span><br><span class="line">        userMap.put(id, user);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;redirect:/user/edit/&quot;</span> + id;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserController</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Map&lt;Integer, User&gt; userMap = Arrays.asList(</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">1</span>, <span class="string">&quot;张三&quot;</span>, <span class="keyword">new</span> <span class="title class_">Date</span>(), <span class="string">&quot;男&quot;</span>, Arrays.asList(<span class="string">&quot;跑步&quot;</span>, <span class="string">&quot;看书&quot;</span>)),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">2</span>, <span class="string">&quot;李四&quot;</span>, <span class="keyword">new</span> <span class="title class_">Date</span>(), <span class="string">&quot;女&quot;</span>, Arrays.asList(<span class="string">&quot;看书&quot;</span>, <span class="string">&quot;画画&quot;</span>))</span><br><span class="line">        ).stream().collect(Collectors.toMap(User::getId, user -&gt; user));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改用户页面</span></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/user/edit/&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toEditPage</span><span class="params">(<span class="meta">@PathVariable</span> Integer id, Model model)</span> &#123;</span><br><span class="line">        <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> userMap.get(id);</span><br><span class="line">        model.addAttribute(<span class="string">&quot;user&quot;</span>, user);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;user/edit&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改用户接口</span></span><br><span class="line">    <span class="meta">@PutMapping(&quot;/user/&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">updateUser</span><span class="params">(<span class="meta">@PathVariable</span> Integer id, User user)</span> &#123;</span><br><span class="line">        userMap.put(id, user);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;redirect:/user/edit/&quot;</span> + id;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>前端页面：</p>
 <figure class="highlight jsp"><figcaption><span>jsp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page contentType=<span class="string">&quot;text/html;charset=UTF-8&quot;</span> language=<span class="string">&quot;java&quot;</span> %&gt;</span><br><span class="line">&lt;%@ taglib prefix=<span class="string">&quot;form&quot;</span> uri=<span class="string">&quot;http://www.springframework.org/tags/form&quot;</span> %&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;zh-CN&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">  &lt;title&gt;修改用户&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;form:form action=<span class="string">&quot;$&#123;pageContext.request.contextPath&#125;/user/$&#123;user.id&#125;&quot;</span> method=<span class="string">&quot;post&quot;</span> modelAttribute=<span class="string">&quot;user&quot;</span>&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;hidden&quot;</span> name=<span class="string">&quot;_method&quot;</span> value=<span class="string">&quot;PUT&quot;</span>/&gt;</span><br><span class="line">    &lt;form:hidden path=<span class="string">&quot;id&quot;</span>/&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;label&gt;姓名：&lt;/label&gt;</span><br><span class="line">    &lt;form:input path=<span class="string">&quot;name&quot;</span>/&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;label&gt;性别：&lt;/label&gt;</span><br><span class="line">    &lt;form:radiobutton path=<span class="string">&quot;gender&quot;</span> value=<span class="string">&quot;男&quot;</span>/&gt;男</span><br><span class="line">    &lt;form:radiobutton path=<span class="string">&quot;gender&quot;</span> value=<span class="string">&quot;女&quot;</span>/&gt;女</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;label&gt;爱好：&lt;/label&gt;</span><br><span class="line">    &lt;form:checkbox path=<span class="string">&quot;hobbies&quot;</span> value=<span class="string">&quot;跑步&quot;</span>/&gt;跑步</span><br><span class="line">    &lt;form:checkbox path=<span class="string">&quot;hobbies&quot;</span> value=<span class="string">&quot;看书&quot;</span>/&gt;看书</span><br><span class="line">    &lt;form:checkbox path=<span class="string">&quot;hobbies&quot;</span> value=<span class="string">&quot;画画&quot;</span>/&gt;画画</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;submit&quot;</span> value=<span class="string">&quot;保存&quot;</span>/&gt;</span><br><span class="line">  &lt;/form:form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
@@ -2595,7 +2581,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年10月18日</div>
               </div>
               
               
@@ -2626,10 +2612,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2669,13 +2655,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20260129/113627/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>过滤器</p>
-          <p class='content'>摘要：本文介绍了Spring MVC中的过滤器。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20260122/123643/'>
           <p class='title'>REST<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了如何在Spring MVC中使用REST风格的请求和响应。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2786,7 +2772,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04004002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Spring MVC:进阶</span></a>
+      <a href='/groups/B03004002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Spring MVC:高级</span></a>
     
   </header>
 
@@ -2886,6 +2872,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <div class='name'>
             
             国际化
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/posts/20260201/135907/" href="/posts/20260201/135907/"
+          
+          
+          active-action="action-posts20260201135907"
+          >
+          <div class='name'>
+            
+            远程调用
           </div>
           
         </a></li>
@@ -3075,50 +3073,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3390,7 +3377,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260126/095654/","name":"表单标签"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"表单标签","description":"摘要：本文学习了如何在Spring MVC中使用表单标签。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260126/095654/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260126/095654/","wordCount":29,"datePublished":"2026-01-26T01:56:54.000Z","dateModified":"2026-06-18T05:49:31.087Z","articleSection":"后端","keywords":"Spring MVC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260126/095654/","name":"表单标签"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"表单标签","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260126/095654/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260126/095654/","wordCount":5,"datePublished":"2026-01-26T01:56:54.000Z","dateModified":"2026-10-18T10:24:57.613Z","articleSection":"后端","keywords":"Spring MVC","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

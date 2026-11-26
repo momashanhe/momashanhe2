@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>接口管理 - 墨码山河</title>
   <meta name="keywords" content="JS,Node,代码改变世界">
-  <meta desc name="description" content="摘要：本文了解了接口的概念和组成，如何使用Node调用接口，以及什么是RESTful风格的接口。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="接口管理">
 <meta property="og:url" content="https://momashanhe.com/posts/20250411/142934/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文了解了接口的概念和组成，如何使用Node调用接口，以及什么是RESTful风格的接口。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-04-11T06:29:34.000Z">
-<meta property="article:modified_time" content="2026-06-18T07:57:50.946Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.718Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="JS">
 <meta property="article:tag" content="Node">
@@ -1855,7 +1855,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2465,7 +2465,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2.2k 字</p>
+      <p>2.1k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2486,7 +2486,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20250411/142934/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2499,20 +2499,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20250411/142934/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20250411/142934/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2526,7 +2512,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文了解了接口的概念和组成，如何使用Node调用接口，以及什么是RESTful风格的接口。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2541,10 +2527,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="2-2-请求方法"><a href="#2-2-请求方法" class="headerlink" title="2.2 请求方法"></a>2.2 请求方法</h3><p>接口接受的请求类型。</p>
 <p>常见的有四种：</p>
 <ul>
-<li><code>GET</code>：这种类型的请求主要用于获取数据，对应查询操作。</li>
-<li><code>POST</code>：这种类型的请求主要用于提交数据，对应增加操作。</li>
-<li><code>PUT</code>：这种类型的请求主要用于更新数据，对应更新操作。</li>
-<li><code>DELETE</code>：这种类型的请求主要用于删除数据，对应删除操作。</li>
+<li><strong>GET</strong>：这种类型的请求主要用于获取数据，对应查询操作。</li>
+<li><strong>POST</strong>：这种类型的请求主要用于提交数据，对应增加操作。</li>
+<li><strong>PUT</strong>：这种类型的请求主要用于更新数据，对应更新操作。</li>
+<li><strong>DELETE</strong>：这种类型的请求主要用于删除数据，对应删除操作。</li>
 </ul>
 <h3 id="2-3-请求参数"><a href="#2-3-请求参数" class="headerlink" title="2.3 请求参数"></a>2.3 请求参数</h3><p>接口需要的数据。</p>
 <p>按参数所在位置不同，可以分为三种：</p>
@@ -2589,9 +2575,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="2-4-响应结果"><a href="#2-4-响应结果" class="headerlink" title="2.4 响应结果"></a>2.4 响应结果</h3><p>接口处理数据后返回的结果。</p>
 <p>通常包括三部分：</p>
 <ul>
-<li><code>状态码</code>：表示请求是否成功，比如200表示成功等。</li>
-<li><code>响应头</code>：包含额外信息，比如内容类型和编码等。</li>
-<li><code>响应体</code>：返回的具体数据，比如JSON格式的数据。</li>
+<li><strong>状态码</strong>：表示请求是否成功，比如200表示成功等。</li>
+<li><strong>响应头</strong>：包含额外信息，比如内容类型和编码等。</li>
+<li><strong>响应体</strong>：返回的具体数据，比如JSON格式的数据。</li>
 </ul>
 <p>常见的状态码：</p>
 <table>
@@ -2663,10 +2649,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>总结：</p>
 <ul>
-<li><code>2xx</code>：成功类状态码，表示请求已正确处理。</li>
-<li><code>3xx</code>：重定向类状态码，表示资源位置已改变。</li>
-<li><code>4xx</code>：客户端错误类状态码，表示请求存在问题。</li>
-<li><code>5xx</code>：服务器错误类状态码，表示服务器无法处理请求。</li>
+<li><strong>2xx</strong>：成功类状态码，表示请求已正确处理。</li>
+<li><strong>3xx</strong>：重定向类状态码，表示资源位置已改变。</li>
+<li><strong>4xx</strong>：客户端错误类状态码，表示请求存在问题。</li>
+<li><strong>5xx</strong>：服务器错误类状态码，表示服务器无法处理请求。</li>
 </ul>
 <h2 id="3-RESTful"><a href="#3-RESTful" class="headerlink" title="3 RESTful"></a>3 RESTful</h2><p>RESTful是一种特殊风格的接口，主要特点有如下几个：</p>
 <ul>
@@ -2713,7 +2699,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2744,10 +2730,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B03/">前端</a>
+    <a class="category-link" href="/categories/B02/">前端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B03/" itemprop="url"><span itemprop="name">前端</span></a>
+        <a href="/categories/B02/" itemprop="url"><span itemprop="name">前端</span></a>
       </span>
     
   </div>
@@ -2787,13 +2773,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20250413/230214/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>会话控制</p>
-          <p class='content'>摘要：本文了解了什么是会话控制，以及在Node中如何使用Cookie和Session进行身份验证。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20250406/083755/'>
           <p class='title'>布局方式整理<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文整理了CSS常见的布局方式。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2904,7 +2890,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B03004001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:Node:基础</span></a>
+      <a href='/groups/B02004001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:Node:基础</span></a>
     
   </header>
 
@@ -3229,50 +3215,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3544,7 +3519,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250411/142934/","name":"接口管理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"接口管理","description":"摘要：本文了解了接口的概念和组成，如何使用Node调用接口，以及什么是RESTful风格的接口。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250411/142934/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250411/142934/","wordCount":48,"datePublished":"2025-04-11T06:29:34.000Z","dateModified":"2026-06-18T07:57:50.946Z","articleSection":"前端","keywords":"JS,Node","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250411/142934/","name":"接口管理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"接口管理","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250411/142934/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250411/142934/","wordCount":5,"datePublished":"2025-04-11T06:29:34.000Z","dateModified":"2026-09-26T23:29:37.718Z","articleSection":"前端","keywords":"JS,Node","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

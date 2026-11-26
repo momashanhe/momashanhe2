@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>面向对象 - 墨码山河</title>
   <meta name="keywords" content="Java,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了面向对象的一些基础知识，介绍了类和对象的概念，以及如何使用接口和导入包。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象">
 <meta property="og:url" content="https://momashanhe.com/posts/20250425/092223/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了面向对象的一些基础知识，介绍了类和对象的概念，以及如何使用接口和导入包。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-04-25T01:22:23.000Z">
-<meta property="article:modified_time" content="2026-06-18T08:14:32.839Z">
+<meta property="article:modified_time" content="2026-10-18T10:15:54.834Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20250425/092223/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20250425/092223/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20250425/092223/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了面向对象的一些基础知识，介绍了类和对象的概念，以及如何使用接口和导入包。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2540,8 +2526,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>在对应的计算机模型中，把动物这种抽象的概念称之为Class，也就是类。而那些具体的对象称之为实例，并且用不同变量标识不同的实例。</p>
 <p>面向过程与面向对象都是编写程序的一种思维方式：</p>
 <ul>
-<li><code>面向过程</code>：遇到一件事时，先做什么，再做什么，然后一步步实现的过程。</li>
-<li><code>面向对象</code>：遇到一件事时，先思考有哪些类和对象，然后思考类和对象里有哪些属性和方法，然后分析类和类之间的关系，最后一群对象合力能把事办好。</li>
+<li><strong>面向过程</strong>：遇到一件事时，先做什么，再做什么，然后一步步实现的过程。</li>
+<li><strong>面向对象</strong>：遇到一件事时，先思考有哪些类和对象，然后思考类和对象里有哪些属性和方法，然后分析类和类之间的关系，最后一群对象合力能把事办好。</li>
 </ul>
 <h2 id="2-类"><a href="#2-类" class="headerlink" title="2 类"></a>2 类</h2><h3 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h3><p>类是一组具有相同特征的对象的集合，是一个抽象的概念。类中定义了这一类对象所具有的属性和方法。</p>
 <p>定义类：</p>
@@ -2587,25 +2573,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>说明：</p>
 <ul>
-<li><p><code>修饰符</code>：方法的修饰符比较多，有对访问权限进行限定的，有静态修饰符static，还有最终修饰符final等，这些修饰符在后面的学习过程中会逐步介绍。</p>
+<li><p><strong>修饰符</strong>：方法的修饰符比较多，有对访问权限进行限定的，有静态修饰符static，还有最终修饰符final等，这些修饰符在后面的学习过程中会逐步介绍。</p>
 </li>
-<li><p><code>返回值类型</code>：用于限定方法返回值的数据类型，返回给调用方，返回类型可以是任意类型。根据是否需要返回值：</p>
+<li><p><strong>返回值类型</strong>：用于限定方法返回值的数据类型，返回给调用方，返回类型可以是任意类型。根据是否需要返回值：</p>
 <ul>
 <li>如果需要返回值，则需要写一个返回类型，并且return后的返回值需要和返回类型一致。</li>
 <li>如果不需要返回值，则写void，方法结束的时候不需要写return和返回值。</li>
 </ul>
 </li>
-<li><p><code>方法名</code>：功能块的名字，命名规则和变量命名规则一样。</p>
+<li><p><strong>方法名</strong>：功能块的名字，命名规则和变量命名规则一样。</p>
 </li>
-<li><p><code>参数类型</code>：参数类型用于限定调用方法时传入参数的数据类型，可以为任意类型，参数类型和返回类型没有任何关系。</p>
+<li><p><strong>参数类型</strong>：参数类型用于限定调用方法时传入参数的数据类型，可以为任意类型，参数类型和返回类型没有任何关系。</p>
 </li>
-<li><p><code>参数名</code>：参数名是一个变量，用于接收调用方法时传入的数据。</p>
+<li><p><strong>参数名</strong>：参数名是一个变量，用于接收调用方法时传入的数据。</p>
 </li>
-<li><p><code>参数</code>：参数类型和参数名组成参数，参数可以有多个，中间用逗号隔开。</p>
+<li><p><strong>参数</strong>：参数类型和参数名组成参数，参数可以有多个，中间用逗号隔开。</p>
 </li>
-<li><p><code>执行语句</code>：里面可以写任何逻辑语句，表示的是此方法的具体功能。</p>
+<li><p><strong>执行语句</strong>：里面可以写任何逻辑语句，表示的是此方法的具体功能。</p>
 </li>
-<li><p><code>返回值</code>：返回值是被return语句返回的值，该值会返回给调用者。</p>
+<li><p><strong>返回值</strong>：返回值是被return语句返回的值，该值会返回给调用者。</p>
 </li>
 </ul>
 <h5 id="2-2-2-2-调用"><a href="#2-2-2-2-调用" class="headerlink" title="2.2.2.2 调用"></a>2.2.2.2 调用</h5><p>方法的调用可以通过如下方式调用：</p>
@@ -2777,9 +2763,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>访问控制：</p>
 <ul>
-<li><code>public</code>：公共访问权限。属性可以被所有类和对象访问，没有进行封装。</li>
-<li><code>private</code>：私有访问权限。只能在这个类中被访问，对属性和方法进行彻底的封装。</li>
-<li><code>protected</code>：继承访问权限。可以被子类访问，封装的不彻底。</li>
+<li><strong>public</strong>：公共访问权限。属性可以被所有类和对象访问，没有进行封装。</li>
+<li><strong>private</strong>：私有访问权限。只能在这个类中被访问，对属性和方法进行彻底的封装。</li>
+<li><strong>protected</strong>：继承访问权限。可以被子类访问，封装的不彻底。</li>
 </ul>
 <p>一般来说，如果类中的某个属性不是公有的，而外部程序又需要访问，那么可以提供一个公有的方法，外部程序可以通过调用方法实现对该属性的间接访问。</p>
 <h4 id="2-4-2-继承"><a href="#2-4-2-继承" class="headerlink" title="2.4.2 继承"></a>2.4.2 继承</h4><p>继承是子类可以获得父类的属性和方法，并且可以在不影响父类代码的前提下，在子类里面对继承的方法进行改写，扩展添加父类里面没有的方法。</p>
@@ -2831,10 +2817,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="2-6-修饰符"><a href="#2-6-修饰符" class="headerlink" title="2.6 修饰符"></a>2.6 修饰符</h3><h4 id="2-6-1-访问修饰符"><a href="#2-6-1-访问修饰符" class="headerlink" title="2.6.1 访问修饰符"></a>2.6.1 访问修饰符</h4><p>通过访问控制修饰符来控制类及类的方法和变量的访问权限，从而向使用者暴露接口，隐藏实现细节。</p>
 <p>四种访问控制级别：</p>
 <ul>
-<li><code>public</code>：对所有类可见。</li>
-<li><code>protected</code>：对当前包可见，以及对子类可见，即使子类在其他包也是可见的。</li>
-<li><code>default</code>：对当前包可见。</li>
-<li><code>private</code>：对当前类可见。</li>
+<li><strong>public</strong>：对所有类可见。</li>
+<li><strong>protected</strong>：对当前包可见，以及对子类可见，即使子类在其他包也是可见的。</li>
+<li><strong>default</strong>：对当前包可见。</li>
+<li><strong>private</strong>：对当前类可见。</li>
 </ul>
 <h5 id="2-6-1-1-public"><a href="#2-6-1-1-public" class="headerlink" title="2.6.1.1 public"></a>2.6.1.1 public</h5><p>可修饰类、接口、属性、方法、构造方法。</p>
 <p>被public修饰的目标能够被所有的类访问，如果是其他包中的类，则需要导入所在的包。</p>
@@ -2878,8 +2864,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>final和static的不同点：</p>
 <ul>
-<li><code>含义不同</code>：static表示该成员要随类加载而加载。final表示该成员不可被修改。</li>
-<li><code>修饰范围不同</code>：static可修饰内部类、属性、方法、初始化块，不可修饰普通类、构造方法。final可修饰类、属性、方法，不可修饰初始化块、构造方法。</li>
+<li><strong>含义不同</strong>：static表示该成员要随类加载而加载。final表示该成员不可被修改。</li>
+<li><strong>修饰范围不同</strong>：static可修饰内部类、属性、方法、初始化块，不可修饰普通类、构造方法。final可修饰类、属性、方法，不可修饰初始化块、构造方法。</li>
 </ul>
 <h4 id="2-6-4-抽象修饰符"><a href="#2-6-4-抽象修饰符" class="headerlink" title="2.6.4 抽象修饰符"></a>2.6.4 抽象修饰符</h4><p>抽象修饰符abstract可以修饰类和方法，但不能用来修饰属性，也不能修饰构造方法。不能和private连用，也不能同final和static连接使用。</p>
 <p>说明：</p>
@@ -2940,8 +2926,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>不能定义普通方法，可以定义抽象方法，使用<code>public abstract</code>修饰符，可以省略修饰符。</p>
 <p>从JDK1.8开始支持定义默认方法和静态方法：</p>
 <ul>
-<li><code>默认方法</code>：使用<code>default</code>修饰符，非抽象方法，可以拥有方法体。</li>
-<li><code>静态方法</code>：使用<code>static</code>修饰符，非抽象方法，可以拥有方法体。</li>
+<li><strong>默认方法</strong>：使用<code>default</code>修饰符，非抽象方法，可以拥有方法体。</li>
+<li><strong>静态方法</strong>：使用<code>static</code>修饰符，非抽象方法，可以拥有方法体。</li>
 </ul>
 <p>不能定义构造方法，因为接口不支持实例化。</p>
 <p>支持内部类和内部接口。</p>
@@ -2964,13 +2950,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">DemoInterface</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">demo</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="3-5-2-使用"><a href="#3-5-2-使用" class="headerlink" title="3.5.2 使用"></a>3.5.2 使用</h4><p>函数式接口可以包含默认方法：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">DemoInterface</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">demo</span><span class="params">()</span>;</span><br><span class="line">    <span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">defaultMethod</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;defaultMethod() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">DemoInterface</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">demo</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">defaultMethod</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;defaultMethod() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>函数式接口可以包含静态方法</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">DemoInterface</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">demo</span><span class="params">()</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">staticMethod</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;staticMethod() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>函数式接口可以包含静态方法：</p>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">DemoInterface</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">demo</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">staticMethod</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;staticMethod() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>函数式接口可以包含Object类的public方法：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">DemoInterface</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">demo</span><span class="params">()</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">DemoInterface</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">demo</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>这些方法对于函数式接口来说，不会被当成抽象方法。虽然是抽象方法，但接口的实现类是Object的子类，会自动实现这些方法。</p>
 <p>包含Object类的public方法，其他访问修饰符修饰的方法是不允许在函数式接口里定义的。</p>
@@ -2984,21 +2970,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h5 id="3-5-3-2-Consumer接口"><a href="#3-5-3-2-Consumer接口" class="headerlink" title="3.5.3.2 Consumer接口"></a>3.5.3.2 Consumer接口</h5><p>有参数，没有返回值，作用是为了进行某种操作，比如打印操作。</p>
 <p>源码：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Consumer</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">accept</span><span class="params">(T t)</span>;</span><br><span class="line">    <span class="comment">// 链式操作，先执行当前对象，再执行参数对象</span></span><br><span class="line">    <span class="keyword">default</span> Consumer&lt;T&gt; <span class="title function_">andThen</span><span class="params">(Consumer&lt;? <span class="built_in">super</span> T&gt; after)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(after);</span><br><span class="line">        <span class="keyword">return</span> (T t) -&gt; &#123; accept(t); after.accept(t); &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Consumer</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">accept</span><span class="params">(T t)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 链式操作，先执行当前对象，再执行参数对象</span></span><br><span class="line">    <span class="keyword">default</span> Consumer&lt;T&gt; <span class="title function_">andThen</span><span class="params">(Consumer&lt;? <span class="built_in">super</span> T&gt; after)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(after);</span><br><span class="line">        <span class="keyword">return</span> (T t) -&gt; &#123; accept(t); after.accept(t); &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>示例：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Consumer&lt;String&gt; consumer = System.out::println;</span><br><span class="line">    consumer.accept(<span class="string">&quot;Demo&quot;</span>);<span class="comment">// Demo</span></span><br><span class="line">    <span class="comment">// 创建两个Consumer对象</span></span><br><span class="line">    Consumer&lt;String&gt; upperConsumer = (s) -&gt; System.out.println(s.toUpperCase());</span><br><span class="line">    Consumer&lt;String&gt; lowerConsumer = (s) -&gt; System.out.println(s.toLowerCase());</span><br><span class="line">    <span class="comment">// 链式操作，先执行当前对象，再执行参数对象</span></span><br><span class="line">    upperConsumer.andThen(lowerConsumer).accept(<span class="string">&quot;Demo&quot;</span>);<span class="comment">// DEMO demo</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="3-5-3-3-Function接口"><a href="#3-5-3-3-Function接口" class="headerlink" title="3.5.3.3 Function接口"></a>3.5.3.3 Function接口</h5><p>有参数，有返回值，作用是对参数进行处理并返回。</p>
 <p>源码：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Function</span>&lt;T, R&gt; &#123;</span><br><span class="line">    R <span class="title function_">apply</span><span class="params">(T t)</span>;</span><br><span class="line">    <span class="comment">// 组合操作，先执行参数对象，再执行当前对象</span></span><br><span class="line">    <span class="keyword">default</span> &lt;V&gt; Function&lt;V, R&gt; <span class="title function_">compose</span><span class="params">(Function&lt;? <span class="built_in">super</span> V, ? extends T&gt; before)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(before);</span><br><span class="line">        <span class="keyword">return</span> (V v) -&gt; apply(before.apply(v));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 链式操作，先执行当前对象，再执行参数对象</span></span><br><span class="line">    <span class="keyword">default</span> &lt;V&gt; Function&lt;T, V&gt; <span class="title function_">andThen</span><span class="params">(Function&lt;? <span class="built_in">super</span> R, ? extends V&gt; after)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(after);</span><br><span class="line">        <span class="keyword">return</span> (T t) -&gt; after.apply(apply(t));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 恒等操作，返回输入</span></span><br><span class="line">    <span class="keyword">static</span> &lt;T&gt; Function&lt;T, T&gt; <span class="title function_">identity</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> t -&gt; t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Function</span>&lt;T, R&gt; &#123;</span><br><span class="line">    R <span class="title function_">apply</span><span class="params">(T t)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 组合操作，先执行参数对象，再执行当前对象</span></span><br><span class="line">    <span class="keyword">default</span> &lt;V&gt; Function&lt;V, R&gt; <span class="title function_">compose</span><span class="params">(Function&lt;? <span class="built_in">super</span> V, ? extends T&gt; before)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(before);</span><br><span class="line">        <span class="keyword">return</span> (V v) -&gt; apply(before.apply(v));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 链式操作，先执行当前对象，再执行参数对象</span></span><br><span class="line">    <span class="keyword">default</span> &lt;V&gt; Function&lt;T, V&gt; <span class="title function_">andThen</span><span class="params">(Function&lt;? <span class="built_in">super</span> R, ? extends V&gt; after)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(after);</span><br><span class="line">        <span class="keyword">return</span> (T t) -&gt; after.apply(apply(t));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 恒等操作，返回输入</span></span><br><span class="line">    <span class="keyword">static</span> &lt;T&gt; Function&lt;T, T&gt; <span class="title function_">identity</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> t -&gt; t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>示例：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Function&lt;String, Integer&gt; lengthFunc = s -&gt; s.length();</span><br><span class="line">    System.out.println(lengthFunc.apply(<span class="string">&quot;Demo&quot;</span>));<span class="comment">// 4</span></span><br><span class="line">    <span class="comment">// 创建两个Function对象</span></span><br><span class="line">    Function&lt;String, String&gt; zs = s -&gt; s + <span class="string">&quot; 张三&quot;</span>;</span><br><span class="line">    Function&lt;String, String&gt; ls = s -&gt; s + <span class="string">&quot; 李四&quot;</span>;</span><br><span class="line">    <span class="comment">// 组合操作，先执行参数对象，再执行当前对象</span></span><br><span class="line">    System.out.println(zs.compose(ls).apply(<span class="string">&quot;组合操作&quot;</span>));<span class="comment">// 组合操作 李四 张三</span></span><br><span class="line">    <span class="comment">// 链式操作，先执行当前对象，再执行参数对象</span></span><br><span class="line">    System.out.println(zs.andThen(ls).apply(<span class="string">&quot;链式操作&quot;</span>));<span class="comment">// 链式操作 张三 李四</span></span><br><span class="line">    <span class="comment">// 恒等操作，返回输入</span></span><br><span class="line">    Map&lt;String, String&gt; nameMap = Arrays.asList(<span class="string">&quot;张三&quot;</span>, <span class="string">&quot;李四&quot;</span>)</span><br><span class="line">            .stream().collect(Collectors.toMap(Function.identity(), Function.identity()));</span><br><span class="line">    System.out.println(nameMap);<span class="comment">// &#123;李四=李四, 张三=张三&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="3-5-3-4-Predicate接口"><a href="#3-5-3-4-Predicate接口" class="headerlink" title="3.5.3.4 Predicate接口"></a>3.5.3.4 Predicate接口</h5><p>有参数，有返回值，但返回值是Boolean类型的值，作用是对传入的参数进行某种判断。</p>
 <p>源码：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Predicate</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">test</span><span class="params">(T t)</span>;</span><br><span class="line">    <span class="comment">// 与操作</span></span><br><span class="line">    <span class="keyword">default</span> Predicate&lt;T&gt; <span class="title function_">and</span><span class="params">(Predicate&lt;? <span class="built_in">super</span> T&gt; other)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(other);</span><br><span class="line">        <span class="keyword">return</span> (t) -&gt; test(t) &amp;&amp; other.test(t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 非操作</span></span><br><span class="line">    <span class="keyword">default</span> Predicate&lt;T&gt; <span class="title function_">negate</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (t) -&gt; !test(t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 或操作</span></span><br><span class="line">    <span class="keyword">default</span> Predicate&lt;T&gt; <span class="title function_">or</span><span class="params">(Predicate&lt;? <span class="built_in">super</span> T&gt; other)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(other);</span><br><span class="line">        <span class="keyword">return</span> (t) -&gt; test(t) || other.test(t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 判等操作</span></span><br><span class="line">    <span class="keyword">static</span> &lt;T&gt; Predicate&lt;T&gt; <span class="title function_">isEqual</span><span class="params">(Object targetRef)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="literal">null</span> == targetRef)</span><br><span class="line">                ? Objects::isNull</span><br><span class="line">                : object -&gt; targetRef.equals(object);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Predicate</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">test</span><span class="params">(T t)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 与操作</span></span><br><span class="line">    <span class="keyword">default</span> Predicate&lt;T&gt; <span class="title function_">and</span><span class="params">(Predicate&lt;? <span class="built_in">super</span> T&gt; other)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(other);</span><br><span class="line">        <span class="keyword">return</span> (t) -&gt; test(t) &amp;&amp; other.test(t);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 非操作</span></span><br><span class="line">    <span class="keyword">default</span> Predicate&lt;T&gt; <span class="title function_">negate</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (t) -&gt; !test(t);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 或操作</span></span><br><span class="line">    <span class="keyword">default</span> Predicate&lt;T&gt; <span class="title function_">or</span><span class="params">(Predicate&lt;? <span class="built_in">super</span> T&gt; other)</span> &#123;</span><br><span class="line">        Objects.requireNonNull(other);</span><br><span class="line">        <span class="keyword">return</span> (t) -&gt; test(t) || other.test(t);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 判等操作</span></span><br><span class="line">    <span class="keyword">static</span> &lt;T&gt; Predicate&lt;T&gt; <span class="title function_">isEqual</span><span class="params">(Object targetRef)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="literal">null</span> == targetRef)</span><br><span class="line">                ? Objects::isNull</span><br><span class="line">                : object -&gt; targetRef.equals(object);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>示例：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Predicate&lt;Integer&gt; isEven = n -&gt; n % <span class="number">2</span> == <span class="number">0</span>;</span><br><span class="line">    System.out.println(isEven.test(<span class="number">4</span>));<span class="comment">// true</span></span><br><span class="line">    <span class="comment">// 创建两个Predicate对象</span></span><br><span class="line">    Predicate&lt;String&gt; lessThan3 = s -&gt; s.length() &lt; <span class="number">3</span>;</span><br><span class="line">    Predicate&lt;String&gt; greaterThan1 = s -&gt; s.length() &gt; <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 与操作</span></span><br><span class="line">    System.out.println(lessThan3.and(greaterThan1).test(<span class="string">&quot;Demo&quot;</span>));<span class="comment">// false</span></span><br><span class="line">    <span class="comment">// 非操作</span></span><br><span class="line">    System.out.println(lessThan3.negate().test(<span class="string">&quot;Demo&quot;</span>));<span class="comment">// true</span></span><br><span class="line">    <span class="comment">// 或操作</span></span><br><span class="line">    System.out.println(lessThan3.or(greaterThan1).test(<span class="string">&quot;Demo&quot;</span>));<span class="comment">// true</span></span><br><span class="line">    <span class="comment">// 判等操作</span></span><br><span class="line">    System.out.println(Predicate.isEqual(<span class="string">&quot;Demo&quot;</span>).test(<span class="string">&quot;Demo&quot;</span>));<span class="comment">// true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3022,14 +3008,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>一个文件中可以有多个导入。</p>
 <h3 id="4-4-核心包"><a href="#4-4-核心包" class="headerlink" title="4.4 核心包"></a>4.4 核心包</h3><p>比较重要的核心包：</p>
 <ul>
-<li><code>java.lang</code>：包含一些核心类，如String、Math、Integer、System和Thread，提供常用功能。</li>
-<li><code>java.net</code>：包含执行与网络相关的操作的类和接口。</li>
-<li><code>java.io</code>：包含能提供多种输入&#x2F;输出功能的类。</li>
-<li><code>java.util</code>：包含一些实用工具类，如定义系统特性、接口的集合框架类、使用与日期日历相关的函数。</li>
-<li><code>java.text</code>：包含了一些格式化相关的类。</li>
-<li><code>java.sql</code>：包含了进行JDBC数据库编程相关的类。</li>
-<li><code>java.awt</code>：包含了构成抽象窗口工具集（abstract window toolkits）的多个类，这些类被用来构建和管理应用程序的图形用户界面(GUI)。</li>
-<li><code>java.applet</code>：包含applet运行所需的一些类。</li>
+<li><strong>java.lang</strong>：包含一些核心类，如String、Math、Integer、System和Thread，提供常用功能。</li>
+<li><strong>java.net</strong>：包含执行与网络相关的操作的类和接口。</li>
+<li><strong>java.io</strong>：包含能提供多种输入&#x2F;输出功能的类。</li>
+<li><strong>java.util</strong>：包含一些实用工具类，如定义系统特性、接口的集合框架类、使用与日期日历相关的函数。</li>
+<li><strong>java.text</strong>：包含了一些格式化相关的类。</li>
+<li><strong>java.sql</strong>：包含了进行JDBC数据库编程相关的类。</li>
+<li><strong>java.awt</strong>：包含了构成抽象窗口工具集（abstract window toolkits）的多个类，这些类被用来构建和管理应用程序的图形用户界面(GUI)。</li>
+<li><strong>java.applet</strong>：包含applet运行所需的一些类。</li>
 </ul>
 
   </div>
@@ -3061,7 +3047,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年10月18日</div>
               </div>
               
               
@@ -3092,10 +3078,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -3135,13 +3121,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20250425/152817/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>注解</p>
-          <p class='content'>摘要：本文学习了注解的概念和使用。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20250424/105521/'>
           <p class='title'>编程基础<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了Java编程的基础知识。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -3252,7 +3238,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04001001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Java:基础</span></a>
+      <a href='/groups/B03001001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Java:基础</span></a>
     
   </header>
 
@@ -3613,50 +3599,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3928,7 +3903,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250425/092223/","name":"面向对象"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"面向对象","description":"摘要：本文学习了面向对象的一些基础知识，介绍了类和对象的概念，以及如何使用接口和导入包。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250425/092223/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250425/092223/","wordCount":44,"datePublished":"2025-04-25T01:22:23.000Z","dateModified":"2026-06-18T08:14:32.839Z","articleSection":"后端","keywords":"Java","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250425/092223/","name":"面向对象"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"面向对象","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250425/092223/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250425/092223/","wordCount":5,"datePublished":"2025-04-25T01:22:23.000Z","dateModified":"2026-10-18T10:15:54.834Z","articleSection":"后端","keywords":"Java","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

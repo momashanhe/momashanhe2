@@ -50,22 +50,22 @@
       <link rel="alternate" href="/atom.xml" title="墨码山河" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>ES规范 - 墨码山河</title>
-  <meta name="keywords" content="HTML,CSS,JS,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了ECMAScript的基本知识，包括简介和历史版本以及新特性。 - 墨码山河 - 墨码山河">
+  <meta name="keywords" content="JS,HTML,CSS,代码改变世界">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES规范">
 <meta property="og:url" content="https://momashanhe.com/posts/20240718/152438/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了ECMAScript的基本知识，包括简介和历史版本以及新特性。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-07-18T07:24:38.000Z">
-<meta property="article:modified_time" content="2026-06-18T08:13:45.451Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.705Z">
 <meta property="article:author" content="墨码山河">
+<meta property="article:tag" content="JS">
 <meta property="article:tag" content="HTML">
 <meta property="article:tag" content="CSS">
-<meta property="article:tag" content="JS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1856,7 +1856,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2022,7 +2022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2487,7 +2487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20240718/152438/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2500,20 +2500,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20240718/152438/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20240718/152438/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2527,7 +2513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了ECMAScript的基本知识，包括简介和历史版本以及新特性。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2540,9 +2526,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>JavaScript是ECMAScript的实现，一般情况下，ECMAScript和JavaScript表达的是同一个意思。</p>
 <p>严格来说，JavaScript包含三个部分：</p>
 <ul>
-<li><code>ECMAScript</code>：核心，通用标准，简写为ES</li>
-<li><code>DOM</code>：文档对象模型，操作网页</li>
-<li><code>BOM</code>：浏览器对象模型，操作浏览器</li>
+<li><strong>ECMAScript</strong>：核心，通用标准，简写为ES</li>
+<li><strong>DOM</strong>：文档对象模型，操作网页</li>
+<li><strong>BOM</strong>：浏览器对象模型，操作浏览器</li>
 </ul>
 <h3 id="1-2-历史版本"><a href="#1-2-历史版本" class="headerlink" title="1.2 历史版本"></a>1.2 历史版本</h3><p>ES5：2009年发布<br>ES6：2015年发布，也称为ES2015<br>ES7：2016年发布，也称为ES2016<br>ES8：2017年发布，也称为ES2017<br>ES9：2018年发布，也称为ES2018<br>ES10：2019年发布，也称为ES2019</p>
 <h2 id="2-ES5"><a href="#2-ES5" class="headerlink" title="2 ES5"></a>2 ES5</h2><h3 id="2-1-严格模式"><a href="#2-1-严格模式" class="headerlink" title="2.1 严格模式"></a>2.1 严格模式</h3><p>在ES5中新增了严格模式，其作用是：</p>
@@ -2691,9 +2677,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-9-Promise"><a href="#3-9-Promise" class="headerlink" title="3.9 Promise"></a>3.9 Promise</h3><p>引入Promise用于解决异步编程的问题，使用构造函数封装异步操作并可以获取其成功或失败的结果。</p>
 <p>Promise对象代表一个异步操作，有三种状态：</p>
 <ul>
-<li><code>pending</code>：进行中</li>
-<li><code>fulfilled</code>：已成功</li>
-<li><code>rejected</code>：已失败</li>
+<li><strong>pending</strong>：进行中</li>
+<li><strong>fulfilled</strong>：已成功</li>
+<li><strong>rejected</strong>：已失败</li>
 </ul>
 <p>在执行完成后，Promise的状态会变成fulfilled（已成功）或者rejected（已失败），这种改变称为resolved（定型），并且一旦发生定型，结果就不会再次发生改变。</p>
 <p>创建对象：</p>
@@ -2786,9 +2772,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-18-模块化"><a href="#3-18-模块化" class="headerlink" title="3.18 模块化"></a>3.18 模块化</h3><h4 id="3-18-1-说明"><a href="#3-18-1-说明" class="headerlink" title="3.18.1 说明"></a>3.18.1 说明</h4><p>模块化是指将一个大的程序文件拆成许多小的文件，然后进行组合。</p>
 <p>优势：</p>
 <ul>
-<li><code>防止命名冲突</code>：不同的模块之间可以使用相同名称的变量，彼此互不干扰。</li>
-<li><code>代码复用</code>：模块可以对外提供接口，相同的功能可以使用同一接口。</li>
-<li><code>高维护性</code>：模块之间独立运行，单个模块出现问题不会影响所有模块，模块支持单独升级。</li>
+<li><strong>防止命名冲突</strong>：不同的模块之间可以使用相同名称的变量，彼此互不干扰。</li>
+<li><strong>代码复用</strong>：模块可以对外提供接口，相同的功能可以使用同一接口。</li>
+<li><strong>高维护性</strong>：模块之间独立运行，单个模块出现问题不会影响所有模块，模块支持单独升级。</li>
 </ul>
 <p>模块化规范比较：</p>
 <div class="tabs" id="tab-tab-id-1"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1-1">CommonJS</a></li><li class="tab"><a class="#tab-id-1-2">AMD</a></li><li class="tab"><a class="#tab-id-1-3">CMD</a></li><li class="tab"><a class="#tab-id-1-4">ESM</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1-1"><p>专用于服务器端，默认不支持在浏览器执行。</p>
@@ -2944,7 +2930,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2975,10 +2961,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B03/">前端</a>
+    <a class="category-link" href="/categories/B02/">前端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B03/" itemprop="url"><span itemprop="name">前端</span></a>
+        <a href="/categories/B02/" itemprop="url"><span itemprop="name">前端</span></a>
       </span>
     
   </div>
@@ -2993,8 +2979,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JS</p></a></div>
-  <span hidden itemprop="keywords">HTML CSS JS</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
+  <span hidden itemprop="keywords">JS HTML CSS</span>
   
 
 
@@ -3018,13 +3004,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20240802/145526/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>使用Babel解决兼容问题</p>
-          <p class='content'>摘要：本文学习了如何使用Babel解决ES5之后的版本的兼容问题。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20240712/154239/'>
           <p class='title'>多线程<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了如何使用Web Worker实现多线程的功能。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -3135,7 +3121,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B03003001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:JS:基础</span></a>
+      <a href='/groups/B02003001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:JS:基础</span></a>
     
   </header>
 
@@ -3376,50 +3362,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3691,7 +3666,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240718/152438/","name":"ES规范"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ES规范","description":"摘要：本文学习了ECMAScript的基本知识，包括简介和历史版本以及新特性。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240718/152438/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240718/152438/","wordCount":39,"datePublished":"2024-07-18T07:24:38.000Z","dateModified":"2026-06-18T08:13:45.451Z","articleSection":"前端","keywords":"HTML,CSS,JS","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20240718/152438/","name":"ES规范"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ES规范","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20240718/152438/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20240718/152438/","wordCount":5,"datePublished":"2024-07-18T07:24:38.000Z","dateModified":"2026-09-26T23:29:37.705Z","articleSection":"前端","keywords":"JS,HTML,CSS","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

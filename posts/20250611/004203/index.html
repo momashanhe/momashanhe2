@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>日志管理 - 墨码山河</title>
   <meta name="keywords" content="MySQL,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了数据库常见的日志类型及其作用。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="日志管理">
 <meta property="og:url" content="https://momashanhe.com/posts/20250611/004203/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了数据库常见的日志类型及其作用。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-06-10T16:42:03.000Z">
-<meta property="article:modified_time" content="2026-06-18T05:17:10.416Z">
+<meta property="article:modified_time" content="2026-10-08T07:15:07.042Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20250611/004203/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20250611/004203/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20250611/004203/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了数据库常见的日志类型及其作用。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2590,19 +2576,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h4 id="1-4-3-日志格式"><a href="#1-4-3-日志格式" class="headerlink" title="1.4.3 日志格式"></a>1.4.3 日志格式</h4><p>支持三种格式：</p>
 <ul>
-<li><p><code>statment</code>：基于sql语句的日志记录，记录的是SQL语句，对数据进行修改的SQL都会记录在日志文件中。优缺点：</p>
+<li><p><strong>statment</strong>：基于sql语句的日志记录，记录的是SQL语句，对数据进行修改的SQL都会记录在日志文件中。优缺点：</p>
 </li>
-<li><p><code>优点</code>：不需要记录每一行的变化，减少了日志量，节约了IO，从而提高了性能。</p>
+<li><p><strong>优点</strong>：不需要记录每一行的变化，减少了日志量，节约了IO，从而提高了性能。</p>
 </li>
-<li><p><code>缺点</code>：在某些情况下的数据不一致，比如将<code>now()</code>等函数得到的结果插入数据库。</p>
+<li><p><strong>缺点</strong>：在某些情况下的数据不一致，比如将<code>now()</code>等函数得到的结果插入数据库。</p>
 </li>
-<li><p><code>row</code>：基于行的日志记录，记录的是数据变更，不记录每条SQL语句的上下文信息。优缺点：</p>
+<li><p><strong>row</strong>：基于行的日志记录，记录的是数据变更，不记录每条SQL语句的上下文信息。优缺点：</p>
 </li>
-<li><p><code>优点</code>：不会出现某些情况下的数据不一致的问题。</p>
+<li><p><strong>优点</strong>：不会出现某些情况下的数据不一致的问题。</p>
 </li>
-<li><p><code>缺点</code>：会产生大量的日志。</p>
+<li><p><strong>缺点</strong>：会产生大量的日志。</p>
 </li>
-<li><p><code>mixed</code>：基于statment和row两种模式的混合，一般的复制使用statement模式，对于statement模式无法复制的操作使用row模式。</p>
+<li><p><strong>mixed</strong>：基于statment和row两种模式的混合，一般的复制使用statement模式，对于statement模式无法复制的操作使用row模式。</p>
 </li>
 </ul>
 <p>默认使用ROW格式。</p>
@@ -2618,9 +2604,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="1-4-4-刷盘策略"><a href="#1-4-4-刷盘策略" class="headerlink" title="1.4.4 刷盘策略"></a>1.4.4 刷盘策略</h4><p>系统会为每个线程分配一块内存作为缓存，在执行SQL命令时，将日志写入缓存，在提交事务时，将缓存里的日志写入磁盘文件。</p>
 <p>刷盘的时机可以通过<code>sync_binlog</code>参数控制：</p>
 <ul>
-<li><code>0</code>：事务提交只写缓存，由系统自行判断什么时候刷盘。</li>
-<li><code>1</code>：事务提交会执行刷盘。</li>
-<li><code>N</code>：事务提交只写缓存，当累计N个事务后才刷盘。</li>
+<li><strong>0</strong>：事务提交只写缓存，由系统自行判断什么时候刷盘。</li>
+<li><strong>1</strong>：事务提交会执行刷盘。</li>
+<li><strong>N</strong>：事务提交只写缓存，当累计N个事务后才刷盘。</li>
 </ul>
 <p>修改配置文件：</p>
 <figure class="highlight plaintext"><figcaption><span>my.cnf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line"># 设置刷盘策略</span><br><span class="line">sync_binlog=0</span><br></pre></td></tr></table></figure>
@@ -2645,8 +2631,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>回滚日志是逻辑日志，记录数据被修改前的值。</p>
 <p>回滚日志主要分为两种：</p>
 <ul>
-<li><code>insert undo log</code>：当执行insert的时候，产生的回滚日志只在回滚时需要，在事务提交后，可被立即删除。因为insert操作只是对本事务可见，其他事务不可见，所以当事务提交后，对应的回滚日志就会被系统直接删除回收，占用的链表也被释放。</li>
-<li><code>update undo log</code>：当执行update和delete的时候，产生的回滚日志不仅在事务回滚时需要，在多版本并发控制的快照读时也需要，所以不能在事务提交后马上删除，只在提交后放入链表，等待purge线程进行最后的删除。</li>
+<li><strong>insert undo log</strong>：当执行insert的时候，产生的回滚日志只在回滚时需要，在事务提交后，可被立即删除。因为insert操作只是对本事务可见，其他事务不可见，所以当事务提交后，对应的回滚日志就会被系统直接删除回收，占用的链表也被释放。</li>
+<li><strong>update undo log</strong>：当执行update和delete的时候，产生的回滚日志不仅在事务回滚时需要，在多版本并发控制的快照读时也需要，所以不能在事务提交后马上删除，只在提交后放入链表，等待purge线程进行最后的删除。</li>
 </ul>
 <h4 id="1-7-2-原理"><a href="#1-7-2-原理" class="headerlink" title="1.7.2 原理"></a>1.7.2 原理</h4><p>在执行增删改的SQL命令前，会在回滚日志中记录操作前的数据，并且会在对应的行中使用roll_pointer隐藏字段记录最近修改这条记录的上一版本。</p>
 <p>在对同一条记录进行增删改操作时，会在回滚日志中生成一系列这条记录的版本链，链表的头部是最新的旧记录，链表尾部是最早的旧记录。</p>
@@ -2675,9 +2661,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="1-8-4-刷盘策略"><a href="#1-8-4-刷盘策略" class="headerlink" title="1.8.4 刷盘策略"></a>1.8.4 刷盘策略</h4><p>在将缓存的重做日志写入到磁盘上时，先将重做日志写入到操作系统的缓存中，然后由操作系统将重做日志写到日志文件。</p>
 <p>刷盘的时机可以通过<code>innodb_flush_log_at_trx_commit</code>参数控制：</p>
 <ul>
-<li><code>0（延迟写）</code>：事务提交不会写入系统缓存，而是每隔1秒写入系统缓存并调用操作系统刷盘。当系统崩溃时会丢失数据。</li>
-<li><code>1（实时写并且实时刷盘）</code>：事务提交会写入系统缓存并调用操作系统刷盘。当系统崩溃时不会丢失任何数据，但是因为每次提交都写入磁盘，IO的性能差。</li>
-<li><code>2（实时写但是延时刷盘）</code>：事务提交只写入系统缓存，每隔1秒调用操作系统刷盘。当系统崩溃时会丢失数据。</li>
+<li><strong>0（延迟写）</strong>：事务提交不会写入系统缓存，而是每隔1秒写入系统缓存并调用操作系统刷盘。当系统崩溃时会丢失数据。</li>
+<li><strong>1（实时写并且实时刷盘）</strong>：事务提交会写入系统缓存并调用操作系统刷盘。当系统崩溃时不会丢失任何数据，但是因为每次提交都写入磁盘，IO的性能差。</li>
+<li><strong>2（实时写但是延迟刷盘）</strong>：事务提交只写入系统缓存，每隔1秒调用操作系统刷盘。当系统崩溃时会丢失数据。</li>
 </ul>
 <p>修改配置文件：</p>
 <figure class="highlight plaintext"><figcaption><span>my.cnf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line"># 设置刷盘策略</span><br><span class="line">innodb_flush_log_at_trx_commit=0</span><br></pre></td></tr></table></figure>
@@ -2698,16 +2684,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>选项：</p>
 <ul>
-<li><code>-s 参数</code>：表示按照何种方式排序。</li>
-<li><code>-s c</code>：表示按照访问次数排序。</li>
-<li><code>-s l</code>：表示按照锁定时间排序。</li>
-<li><code>-s r</code>：表示按照返回时间排序。</li>
-<li><code>-s t</code>：表示按照查询时间排序。</li>
-<li><code>-s al</code>：表示按照平均访问次数排序。</li>
-<li><code>-s ar</code>：表示按照平均返回时间排序。</li>
-<li><code>-s at</code>：表示按照平均查询时间排序。</li>
-<li><code>-t n</code>：表示返回前面n条的数据。</li>
-<li><code>-g 表达式</code>：后边搭配一个正则匹配模式，大小写不敏感。</li>
+<li><strong>-s 参数</strong>：表示按照何种方式排序。</li>
+<li><strong>-s c</strong>：表示按照访问次数排序。</li>
+<li><strong>-s l</strong>：表示按照锁定时间排序。</li>
+<li><strong>-s r</strong>：表示按照返回时间排序。</li>
+<li><strong>-s t</strong>：表示按照查询时间排序。</li>
+<li><strong>-s al</strong>：表示按照平均访问次数排序。</li>
+<li><strong>-s ar</strong>：表示按照平均返回时间排序。</li>
+<li><strong>-s at</strong>：表示按照平均查询时间排序。</li>
+<li><strong>-t n</strong>：表示返回前面n条的数据。</li>
+<li><strong>-g 表达式</strong>：后边搭配一个正则匹配模式，大小写不敏感。</li>
 </ul>
 <p>查询返回结果最慢的10个SQL：</p>
 <figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldumpslow -s t -t 10 /var/log/mysql/slow.log</span><br></pre></td></tr></table></figure>
@@ -2740,14 +2726,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>选项：</p>
 <ul>
-<li><code>--no-defaults</code>：不要读取任何选项文件，如果使用时有如下报错<code>mysqlbinlog: [ERROR] unknown variable</code>可以使用该选项绕过。</li>
-<li><code>--base64-output=decode-rows -v</code>：将BINLOG语句解码为SQL语句进行显示。</li>
-<li><code>--base64-output=decode-rows -vv</code>：将BINLOG语句解码为SQL语句进行显示，同时显示字段数据类型和某些元数据的注释。</li>
-<li><code>--start-position</code>：设置开始位置。</li>
-<li><code>--stop-position</code>：设置结束位置。</li>
-<li><code>--start-datetime</code>：设置开始日期，优先级比位置低。</li>
-<li><code>--stop-datetime</code>：设置结束日期，优先级比位置低。</li>
-<li><code>--database</code>：设置数据库。</li>
+<li><strong>–no-defaults</strong>：不要读取任何选项文件，如果使用时有如下报错<code>mysqlbinlog: [ERROR] unknown variable</code>可以使用该选项绕过。</li>
+<li><strong>–base64-output&#x3D;decode-rows -v</strong>：将BINLOG语句解码为SQL语句进行显示。</li>
+<li><strong>–base64-output&#x3D;decode-rows -vv</strong>：将BINLOG语句解码为SQL语句进行显示，同时显示字段数据类型和某些元数据的注释。</li>
+<li><strong>–start-position</strong>：设置开始位置。</li>
+<li><strong>–stop-position</strong>：设置结束位置。</li>
+<li><strong>–start-datetime</strong>：设置开始日期，优先级比位置低。</li>
+<li><strong>–stop-datetime</strong>：设置结束日期，优先级比位置低。</li>
+<li><strong>–database</strong>：设置数据库。</li>
 </ul>
 <p>示例：</p>
 <figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqlbinlog --no-defaults --base64-output=decode-rows -v /var/log/mysql/mysql-bin.000001</span><br></pre></td></tr></table></figure>
@@ -2790,7 +2776,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年10月8日</div>
               </div>
               
               
@@ -2821,10 +2807,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B05/">数据库</a>
+    <a class="category-link" href="/categories/B04/">数据库</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B05/" itemprop="url"><span itemprop="name">数据库</span></a>
+        <a href="/categories/B04/" itemprop="url"><span itemprop="name">数据库</span></a>
       </span>
     
   </div>
@@ -2864,13 +2850,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20250611/165459/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>性能分析</p>
-          <p class='content'>摘要：本文学习了如何对数据库进行性能分析。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20250605/100752/'>
           <p class='title'>索引详解<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了索引的数据结构和相关的概念，以及如何使用工具分析和优化。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2981,7 +2967,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B05002002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:MySQL:高级</span></a>
+      <a href='/groups/B04002002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:MySQL:高级</span></a>
     
   </header>
 
@@ -3093,6 +3079,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <div class='name'>
             
             备份和还原
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/posts/20260420/123156/" href="/posts/20260420/123156/"
+          
+          
+          active-action="action-posts20260420123156"
+          >
+          <div class='name'>
+            
+            在线DDL
           </div>
           
         </a></li>
@@ -3282,50 +3280,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3597,7 +3584,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B05/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250611/004203/","name":"日志管理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"日志管理","description":"摘要：本文学习了数据库常见的日志类型及其作用。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250611/004203/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250611/004203/","wordCount":23,"datePublished":"2025-06-10T16:42:03.000Z","dateModified":"2026-06-18T05:17:10.416Z","articleSection":"数据库","keywords":"MySQL","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250611/004203/","name":"日志管理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"日志管理","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250611/004203/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250611/004203/","wordCount":5,"datePublished":"2025-06-10T16:42:03.000Z","dateModified":"2026-10-08T07:15:07.042Z","articleSection":"数据库","keywords":"MySQL","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

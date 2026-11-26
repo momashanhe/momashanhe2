@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>Tomcat - 墨码山河</title>
   <meta name="keywords" content="JavaWeb,Servlet,Tomcat,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了Tomcat的基本使用和配置。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tomcat">
 <meta property="og:url" content="https://momashanhe.com/posts/20251201/154545/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了Tomcat的基本使用和配置。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-12-01T07:45:45.000Z">
-<meta property="article:modified_time" content="2026-06-18T07:57:50.946Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.767Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="JavaWeb">
 <meta property="article:tag" content="Servlet">
@@ -1856,7 +1856,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2022,7 +2022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2487,7 +2487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20251201/154545/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2500,20 +2500,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20251201/154545/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20251201/154545/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2527,7 +2513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了Tomcat的基本使用和配置。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2550,39 +2536,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>Tomcat的核心优势是规范兼容性强、生态完善、稳定性高，与主流JavaWeb框架深度适配，文档和社区解决方案丰富，部署简单且无商业授权成本，既适合开发测试环境，也能支撑中小型生产环境的JavaWeb应用。</p>
 <h3 id="1-3-比较"><a href="#1-3-比较" class="headerlink" title="1.3 比较"></a>1.3 比较</h3><p>核心定位：</p>
 <ul>
-<li><code>Tomcat</code>：Apache旗下的开源轻量级Servlet容器，JavaWeb开发的事实标准，主打稳定性和标准规范实现。</li>
-<li><code>Jetty</code>：Eclipse基金维护的轻量级嵌入式Web容器，以灵活集成和异步IO为核心优势，适合现代架构。</li>
-<li><code>Resin</code>：Caucho公司开发的全栈式JavaEE应用服务器，支持完整企业级规范，侧重商业性能优化。</li>
+<li><strong>Tomcat</strong>：Apache旗下的开源轻量级Servlet容器，JavaWeb开发的事实标准，主打稳定性和标准规范实现。</li>
+<li><strong>Jetty</strong>：Eclipse基金维护的轻量级嵌入式Web容器，以灵活集成和异步IO为核心优势，适合现代架构。</li>
+<li><strong>Resin</strong>：Caucho公司开发的全栈式JavaEE应用服务器，支持完整企业级规范，侧重商业性能优化。</li>
 </ul>
 <p>架构特性：</p>
 <ul>
-<li><code>Tomcat</code>：模块化设计，结构清晰但相对偏重，规范适配性强。</li>
-<li><code>Jetty</code>：事件驱动和异步非阻塞架构，组件高度可插拔，极度轻量化，启动迅速。</li>
-<li><code>Resin</code>：一体化集成架构，内置缓存和负载均衡等企业级特性，JSP编译优化突出。</li>
+<li><strong>Tomcat</strong>：模块化设计，结构清晰但相对偏重，规范适配性强。</li>
+<li><strong>Jetty</strong>：事件驱动和异步非阻塞架构，组件高度可插拔，极度轻量化，启动迅速。</li>
+<li><strong>Resin</strong>：一体化集成架构，内置缓存和负载均衡等企业级特性，JSP编译优化突出。</li>
 </ul>
 <p>性能特点：</p>
 <ul>
-<li><code>Tomcat</code>：性能均衡稳定，中等并发场景表现可靠，高并发异步场景资源消耗相对较高。</li>
-<li><code>Jetty</code>：高并发和异步IO性能卓越，启动速度极快，内存占用极低，WebSocket支持优异。</li>
-<li><code>Resin</code>：高并发企业级场景表现突出，JSP执行效率高，通过内置优化提升响应速度。</li>
+<li><strong>Tomcat</strong>：性能均衡稳定，中等并发场景表现可靠，高并发异步场景资源消耗相对较高。</li>
+<li><strong>Jetty</strong>：高并发和异步IO性能卓越，启动速度极快，内存占用极低，WebSocket支持优异。</li>
+<li><strong>Resin</strong>：高并发企业级场景表现突出，JSP执行效率高，通过内置优化提升响应速度。</li>
 </ul>
 <p>适用场景：</p>
 <ul>
-<li><code>Tomcat</code>：绝大多数中小型应用，开发测试环境，主流框架默认适配。</li>
-<li><code>Jetty</code>：嵌入式部署、微服务架构、实时通信应用，需要快速启停的测试和云原生场景。</li>
-<li><code>Resin</code>：大型电商、高流量企业级应用，需要集群部署和负载均衡的生产环境。</li>
+<li><strong>Tomcat</strong>：绝大多数中小型应用，开发测试环境，主流框架默认适配。</li>
+<li><strong>Jetty</strong>：嵌入式部署、微服务架构、实时通信应用，需要快速启停的测试和云原生场景。</li>
+<li><strong>Resin</strong>：大型电商、高流量企业级应用，需要集群部署和负载均衡的生产环境。</li>
 </ul>
 <p>使用成本：</p>
 <ul>
-<li><code>Tomcat</code>：社区活跃度极高，文档全面丰富，入门门槛低，解决方案随处可见。</li>
-<li><code>Jetty</code>：社区活跃度中等，文档精简，需要一定定制化能力，学习曲线稍陡。</li>
-<li><code>Resin</code>：社区活跃度低，开源资料有限，配置运维复杂，适合有专业运维团队的企业。</li>
+<li><strong>Tomcat</strong>：社区活跃度极高，文档全面丰富，入门门槛低，解决方案随处可见。</li>
+<li><strong>Jetty</strong>：社区活跃度中等，文档精简，需要一定定制化能力，学习曲线稍陡。</li>
+<li><strong>Resin</strong>：社区活跃度低，开源资料有限，配置运维复杂，适合有专业运维团队的企业。</li>
 </ul>
 <p>授权方式：</p>
 <ul>
-<li><code>Tomcat</code>：基于Apache 2.0协议，完全开源免费，无商业授权成本。</li>
-<li><code>Jetty</code>：基于Apache 2.0&#x2F;EPL双协议，完全开源免费，无商业授权成本。</li>
-<li><code>Resin</code>：基于GPL协议，基础版开源，企业级特性需商业授权付费。</li>
+<li><strong>Tomcat</strong>：基于Apache 2.0协议，完全开源免费，无商业授权成本。</li>
+<li><strong>Jetty</strong>：基于Apache 2.0&#x2F;EPL双协议，完全开源免费，无商业授权成本。</li>
+<li><strong>Resin</strong>：基于GPL协议，基础版开源，企业级特性需商业授权付费。</li>
 </ul>
 <h3 id="1-4-版本"><a href="#1-4-版本" class="headerlink" title="1.4 版本"></a>1.4 版本</h3><p>版本对照：</p>
 <table>
@@ -2631,42 +2617,42 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>历史版本：<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/tomcat/">https://archive.apache.org/dist/tomcat/</a></p>
 <p>版本说明：</p>
 <ul>
-<li><code>apache-tomcat-x.zip</code>：Windows系统的压缩包，不包含批处理脚本以及本地库。</li>
-<li><code>apache-tomcat-x.tar.gz</code>：Linux系统的压缩包，主要提供给Linux系统使用。</li>
-<li><code>apache-tomcat-x.exe</code>：Windows系统的安装包，功能和压缩包基本一致，适用Windows快捷键以及系统服务形式启动。</li>
-<li><code>apache-tomcat-x-windows-x86.zip</code>：32位Windows发布包，包含批处理脚本以及本地库，适配32位和64位操作系统。</li>
-<li><code>apache-tomcat-x-windows-x64.zip</code>：64位Windows发布包，包含批处理脚本以及本地库，只适配64位操作系统。</li>
+<li><strong>apache-tomcat-x.zip</strong>：Windows系统的压缩包，不包含批处理脚本以及本地库。</li>
+<li><strong>apache-tomcat-x.tar.gz</strong>：Linux系统的压缩包，主要提供给Linux系统使用。</li>
+<li><strong>apache-tomcat-x.exe</strong>：Windows系统的安装包，功能和压缩包基本一致，适用Windows快捷键以及系统服务形式启动。</li>
+<li><strong>apache-tomcat-x-windows-x86.zip</strong>：32位Windows发布包，包含批处理脚本以及本地库，适配32位和64位操作系统。</li>
+<li><strong>apache-tomcat-x-windows-x64.zip</strong>：64位Windows发布包，包含批处理脚本以及本地库，只适配64位操作系统。</li>
 </ul>
 <h3 id="2-2-安装"><a href="#2-2-安装" class="headerlink" title="2.2 安装"></a>2.2 安装</h3><p>在安装前需要确保配置了JDK环境变量，即配置了JAVA_HOME环境变量。</p>
 <p>将<code>apache-tomcat-x.zip</code>压缩包解压到指定目录，即可完成Tomcat的安装。</p>
-<p>进入解压目录，可以看到Tomcat的目录结构：</p>
+<p>目录结构：</p>
 <figure class="highlight plaintext"><figcaption><span>code</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">apache-tomcat-x</span><br><span class="line">├── bin</span><br><span class="line">├── conf</span><br><span class="line">├── lib</span><br><span class="line">├── logs</span><br><span class="line">├── temp</span><br><span class="line">├── webapps</span><br><span class="line">└── work</span><br></pre></td></tr></table></figure>
 
 <p>目录说明：</p>
 <ul>
-<li><code>bin</code>：存放Tomcat的可执行脚本。</li>
-<li><code>conf</code>：存放Tomcat的配置文件。</li>
-<li><code>lib</code>：存放Tomcat的核心类库和依赖包。</li>
-<li><code>logs</code>：存放Tomcat的日志文件。</li>
-<li><code>temp</code>：存放Tomcat的临时文件。</li>
-<li><code>webapps</code>：存放Tomcat的Web应用程序，启动时会加载该目录下的应用程序，默认访问ROOT项目。</li>
-<li><code>work</code>：存放Tomcat的运行时文件。</li>
+<li><strong>bin</strong>：存放Tomcat的可执行脚本。</li>
+<li><strong>conf</strong>：存放Tomcat的配置文件。</li>
+<li><strong>lib</strong>：存放Tomcat的核心类库和依赖包。</li>
+<li><strong>logs</strong>：存放Tomcat的日志文件。</li>
+<li><strong>temp</strong>：存放Tomcat的临时文件。</li>
+<li><strong>webapps</strong>：存放Tomcat的Web应用程序，启动时会加载该目录下的应用程序，默认访问ROOT项目。</li>
+<li><strong>work</strong>：存放Tomcat的运行时文件。</li>
 </ul>
 <p>进入解压目录，执行<code>bin/startup.bat</code>启动Tomcat，执行<code>bin/shutdown.bat</code>停止Tomcat。</p>
 <p>启动Tomcat后，访问<code>http://localhost:8080/</code>即可看到Tomcat默认页面。</p>
 <h2 id="3-架构"><a href="#3-架构" class="headerlink" title="3 架构"></a>3 架构</h2><h3 id="3-1-总体"><a href="#3-1-总体" class="headerlink" title="3.1 总体"></a>3.1 总体</h3><p>Tomcat在实现Servlet容器规范时，核心拆分为两大模块：</p>
 <ul>
-<li><code>HTTP服务器（Connector）</code>：接收客户端的请求，解析请求报文，生成响应报文，发送给客户端。</li>
-<li><code>Servlet容器（Container）</code>：管理Servlet全生命周期，接收处理后的请求对象，处理会话信息，执行业务逻辑，返回响应数据。</li>
+<li><strong>HTTP服务器（Connector）</strong>：接收客户端的请求，解析请求报文，生成响应报文，发送给客户端。</li>
+<li><strong>Servlet容器（Container）</strong>：管理Servlet全生命周期，接收处理后的请求对象，处理会话信息，执行业务逻辑，返回响应数据。</li>
 </ul>
 <p>模块划分：</p>
-<p><img src="/@image/B04002003/001-20260106093417.jpg" alt="20260106093417-总体"></p>
+<p><img src="/@image/B03002003/001-20260106093417.jpg" alt="20260106093417-总体"></p>
 <p>说明：</p>
 <ul>
-<li><code>Server</code>：Tomcat运行的示例。一个Tomcat服务器实例包含一个Server组件。</li>
-<li><code>Service</code>：提供完整的Web服务。一个Server组件包含多个Service组件，但是多个Service组件不能存在相同的Connector组件。</li>
-<li><code>Connector</code>：根据配置的协议处理对应的请求。一个Service组件包含多个Connector组件，但是Connector组件不能相同。</li>
-<li><code>Container</code>：处理请求并生成响应。一个Service组件包含一个Container组件。</li>
+<li><strong>Server</strong>：Tomcat运行的示例。一个Tomcat服务器实例包含一个Server组件。</li>
+<li><strong>Service</strong>：提供完整的Web服务。一个Server组件包含多个Service组件，但是多个Service组件不能存在相同的Connector组件。</li>
+<li><strong>Connector</strong>：根据配置的协议处理对应的请求。一个Service组件包含多个Connector组件，但是Connector组件不能相同。</li>
+<li><strong>Container</strong>：处理请求并生成响应。一个Service组件包含一个Container组件。</li>
 </ul>
 <h3 id="3-2-详细"><a href="#3-2-详细" class="headerlink" title="3.2 详细"></a>3.2 详细</h3><h4 id="3-2-1-连接器"><a href="#3-2-1-连接器" class="headerlink" title="3.2.1 连接器"></a>3.2.1 连接器</h4><p>将连接器的功能进一步细分：</p>
 <ul>
@@ -2676,22 +2662,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>将Response对象转为字节流，生成响应报文，发送给客户端。</li>
 </ul>
 <p>连接器组成：</p>
-<p><img src="/@image/B04002003/001-20260106130538.jpg" alt="20260106130538-连接器"></p>
+<p><img src="/@image/B03002003/001-20260106130538.jpg" alt="20260106130538-连接器"></p>
 <p>说明：</p>
 <ul>
-<li><code>Endpoint</code>：通信端点，具体的Socket接收处理类。</li>
-<li><code>Processor</code>：协议处理接口，构造Request对象和Response对象。</li>
-<li><code>ProtocolHandler</code>：协议处理器，封装了Endpoint组件和Processor组件，实现具体的协议处理逻辑。</li>
-<li><code>Adapter</code>：适配器，将Request对象转为ServletRequest对象，将ServletResponse对象转为Response对象。</li>
+<li><strong>Endpoint</strong>：通信端点，具体的Socket接收处理类。</li>
+<li><strong>Processor</strong>：协议处理接口，构造Request对象和Response对象。</li>
+<li><strong>ProtocolHandler</strong>：协议处理器，封装了Endpoint组件和Processor组件，实现具体的协议处理逻辑。</li>
+<li><strong>Adapter</strong>：适配器，将Request对象转为ServletRequest对象，将ServletResponse对象转为Response对象。</li>
 </ul>
 <h4 id="3-2-2-容器"><a href="#3-2-2-容器" class="headerlink" title="3.2.2 容器"></a>3.2.2 容器</h4><p>容器中存在多个层次：</p>
-<p><img src="/@image/B04002003/001-20260106132510.jpg" alt="20260106132510-容器"></p>
+<p><img src="/@image/B03002003/001-20260106132510.jpg" alt="20260106132510-容器"></p>
 <p>说明：</p>
 <ul>
-<li><code>Engine</code>：引擎，用于管理多个Host虚拟主机。一个Service组件包含一个Engine组件。</li>
-<li><code>Host</code>：虚拟主机，设置站点相关信息。一个Engine组件包含多个Host组件。</li>
-<li><code>Context</code>：上下文，为Wrapper组件提供运行环境。一个Host组件包含多个Context组件。</li>
-<li><code>Wrapper</code>：包装器，用于管理Servlet生命周期。一个Context组件包含多个Wrapper组件。</li>
+<li><strong>Engine</strong>：引擎，用于管理多个Host虚拟主机。一个Service组件包含一个Engine组件。</li>
+<li><strong>Host</strong>：虚拟主机，设置站点相关信息。一个Engine组件包含多个Host组件。</li>
+<li><strong>Context</strong>：上下文，为Wrapper组件提供运行环境。一个Host组件包含多个Context组件。</li>
+<li><strong>Wrapper</strong>：包装器，用于管理Servlet生命周期。一个Context组件包含多个Wrapper组件。</li>
 </ul>
 <h2 id="4-流程"><a href="#4-流程" class="headerlink" title="4 流程"></a>4 流程</h2><h3 id="4-1-启动脚本"><a href="#4-1-启动脚本" class="headerlink" title="4.1 启动脚本"></a>4.1 启动脚本</h3><p>通过启动脚本启动Tomcat服务。</p>
 <p>脚本调用Bootstrap类的<code>main()</code>方法，这是启动的入口：</p>
@@ -2709,23 +2695,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>如果Tomcat使用双亲委派机制来加载类，在多个Web应用中部署相同的类，但版本不同时，就会因为版本不同而导致问题。</p>
 <p>为了解决多个Web应用的部署问题，在Tomcat中就破坏了双亲委派机制，目的是为了提高灵活性与隔离性：</p>
 <ul>
-<li><code>应用隔离</code>：确保不同的Web应用互不影响，不会因为版本问题导致冲突。</li>
-<li><code>资源共享</code>：让服务器的核心类库和Web应用的通用类库可以安全共享，避免重复加载。</li>
-<li><code>容器隔离</code>：确保核心类库和Web应用的类库隔离，保证容器安全稳定。</li>
-<li><code>热部署</code>：在不重启服务器的情况下，丢弃旧的类加载器，然后创建新的类加载器重新加载应用，从而实现热部署，这是双亲委派机制做不到的。</li>
+<li><strong>应用隔离</strong>：确保不同的Web应用互不影响，不会因为版本问题导致冲突。</li>
+<li><strong>资源共享</strong>：让服务器的核心类库和Web应用的通用类库可以安全共享，避免重复加载。</li>
+<li><strong>容器隔离</strong>：确保核心类库和Web应用的类库隔离，保证容器安全稳定。</li>
+<li><strong>热部署</strong>：在不重启服务器的情况下，丢弃旧的类加载器，然后创建新的类加载器重新加载应用，从而实现热部署，这是双亲委派机制做不到的。</li>
 </ul>
 <p>Tomcat的类加载机制如下：</p>
-<p><img src="/@image/B04002003/001-20260106170303.jpg" alt="20260106170303-连接器"></p>
+<p><img src="/@image/B03002003/001-20260106170303.jpg" alt="20260106170303-连接器"></p>
 <p>说明：</p>
 <ul>
-<li><code>启动类加载器</code>：用C++编写的，是JVM自带的类装载器，负责Java平台核心库，用来装载核心类库。无法直接获取。</li>
-<li><code>扩展类加载器</code>：负责<code>jre/lib/ext</code>目录下的Jar包或<code>–D java.ext.dirs</code>指定目录下的Jar包装入工作库。</li>
-<li><code>应用程序类加载器</code>：负责<code>java –classpath</code>或<code>–D java.class.path</code>所指的目录下的类与Jar包装入工作，最常用的加载器。</li>
-<li><code>Common类加载器</code>：负责加载Tomcat安装目录的<code>lib</code>目录下的Jar包，对Tomcat和所有Web应用都可见。</li>
-<li><code>Catalina类加载器</code>：负责加载Tomcat私有的类，对Web应用不可见。</li>
-<li><code>Shared类加载器</code>：负责加载Web应用共享的类，对Tomcat不可见。</li>
-<li><code>WebApp类加载器</code>：负责加载Web应用私有的类，对Tomcat和其他Web应用都不可见。打破双亲委派机制。</li>
-<li><code>JSP类加载器</code>：每个JSP页面私有的类加载器，对Tomcat和所有Web应用都不可见。当JSP页面修改后，会创建新的类加载器。</li>
+<li><strong>启动类加载器</strong>：用C++编写的，是JVM自带的类装载器，负责Java平台核心库，用来装载核心类库。无法直接获取。</li>
+<li><strong>扩展类加载器</strong>：负责<code>jre/lib/ext</code>目录下的Jar包或<code>–D java.ext.dirs</code>指定目录下的Jar包装入工作库。</li>
+<li><strong>应用程序类加载器</strong>：负责<code>java –classpath</code>或<code>–D java.class.path</code>所指的目录下的类与Jar包装入工作，最常用的加载器。</li>
+<li><strong>Common类加载器</strong>：负责加载Tomcat安装目录的<code>lib</code>目录下的Jar包，对Tomcat和所有Web应用都可见。</li>
+<li><strong>Catalina类加载器</strong>：负责加载Tomcat私有的类，对Web应用不可见。</li>
+<li><strong>Shared类加载器</strong>：负责加载Web应用共享的类，对Tomcat不可见。</li>
+<li><strong>WebApp类加载器</strong>：负责加载Web应用私有的类，对Tomcat和其他Web应用都不可见。打破双亲委派机制。</li>
+<li><strong>JSP类加载器</strong>：每个JSP页面私有的类加载器，对Tomcat和所有Web应用都不可见。当JSP页面修改后，会创建新的类加载器。</li>
 </ul>
 <h3 id="4-4-逐级初始化"><a href="#4-4-逐级初始化" class="headerlink" title="4.4 逐级初始化"></a>4.4 逐级初始化</h3><p>调用Bootstrap的<code>load()</code>方法：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">load</span><span class="params">(String[] arguments)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="comment">// 反射调用</span></span><br><span class="line">    <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> catalinaDaemon.getClass().getMethod(<span class="string">&quot;load&quot;</span>, <span class="literal">null</span>);</span><br><span class="line">    method.invoke(catalinaDaemon, param);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2828,7 +2814,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2859,10 +2845,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2902,13 +2888,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20251202/104109/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>JSP基础</p>
-          <p class='content'>摘要：本文介绍了JSP的基本概念、生命周期、语法、指令和动作，以及常用的九个隐式对象和四个域对象。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20251126/113558/'>
           <p class='title'>Servlet<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了Servlet的基本概念，以及如何使用Servlet技术开发Web应用。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -3019,7 +3005,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04002003/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:JavaWeb:容器</span></a>
+      <a href='/groups/B03002003/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:JavaWeb:容器</span></a>
     
   </header>
 
@@ -3224,50 +3210,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3539,7 +3514,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251201/154545/","name":"Tomcat"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Tomcat","description":"摘要：本文介绍了Tomcat的基本使用和配置。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251201/154545/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251201/154545/","wordCount":23,"datePublished":"2025-12-01T07:45:45.000Z","dateModified":"2026-06-18T07:57:50.946Z","articleSection":"后端","keywords":"JavaWeb,Servlet,Tomcat","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251201/154545/","name":"Tomcat"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Tomcat","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251201/154545/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251201/154545/","wordCount":5,"datePublished":"2025-12-01T07:45:45.000Z","dateModified":"2026-09-26T23:29:37.767Z","articleSection":"后端","keywords":"JavaWeb,Servlet,Tomcat","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

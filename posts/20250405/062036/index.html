@@ -50,21 +50,21 @@
       <link rel="alternate" href="/atom.xml" title="墨码山河" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>Bootstrap - 墨码山河</title>
-  <meta name="keywords" content="CSS,JS,Less,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了如何使用Bootstrap框架，了解了栅格系统的原理。 - 墨码山河 - 墨码山河">
+  <meta name="keywords" content="JS,CSS,Less,代码改变世界">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bootstrap">
 <meta property="og:url" content="https://momashanhe.com/posts/20250405/062036/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了如何使用Bootstrap框架，了解了栅格系统的原理。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-04-04T22:20:36.000Z">
-<meta property="article:modified_time" content="2026-06-18T07:57:50.946Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.701Z">
 <meta property="article:author" content="墨码山河">
-<meta property="article:tag" content="CSS">
 <meta property="article:tag" content="JS">
+<meta property="article:tag" content="CSS">
 <meta property="article:tag" content="Less">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1856,7 +1856,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2022,7 +2022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2487,7 +2487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20250405/062036/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2500,20 +2500,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20250405/062036/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20250405/062036/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2527,7 +2513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了如何使用Bootstrap框架，了解了栅格系统的原理。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2540,17 +2526,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>Bootstrap基于HTML、CSS和JS，提供了丰富的样式、组件和插件，帮助开发者快速构建美观且功能强大的界面。</p>
 <p>Bootstrap具有以下特点：</p>
 <ul>
-<li><code>响应式布局</code>：能够自适应不同设备的屏幕尺寸，如手机、平板和桌面电脑等，确保网页在各种设备上都能呈现出良好的视觉效果和用户体验。</li>
-<li><code>丰富的组件</code>：包含了大量的预定义组件，如导航栏、按钮、表单、模态框、轮播图等，开发者可以直接使用这些组件，快速搭建网页界面，提高开发效率。</li>
-<li><code>社区支持强大</code>：拥有庞大且活跃的社区，开发者可以在社区中找到丰富的资源、插件和教程，也可以分享自己的经验和成果，遇到问题时能够得到及时的帮助和解决方案。</li>
-<li><code>跨浏览器兼容</code>：支持主流浏览器，确保网页在不同浏览器上都能正常显示和运行，减少了开发者处理浏览器兼容性问题的工作量。</li>
+<li><strong>响应式布局</strong>：能够自适应不同设备的屏幕尺寸，如手机、平板和桌面电脑等，确保网页在各种设备上都能呈现出良好的视觉效果和用户体验。</li>
+<li><strong>丰富的组件</strong>：包含了大量的预定义组件，如导航栏、按钮、表单、模态框、轮播图等，开发者可以直接使用这些组件，快速搭建网页界面，提高开发效率。</li>
+<li><strong>社区支持强大</strong>：拥有庞大且活跃的社区，开发者可以在社区中找到丰富的资源、插件和教程，也可以分享自己的经验和成果，遇到问题时能够得到及时的帮助和解决方案。</li>
+<li><strong>跨浏览器兼容</strong>：支持主流浏览器，确保网页在不同浏览器上都能正常显示和运行，减少了开发者处理浏览器兼容性问题的工作量。</li>
 </ul>
 <p>官方网址：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://www.bootcss.com/">官网主站</a></li>
-<li><a target="_blank" rel="noopener" href="https://v3.bootcss.com/">V3文档</a></li>
-<li><a target="_blank" rel="noopener" href="https://v4.bootcss.com/">V4文档</a></li>
-<li><a target="_blank" rel="noopener" href="https://v5.bootcss.com/">V5文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bootcss.com/">https://www.bootcss.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://v3.bootcss.com/">https://v3.bootcss.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://v4.bootcss.com/">https://v4.bootcss.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://v5.bootcss.com/">https://v5.bootcss.com/</a></li>
 </ul>
 <p>本文使用的是3.4.1版本：</p>
 <ul>
@@ -2561,13 +2547,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="2-引入"><a href="#2-引入" class="headerlink" title="2 引入"></a>2 引入</h2><h3 id="2-1-通过CDN链接引入"><a href="#2-1-通过CDN链接引入" class="headerlink" title="2.1 通过CDN链接引入"></a>2.1 通过CDN链接引入</h3><p>在HTML文件的<code>head</code>元素中引入：</p>
 <figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 引入CSS文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://unpkg.com/bootstrap@3.4.1/dist/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 引入JQuery文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/jquery@3.6.0/dist/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 引入JS文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/bootstrap@3.4.1/dist/js/bootstrap.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="2-2-通过本地文件引入"><a href="#2-2-通过本地文件引入" class="headerlink" title="2.2 通过本地文件引入"></a>2.2 通过本地文件引入</h3><p>下载地址：<a target="_blank" rel="noopener" href="https://github.com/twbs/bootstrap/releases/tag/v3.4.1">在GitHub上下载3.4.1版本</a></p>
+<h3 id="2-2-通过本地文件引入"><a href="#2-2-通过本地文件引入" class="headerlink" title="2.2 通过本地文件引入"></a>2.2 通过本地文件引入</h3><p>下载地址：<a target="_blank" rel="noopener" href="https://github.com/twbs/bootstrap/releases/tag/v3.4.1">https://github.com/twbs/bootstrap/releases/tag/v3.4.1</a></p>
 <p>文件中包含<code>dist</code>的是编译后的文件，不包含源码，体积小，用于部署到生产环境。</p>
 <p>解压后目录说明：</p>
 <ul>
-<li><code>css</code>：放置样式文件。</li>
-<li><code>js</code>：放置脚本文件，其中的<code>npm.js</code>文件只在编译时使用。</li>
-<li><code>fonts</code>：放置图标字体库。</li>
+<li><strong>css</strong>：放置样式文件。</li>
+<li><strong>js</strong>：放置脚本文件，其中的<code>npm.js</code>文件只在编译时使用。</li>
+<li><strong>fonts</strong>：放置图标字体库。</li>
 </ul>
 <h2 id="3-原理"><a href="#3-原理" class="headerlink" title="3 原理"></a>3 原理</h2><h3 id="3-1-容器"><a href="#3-1-容器" class="headerlink" title="3.1 容器"></a>3.1 容器</h3><h4 id="3-1-1-流体容器"><a href="#3-1-1-流体容器" class="headerlink" title="3.1.1 流体容器"></a>3.1.1 流体容器</h4><p>使用<code>class</code>属性为<code>container-fluid</code>的元素，使用默认宽度，占据整行。</p>
 <p>样式：</p>
@@ -2582,9 +2568,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-2-栅格系统"><a href="#3-2-栅格系统" class="headerlink" title="3.2 栅格系统"></a>3.2 栅格系统</h3><h4 id="3-2-1-简介"><a href="#3-2-1-简介" class="headerlink" title="3.2.1 简介"></a>3.2.1 简介</h4><p>栅格系统用于通过一系列的行（row）与列（col）的组合来创建页面布局，可以将内容放入这些创建好的布局中。</p>
 <p>栅格系统的基本组成部分：</p>
 <ul>
-<li><code>Container</code>：用于包裹整个栅格系统的容器，可以分为流体容器和固定容器。</li>
-<li><code>Row</code>：栅格行，用于包含列元素，并确保列在水平排列时正确对齐。</li>
-<li><code>Col</code>：栅格列，负责实际内容的显示，每一行最多可以包含12列，不足会保持空白，超出会自动换行。</li>
+<li><strong>Container</strong>：用于包裹整个栅格系统的容器，可以分为流体容器和固定容器。</li>
+<li><strong>Row</strong>：栅格行，用于包含列元素，并确保列在水平排列时正确对齐。</li>
+<li><strong>Col</strong>：栅格列，负责实际内容的显示，每一行最多可以包含12列，不足会保持空白，超出会自动换行。</li>
 </ul>
 <h4 id="3-2-2-断点"><a href="#3-2-2-断点" class="headerlink" title="3.2.2 断点"></a>3.2.2 断点</h4><p>断点类似固定容器里的阈值：</p>
 <table>
@@ -2746,7 +2732,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2777,10 +2763,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B03/">前端</a>
+    <a class="category-link" href="/categories/B02/">前端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B03/" itemprop="url"><span itemprop="name">前端</span></a>
+        <a href="/categories/B02/" itemprop="url"><span itemprop="name">前端</span></a>
       </span>
     
   </div>
@@ -2795,8 +2781,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Less/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Less</p></a></div>
-  <span hidden itemprop="keywords">CSS JS Less</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Less/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Less</p></a></div>
+  <span hidden itemprop="keywords">JS CSS Less</span>
   
 
 
@@ -2820,13 +2806,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20250406/083755/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>布局方式整理</p>
-          <p class='content'>摘要：本文整理了CSS常见的布局方式。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20250401/132206/'>
           <p class='title'>使用MongoDB数据库<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了如何在Node中使用MongoDB数据库。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2937,7 +2923,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B03002004/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:CSS:框架</span></a>
+      <a href='/groups/B02002004/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:CSS:框架</span></a>
     
   </header>
 
@@ -3142,50 +3128,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3457,7 +3432,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250405/062036/","name":"Bootstrap"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Bootstrap","description":"摘要：本文学习了如何使用Bootstrap框架，了解了栅格系统的原理。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250405/062036/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250405/062036/","wordCount":35,"datePublished":"2025-04-04T22:20:36.000Z","dateModified":"2026-06-18T07:57:50.946Z","articleSection":"前端","keywords":"CSS,JS,Less","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250405/062036/","name":"Bootstrap"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Bootstrap","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250405/062036/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250405/062036/","wordCount":5,"datePublished":"2025-04-04T22:20:36.000Z","dateModified":"2026-09-26T23:29:37.701Z","articleSection":"前端","keywords":"JS,CSS,Less","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

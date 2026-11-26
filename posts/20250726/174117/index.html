@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>ForkJoin - 墨码山河</title>
   <meta name="keywords" content="Java,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了多线程的ForkJoin框架。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="ForkJoin">
 <meta property="og:url" content="https://momashanhe.com/posts/20250726/174117/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了多线程的ForkJoin框架。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-07-26T09:41:17.000Z">
-<meta property="article:modified_time" content="2026-06-18T08:16:16.320Z">
+<meta property="article:modified_time" content="2026-10-18T10:24:57.491Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20250726/174117/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20250726/174117/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20250726/174117/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了多线程的ForkJoin框架。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2537,15 +2523,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p>在JDK1.7之后引入了ForkJoin框架，将一个大任务分解成多个子任务，子任务可以继续往下分解，将多个子任务的结果合并成一个大结果，最终合并成大任务的结果。</p>
 <p>ForkJoin框架要完成两件事情：</p>
 <ul>
-<li><code>Fork</code>：把大任务拆分成子任务。</li>
-<li><code>Join</code>：把子任务的结果合并成大任务的结果。</li>
+<li><strong>Fork</strong>：把大任务拆分成子任务。</li>
+<li><strong>Join</strong>：把子任务的结果合并成大任务的结果。</li>
 </ul>
 <p>ForkJoin框架的实现非常复杂，内部大量运用了位操作和无锁算法，核心组件：</p>
 <ul>
-<li><code>ForkJoinPool</code>：基于工作窃取算法的线程池，负责全局任务调度与负载均衡。</li>
-<li><code>ForkJoinTask</code>：可递归Fork和Join的任务单元，自带状态机驱动完成通知。</li>
-<li><code>ForkJoinWorkerThread</code>：拥有独立队列的线程，优先执行本地任务，空闲时窃取外部队列任务。</li>
-<li><code>WorkQueue</code>：无锁双端队列，支持FIFO先进先出和LIFO后进先出，实现高效任务分发与窃取。</li>
+<li><strong>ForkJoinPool</strong>：基于工作窃取算法的线程池，负责全局任务调度与负载均衡。</li>
+<li><strong>ForkJoinTask</strong>：可递归Fork和Join的任务单元，自带状态机驱动完成通知。</li>
+<li><strong>ForkJoinWorkerThread</strong>：拥有独立队列的线程，优先执行本地任务，空闲时窃取外部队列任务。</li>
+<li><strong>WorkQueue</strong>：无锁双端队列，支持FIFO先进先出和LIFO后进先出，实现高效任务分发与窃取。</li>
 </ul>
 <h2 id="2-类和接口"><a href="#2-类和接口" class="headerlink" title="2 类和接口"></a>2 类和接口</h2><h3 id="2-1-ForkJoinPool"><a href="#2-1-ForkJoinPool" class="headerlink" title="2.1 ForkJoinPool"></a>2.1 ForkJoinPool</h3><p>ForkJoinPool是分支合并池，类似于线程池ThreadPoolExecutor类，同样是ExecutorService接口的一个实现类。</p>
 <p>在ForkJoinPool类中提供了三个构造方法：</p>
@@ -2556,22 +2542,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>参数含义：</p>
 <ul>
-<li><code>parallelism</code>：并行级别，默认为CPU核心数，ForkJoinPool里线程数量与该参数有关，但它不表示最大线程数。</li>
-<li><code>factory</code>：线程工厂，默认为DefaultForkJoinWorkerThreadFactory，其实就是用来创建ForkJoinWorkerThread线程对象。</li>
-<li><code>handler</code>：异常处理器。</li>
-<li><code>mode</code>：调度模式，FIFO_QUEUE表示本地队列先进先出，LIFO_QUEUE表示本地队列后进先出。</li>
-<li><code>workerNamePrefix</code>：线程的名称前缀。</li>
+<li><strong>parallelism</strong>：并行级别，默认为CPU核心数，ForkJoinPool里线程数量与该参数有关，但它不表示最大线程数。</li>
+<li><strong>factory</strong>：线程工厂，默认为DefaultForkJoinWorkerThreadFactory，其实就是用来创建ForkJoinWorkerThread线程对象。</li>
+<li><strong>handler</strong>：异常处理器。</li>
+<li><strong>mode</strong>：调度模式，FIFO_QUEUE表示本地队列先进先出，LIFO_QUEUE表示本地队列后进先出。</li>
+<li><strong>workerNamePrefix</strong>：线程的名称前缀。</li>
 </ul>
 <p>成员变量：</p>
 <ul>
-<li><p><code>config</code>：创建ForkJoinPool的配置，int类型的变量，占32位内存：</p>
+<li><p><strong>config</strong>：创建ForkJoinPool的配置，int类型的变量，占32位内存：</p>
 <ul>
 <li>低16位表示parallelism。</li>
 <li>第17位表示mode，0表示队列后进先出，1表示队列先进先出。</li>
 <li>第32位表示是否共享模式，0表示普通模式，1表示共享模式，队列没有线程，只能被其他线程窃取任务。</li>
 </ul>
 </li>
-<li><p><code>ctl</code>：ForkJoinPool的主要控制字段，long类型的变量，占64位内存：</p>
+<li><p><strong>ctl</strong>：ForkJoinPool的主要控制字段，long类型的变量，占64位内存：</p>
 <ul>
 <li><p>第63~48位表示激活线程数量，值为激活线程数减去parallelism（补码表示），线程激活则加1，线程停用则减1。当累积增加parallelism时第63位翻转为0，则不允许再激活线程。</p>
 </li>
@@ -2585,17 +2571,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 </li>
-<li><p><code>workQueues</code>：WorkQueue数组，奇数索引的队列可以关联线程并接收线程提交的本地任务，偶数索引的队列只能接收外部任务。</p>
+<li><p><strong>workQueues</strong>：WorkQueue数组，奇数索引的队列可以关联线程并接收线程提交的本地任务，偶数索引的队列只能接收外部任务。</p>
 </li>
-<li><p><code>factory</code>：创建线程的工厂。</p>
+<li><p><strong>factory</strong>：创建线程的工厂。</p>
 </li>
 </ul>
 <h3 id="2-2-ForkJoinTask"><a href="#2-2-ForkJoinTask" class="headerlink" title="2.2 ForkJoinTask"></a>2.2 ForkJoinTask</h3><p>ForkJoinTask是Future接口的抽象实现类，提供了用于分解任务的<code>fork()</code>方法和用于合并任务的<code>join()</code>方法。</p>
 <p>在ThreadPoolExecutor类中，线程池执行任务调用的<code>execute()</code>方法中要求传入Runnable接口的实例。但是在ForkJoinPool类中，除了可以传入Runnable接口的实例外，还可以传入ForkJoinTask抽象类的实例，并且传入Runnable接口的实例也会被适配为ForkJoinTask抽象类的实例。</p>
 <h3 id="2-3-RecursiveTask"><a href="#2-3-RecursiveTask" class="headerlink" title="2.3 RecursiveTask"></a>2.3 RecursiveTask</h3><p>通常情况下使用ForkJoinTask抽象类的实例，并不需要直接继承ForkJoinTask类，只需要继承其子类：</p>
 <ul>
-<li><code>RecursiveAction</code>：用于没有返回结果的任务。</li>
-<li><code>RecursiveTask</code>：用于有返回结果的任务，最常用。</li>
+<li><strong>RecursiveAction</strong>：用于没有返回结果的任务。</li>
+<li><strong>RecursiveTask</strong>：用于有返回结果的任务，最常用。</li>
 </ul>
 <h3 id="2-4-ForkJoinWorkerThread"><a href="#2-4-ForkJoinWorkerThread" class="headerlink" title="2.4 ForkJoinWorkerThread"></a>2.4 ForkJoinWorkerThread</h3><p>ForkJoinWorkerThread类是Thread的子类，作为线程池中的线程执行任务，其内部维护了一个WorkerQueue类型的双向任务队列。</p>
 <p>线程在执行任务时，优先处理本地任务队列中的任务（支持FIFO和LIFO），当本地任务队列为空时，会窃取外部任务队列中的任务（FIFO）。</p>
@@ -2603,7 +2589,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3 使用"></a>3 使用</h2><p>任务类定义，因为需要返回结果，所以继承RecursiveTask，并覆写compute方法。</p>
 <p>任务的拆分通过ForkJoinTask的fork方法执行，join方法用于等待任务执行后返回。</p>
 <p>示例：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">SumTask</span> <span class="variable">sumTask</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SumTask</span>(<span class="number">1</span>, <span class="number">100</span>);</span><br><span class="line">        <span class="type">ForkJoinPool</span> <span class="variable">pool</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ForkJoinPool</span>();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            ForkJoinTask&lt;Integer&gt; task = pool.submit(sumTask);</span><br><span class="line">            System.out.println(task.get());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            pool.shutdown();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SumTask</span> <span class="keyword">extends</span> <span class="title class_">RecursiveTask</span>&lt;Integer&gt; &#123;</span><br><span class="line">    <span class="comment">// 拆分阈值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">THRESHOLD</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 拆分开始值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> begin;</span><br><span class="line">    <span class="comment">// 拆分结束值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> end;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SumTask</span><span class="params">(<span class="type">int</span> begin, <span class="type">int</span> end)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.begin = begin;</span><br><span class="line">        <span class="built_in">this</span>.end = end;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> Integer <span class="title function_">compute</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">Integer</span> <span class="variable">value</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (end - begin &lt;= THRESHOLD) &#123;</span><br><span class="line">            <span class="comment">// 小于阈值，直接计算</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> begin; i &lt;= end; i++) &#123;</span><br><span class="line">                value += i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 大于阈值，递归计算</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">middle</span> <span class="operator">=</span> (begin + end) / <span class="number">2</span>;</span><br><span class="line">            <span class="type">SumTask</span> <span class="variable">beginTask</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SumTask</span>(begin, middle);</span><br><span class="line">            <span class="type">SumTask</span> <span class="variable">endTask</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SumTask</span>(middle + <span class="number">1</span>, end);</span><br><span class="line">            beginTask.fork();</span><br><span class="line">            endTask.fork();</span><br><span class="line">            value = beginTask.join() + endTask.join();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">SumTask</span> <span class="variable">sumTask</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SumTask</span>(<span class="number">1</span>, <span class="number">100</span>);</span><br><span class="line">        <span class="type">ForkJoinPool</span> <span class="variable">pool</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ForkJoinPool</span>();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            ForkJoinTask&lt;Integer&gt; task = pool.submit(sumTask);</span><br><span class="line">            System.out.println(task.get());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            pool.shutdown();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SumTask</span> <span class="keyword">extends</span> <span class="title class_">RecursiveTask</span>&lt;Integer&gt; &#123;</span><br><span class="line">    <span class="comment">// 拆分阈值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">THRESHOLD</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 拆分开始值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> begin;</span><br><span class="line">    <span class="comment">// 拆分结束值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> end;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SumTask</span><span class="params">(<span class="type">int</span> begin, <span class="type">int</span> end)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.begin = begin;</span><br><span class="line">        <span class="built_in">this</span>.end = end;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> Integer <span class="title function_">compute</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">Integer</span> <span class="variable">value</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (end - begin &lt;= THRESHOLD) &#123;</span><br><span class="line">            <span class="comment">// 小于阈值，直接计算</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> begin; i &lt;= end; i++) &#123;</span><br><span class="line">                value += i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 大于阈值，递归计算</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">middle</span> <span class="operator">=</span> (begin + end) / <span class="number">2</span>;</span><br><span class="line">            <span class="type">SumTask</span> <span class="variable">beginTask</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SumTask</span>(begin, middle);</span><br><span class="line">            <span class="type">SumTask</span> <span class="variable">endTask</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SumTask</span>(middle + <span class="number">1</span>, end);</span><br><span class="line">            beginTask.fork();</span><br><span class="line">            endTask.fork();</span><br><span class="line">            value = beginTask.join() + endTask.join();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
 <figure class="highlight plaintext"><figcaption><span>log</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5050</span><br></pre></td></tr></table></figure>
@@ -2637,7 +2623,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年10月18日</div>
               </div>
               
               
@@ -2668,10 +2654,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2711,13 +2697,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20250730/143223/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>锁事</p>
-          <p class='content'>摘要：本文学习了多线程中有关锁的一些特性。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20250725/091434/'>
           <p class='title'>辅助类<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了JUC提供的三个常用的辅助类。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2828,7 +2814,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04001003/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Java:并发</span></a>
+      <a href='/groups/B03001003/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Java:并发</span></a>
     
   </header>
 
@@ -2920,10 +2906,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         </a></li>
       
-        <li><a class="flat-box" title="/posts/20250716/131400/" href="/posts/20250716/131400/"
+        <li><a class="flat-box" title="/posts/20250716/131408/" href="/posts/20250716/131408/"
           
           
-          active-action="action-posts20250716131400"
+          active-action="action-posts20250716131408"
           >
           <div class='name'>
             
@@ -3189,50 +3175,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3504,7 +3479,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250726/174117/","name":"ForkJoin"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ForkJoin","description":"摘要：本文学习了多线程的ForkJoin框架。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250726/174117/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250726/174117/","wordCount":23,"datePublished":"2025-07-26T09:41:17.000Z","dateModified":"2026-06-18T08:16:16.320Z","articleSection":"后端","keywords":"Java","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250726/174117/","name":"ForkJoin"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ForkJoin","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250726/174117/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250726/174117/","wordCount":5,"datePublished":"2025-07-26T09:41:17.000Z","dateModified":"2026-10-18T10:24:57.491Z","articleSection":"后端","keywords":"Java","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

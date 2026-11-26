@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>发布订阅 - 墨码山河</title>
   <meta name="keywords" content="Redis,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了Redis的发布订阅。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="发布订阅">
 <meta property="og:url" content="https://momashanhe.com/posts/20260324/153817/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了Redis的发布订阅。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-03-24T07:38:17.000Z">
-<meta property="article:modified_time" content="2026-06-18T05:53:12.982Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.863Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2464,7 +2464,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>753 字</p>
+      <p>743 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20260324/153817/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20260324/153817/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20260324/153817/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了Redis的发布订阅。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2538,10 +2524,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>发布订阅模式可以用于实现消息队列、事件通知、实时通信等场景。</p>
 <h2 id="2-特点"><a href="#2-特点" class="headerlink" title="2 特点"></a>2 特点</h2><p>发布订阅特点：</p>
 <ul>
-<li><code>松耦合</code>：发布者和订阅者之间不需要直接通信，通过频道进行消息传递。</li>
-<li><code>多对多</code>：一个发布者可以向多个频道发布消息，一个订阅者可以订阅多个频道。</li>
-<li><code>实时性</code>：消息会实时传递给订阅者，不需要轮询。</li>
-<li><code>无持久化</code>：默认情况下，消息不会持久化，如果订阅者离线，会错过消息。</li>
+<li><strong>松耦合</strong>：发布者和订阅者之间不需要直接通信，通过频道进行消息传递。</li>
+<li><strong>多对多</strong>：一个发布者可以向多个频道发布消息，一个订阅者可以订阅多个频道。</li>
+<li><strong>实时性</strong>：消息会实时传递给订阅者，不需要轮询。</li>
+<li><strong>无持久化</strong>：默认情况下，消息不会持久化，如果订阅者离线，会错过消息。</li>
 </ul>
 <h2 id="3-原理"><a href="#3-原理" class="headerlink" title="3 原理"></a>3 原理</h2><p>工作原理：</p>
 <ol>
@@ -2551,24 +2537,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <p>核心角色：</p>
 <ul>
-<li><code>发布者</code>：消息的发送者，负责将消息发送到指定的频道。</li>
-<li><code>订阅者</code>：消息的接收者，负责订阅频道，接收并处理消息。</li>
-<li><code>频道</code>：消息传递的通道，连接发布者和订阅者的桥梁。</li>
+<li><strong>发布者</strong>：消息的发送者，负责将消息发送到指定的频道。</li>
+<li><strong>订阅者</strong>：消息的接收者，负责订阅频道，接收并处理消息。</li>
+<li><strong>频道</strong>：消息传递的通道，连接发布者和订阅者的桥梁。</li>
 </ul>
 <h2 id="4-使用"><a href="#4-使用" class="headerlink" title="4 使用"></a>4 使用</h2><h3 id="4-1-命令"><a href="#4-1-命令" class="headerlink" title="4.1 命令"></a>4.1 命令</h3><p>命令：</p>
 <ul>
-<li><code>PUBLISH channel message</code>：向指定频道发布消息。</li>
-<li><code>SUBSCRIBE channel ... channel</code>：订阅一个或多个频道。</li>
-<li><code>UNSUBSCRIBE</code>：取消订阅一个或多个频道。</li>
-<li><code>PSUBSCRIBE</code>：模式订阅，订阅通配符模式匹配的频道。</li>
-<li><code>PUNSUBSCRIBE</code>：取消模式订阅，取消订阅通配符模式匹配的频道。</li>
-<li><code>PUBSUB 子命令</code>：查看发布订阅的状态。</li>
+<li><strong>PUBLISH channel message</strong>：向指定频道发布消息。</li>
+<li><strong>SUBSCRIBE channel … channel</strong>：订阅一个或多个频道。</li>
+<li><strong>UNSUBSCRIBE</strong>：取消订阅一个或多个频道。</li>
+<li><strong>PSUBSCRIBE</strong>：模式订阅，订阅通配符模式匹配的频道。</li>
+<li><strong>PUNSUBSCRIBE</strong>：取消模式订阅，取消订阅通配符模式匹配的频道。</li>
+<li><strong>PUBSUB 子命令</strong>：查看发布订阅的状态。</li>
 </ul>
 <p>通配符：</p>
 <ul>
-<li><code>*</code>：匹配任意数量的字符。</li>
-<li><code>?</code>：匹配任意一个字符。</li>
-<li><code>[abc]</code>：匹配方括号中的任意一个字符。</li>
+<li>*****：匹配任意数量的字符。</li>
+<li>**?**：匹配任意一个字符。</li>
+<li>**[abc]**：匹配方括号中的任意一个字符。</li>
 </ul>
 <h3 id="4-2-示例"><a href="#4-2-示例" class="headerlink" title="4.2 示例"></a>4.2 示例</h3><h4 id="4-2-1-订阅频道"><a href="#4-2-1-订阅频道" class="headerlink" title="4.2.1 订阅频道"></a>4.2.1 订阅频道</h4><p>订阅频道：</p>
 <figure class="highlight cmd"><figcaption><span>cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; SUBSCRIBE student teacher</span><br><span class="line"><span class="number">1</span>) &quot;subscribe&quot;</span><br><span class="line"><span class="number">2</span>) &quot;student&quot;</span><br><span class="line"><span class="number">3</span>) (integer) <span class="number">1</span></span><br><span class="line"><span class="number">1</span>) &quot;subscribe&quot;</span><br><span class="line"><span class="number">2</span>) &quot;teacher&quot;</span><br><span class="line"><span class="number">3</span>) (integer) <span class="number">2</span></span><br><span class="line">Reading messages... (press Ctrl-C to quit or any key to <span class="built_in">type</span> command)</span><br></pre></td></tr></table></figure>
@@ -2592,9 +2578,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>会返回订阅频道的订阅者数量。</p>
 <h4 id="4-2-4-查看状态"><a href="#4-2-4-查看状态" class="headerlink" title="4.2.4 查看状态"></a>4.2.4 查看状态</h4><p>支持的子命令：</p>
 <ul>
-<li><code>CHANNELS</code>：查看所有订阅的频道，不包含模式订阅的频道。</li>
-<li><code>NUMSUB channel</code>：查看指定频道的订阅者数量，不包含模式订阅的频道。</li>
-<li><code>NUMPAT</code>：查看模式订阅的频道数量。</li>
+<li><strong>CHANNELS</strong>：查看所有订阅的频道，不包含模式订阅的频道。</li>
+<li><strong>NUMSUB channel</strong>：查看指定频道的订阅者数量，不包含模式订阅的频道。</li>
+<li><strong>NUMPAT</strong>：查看模式订阅的频道数量。</li>
 </ul>
 
   </div>
@@ -2626,7 +2612,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2657,10 +2643,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2700,13 +2686,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20260326/144236/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>事务</p>
-          <p class='content'>摘要：本文介绍了Redis的事务。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20260322/103416/'>
           <p class='title'>集群模式<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了Redis的集群模式。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2817,7 +2803,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B05003002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:Redis:高级</span></a>
+      <a href='/groups/B04003002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:Redis:高级</span></a>
     
   </header>
 
@@ -3106,50 +3092,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3421,7 +3396,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260324/153817/","name":"发布订阅"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"发布订阅","description":"摘要：本文介绍了Redis的发布订阅。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260324/153817/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260324/153817/","wordCount":19,"datePublished":"2026-03-24T07:38:17.000Z","dateModified":"2026-06-18T05:53:12.982Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260324/153817/","name":"发布订阅"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"发布订阅","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260324/153817/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260324/153817/","wordCount":5,"datePublished":"2026-03-24T07:38:17.000Z","dateModified":"2026-09-26T23:29:37.863Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

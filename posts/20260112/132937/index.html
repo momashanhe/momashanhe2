@@ -49,19 +49,19 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="墨码山河" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>配置方式 - 墨码山河</title>
+  <title>配置管理 - 墨码山河</title>
   <meta name="keywords" content="Spring MVC,配置,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了Spring MVC的配置方式。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="配置方式">
+<meta property="og:title" content="配置管理">
 <meta property="og:url" content="https://momashanhe.com/posts/20260112/132937/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了Spring MVC的配置方式。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-01-12T05:29:37.000Z">
-<meta property="article:modified_time" content="2026-06-18T07:57:50.946Z">
+<meta property="article:modified_time" content="2026-10-18T10:24:57.607Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Spring MVC">
 <meta property="article:tag" content="配置">
@@ -1855,7 +1855,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2445,7 +2445,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        配置方式
+        配置管理
       </h1>
       <div class='new-meta-box'>
         
@@ -2486,7 +2486,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20260112/132937/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2499,20 +2499,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20260112/132937/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20260112/132937/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2526,7 +2512,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了Spring MVC的配置方式。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2653,7 +2639,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>为了进一步简化开发，Spring还提供了实现了WebApplicationInitializer接口的AbstractAnnotationConfigDispatcherServletInitializer抽象类。</p>
 <p>示例：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebInitializer</span> <span class="keyword">extends</span> <span class="title class_">AbstractAnnotationConfigDispatcherServletInitializer</span> &#123;</span><br><span class="line">    <span class="comment">// 指定根配置类，在核心容器中创建，具有唯一性</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> Class&lt;?&gt;[] getRootConfigClasses() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Class</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 指定Web配置类，在MVC容器中创建，可以有多个</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> Class&lt;?&gt;[] getServletConfigClasses() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Class</span>[] &#123;WebConfig.class&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 指定映射路径</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> String[] getServletMappings() &#123;</span><br><span class="line">        <span class="comment">// 设置DispatcherServlet的映射路径</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>[] &#123;<span class="string">&quot;/&quot;</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 指定过滤器</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> Filter[] getServletFilters() &#123;</span><br><span class="line">        <span class="comment">// 注册字符编码过滤器</span></span><br><span class="line">        <span class="type">CharacterEncodingFilter</span> <span class="variable">encodingFilter</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CharacterEncodingFilter</span>();</span><br><span class="line">        encodingFilter.setEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">        encodingFilter.setForceEncoding(<span class="literal">true</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Filter</span>[] &#123;encodingFilter&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebInitializer</span> <span class="keyword">extends</span> <span class="title class_">AbstractAnnotationConfigDispatcherServletInitializer</span> &#123;</span><br><span class="line">    <span class="comment">// 指定根配置类，在核心容器中创建，具有唯一性</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> Class&lt;?&gt;[] getRootConfigClasses() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Class</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指定Web配置类，在MVC容器中创建，可以有多个</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> Class&lt;?&gt;[] getServletConfigClasses() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Class</span>[] &#123;WebConfig.class&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指定映射路径</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> String[] getServletMappings() &#123;</span><br><span class="line">        <span class="comment">// 设置DispatcherServlet的映射路径</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>[] &#123;<span class="string">&quot;/&quot;</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指定过滤器</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> Filter[] getServletFilters() &#123;</span><br><span class="line">        <span class="comment">// 注册字符编码过滤器</span></span><br><span class="line">        <span class="type">CharacterEncodingFilter</span> <span class="variable">encodingFilter</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CharacterEncodingFilter</span>();</span><br><span class="line">        encodingFilter.setEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">        encodingFilter.setForceEncoding(<span class="literal">true</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Filter</span>[] &#123;encodingFilter&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="3-2-2-根配置类"><a href="#3-2-2-根配置类" class="headerlink" title="3.2.2 根配置类"></a>3.2.2 根配置类</h4><p>根配置类用于创建核心容器，需要使用注解：</p>
 <ul>
@@ -2668,10 +2654,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>WebMvcConfigurer接口是Web配置的核心接口，提供了一系列可重写的方法：</p>
 <ul>
-<li><code>配置视图解析器</code>：通过重写<code>configureViewResolvers()</code>方法配置。</li>
-<li><code>配置静态资源映射</code>：通过重写<code>addResourceHandlers()</code>方法配置。</li>
-<li><code>配置拦截器</code>：通过重写<code>addInterceptors()</code>方法配置。</li>
-<li><code>配置跨域映射</code>：通过重写<code>addCorsMappings()</code>方法配置。</li>
+<li><strong>配置视图解析器</strong>：通过重写<code>configureViewResolvers()</code>方法配置。</li>
+<li><strong>配置静态资源映射</strong>：通过重写<code>addResourceHandlers()</code>方法配置。</li>
+<li><strong>配置拦截器</strong>：通过重写<code>addInterceptors()</code>方法配置。</li>
+<li><strong>配置跨域映射</strong>：通过重写<code>addCorsMappings()</code>方法配置。</li>
 </ul>
 <h4 id="3-2-4-全局配置类"><a href="#3-2-4-全局配置类" class="headerlink" title="3.2.4 全局配置类"></a>3.2.4 全局配置类</h4><p>使用<code>@ControllerAdvice</code>注解配合其他注解可以实现不同的功能：</p>
 <ul>
@@ -2686,7 +2672,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableWebMvc</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;com.example.controller&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebConfig</span> <span class="keyword">implements</span> <span class="title class_">WebMvcConfigurer</span> &#123;</span><br><span class="line">    <span class="comment">// 配置消息转换器，设置编码格式，处理返回String类型的响应</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">extendMessageConverters</span><span class="params">(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters)</span> &#123;</span><br><span class="line">        <span class="comment">// 遍历消息转换器列表</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; converters.size(); i++) &#123;</span><br><span class="line">            <span class="comment">// 修改原始StringHttpMessageConverter转换器</span></span><br><span class="line">            <span class="keyword">if</span> (converters.get(i) <span class="keyword">instanceof</span> StringHttpMessageConverter) &#123;</span><br><span class="line">                <span class="comment">// 设置UTF-8编码</span></span><br><span class="line">                <span class="type">StringHttpMessageConverter</span> <span class="variable">custom</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringHttpMessageConverter</span>(StandardCharsets.UTF_8);</span><br><span class="line">                <span class="comment">// 设置为false可以避免响应头过大</span></span><br><span class="line">                custom.setWriteAcceptCharset(<span class="literal">false</span>);</span><br><span class="line">                <span class="comment">// 替换原始StringHttpMessageConverter转换器</span></span><br><span class="line">                converters.set(i, custom);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="3-4-2-转换对象"><a href="#3-4-2-转换对象" class="headerlink" title="3.4.2 转换对象"></a>3.4.2 转换对象</h4><p>自定义消息转换器，处理自定义对象的转换：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoMessageConverter</span> <span class="keyword">implements</span> <span class="title class_">HttpMessageConverter</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canRead</span><span class="params">(Class clazz, MediaType mediaType)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> User.class.isAssignableFrom(clazz);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canWrite</span><span class="params">(Class clazz, MediaType mediaType)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> User.class.isAssignableFrom(clazz);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;MediaType&gt; <span class="title function_">getSupportedMediaTypes</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Collections.singletonList(<span class="keyword">new</span> <span class="title class_">MediaType</span>(<span class="string">&quot;application&quot;</span>, <span class="string">&quot;x-demo&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">read</span><span class="params">(Class clazz, HttpInputMessage inputMessage)</span> <span class="keyword">throws</span> IOException, HttpMessageNotReadableException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">body</span> <span class="operator">=</span> StreamUtils.copyToString(inputMessage.getBody(), StandardCharsets.UTF_8);</span><br><span class="line">        Map&lt;String, String&gt; param = Arrays.stream(body.split(<span class="string">&quot;;&quot;</span>))</span><br><span class="line">                .map(data -&gt; data.split(<span class="string">&quot;:&quot;</span>))</span><br><span class="line">                .collect(Collectors.toMap(data -&gt; data[<span class="number">0</span>], data -&gt; data[<span class="number">1</span>]));</span><br><span class="line">        <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">        user.setId(Integer.parseInt(param.get(<span class="string">&quot;id&quot;</span>)));</span><br><span class="line">        user.setName(param.get(<span class="string">&quot;name&quot;</span>));</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">write</span><span class="params">(Object o, MediaType contentType, HttpOutputMessage outputMessage)</span> <span class="keyword">throws</span> IOException, HttpMessageNotWritableException &#123;</span><br><span class="line">        <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> (User) o;</span><br><span class="line">        <span class="type">String</span> <span class="variable">body</span> <span class="operator">=</span> String.format(<span class="string">&quot;id:%d;name:%s&quot;</span>, user.getId(), user.getName());</span><br><span class="line">        StreamUtils.copy(body.getBytes(StandardCharsets.UTF_8), outputMessage.getBody());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoMessageConverter</span> <span class="keyword">implements</span> <span class="title class_">HttpMessageConverter</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canRead</span><span class="params">(Class clazz, MediaType mediaType)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> User.class.isAssignableFrom(clazz);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canWrite</span><span class="params">(Class clazz, MediaType mediaType)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> User.class.isAssignableFrom(clazz);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;MediaType&gt; <span class="title function_">getSupportedMediaTypes</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Collections.singletonList(<span class="keyword">new</span> <span class="title class_">MediaType</span>(<span class="string">&quot;application&quot;</span>, <span class="string">&quot;x-demo&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">read</span><span class="params">(Class clazz, HttpInputMessage inputMessage)</span> <span class="keyword">throws</span> IOException, HttpMessageNotReadableException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">body</span> <span class="operator">=</span> StreamUtils.copyToString(inputMessage.getBody(), StandardCharsets.UTF_8);</span><br><span class="line">        Map&lt;String, String&gt; param = Arrays.stream(body.split(<span class="string">&quot;;&quot;</span>))</span><br><span class="line">                .map(data -&gt; data.split(<span class="string">&quot;:&quot;</span>))</span><br><span class="line">                .collect(Collectors.toMap(data -&gt; data[<span class="number">0</span>], data -&gt; data[<span class="number">1</span>]));</span><br><span class="line">        <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">        user.setId(Integer.parseInt(param.get(<span class="string">&quot;id&quot;</span>)));</span><br><span class="line">        user.setName(param.get(<span class="string">&quot;name&quot;</span>));</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">write</span><span class="params">(Object o, MediaType contentType, HttpOutputMessage outputMessage)</span> <span class="keyword">throws</span> IOException, HttpMessageNotWritableException &#123;</span><br><span class="line">        <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> (User) o;</span><br><span class="line">        <span class="type">String</span> <span class="variable">body</span> <span class="operator">=</span> String.format(<span class="string">&quot;id:%d;name:%s&quot;</span>, user.getId(), user.getName());</span><br><span class="line">        StreamUtils.copy(body.getBytes(StandardCharsets.UTF_8), outputMessage.getBody());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在Web配置类中配置自定义消息转换器：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableWebMvc</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;com.example.controller&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebConfig</span> <span class="keyword">implements</span> <span class="title class_">WebMvcConfigurer</span> &#123;</span><br><span class="line">    <span class="comment">// 配置消息转换器</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">extendMessageConverters</span><span class="params">(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters)</span> &#123;</span><br><span class="line">        converters.add(<span class="keyword">new</span> <span class="title class_">DemoMessageConverter</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2694,10 +2680,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>在控制器中处理请求：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoController</span> &#123;</span><br><span class="line">    <span class="meta">@PostMapping(&quot;/demo&quot;)</span></span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="keyword">public</span> User <span class="title function_">demo</span><span class="params">(<span class="meta">@RequestBody</span> User user)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>请求体为Text格式：</p>
-<figure class="highlight text"><figcaption><span>text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id:1;name:张三</span><br></pre></td></tr></table></figure>
+<p>请求体为文本格式：</p>
+<figure class="highlight txt"><figcaption><span>txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id:1;name:张三</span><br></pre></td></tr></table></figure>
 
-<p>使用Postman发送POST请求，请求体为Text格式：</p>
+<p>使用Postman发送POST请求，请求体为文本格式：</p>
 <ul>
 <li>如果请求头Accept为<code>application/x-demo</code>类型，返回自定义字符串。</li>
 <li>如果请求头Accept为<code>application/json</code>类型，返回JSON字符串。</li>
@@ -2707,7 +2693,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>在Web配置类中配置内容协商策略：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableWebMvc</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;com.example.controller&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebConfig</span> <span class="keyword">implements</span> <span class="title class_">WebMvcConfigurer</span> &#123;</span><br><span class="line">    <span class="comment">// 配置内容协商策略</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">configureContentNegotiation</span><span class="params">(ContentNegotiationConfigurer configurer)</span> &#123;</span><br><span class="line">        <span class="comment">// 注册自定义媒体类型</span></span><br><span class="line">        <span class="type">MediaType</span> <span class="variable">APPLICATION_X_DEMO</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MediaType</span>(<span class="string">&quot;application&quot;</span>, <span class="string">&quot;x-demo&quot;</span>);</span><br><span class="line">        <span class="comment">// 配置支持的媒体类型</span></span><br><span class="line">        Map&lt;String, MediaType&gt; mediaTypes = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        mediaTypes.put(<span class="string">&quot;json&quot;</span>, MediaType.APPLICATION_JSON);</span><br><span class="line">        mediaTypes.put(<span class="string">&quot;xml&quot;</span>, MediaType.APPLICATION_XML);</span><br><span class="line">        mediaTypes.put(<span class="string">&quot;x-demo&quot;</span>, APPLICATION_X_DEMO);</span><br><span class="line">        <span class="comment">// 开启路径参数</span></span><br><span class="line">        configurer.favorParameter(<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 配置路径参数名，默认将format作为参数名</span></span><br><span class="line">        configurer.parameterName(<span class="string">&quot;content&quot;</span>);</span><br><span class="line">        <span class="comment">// 配置默认媒体类型</span></span><br><span class="line">        configurer.defaultContentType(APPLICATION_X_DEMO);</span><br><span class="line">        <span class="comment">// 配置支持的媒体类型</span></span><br><span class="line">        configurer.mediaTypes(mediaTypes);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>使用Postman发送POST请求，请求体为Text格式，以路径参数为主，当路径参数不存在时使用Accept请求头：</p>
+<p>使用Postman发送POST请求，请求体为文本格式，以路径参数为主，当路径参数不存在时使用Accept请求头：</p>
 <ul>
 <li>如果请求路径为<code>/demo?content=x-demo</code>，返回自定义字符串。</li>
 <li>如果请求路径为<code>/demo?content=json</code>，返回JSON字符串。</li>
@@ -2728,7 +2714,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">配置方式</div>
+            <div class="license-title">配置管理</div>
             <div class="license-link"><a href="https://momashanhe.com/posts/20260112/132937/">https://momashanhe.com/posts/20260112/132937/</a>
             </div>
             <div class="license-meta">
@@ -2743,7 +2729,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年10月18日</div>
               </div>
               
               
@@ -2774,10 +2760,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2817,13 +2803,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20260115/163350/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>处理请求</p>
-          <p class='content'>摘要：本文学习了使用Spring MVC如何解析请求。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20260109/160036/'>
           <p class='title'>工作流程<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文分析了Spring MVC的工作流程，包括请求处理的各个阶段和核心对象的协作机制。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2934,7 +2920,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04004001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Spring MVC:基础</span></a>
+      <a href='/groups/B03004001/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Spring MVC:基础</span></a>
     
   </header>
 
@@ -2954,14 +2940,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         </a></li>
       
-        <li><a class="flat-box" title="/posts/20260108/121500/" href="/posts/20260108/121500/"
+        <li><a class="flat-box" title="/posts/20260108/121516/" href="/posts/20260108/121516/"
           
           
-          active-action="action-posts20260108121500"
+          active-action="action-posts20260108121516"
           >
           <div class='name'>
             
-            基础使用
+            简单使用
           </div>
           
         </a></li>
@@ -2985,7 +2971,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-            配置方式
+            配置管理
           </div>
           
         </a></li>
@@ -3175,50 +3161,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3490,7 +3465,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260112/132937/","name":"配置方式"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"配置方式","description":"摘要：本文学习了Spring MVC的配置方式。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260112/132937/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260112/132937/","wordCount":24,"datePublished":"2026-01-12T05:29:37.000Z","dateModified":"2026-06-18T07:57:50.946Z","articleSection":"后端","keywords":"Spring MVC,配置","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260112/132937/","name":"配置管理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"配置管理","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260112/132937/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260112/132937/","wordCount":5,"datePublished":"2026-01-12T05:29:37.000Z","dateModified":"2026-10-18T10:24:57.607Z","articleSection":"后端","keywords":"Spring MVC,配置","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

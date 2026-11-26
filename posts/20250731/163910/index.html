@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>数据存储 - 墨码山河</title>
   <meta name="keywords" content="Java,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了虚拟机如何管理对象。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据存储">
 <meta property="og:url" content="https://momashanhe.com/posts/20250731/163910/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了虚拟机如何管理对象。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-07-31T08:39:10.000Z">
-<meta property="article:modified_time" content="2026-06-18T08:16:23.249Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.759Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20250731/163910/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20250731/163910/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20250731/163910/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了虚拟机如何管理对象。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2535,7 +2521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             </details>
 
 <h2 id="1-内存区域模型"><a href="#1-内存区域模型" class="headerlink" title="1 内存区域模型"></a>1 内存区域模型</h2><p>虚拟机定义的内存区域模型：</p>
-<p><img src="/@image/B04001004/003-20250731170055.jpg" alt="20250731170055-模型"></p>
+<p><img src="/@image/B03001004/003-20250731170055.jpg" alt="20250731170055-模型"></p>
 <p>图中绿色部分就是所有线程之间共享的内存区域，包括方法区和堆。而绿色部分则是线程运行时独享的数据区域，包括程序计数器、本地方法栈、虚拟机栈。</p>
 <p>之所以要划分这么多区域出来是因为这些区域都有自己的用途，以及创建和销毁的时间。</p>
 <p>有些区域随着虚拟机进程的启动而存在，有的区域则依赖用户线程的启动和结束而销毁和建立。</p>
@@ -2567,7 +2553,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>每一个方法被调用直至执行完成的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈的过程，这个过程遵循先进后出的规则。</p>
 <p>在活动线程中，只有位于栈顶的栈帧才是有效的，称为当前栈帧，与这个栈帧相关联的方法称为当前方法。</p>
 <p>结构图：</p>
-<p><img src="/@image/B04001004/003-20250731170338.jpg" alt="20250731170338-虚拟机栈"></p>
+<p><img src="/@image/B03001004/003-20250731170338.jpg" alt="20250731170338-虚拟机栈"></p>
 <h4 id="2-3-2-独享"><a href="#2-3-2-独享" class="headerlink" title="2.3.2 独享"></a>2.3.2 独享</h4><p>与本地方法栈一样，虚拟机栈也是线程私有的，它的生命周期与线程相同，每创建一个线程时就会对应创建一个虚拟机栈，所以虚拟机栈也是线程私有的内存区域。</p>
 <h4 id="2-3-3-异常"><a href="#2-3-3-异常" class="headerlink" title="2.3.3 异常"></a>2.3.3 异常</h4><p>与本地方法栈一样，虚拟机栈也会抛出StackOverflowError异常和OutOfMemoryError异常。</p>
 <h4 id="2-3-4-栈帧"><a href="#2-3-4-栈帧" class="headerlink" title="2.3.4 栈帧"></a>2.3.4 栈帧</h4><p>一个栈帧需要分配多少内存，不会受到程序运行期变量数据的影响，而仅仅取决于具体的虚拟机实现。</p>
@@ -2580,8 +2566,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h5 id="2-3-4-3-动态链接"><a href="#2-3-4-3-动态链接" class="headerlink" title="2.3.4.3 动态链接"></a>2.3.4.3 动态链接</h5><p>每个栈帧都包含一个指向运行时常量池中该栈帧所属方法的引用，持有这个引用是为了支持方法调用过程中的动态链接（Dynamic Linking）。</p>
 <p>比较：</p>
 <ul>
-<li><code>静态链接</code>：当字节码文件被装载进JVM内部时，在类加载阶段中的解析阶段就将符号引用转为直接引用，这种过程被称为静态链接。</li>
-<li><code>动态链接</code>：如果在程序运行期才能将符号引用转为直接引用，这种过程被称为动态链接。</li>
+<li><strong>静态链接</strong>：当字节码文件被装载进JVM内部时，在类加载阶段中的解析阶段就将符号引用转为直接引用，这种过程被称为静态链接。</li>
+<li><strong>动态链接</strong>：如果在程序运行期才能将符号引用转为直接引用，这种过程被称为动态链接。</li>
 </ul>
 <h5 id="2-3-4-4-方法返回地址"><a href="#2-3-4-4-方法返回地址" class="headerlink" title="2.3.4.4 方法返回地址"></a>2.3.4.4 方法返回地址</h5><p>方法返回地址（Return Address）用于存放调用该方法的程序计数器的值，用于在退出方法后执行下一条命令。</p>
 <p>方法有两种方式可以退出：</p>
@@ -2610,10 +2596,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="2-5-方法区"><a href="#2-5-方法区" class="headerlink" title="2.5 方法区"></a>2.5 方法区</h3><h4 id="2-5-1-作用"><a href="#2-5-1-作用" class="headerlink" title="2.5.1 作用"></a>2.5.1 作用</h4><p>在JDK1.8之前，方法区存储类元数据、运行时常量池、静态变量等数据，并在逻辑上将方法区划分为堆中的永久代，作为堆的逻辑部分。</p>
 <p>在JDK1.8之后，方法区中的数据被拆分到了堆和元空间：</p>
 <ul>
-<li><code>静态变量</code>：存储在堆中。</li>
-<li><code>字符串常量池</code>：将字符串常量池从运行时常量池拆分，存储在堆中。</li>
-<li><code>运行时常量池</code>：存储在元空间中，但运行时常量池的符号引用解析后可能指向堆中的对象。</li>
-<li><code>类元数据</code>：存储在元空间中。</li>
+<li><strong>静态变量</strong>：存储在堆中。</li>
+<li><strong>字符串常量池</strong>：将字符串常量池从运行时常量池拆分，存储在堆中。</li>
+<li><strong>运行时常量池</strong>：存储在元空间中，但运行时常量池的符号引用解析后可能指向堆中的对象。</li>
+<li><strong>类元数据</strong>：存储在元空间中。</li>
 </ul>
 <h4 id="2-5-2-共享"><a href="#2-5-2-共享" class="headerlink" title="2.5.2 共享"></a>2.5.2 共享</h4><p>方法区与堆一样，是各个线程共享的内存区域。</p>
 <h4 id="2-5-3-异常"><a href="#2-5-3-异常" class="headerlink" title="2.5.3 异常"></a>2.5.3 异常</h4><p>在虚拟机规范中，当方法区无法满足内存分配需求时，将抛出OutOfMemoryError异常。</p>
@@ -2631,12 +2617,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>对类型的卸载。</li>
 </ul>
 <h2 id="3-对象内存结构"><a href="#3-对象内存结构" class="headerlink" title="3 对象内存结构"></a>3 对象内存结构</h2><p>对象的内存结构：</p>
-<p><img src="/@image/B04001004/003-20250731170500.jpg" alt="20250731170500-内存结构"></p>
+<p><img src="/@image/B03001004/003-20250731170500.jpg" alt="20250731170500-内存结构"></p>
 <p>对象内存结构分为对象头、实例数据、对齐填充。</p>
 <h3 id="3-1-对象头"><a href="#3-1-对象头" class="headerlink" title="3.1 对象头"></a>3.1 对象头</h3><p>对象头分为对象标记和类型指针，如果是数组对象还有数组长度。</p>
 <h4 id="3-1-1-对象标记"><a href="#3-1-1-对象标记" class="headerlink" title="3.1.1 对象标记"></a>3.1.1 对象标记</h4><p>对象标记存储的数据会根据对象的锁状态进行复用，在运行期间，对象标记中的数据会随着锁标志位的变化而变化。</p>
 <p>对象标记结构图：</p>
-<p><img src="/@image/B04001004/003-20250731170550.jpg" alt="20250731170550-对象标记"></p>
+<p><img src="/@image/B03001004/003-20250731170550.jpg" alt="20250731170550-对象标记"></p>
 <p>在64位的HotSpot虚拟机下，对象标记占用8个字节。</p>
 <h4 id="3-1-2-类型指针"><a href="#3-1-2-类型指针" class="headerlink" title="3.1.2 类型指针"></a>3.1.2 类型指针</h4><p>对象指向它的类元数据的指针，虚拟机通过这个指针来确定这个对象是哪个类的实例。</p>
 <p>在开启压缩的情况下占用4个字节，否则占用8个字节，JDK1.8默认开启压缩。</p>
@@ -2663,8 +2649,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="4-1-2-分配内存"><a href="#4-1-2-分配内存" class="headerlink" title="4.1.2 分配内存"></a>4.1.2 分配内存</h4><p>类加载检查通过后，虚拟机为新生对象分配内存。对象所需内存大小在类加载完成后便可以完全确定，在堆中为对象分配内存。</p>
 <p>分配方式：</p>
 <ul>
-<li><code>指针碰撞法</code>：内存是规整的，用过的内存在一边，空闲的内存在另外一边，中间放着一个指针作为分界点的指示器，在空闲的内存将指针挪动一段与对象大小相等的距离。</li>
-<li><code>空闲列表法</code>：内存不是规整的，已使用的内存和未使用的内存相互交错，从列表中找到一块足够大的空间划分给对象实例，并更新列表上的内容。</li>
+<li><strong>指针碰撞法</strong>：内存是规整的，用过的内存在一边，空闲的内存在另外一边，中间放着一个指针作为分界点的指示器，在空闲的内存将指针挪动一段与对象大小相等的距离。</li>
+<li><strong>空闲列表法</strong>：内存不是规整的，已使用的内存和未使用的内存相互交错，从列表中找到一块足够大的空间划分给对象实例，并更新列表上的内容。</li>
 </ul>
 <p>如果是在多线程环境下的为对象分配内存，需要使用TLAB（Thread Local Allocation Buffer，线程本地分配缓冲区）保证创建对象时的线程安全：</p>
 <ul>
@@ -2683,10 +2669,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>存储在方法区中的对象类型数据的地址。</li>
 </ul>
 <p>句柄访问：</p>
-<p><img src="/@image/B04001004/003-20250803190642.jpg" alt="20250803190642-句柄访问"></p>
+<p><img src="/@image/B03001004/003-20250803190642.jpg" alt="20250803190642-句柄访问"></p>
 <h4 id="4-3-2-直接指针访问"><a href="#4-3-2-直接指针访问" class="headerlink" title="4.3.2 直接指针访问"></a>4.3.2 直接指针访问</h4><p>栈帧中的reference存储的是对象实例数据的地址，对象实例数据中的类型指针存储指向方法区的对象类型数据的地址。</p>
 <p>直接指针访问：</p>
-<p><img src="/@image/B04001004/003-20250803190711.jpg" alt="20250803190711-直接指针访问"></p>
+<p><img src="/@image/B03001004/003-20250803190711.jpg" alt="20250803190711-直接指针访问"></p>
 <h3 id="4-4-不可达"><a href="#4-4-不可达" class="headerlink" title="4.4 不可达"></a>4.4 不可达</h3><p>当对象经过存活判断为不可达后，进入不可达阶段。</p>
 <h3 id="4-5-回收"><a href="#4-5-回收" class="headerlink" title="4.5 回收"></a>4.5 回收</h3><p>不可达对象会被垃圾回收器回收，释放其占用的堆内存。</p>
 <h3 id="4-6-销毁"><a href="#4-6-销毁" class="headerlink" title="4.6 销毁"></a>4.6 销毁</h3><p>当对象的内存被完全释放，且无法再被任何方式访问，则对象彻底销毁，生命周期结束。</p>
@@ -2694,15 +2680,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>一个在方法中创建的对象，可能在方法结束后返回被外部方法所引用，也可能在方法中调用其他方法时作为参数传入，以上两种情况都称之为对象逃逸。</p>
 <p>根据作用域可分为下面三种情况：</p>
 <ul>
-<li><p><code>GlobalEscape（全局逃逸）</code>：对象的引用逃出了方法或者线程。例如：</p>
+<li><p><strong>GlobalEscape（全局逃逸）</strong>：对象的引用逃出了方法或者线程。例如：</p>
 <ul>
 <li>将对象的引用赋值给类变量或者静态变量。</li>
 <li>对象跟随方法返回。</li>
 </ul>
 </li>
-<li><p><code>ArgEscape（参数级逃逸）</code>：在方法中调用其他方法时，对象的引用作为参数传递至其他方法。</p>
+<li><p><strong>ArgEscape（参数级逃逸）</strong>：在方法中调用其他方法时，对象的引用作为参数传递至其他方法。</p>
 </li>
-<li><p><code>NoEscape（没有逃逸）</code>：对象的作用域范围就只在本方法中，随着方法栈帧的进栈而生、出栈而亡。这种情况下，对象可以分配在栈中，但不是一定分配在栈中。</p>
+<li><p><strong>NoEscape（没有逃逸）</strong>：对象的作用域范围就只在本方法中，随着方法栈帧的进栈而生、出栈而亡。这种情况下，对象可以分配在栈中，但不是一定分配在栈中。</p>
 </li>
 </ul>
 <h3 id="5-2-使用"><a href="#5-2-使用" class="headerlink" title="5.2 使用"></a>5.2 使用</h3><p>逃逸分析的JVM参数：</p>
@@ -2744,11 +2730,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>参数：</p>
 <ul>
-<li><code>OFFSET</code>：偏移量，表示从第几个字节开始。</li>
-<li><code>SIZE</code>：占用的字节大小。</li>
-<li><code>TYPE</code>：Class中定义的类型。</li>
-<li><code>DESCRIPTION</code>：对类型的描述。</li>
-<li><code>VALUE</code>：在内存中的值。</li>
+<li><strong>OFFSET</strong>：偏移量，表示从第几个字节开始。</li>
+<li><strong>SIZE</strong>：占用的字节大小。</li>
+<li><strong>TYPE</strong>：Class中定义的类型。</li>
+<li><strong>DESCRIPTION</strong>：对类型的描述。</li>
+<li><strong>VALUE</strong>：在内存中的值。</li>
 </ul>
 <p>一个空的Object对象占用16字节，对象标记占用8个字节，类型指针在关闭压缩后占用8个字节。</p>
 <h4 id="6-3-2-查看Integer对象"><a href="#6-3-2-查看Integer对象" class="headerlink" title="6.3.2 查看Integer对象"></a>6.3.2 查看Integer对象</h4><p>示例：</p>
@@ -2814,7 +2800,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2845,10 +2831,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2888,13 +2874,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20250803/194843/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>垃圾回收</p>
-          <p class='content'>摘要：本文学习了虚拟机的垃圾回收机制。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20250730/165326/'>
           <p class='title'>加载过程<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了如何将类加载到虚拟机。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -3005,7 +2991,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04001004/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Java:虚拟机</span></a>
+      <a href='/groups/B03001004/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Java:虚拟机</span></a>
     
   </header>
 
@@ -3246,50 +3232,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3561,7 +3536,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250731/163910/","name":"数据存储"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数据存储","description":"摘要：本文学习了虚拟机如何管理对象。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250731/163910/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250731/163910/","wordCount":18,"datePublished":"2025-07-31T08:39:10.000Z","dateModified":"2026-06-18T08:16:23.249Z","articleSection":"后端","keywords":"Java","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250731/163910/","name":"数据存储"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数据存储","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250731/163910/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250731/163910/","wordCount":5,"datePublished":"2025-07-31T08:39:10.000Z","dateModified":"2026-09-26T23:29:37.759Z","articleSection":"后端","keywords":"Java","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

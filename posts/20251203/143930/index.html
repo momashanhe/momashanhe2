@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>Listener - 墨码山河</title>
   <meta name="keywords" content="JavaWeb,Listener,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了Listener的原理和使用方法。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Listener">
 <meta property="og:url" content="https://momashanhe.com/posts/20251203/143930/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了Listener的原理和使用方法。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-12-03T06:39:30.000Z">
-<meta property="article:modified_time" content="2026-06-18T05:51:40.839Z">
+<meta property="article:modified_time" content="2026-10-18T10:24:57.526Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="JavaWeb">
 <meta property="article:tag" content="Listener">
@@ -1855,7 +1855,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2021,7 +2021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2486,7 +2486,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20251203/143930/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2499,20 +2499,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20251203/143930/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20251203/143930/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2526,7 +2512,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了Listener的原理和使用方法。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2540,26 +2526,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="2-原理"><a href="#2-原理" class="headerlink" title="2 原理"></a>2 原理</h2><p>Listener基于观察者模式，所谓观察者模式，就是当被观察的特定事件触发后，会通过调用观察者的方法通知观察者，观察者可以在方法中对事件做一些处理。</p>
 <p>在JavaWeb中，被观察的对象有三个：</p>
 <ul>
-<li><code>ServletRequest</code>：对应请求的生命周期事件。</li>
-<li><code>HttpSession</code>：对应会话的生命周期事件。</li>
-<li><code>ServletContext</code>：对应应用程序的生命周期事件。</li>
+<li><strong>ServletRequest</strong>：对应请求的生命周期事件。</li>
+<li><strong>HttpSession</strong>：对应会话的生命周期事件。</li>
+<li><strong>ServletContext</strong>：对应应用程序的生命周期事件。</li>
 </ul>
 <h2 id="3-分类"><a href="#3-分类" class="headerlink" title="3 分类"></a>3 分类</h2><p>对象生命周期监听器：</p>
 <ul>
-<li><code>ServletRequestListener</code>：监听ServletRequest对象的创建和销毁。</li>
-<li><code>HttpSessionListener</code>：监听HttpSession对象的创建和销毁。</li>
-<li><code>ServletContextListener</code>：监听ServletContext对象的创建和销毁。</li>
+<li><strong>ServletRequestListener</strong>：监听ServletRequest对象的创建和销毁。</li>
+<li><strong>HttpSessionListener</strong>：监听HttpSession对象的创建和销毁。</li>
+<li><strong>ServletContextListener</strong>：监听ServletContext对象的创建和销毁。</li>
 </ul>
 <p>属性变化监听器：</p>
 <ul>
-<li><code>ServletRequestAttributeListener</code>：监听ServletRequest域中属性的变化。</li>
-<li><code>HttpSessionAttributeListener</code>：监听HttpSession域中属性的变化。</li>
-<li><code>ServletContextAttributeListener</code>：监听ServletContext域中属性的变化。</li>
+<li><strong>ServletRequestAttributeListener</strong>：监听ServletRequest域中属性的变化。</li>
+<li><strong>HttpSessionAttributeListener</strong>：监听HttpSession域中属性的变化。</li>
+<li><strong>ServletContextAttributeListener</strong>：监听ServletContext域中属性的变化。</li>
 </ul>
 <p>特殊会话监听器：</p>
 <ul>
-<li><code>HttpSessionActivationListener</code>：监听Session中对象的活化和钝化。</li>
-<li><code>HttpSessionBindingListener</code>：监听Session中对象的绑定和解绑。</li>
+<li><strong>HttpSessionActivationListener</strong>：监听Session中对象的活化和钝化。</li>
+<li><strong>HttpSessionBindingListener</strong>：监听Session中对象的绑定和解绑。</li>
 </ul>
 <h2 id="4-注册"><a href="#4-注册" class="headerlink" title="4 注册"></a>4 注册</h2><p>实现监听器接口后，还需要注册监听器才能生效，注册方式有两种：</p>
 <ul>
@@ -2573,42 +2559,42 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="5-使用"><a href="#5-使用" class="headerlink" title="5 使用"></a>5 使用</h2><h3 id="5-1-对象生命周期监听器"><a href="#5-1-对象生命周期监听器" class="headerlink" title="5.1 对象生命周期监听器"></a>5.1 对象生命周期监听器</h3><h4 id="5-1-1-ServletRequestListener"><a href="#5-1-1-ServletRequestListener" class="headerlink" title="5.1.1 ServletRequestListener"></a>5.1.1 ServletRequestListener</h4><p>ServletRequestListener监听器用于监听HttpServletRequest对象的创建和销毁事件。</p>
 <p>ServletRequest对象在请求到达时创建，在响应结束时销毁。</p>
 <p>监听方法：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestServletRequestListener</span> <span class="keyword">implements</span> <span class="title class_">ServletRequestListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">requestInitialized</span><span class="params">(ServletRequestEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest对象被创建了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">requestDestroyed</span><span class="params">(ServletRequestEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest对象被销毁了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestServletRequestListener</span> <span class="keyword">implements</span> <span class="title class_">ServletRequestListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">requestInitialized</span><span class="params">(ServletRequestEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest对象被创建了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">requestDestroyed</span><span class="params">(ServletRequestEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest对象被销毁了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="5-1-2-HttpSessionListener"><a href="#5-1-2-HttpSessionListener" class="headerlink" title="5.1.2 HttpSessionListener"></a>5.1.2 HttpSessionListener</h4><p>HttpSessionListener监听器用于监听HttpSession对象的创建和销毁事件。</p>
 <p>HttpSession对象在首次调用<code>getSession()</code>方法时创建，在最后调用<code>invalidate()</code>方法时销毁。</p>
 <p>监听方法：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestHttpSessionListener</span> <span class="keyword">implements</span> <span class="title class_">HttpSessionListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionCreated</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession对象被创建了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionDestroyed</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession对象被销毁了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestHttpSessionListener</span> <span class="keyword">implements</span> <span class="title class_">HttpSessionListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionCreated</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession对象被创建了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionDestroyed</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession对象被销毁了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="5-1-3-ServletContextListener"><a href="#5-1-3-ServletContextListener" class="headerlink" title="5.1.3 ServletContextListener"></a>5.1.3 ServletContextListener</h4><p>ServletContextListener监听器用于监听ServletContext对象的创建和销毁事件。</p>
 <p>ServletContext对象在Web应用启动时创建，在Web应用停止时销毁。</p>
 <p>监听方法：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestServletContextListener</span> <span class="keyword">implements</span> <span class="title class_">ServletContextListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">contextInitialized</span><span class="params">(ServletContextEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext对象被创建了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">contextDestroyed</span><span class="params">(ServletContextEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext对象被销毁了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestServletContextListener</span> <span class="keyword">implements</span> <span class="title class_">ServletContextListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">contextInitialized</span><span class="params">(ServletContextEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext对象被创建了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">contextDestroyed</span><span class="params">(ServletContextEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext对象被销毁了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="5-2-属性变化监听器"><a href="#5-2-属性变化监听器" class="headerlink" title="5.2 属性变化监听器"></a>5.2 属性变化监听器</h3><h4 id="5-2-1-ServletRequestAttributeListener"><a href="#5-2-1-ServletRequestAttributeListener" class="headerlink" title="5.2.1 ServletRequestAttributeListener"></a>5.2.1 ServletRequestAttributeListener</h4><p>ServletRequestAttributeListener监听器用于监听ServletRequest域中属性的变化事件。</p>
 <p>监听方法：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestServletRequestAttributeListener</span> <span class="keyword">implements</span> <span class="title class_">ServletRequestAttributeListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeAdded</span><span class="params">(ServletRequestAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest域中添加了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeRemoved</span><span class="params">(ServletRequestAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest域中移除了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeReplaced</span><span class="params">(ServletRequestAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest域中替换了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestServletRequestAttributeListener</span> <span class="keyword">implements</span> <span class="title class_">ServletRequestAttributeListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeAdded</span><span class="params">(ServletRequestAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest域中添加了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeRemoved</span><span class="params">(ServletRequestAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest域中移除了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeReplaced</span><span class="params">(ServletRequestAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest域中替换了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="5-2-2-HttpSessionAttributeListener"><a href="#5-2-2-HttpSessionAttributeListener" class="headerlink" title="5.2.2 HttpSessionAttributeListener"></a>5.2.2 HttpSessionAttributeListener</h4><p>HttpSessionAttributeListener监听器用于监听HttpSession域中属性的变化事件。</p>
 <p>监听方法：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestHttpSessionAttributeListener</span> <span class="keyword">implements</span> <span class="title class_">HttpSessionAttributeListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeAdded</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession域中添加了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeRemoved</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession域中移除了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeReplaced</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession域中替换了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestHttpSessionAttributeListener</span> <span class="keyword">implements</span> <span class="title class_">HttpSessionAttributeListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeAdded</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession域中添加了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeRemoved</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession域中移除了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeReplaced</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HttpSession域中替换了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="5-2-3-ServletContextAttributeListener"><a href="#5-2-3-ServletContextAttributeListener" class="headerlink" title="5.2.3 ServletContextAttributeListener"></a>5.2.3 ServletContextAttributeListener</h4><p>ServletContextAttributeListener监听器用于监听ServletContext域中属性的变化事件。</p>
 <p>监听方法：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestServletContextAttributeListener</span> <span class="keyword">implements</span> <span class="title class_">ServletContextAttributeListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeAdded</span><span class="params">(ServletContextAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext域中添加了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeRemoved</span><span class="params">(ServletContextAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext域中移除了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeReplaced</span><span class="params">(ServletContextAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext域中替换了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestServletContextAttributeListener</span> <span class="keyword">implements</span> <span class="title class_">ServletContextAttributeListener</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeAdded</span><span class="params">(ServletContextAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext域中添加了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeRemoved</span><span class="params">(ServletContextAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext域中移除了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeReplaced</span><span class="params">(ServletContextAttributeEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext域中替换了属性：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="5-3-特殊会话监听器"><a href="#5-3-特殊会话监听器" class="headerlink" title="5.3 特殊会话监听器"></a>5.3 特殊会话监听器</h3><h4 id="5-3-1-HttpSessionActivationListener"><a href="#5-3-1-HttpSessionActivationListener" class="headerlink" title="5.3.1 HttpSessionActivationListener"></a>5.3.1 HttpSessionActivationListener</h4><p>HttpSessionActivationListener监听器用于监听Session中对象的活化和钝化。</p>
 <p>概念：</p>
 <ul>
-<li><code>钝化（Passivate）</code>：将会话对象从内存序列化到磁盘。</li>
-<li><code>活化（Activate）</code>：将会话对象从磁盘反序列化到内存。</li>
+<li><strong>钝化（Passivate）</strong>：将会话对象从内存序列化到磁盘。</li>
+<li><strong>活化（Activate）</strong>：将会话对象从磁盘反序列化到内存。</li>
 </ul>
 <p>监听方法，不需要注册，但是需要被监听的Bean实现序列化接口和监听接口：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span>, HttpSessionActivationListener &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Student&#123;&quot;</span> + <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&quot;&#x27;&quot;</span> + <span class="string">&quot;&#125;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionWillPassivate</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Student对象即将钝化&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionDidActivate</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Student对象已经活化&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span>, HttpSessionActivationListener &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Student&#123;&quot;</span> + <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&quot;&#x27;&quot;</span> + <span class="string">&quot;&#125;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionWillPassivate</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Student对象即将钝化&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionDidActivate</span><span class="params">(HttpSessionEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Student对象已经活化&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="5-3-2-HttpSessionBindingListener"><a href="#5-3-2-HttpSessionBindingListener" class="headerlink" title="5.3.2 HttpSessionBindingListener"></a>5.3.2 HttpSessionBindingListener</h4><p>HttpSessionBindingListener监听器用于监听Session中对象的绑定和解绑。</p>
 <p>监听方法，不需要注册，但是需要被监听的Bean实现监听接口：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">implements</span> <span class="title class_">HttpSessionBindingListener</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">valueBound</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Session绑定了Student对象：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">valueUnbound</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Session解绑了Student对象：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">implements</span> <span class="title class_">HttpSessionBindingListener</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">valueBound</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Session绑定了Student对象：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">valueUnbound</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Session解绑了Student对象：&quot;</span> + event.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   </div>
   
@@ -2639,7 +2625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年10月18日</div>
               </div>
               
               
@@ -2670,10 +2656,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2713,13 +2699,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20251203/154448/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Filter</p>
-          <p class='content'>摘要：本文学习了Filter的原理和使用方法。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20251203/135057/'>
           <p class='title'>JSTL标签库<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了JSP的JSTL标签库，包括使用方法和常用标签。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2830,7 +2816,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04002002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:JavaWeb:组件</span></a>
+      <a href='/groups/B03002002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:JavaWeb:组件</span></a>
     
   </header>
 
@@ -3059,50 +3045,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3374,7 +3349,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251203/143930/","name":"Listener"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Listener","description":"摘要：本文学习了Listener的原理和使用方法。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251203/143930/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251203/143930/","wordCount":25,"datePublished":"2025-12-03T06:39:30.000Z","dateModified":"2026-06-18T05:51:40.839Z","articleSection":"后端","keywords":"JavaWeb,Listener","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251203/143930/","name":"Listener"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Listener","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251203/143930/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251203/143930/","wordCount":5,"datePublished":"2025-12-03T06:39:30.000Z","dateModified":"2026-10-18T10:24:57.526Z","articleSection":"后端","keywords":"JavaWeb,Listener","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

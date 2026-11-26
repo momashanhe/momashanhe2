@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>插件开发 - 墨码山河</title>
   <meta name="keywords" content="MyBatis,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了如何使用MyBatis插件对框架行为进行定制。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="插件开发">
 <meta property="og:url" content="https://momashanhe.com/posts/20260213/131521/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了如何使用MyBatis插件对框架行为进行定制。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-02-13T05:15:21.000Z">
-<meta property="article:modified_time" content="2026-06-18T05:53:12.982Z">
+<meta property="article:modified_time" content="2026-10-18T10:24:57.617Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="MyBatis">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2464,7 +2464,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>886 字</p>
+      <p>868 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20260213/131521/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20260213/131521/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20260213/131521/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,12 +2511,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了如何使用MyBatis插件对框架行为进行定制。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
               <div class='content'>
-              <p>Windows 10 企业版 LTSC 21H2<br>MySQL 5.7.40<br>Java 1.8<br>Maven 3.6.3<br>MyBatis 3.5.6</p>
+              <p>Windows 10 企业版 LTSC 21H2<br>MySQL 5.7.40<br>Java 1.8<br>Maven 3.6.3<br>MyBatis 3.5.16</p>
               </div>
             </details>
 
@@ -2547,10 +2533,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="2-1-Executor（核心调用器）"><a href="#2-1-Executor（核心调用器）" class="headerlink" title="2.1 Executor（核心调用器）"></a>2.1 Executor（核心调用器）</h3><p>Executor是核心接口，负责执行SQL语句和管理查询缓存以及调度其他组件。</p>
 <p>主要拦截方法：</p>
 <ul>
-<li><code>query</code>：查询操作</li>
-<li><code>update</code>：更新操作</li>
-<li><code>commit</code>：提交事务</li>
-<li><code>rollback</code>：回滚事务</li>
+<li><strong>query</strong>：查询操作</li>
+<li><strong>update</strong>：更新操作</li>
+<li><strong>commit</strong>：提交事务</li>
+<li><strong>rollback</strong>：回滚事务</li>
 </ul>
 <p>常见用途：</p>
 <ul>
@@ -2561,11 +2547,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="2-2-StatementHandler（语句处理器）"><a href="#2-2-StatementHandler（语句处理器）" class="headerlink" title="2.2 StatementHandler（语句处理器）"></a>2.2 StatementHandler（语句处理器）</h3><p>StatementHandler负责准备SQL语句和执行JDBC操作。</p>
 <p>主要拦截方法：</p>
 <ul>
-<li><code>prepare</code>：准备语句</li>
-<li><code>parameterize</code>：参数设置</li>
-<li><code>query</code>：查询操作</li>
-<li><code>update</code>：更新操作</li>
-<li><code>batch</code>：批量操作</li>
+<li><strong>prepare</strong>：准备语句</li>
+<li><strong>parameterize</strong>：参数设置</li>
+<li><strong>query</strong>：查询操作</li>
+<li><strong>update</strong>：更新操作</li>
+<li><strong>batch</strong>：批量操作</li>
 </ul>
 <p>常见用途：</p>
 <ul>
@@ -2575,18 +2561,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="2-3-ParameterHandler（参数处理器）"><a href="#2-3-ParameterHandler（参数处理器）" class="headerlink" title="2.3 ParameterHandler（参数处理器）"></a>2.3 ParameterHandler（参数处理器）</h3><p>ParameterHandler处理预编译语句中的参数值。</p>
 <p>主要拦截方法：</p>
 <ul>
-<li><code>setParameters</code>：参数设置</li>
+<li><strong>setParameters</strong>：参数设置</li>
 </ul>
 <p>常见用途：</p>
 <ul>
 <li>参数加密</li>
 <li>参数验证</li>
 </ul>
-<h3 id="ResultSetHandler（结果集处理器）"><a href="#ResultSetHandler（结果集处理器）" class="headerlink" title="ResultSetHandler（结果集处理器）"></a>ResultSetHandler（结果集处理器）</h3><p>ResultSetHandler处理JDBC结果集并将其转换为Java对象。</p>
+<h3 id="2-4-ResultSetHandler（结果集处理器）"><a href="#2-4-ResultSetHandler（结果集处理器）" class="headerlink" title="2.4 ResultSetHandler（结果集处理器）"></a>2.4 ResultSetHandler（结果集处理器）</h3><p>ResultSetHandler处理JDBC结果集并将其转换为Java对象。</p>
 <p>主要拦截方法：</p>
 <ul>
-<li><code>handleResultSets</code>：处理结果集</li>
-<li><code>handleOutputParameters</code>：处理输出参数</li>
+<li><strong>handleResultSets</strong>：处理结果集</li>
+<li><strong>handleOutputParameters</strong>：处理输出参数</li>
 </ul>
 <p>常见用途：</p>
 <ul>
@@ -2595,7 +2581,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>数据脱敏</li>
 </ul>
 <h2 id="3-自定义插件"><a href="#3-自定义插件" class="headerlink" title="3 自定义插件"></a>3 自定义插件</h2><h3 id="3-1-创建"><a href="#3-1-创建" class="headerlink" title="3.1 创建"></a>3.1 创建</h3><p>实现Interceptor接口：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用@Intercepts注解标识拦截器</span></span><br><span class="line"><span class="meta">@Intercepts(&#123;</span></span><br><span class="line"><span class="meta">        // 使用@Signature注解设置拦截器的属性，可以拦截多个方法</span></span><br><span class="line"><span class="meta">        @Signature(</span></span><br><span class="line"><span class="meta">                // 设置拦截接口</span></span><br><span class="line"><span class="meta">                type = Executor.class,</span></span><br><span class="line"><span class="meta">                // 设置拦截接口的目标方法</span></span><br><span class="line"><span class="meta">                method = &quot;query&quot;,</span></span><br><span class="line"><span class="meta">                // 设置目标方法需要的参数类型</span></span><br><span class="line"><span class="meta">                args = &#123;MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class&#125;</span></span><br><span class="line"><span class="meta">        )</span></span><br><span class="line"><span class="meta">&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoPlugin</span> <span class="keyword">implements</span> <span class="title class_">Interceptor</span> &#123;</span><br><span class="line">    <span class="comment">// 核心拦截逻辑，拦截目标对象的方法调用</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">intercept</span><span class="params">(Invocation invocation)</span> <span class="keyword">throws</span> Throwable &#123;</span><br><span class="line">        <span class="comment">// 拦截前</span></span><br><span class="line">        System.out.println(<span class="string">&quot;执行SQL前...&quot;</span>);</span><br><span class="line">        <span class="comment">// 执行业务方法</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">result</span> <span class="operator">=</span> invocation.proceed();</span><br><span class="line">        <span class="comment">// 拦截后</span></span><br><span class="line">        System.out.println(<span class="string">&quot;执行SQL后...&quot;</span>);</span><br><span class="line">        <span class="comment">// 返回结果</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 匹配目标对象，判断目标对象是否需要返回代理对象进行拦截</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">plugin</span><span class="params">(Object target)</span> &#123;</span><br><span class="line">        <span class="comment">// 包装目标对象，返回代理对象</span></span><br><span class="line">        <span class="keyword">return</span> Plugin.wrap(target, <span class="built_in">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 设置插件参数，可以获取配置文件中的属性</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setProperties</span><span class="params">(Properties properties)</span> &#123;</span><br><span class="line">        <span class="comment">// 设置插件属性</span></span><br><span class="line">        System.out.println(<span class="string">&quot;param = &quot;</span> + properties.getProperty(<span class="string">&quot;param&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用@Intercepts注解标识拦截器</span></span><br><span class="line"><span class="meta">@Intercepts(&#123;</span></span><br><span class="line"><span class="meta">        // 使用@Signature注解设置拦截器的属性，可以拦截多个方法</span></span><br><span class="line"><span class="meta">        @Signature(</span></span><br><span class="line"><span class="meta">                // 设置拦截接口</span></span><br><span class="line"><span class="meta">                type = Executor.class,</span></span><br><span class="line"><span class="meta">                // 设置拦截接口的目标方法</span></span><br><span class="line"><span class="meta">                method = &quot;query&quot;,</span></span><br><span class="line"><span class="meta">                // 设置目标方法需要的参数类型</span></span><br><span class="line"><span class="meta">                args = &#123;MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class&#125;</span></span><br><span class="line"><span class="meta">        )</span></span><br><span class="line"><span class="meta">&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoPlugin</span> <span class="keyword">implements</span> <span class="title class_">Interceptor</span> &#123;</span><br><span class="line">    <span class="comment">// 核心拦截逻辑，拦截目标对象的方法调用</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">intercept</span><span class="params">(Invocation invocation)</span> <span class="keyword">throws</span> Throwable &#123;</span><br><span class="line">        <span class="comment">// 拦截前</span></span><br><span class="line">        System.out.println(<span class="string">&quot;执行SQL前...&quot;</span>);</span><br><span class="line">        <span class="comment">// 执行业务方法</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">result</span> <span class="operator">=</span> invocation.proceed();</span><br><span class="line">        <span class="comment">// 拦截后</span></span><br><span class="line">        System.out.println(<span class="string">&quot;执行SQL后...&quot;</span>);</span><br><span class="line">        <span class="comment">// 返回结果</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 匹配目标对象，判断目标对象是否需要返回代理对象进行拦截</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">plugin</span><span class="params">(Object target)</span> &#123;</span><br><span class="line">        <span class="comment">// 包装目标对象，返回代理对象</span></span><br><span class="line">        <span class="keyword">return</span> Plugin.wrap(target, <span class="built_in">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置插件参数，可以获取配置文件中的属性</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setProperties</span><span class="params">(Properties properties)</span> &#123;</span><br><span class="line">        <span class="comment">// 设置插件属性</span></span><br><span class="line">        System.out.println(<span class="string">&quot;param = &quot;</span> + properties.getProperty(<span class="string">&quot;param&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-2-配置"><a href="#3-2-配置" class="headerlink" title="3.2 配置"></a>3.2 配置</h3><p>在mybatis.xml配置文件中配置插件：</p>
 <figure class="highlight xml"><figcaption><span>xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 指定插件，可以配置多个插件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 指定插件的全类名 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">plugin</span> <span class="attr">interceptor</span>=<span class="string">&quot;com.example.plugin.DemoPlugin&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 设置插件的参数 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;param&quot;</span> <span class="attr">value</span>=<span class="string">&quot;100&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -2631,7 +2617,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年10月18日</div>
               </div>
               
               
@@ -2662,10 +2648,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2705,13 +2691,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20260215/124112/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>整合Spring MVC</p>
-          <p class='content'>摘要：本文学习了如何在Spring框架中整合Spring MVC框架。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20260212/153840/'>
           <p class='title'>缓存机制<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了MyBatis的缓存机制，包括一级缓存和二级缓存的使用和配置。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2822,7 +2808,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04005002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:MyBatis:进阶</span></a>
+      <a href='/groups/B03005002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:MyBatis:高级</span></a>
     
   </header>
 
@@ -2849,7 +2835,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-            配置文件
+            配置管理
           </div>
           
         </a></li>
@@ -2935,7 +2921,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">1 工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%8B%A6%E6%88%AA%E6%8E%A5%E5%8F%A3"><span class="toc-text">2 拦截接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Executor%EF%BC%88%E6%A0%B8%E5%BF%83%E8%B0%83%E7%94%A8%E5%99%A8%EF%BC%89"><span class="toc-text">2.1 Executor（核心调用器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-StatementHandler%EF%BC%88%E8%AF%AD%E5%8F%A5%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%89"><span class="toc-text">2.2 StatementHandler（语句处理器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-ParameterHandler%EF%BC%88%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%89"><span class="toc-text">2.3 ParameterHandler（参数处理器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ResultSetHandler%EF%BC%88%E7%BB%93%E6%9E%9C%E9%9B%86%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%89"><span class="toc-text">ResultSetHandler（结果集处理器）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6"><span class="toc-text">3 自定义插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%88%9B%E5%BB%BA"><span class="toc-text">3.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%85%8D%E7%BD%AE"><span class="toc-text">3.2 配置</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">1 工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%8B%A6%E6%88%AA%E6%8E%A5%E5%8F%A3"><span class="toc-text">2 拦截接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Executor%EF%BC%88%E6%A0%B8%E5%BF%83%E8%B0%83%E7%94%A8%E5%99%A8%EF%BC%89"><span class="toc-text">2.1 Executor（核心调用器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-StatementHandler%EF%BC%88%E8%AF%AD%E5%8F%A5%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%89"><span class="toc-text">2.2 StatementHandler（语句处理器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-ParameterHandler%EF%BC%88%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%89"><span class="toc-text">2.3 ParameterHandler（参数处理器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-ResultSetHandler%EF%BC%88%E7%BB%93%E6%9E%9C%E9%9B%86%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%89"><span class="toc-text">2.4 ResultSetHandler（结果集处理器）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6"><span class="toc-text">3 自定义插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%88%9B%E5%BB%BA"><span class="toc-text">3.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%85%8D%E7%BD%AE"><span class="toc-text">3.2 配置</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -3087,50 +3073,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3402,7 +3377,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260213/131521/","name":"插件开发"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"插件开发","description":"摘要：本文学习了如何使用MyBatis插件对框架行为进行定制。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260213/131521/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260213/131521/","wordCount":31,"datePublished":"2026-02-13T05:15:21.000Z","dateModified":"2026-06-18T05:53:12.982Z","articleSection":"后端","keywords":"MyBatis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260213/131521/","name":"插件开发"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"插件开发","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260213/131521/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260213/131521/","wordCount":5,"datePublished":"2026-02-13T05:15:21.000Z","dateModified":"2026-10-18T10:24:57.617Z","articleSection":"后端","keywords":"MyBatis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

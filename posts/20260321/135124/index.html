@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>哨兵模式 - 墨码山河</title>
   <meta name="keywords" content="Redis,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了Redis的哨兵模式。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="哨兵模式">
 <meta property="og:url" content="https://momashanhe.com/posts/20260321/135124/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了Redis的哨兵模式。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-03-21T05:51:24.000Z">
-<meta property="article:modified_time" content="2026-06-18T09:47:23.031Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.862Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20260321/135124/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20260321/135124/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20260321/135124/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了Redis的哨兵模式。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2545,29 +2531,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <h2 id="3-原理"><a href="#3-原理" class="headerlink" title="3 原理"></a>3 原理</h2><p>监控：</p>
 <ul>
-<li><code>定期检查</code>：哨兵定期向主节点和从节点发送<code>PING</code>命令，检查它们的健康状态。</li>
-<li><code>主观下线</code>：当哨兵在一定时间内没有收到主节点的回复时，会将主节点标记为主观下线（Subjectively Down，SDOWN）。</li>
-<li><code>客观下线</code>：当标记主观下线的哨兵数量超过仲裁票数时，会将主节点标记为客观下线（Objectively Down，ODOWN）。</li>
-<li><code>故障转移</code>：当主节点被标记为客观下线时，哨兵会启动故障转移，选举一个从节点作为新的主节点。</li>
+<li><strong>定期检查</strong>：哨兵定期向主节点和从节点发送<code>PING</code>命令，检查它们的健康状态。</li>
+<li><strong>主观下线</strong>：当哨兵在一定时间内没有收到主节点的回复时，会将主节点标记为主观下线（Subjectively Down，SDOWN）。</li>
+<li><strong>客观下线</strong>：当标记主观下线的哨兵数量超过仲裁票数时，会将主节点标记为客观下线（Objectively Down，ODOWN）。</li>
+<li><strong>故障转移</strong>：当主节点被标记为客观下线时，哨兵会启动故障转移，选举一个从节点作为新的主节点。</li>
 </ul>
 <p>故障转移：</p>
 <ul>
-<li><p><code>选举领导哨兵</code>：多个哨兵通过投票选举领导哨兵，由领导哨兵负责故障转移。</p>
+<li><p><strong>选举领导哨兵</strong>：多个哨兵通过投票选举领导哨兵，由领导哨兵负责故障转移。</p>
 </li>
-<li><p><code>选择新主节点</code>：领导哨兵会在所有从节点中选择新的主节点：</p>
+<li><p><strong>选择新主节点</strong>：领导哨兵会在所有从节点中选择新的主节点：</p>
 <ul>
 <li>排除状态异常的从节点。</li>
 <li>按照从节点的优先级、复制偏移量、运行ID进行排序，选择排名最高的从节点作为新的主节点。</li>
 </ul>
 </li>
-<li><p><code>执行故障转移</code>：领导哨兵会执行以下操作：</p>
+<li><p><strong>执行故障转移</strong>：领导哨兵会执行以下操作：</p>
 <ul>
 <li>使用<code>REPLICAOF NO ONE</code>命令将被选中的从节点设置为新的主节点。</li>
 <li>使用<code>REPLICAOF 主节点IP地址 主节点端口</code>命令将其他从节点的主节点设置为新的主节点。</li>
 <li>更新内部配置，记录新的主节点信息。</li>
 </ul>
 </li>
-<li><p><code>通知应用</code>：哨兵会通知应用程序主节点的变更。</p>
+<li><p><strong>通知应用</strong>：哨兵会通知应用程序主节点的变更。</p>
 </li>
 </ul>
 <h2 id="4-配置"><a href="#4-配置" class="headerlink" title="4 配置"></a>4 配置</h2><p>修改安装目录下的<code>sentinel.conf</code>配置文件。</p>
@@ -2599,14 +2585,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>显示结果：</p>
 <ul>
-<li><code># Sentinel</code>：哨兵状态</li>
-<li><code>sentinel_masters:1</code>：监控的主节点数量</li>
-<li><code>sentinel_tilt:0</code>：哨兵是否处于倾斜状态，0表示未进入倾斜状态</li>
-<li><code>sentinel_tilt_since_seconds:-1</code>：哨兵进入倾斜状态的时间，单位是秒，-1表示未进入倾斜状态</li>
-<li><code>sentinel_running_scripts:0</code>：正在运行的脚本数量</li>
-<li><code>sentinel_scripts_queue_length:0</code>：脚本队列长度</li>
-<li><code>sentinel_simulate_failure_flags:0</code>：模拟故障标志</li>
-<li><code>master0:name=mymaster,status=ok,address=127.0.0.1:6379,slaves=2,sentinels=3</code>：主节点名称、主节点状态、主节点IP地址、主节点端口、从节点数量、哨兵数量</li>
+<li><strong># Sentinel</strong>：哨兵状态</li>
+<li><strong>sentinel_masters:1</strong>：监控的主节点数量</li>
+<li><strong>sentinel_tilt:0</strong>：哨兵是否处于倾斜状态，0表示未进入倾斜状态</li>
+<li><strong>sentinel_tilt_since_seconds:-1</strong>：哨兵进入倾斜状态的时间，单位是秒，-1表示未进入倾斜状态</li>
+<li><strong>sentinel_running_scripts:0</strong>：正在运行的脚本数量</li>
+<li><strong>sentinel_scripts_queue_length:0</strong>：脚本队列长度</li>
+<li><strong>sentinel_simulate_failure_flags:0</strong>：模拟故障标志</li>
+<li><strong>master0:name&#x3D;mymaster,status&#x3D;ok,address&#x3D;127.0.0.1:6379,slaves&#x3D;2,sentinels&#x3D;3</strong>：主节点名称、主节点状态、主节点IP地址、主节点端口、从节点数量、哨兵数量</li>
 </ul>
 <h3 id="6-2-查看主节点状态"><a href="#6-2-查看主节点状态" class="headerlink" title="6.2 查看主节点状态"></a>6.2 查看主节点状态</h3><p>使用命令查看主节点状态：</p>
 <figure class="highlight cmd"><figcaption><span>cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 查看所有主节点状态</span><br><span class="line">SENTINEL MASTERS</span><br><span class="line"># 查看指定主节点状态</span><br><span class="line">SENTINEL MASTER 主节点名称</span><br></pre></td></tr></table></figure>
@@ -2648,7 +2634,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月18日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2679,10 +2665,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2722,13 +2708,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20260322/103416/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>集群模式</p>
-          <p class='content'>摘要：本文介绍了Redis的集群模式。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20260320/094948/'>
           <p class='title'>主从复制<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了Redis的主从复制。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2839,7 +2825,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B05003002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:Redis:高级</span></a>
+      <a href='/groups/B04003002/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:数据库:Redis:高级</span></a>
     
   </header>
 
@@ -3128,50 +3114,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3443,7 +3418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260321/135124/","name":"哨兵模式"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"哨兵模式","description":"摘要：本文介绍了Redis的哨兵模式。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260321/135124/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260321/135124/","wordCount":19,"datePublished":"2026-03-21T05:51:24.000Z","dateModified":"2026-06-18T09:47:23.031Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20260321/135124/","name":"哨兵模式"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"哨兵模式","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20260321/135124/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20260321/135124/","wordCount":5,"datePublished":"2026-03-21T05:51:24.000Z","dateModified":"2026-09-26T23:29:37.862Z","articleSection":"后端","keywords":"Redis","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

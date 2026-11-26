@@ -51,17 +51,17 @@
   <!-- 页面元数据 -->
   <title>缓存管理 - 墨码山河</title>
   <meta name="keywords" content="Spring,代码改变世界">
-  <meta desc name="description" content="摘要：本文介绍了Spring的缓存管理。 - 墨码山河 - 墨码山河">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="缓存管理">
 <meta property="og:url" content="https://momashanhe.com/posts/20251230/132433/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文介绍了Spring的缓存管理。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-12-30T05:24:33.000Z">
-<meta property="article:modified_time" content="2026-06-22T02:17:08.618Z">
+<meta property="article:modified_time" content="2026-10-18T10:24:57.601Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
@@ -1854,7 +1854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2020,7 +2020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2464,13 +2464,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2.5k 字</p>
+      <p>2.2k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>10 分钟</p>
+      <p>9 分钟</p>
     </a>
   </div>
 
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20251230/132433/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2498,20 +2498,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20251230/132433/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20251230/132433/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2525,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文介绍了Spring的缓存管理。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2538,15 +2524,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>Spring提供了基于注解的缓存抽象，旨在简化缓存的配置和使用，支持适配多种缓存实现。核心思想是将缓存逻辑与业务逻辑分离，通过注解标记需要缓存的方法，基于AOP机制在方法执行前后进行缓存操作，实现透明的缓存管理。</p>
 <h3 id="1-2-特点"><a href="#1-2-特点" class="headerlink" title="1.2 特点"></a>1.2 特点</h3><p>缓存的特点：</p>
 <ul>
-<li><code>提高性能</code>：减少数据库查询或计算时间。</li>
-<li><code>降低负载</code>：减少数据库或其他服务的压力。</li>
-<li><code>增强可靠性</code>：在服务暂时不可用时仍能提供数据。</li>
+<li><strong>提高性能</strong>：减少数据库查询或计算时间。</li>
+<li><strong>降低负载</strong>：减少数据库或其他服务的压力。</li>
+<li><strong>增强可靠性</strong>：在服务暂时不可用时仍能提供数据。</li>
 </ul>
 <h3 id="1-3-类型"><a href="#1-3-类型" class="headerlink" title="1.3 类型"></a>1.3 类型</h3><p>缓存的类型：</p>
 <ul>
-<li><code>内存缓存</code>：ConcurrentHashMap、Caffeine</li>
-<li><code>分布式缓存</code>：Redis、Memcached</li>
-<li><code>磁盘缓存</code>：EhCache</li>
+<li><strong>内存缓存</strong>：ConcurrentHashMap、Caffeine</li>
+<li><strong>分布式缓存</strong>：Redis、Memcached</li>
+<li><strong>磁盘缓存</strong>：EhCache</li>
 </ul>
 <h2 id="2-配置依赖"><a href="#2-配置依赖" class="headerlink" title="2 配置依赖"></a>2 配置依赖</h2><p>添加依赖：</p>
 <figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Spring Context --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.3.31<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -2555,21 +2541,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>不同的缓存实现都需要实现Cache接口。</p>
 <p>常用实现类：</p>
 <ul>
-<li><code>ConcurrentHashMapCache</code>：基于ConcurrentHashMap实现的缓存，适用于单节点应用。</li>
-<li><code>CaffeineCache</code>：基于Caffeine实现的缓存，适用于高并发场景。</li>
-<li><code>RedisCache</code>：基于Redis实现的缓存，适用于分布式应用。</li>
-<li><code>MemcachedCache</code>：基于Memcached实现的缓存，适用于高并发场景。</li>
-<li><code>EhCacheCache</code>：基于EhCache实现的缓存，适用于本地缓存。</li>
+<li><strong>ConcurrentHashMapCache</strong>：基于ConcurrentHashMap实现的缓存，适用于单节点应用。</li>
+<li><strong>CaffeineCache</strong>：基于Caffeine实现的缓存，适用于高并发场景。</li>
+<li><strong>RedisCache</strong>：基于Redis实现的缓存，适用于分布式应用。</li>
+<li><strong>MemcachedCache</strong>：基于Memcached实现的缓存，适用于高并发场景。</li>
+<li><strong>EhCacheCache</strong>：基于EhCache实现的缓存，适用于本地缓存。</li>
 </ul>
 <h3 id="3-2-CacheManager"><a href="#3-2-CacheManager" class="headerlink" title="3.2 CacheManager"></a>3.2 CacheManager</h3><p>CacheManager接口代表缓存管理器，负责管理缓存实例。</p>
 <p>不同的缓存实现都需要实现CacheManager接口。</p>
 <p>常用实现类：</p>
 <ul>
-<li><code>ConcurrentMapCacheManager</code>：基于ConcurrentHashMap实现的缓存管理器，适用于单节点应用。</li>
-<li><code>CaffeineCacheManager</code>：基于Caffeine实现的缓存管理器，适用于高并发场景。</li>
-<li><code>RedisCacheManager</code>：基于Redis实现的缓存管理器，适用于分布式应用。</li>
-<li><code>MemcachedCacheManager</code>：基于Memcached实现的缓存管理器，适用于高并发场景。</li>
-<li><code>EhCacheCacheManager</code>：基于EhCache实现的缓存管理器，适用于本地缓存。</li>
+<li><strong>ConcurrentMapCacheManager</strong>：基于ConcurrentHashMap实现的缓存管理器，适用于单节点应用。</li>
+<li><strong>CaffeineCacheManager</strong>：基于Caffeine实现的缓存管理器，适用于高并发场景。</li>
+<li><strong>RedisCacheManager</strong>：基于Redis实现的缓存管理器，适用于分布式应用。</li>
+<li><strong>MemcachedCacheManager</strong>：基于Memcached实现的缓存管理器，适用于高并发场景。</li>
+<li><strong>EhCacheCacheManager</strong>：基于EhCache实现的缓存管理器，适用于本地缓存。</li>
 </ul>
 <h2 id="4-常用注解"><a href="#4-常用注解" class="headerlink" title="4 常用注解"></a>4 常用注解</h2><h3 id="4-1-Cacheable"><a href="#4-1-Cacheable" class="headerlink" title="4.1 @Cacheable"></a>4.1 @Cacheable</h3><p><code>@Cacheable</code>注解用于方法级别，将方法的返回值缓存起来。当再次调用该方法时，先检查缓存中是否存在结果，如果存在则直接返回缓存值，否则执行方法体并将结果缓存起来。</p>
 <p>常用属性：</p>
@@ -2704,7 +2690,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </table>
 
 <h2 id="5-配置方式"><a href="#5-配置方式" class="headerlink" title="5 配置方式"></a>5 配置方式</h2><p>创建服务类：</p>
-<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserService</span> &#123;</span><br><span class="line">    <span class="comment">// 模拟数据库操作</span></span><br><span class="line">    <span class="keyword">private</span> Map&lt;Integer, User&gt; userMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">// 初始化数据</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">UserService</span><span class="params">()</span> &#123;</span><br><span class="line">        userMap.put(<span class="number">1</span>, <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">1</span>, <span class="string">&quot;张三&quot;</span>));</span><br><span class="line">        userMap.put(<span class="number">2</span>, <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">2</span>, <span class="string">&quot;李四&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 获取用户，使用缓存</span></span><br><span class="line">    <span class="meta">@Cacheable(value = &quot;users&quot;, key = &quot;#id&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> User <span class="title function_">findById</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;数据库获取用户&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> userMap.get(id);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 更新用户，更新缓存</span></span><br><span class="line">    <span class="meta">@CachePut(value = &quot;users&quot;, key = &quot;#user.id&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> User <span class="title function_">updateById</span><span class="params">(User user)</span> &#123;</span><br><span class="line">        userMap.put(user.getId(), user);</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 删除用户，清除缓存</span></span><br><span class="line">    <span class="meta">@CacheEvict(value = &quot;users&quot;, key = &quot;#id&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteById</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">        userMap.remove(id);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserService</span> &#123;</span><br><span class="line">    <span class="comment">// 模拟数据库操作</span></span><br><span class="line">    <span class="keyword">private</span> Map&lt;Integer, User&gt; userMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化数据</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">UserService</span><span class="params">()</span> &#123;</span><br><span class="line">        userMap.put(<span class="number">1</span>, <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">1</span>, <span class="string">&quot;张三&quot;</span>));</span><br><span class="line">        userMap.put(<span class="number">2</span>, <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">2</span>, <span class="string">&quot;李四&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取用户，使用缓存</span></span><br><span class="line">    <span class="meta">@Cacheable(value = &quot;users&quot;, key = &quot;#id&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> User <span class="title function_">findById</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;数据库获取用户&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> userMap.get(id);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 更新用户，更新缓存</span></span><br><span class="line">    <span class="meta">@CachePut(value = &quot;users&quot;, key = &quot;#user.id&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> User <span class="title function_">updateById</span><span class="params">(User user)</span> &#123;</span><br><span class="line">        userMap.put(user.getId(), user);</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 删除用户，清除缓存</span></span><br><span class="line">    <span class="meta">@CacheEvict(value = &quot;users&quot;, key = &quot;#id&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteById</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">        userMap.remove(id);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="5-1-半注解配置"><a href="#5-1-半注解配置" class="headerlink" title="5.1 半注解配置"></a>5.1 半注解配置</h3><p>在<code>spring.xml</code>配置文件中使用<code>cache:annotation-driven</code>标签启用缓存注解，需要添加<code>cache</code>命名空间。</p>
 <p>创建配置文件：</p>
@@ -2720,25 +2706,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>修改启动类：</p>
 <figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 加载配置类</span></span><br><span class="line">        <span class="type">AnnotationConfigApplicationContext</span> <span class="variable">context</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AnnotationConfigApplicationContext</span>(DemoConfig.class);</span><br><span class="line">        <span class="comment">// 获取服务对象</span></span><br><span class="line">        <span class="type">UserService</span> <span class="variable">userService</span> <span class="operator">=</span> context.getBean(UserService.class);</span><br><span class="line">        <span class="comment">// 第一次查询用户，从数据库获取</span></span><br><span class="line">        System.out.println(<span class="string">&quot;第一次查询用户：&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;第一次查询用户：&quot;</span> + userService.findById(<span class="number">1</span>));</span><br><span class="line">        <span class="comment">// 第二次查询用户，从缓存获取</span></span><br><span class="line">        System.out.println(<span class="string">&quot;第二次查询用户：&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;第二次查询用户：&quot;</span> + userService.findById(<span class="number">1</span>));</span><br><span class="line">        <span class="comment">// 更新用户</span></span><br><span class="line">        System.out.println(<span class="string">&quot;更新用户：&quot;</span>);</span><br><span class="line">        userService.updateById(<span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">1</span>, <span class="string">&quot;王五&quot;</span>));</span><br><span class="line">        <span class="comment">// 再次查询用户</span></span><br><span class="line">        System.out.println(<span class="string">&quot;查询更新的用户：&quot;</span> + userService.findById(<span class="number">1</span>));</span><br><span class="line">        <span class="comment">// 删除用户</span></span><br><span class="line">        System.out.println(<span class="string">&quot;删除用户：&quot;</span>);</span><br><span class="line">        userService.deleteById(<span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 再次查询用户</span></span><br><span class="line">        System.out.println(<span class="string">&quot;查询删除的用户：&quot;</span> + userService.findById(<span class="number">1</span>));</span><br><span class="line">        <span class="comment">// 关闭容器</span></span><br><span class="line">        context.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="6-常见问题"><a href="#6-常见问题" class="headerlink" title="6 常见问题"></a>6 常见问题</h2><h3 id="6-1-缓存穿透"><a href="#6-1-缓存穿透" class="headerlink" title="6.1 缓存穿透"></a>6.1 缓存穿透</h3><p>缓存穿透是指查询不存在的数据，导致每次都访问数据库。</p>
-<p>解决方案：</p>
-<ul>
-<li>缓存空对象，设置较短的过期时间，避免后续请求继续访问数据库。</li>
-<li>使用布隆过滤器过滤不存在的数据，避免查询数据库。</li>
-</ul>
-<h3 id="6-2-缓存雪崩"><a href="#6-2-缓存雪崩" class="headerlink" title="6.2 缓存雪崩"></a>6.2 缓存雪崩</h3><p>缓存雪崩是指大量缓存同时过期，导致数据库压力骤增。</p>
-<p>解决方案：</p>
-<ul>
-<li>为缓存设置随机过期时间，避免缓存同时过期。</li>
-<li>使用缓存预热技术，在缓存过期前提前加载数据到缓存中。</li>
-</ul>
-<h3 id="6-3-缓存击穿"><a href="#6-3-缓存击穿" class="headerlink" title="6.3 缓存击穿"></a>6.3 缓存击穿</h3><p>缓存击穿是指热点数据过期，导致大量请求同时访问数据库。</p>
-<p>解决方案：</p>
-<ul>
-<li>使用<code>@Cacheable(sync = true)</code>进行本地同步。</li>
-<li>使用线程锁保护数据库，确保在缓存过期时只有一个线程去查询数据库，其他线程等待结果返回。</li>
-</ul>
-<h3 id="6-4-缓存失效"><a href="#6-4-缓存失效" class="headerlink" title="6.4 缓存失效"></a>6.4 缓存失效</h3><p>缓存失效情况：</p>
+<h2 id="6-缓存失效"><a href="#6-缓存失效" class="headerlink" title="6 缓存失效"></a>6 缓存失效</h2><p>缓存失效情况：</p>
 <ul>
 <li>只有外部的方法调用被AOP拦截才会缓存，同一个类内部的方法调用不会缓存。</li>
 <li>使用缓存注解标记的方法必须是<code>public</code>方法。</li>
@@ -2774,7 +2742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月22日</div>
+                <div class="license-meta-text">2026年10月18日</div>
               </div>
               
               
@@ -2805,10 +2773,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B04/">后端</a>
+    <a class="category-link" href="/categories/B03/">后端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B04/" itemprop="url"><span itemprop="name">后端</span></a>
+        <a href="/categories/B03/" itemprop="url"><span itemprop="name">后端</span></a>
       </span>
     
   </div>
@@ -2848,13 +2816,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20260105/112240/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>概述</p>
-          <p class='content'>摘要：本文了解了什么是Spring MVC。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20251229/081437/'>
           <p class='title'>异步任务<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文介绍了Spring的异步任务。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2965,7 +2933,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B04003005/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Spring:扩展内容</span></a>
+      <a href='/groups/B03003005/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:后端:Spring:扩展内容</span></a>
     
   </header>
 
@@ -3021,6 +2989,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         </a></li>
       
+        <li><a class="flat-box" title="/posts/20260421/153423/" href="/posts/20260421/153423/"
+          
+          
+          active-action="action-posts20260421153423"
+          >
+          <div class='name'>
+            
+            资源加载
+          </div>
+          
+        </a></li>
+      
     </ul>
   </div>
 </section>
@@ -3054,7 +3034,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0"><span class="toc-text">1 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%AE%9A%E4%B9%89"><span class="toc-text">1.1 定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E7%89%B9%E7%82%B9"><span class="toc-text">1.2 特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.3 类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E4%BE%9D%E8%B5%96"><span class="toc-text">2 配置依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%A0%B8%E5%BF%83%E6%8E%A5%E5%8F%A3"><span class="toc-text">3 核心接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Cache"><span class="toc-text">3.1 Cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-CacheManager"><span class="toc-text">3.2 CacheManager</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-text">4 常用注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Cacheable"><span class="toc-text">4.1 @Cacheable</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-CachePut"><span class="toc-text">4.2 @CachePut</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-CacheEvict"><span class="toc-text">4.3 @CacheEvict</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Caching"><span class="toc-text">4.4 @Caching</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-CacheConfig"><span class="toc-text">4.5 @CacheConfig</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F"><span class="toc-text">5 配置方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%8D%8A%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE"><span class="toc-text">5.1 半注解配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%85%A8%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE"><span class="toc-text">5.2 全注解配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">6 常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F"><span class="toc-text">6.1 缓存穿透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9"><span class="toc-text">6.2 缓存雪崩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF"><span class="toc-text">6.3 缓存击穿</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E7%BC%93%E5%AD%98%E5%A4%B1%E6%95%88"><span class="toc-text">6.4 缓存失效</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0"><span class="toc-text">1 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%AE%9A%E4%B9%89"><span class="toc-text">1.1 定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E7%89%B9%E7%82%B9"><span class="toc-text">1.2 特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.3 类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E4%BE%9D%E8%B5%96"><span class="toc-text">2 配置依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%A0%B8%E5%BF%83%E6%8E%A5%E5%8F%A3"><span class="toc-text">3 核心接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Cache"><span class="toc-text">3.1 Cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-CacheManager"><span class="toc-text">3.2 CacheManager</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-text">4 常用注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Cacheable"><span class="toc-text">4.1 @Cacheable</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-CachePut"><span class="toc-text">4.2 @CachePut</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-CacheEvict"><span class="toc-text">4.3 @CacheEvict</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Caching"><span class="toc-text">4.4 @Caching</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-CacheConfig"><span class="toc-text">4.5 @CacheConfig</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F"><span class="toc-text">5 配置方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%8D%8A%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE"><span class="toc-text">5.1 半注解配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%85%A8%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE"><span class="toc-text">5.2 全注解配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%BC%93%E5%AD%98%E5%A4%B1%E6%95%88"><span class="toc-text">6 缓存失效</span></a></li></ol>
   </div>
 </section>
 
@@ -3206,50 +3186,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3521,7 +3490,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B04/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251230/132433/","name":"缓存管理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"缓存管理","description":"摘要：本文介绍了Spring的缓存管理。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251230/132433/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251230/132433/","wordCount":20,"datePublished":"2025-12-30T05:24:33.000Z","dateModified":"2026-06-22T02:17:08.618Z","articleSection":"后端","keywords":"Spring","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"后端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20251230/132433/","name":"缓存管理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"缓存管理","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20251230/132433/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20251230/132433/","wordCount":5,"datePublished":"2025-12-30T05:24:33.000Z","dateModified":"2026-10-18T10:24:57.601Z","articleSection":"后端","keywords":"Spring","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

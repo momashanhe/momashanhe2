@@ -50,22 +50,22 @@
       <link rel="alternate" href="/atom.xml" title="墨码山河" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>AJAX - 墨码山河</title>
-  <meta name="keywords" content="JS,JQuery,AJAX,代码改变世界">
-  <meta desc name="description" content="摘要：本文学习了AJAX的原理和使用。 - 墨码山河 - 墨码山河">
+  <meta name="keywords" content="JS,AJAX,JQuery,代码改变世界">
+  <meta desc name="description" content="摘要：无。 - 墨码山河 - 墨码山河">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="AJAX">
 <meta property="og:url" content="https://momashanhe.com/posts/20250117/115818/index.html">
 <meta property="og:site_name" content="墨码山河">
-<meta property="og:description" content="摘要：本文学习了AJAX的原理和使用。">
+<meta property="og:description" content="摘要：无。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-01-17T03:58:18.000Z">
-<meta property="article:modified_time" content="2026-06-22T02:05:53.696Z">
+<meta property="article:modified_time" content="2026-09-26T23:29:37.710Z">
 <meta property="article:author" content="墨码山河">
 <meta property="article:tag" content="JS">
-<meta property="article:tag" content="JQuery">
 <meta property="article:tag" content="AJAX">
+<meta property="article:tag" content="JQuery">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://momashanhe.com/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1856,7 +1856,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
@@ -2022,7 +2022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/@static/media/placeholder/avatar/round/3442075.svg","link":"/@static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/@static/media/placeholder/cover/76b86c0226ffd.svg","image":"/@static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782106458480),
+    lastupdate: new Date(1795654918744),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2487,7 +2487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <a class='notlink'>
     <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
     
-    <span data-path="/posts/20250117/115818/" class="waline-pageview-count">
+    <span id="twikoo_visitors">
       <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
     </span>
       
@@ -2500,20 +2500,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-<div class="new-meta-item comment">
-   
-  
-  <a class="notlink" href="/posts/20250117/115818/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span data-path="/posts/20250117/115818/" class="waline-comment-count">
-      <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
-    </span> 
-     
-      <p>条</p> 
-     
-  </a>
-</div>
-
 
           
         
@@ -2527,7 +2513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>摘要：本文学习了AJAX的原理和使用。</p>
+    <p>摘要：无。</p>
 <span id="more"></span>
 
 <details ><summary> 环境 </summary>
@@ -2559,9 +2545,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>参数：</p>
 <ul>
-<li><code>method</code>：发送请求的HTTP类型(GET，POST，PUT，DELETE)，必须大写。</li>
-<li><code>uri</code>：XMLHttpRequest对象把请求发送到的服务器相应的URI。</li>
-<li><code>async</code>：是否请求是异步的，默认为true表示异步，设置为false表示同步。</li>
+<li><strong>method</strong>：发送请求的HTTP类型(GET，POST，PUT，DELETE)，必须大写。</li>
+<li><strong>uri</strong>：XMLHttpRequest对象把请求发送到的服务器相应的URI。</li>
+<li><strong>async</strong>：是否请求是异步的，默认为true表示异步，设置为false表示同步。</li>
 </ul>
 <h5 id="3-3-1-2-send"><a href="#3-3-1-2-send" class="headerlink" title="3.3.1.2 send"></a>3.3.1.2 send</h5><p>使用<code>send()</code>方法将请求发送到服务器。</p>
 <p>格式：</p>
@@ -2569,7 +2555,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>参数：</p>
 <ul>
-<li><code>string</code>：仅用于POST请求，并且POST请求在发送数据之前还需要设置请求头。</li>
+<li><strong>string</strong>：仅用于POST请求，并且POST请求在发送数据之前还需要设置请求头。</li>
 </ul>
 <h4 id="3-3-2-获取响应"><a href="#3-3-2-获取响应" class="headerlink" title="3.3.2 获取响应"></a>3.3.2 获取响应</h4><p>如果要获取服务器的响应，需要使用responseText或者responseXML属性。</p>
 <p>如果响应返回的数据是文本就使用responseText，如果响应返回的数据是XML就使用responseXML。</p>
@@ -2603,10 +2589,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>参数：</p>
 <ul>
-<li><code>url</code>：发送请求的URL地址。</li>
-<li><code>data</code>：发送到服务器的数据，支持<code>k=v&amp;k=v</code>字符串和<code>&#123;k:v,k:v&#125;</code>对象两种格式。</li>
-<li><code>callback</code>：载入成功时回调函数。</li>
-<li><code>type</code>：预期服务器返回的数据类型，支持xml、html、script、json、text、_default等类型。</li>
+<li><strong>url</strong>：发送请求的URL地址。</li>
+<li><strong>data</strong>：发送到服务器的数据，支持<code>k=v&amp;k=v</code>字符串和<code>&#123;k:v,k:v&#125;</code>对象两种格式。</li>
+<li><strong>callback</strong>：载入成功时回调函数。</li>
+<li><strong>type</strong>：预期服务器返回的数据类型，支持xml、html、script、json、text、_default等类型。</li>
 </ul>
 <p>示例：</p>
 <figure class="highlight js"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$.<span class="title function_">get</span>(<span class="string">&#x27;$&#123;pageContext.request.contextPath&#125;/getPassword&#x27;</span>,</span><br><span class="line">    &#123;<span class="string">&#x27;username&#x27;</span>:<span class="string">&#x27;admin&#x27;</span>&#125;,</span><br><span class="line">    <span class="keyword">function</span> (<span class="params">data</span>) &#123;</span><br><span class="line">    $(<span class="string">&#x27;#password&#x27;</span>).<span class="title function_">html</span>(data);<span class="comment">// 123456</span></span><br><span class="line">    &#125;, <span class="string">&#x27;json&#x27;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
@@ -2616,10 +2602,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>参数：</p>
 <ul>
-<li><code>url</code>：发送请求的URL地址。</li>
-<li><code>data</code>：发送到服务器的数据，支持<code>k=v&amp;k=v</code>字符串和<code>&#123;k:v,k:v&#125;</code>对象两种格式。</li>
-<li><code>callback</code>：载入成功时回调函数。</li>
-<li><code>type</code>：预期服务器返回的数据类型，支持xml、html、script、json、text、_default等类型。</li>
+<li><strong>url</strong>：发送请求的URL地址。</li>
+<li><strong>data</strong>：发送到服务器的数据，支持<code>k=v&amp;k=v</code>字符串和<code>&#123;k:v,k:v&#125;</code>对象两种格式。</li>
+<li><strong>callback</strong>：载入成功时回调函数。</li>
+<li><strong>type</strong>：预期服务器返回的数据类型，支持xml、html、script、json、text、_default等类型。</li>
 </ul>
 <p>示例：</p>
 <figure class="highlight js"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$.<span class="title function_">post</span>(<span class="string">&#x27;$&#123;pageContext.request.contextPath&#125;/getPassword&#x27;</span>,</span><br><span class="line">    &#123;<span class="string">&#x27;username&#x27;</span>:<span class="string">&#x27;admin&#x27;</span>&#125;,</span><br><span class="line">    <span class="keyword">function</span> (<span class="params">data</span>) &#123;</span><br><span class="line">    $(<span class="string">&#x27;#password&#x27;</span>).<span class="title function_">html</span>(data);<span class="comment">// 123456</span></span><br><span class="line">    &#125;, <span class="string">&#x27;json&#x27;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
@@ -2630,18 +2616,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>参数：</p>
 <ul>
-<li><code>url</code>：发送请求的url地址。</li>
-<li><code>type</code>：请求方式，POST或者GET，默认为GET请求。</li>
-<li><code>async</code>：请求是同步还是异步，默认为true表示同步，设置为false表示异步。</li>
-<li><code>cache</code>：是否缓存页面，适用于GET请求，默认为true表示缓存，设置为false表示不缓存。</li>
-<li><code>data</code>：发送到服务器的数据，支持<code>k=v&amp;k=v</code>字符串和<code>&#123;k:v,k:v&#125;</code>对象两种格式。</li>
-<li><code>processData</code>：是否将对象类型的数据拼接为键值对字符串，默认为true表示拼接，设置为false表示不拼接。</li>
-<li><code>contentType</code>：发送到服务器的数据类型，默认为<code>application/x-www-form-urlencoded</code>类型，支持JSON&#x2F;XML&#x2F;HTML&#x2F;TXT等类型。</li>
-<li><code>dataType</code>：预期服务器返回的数据类型，支持JSON&#x2F;XML&#x2F;HTML&#x2F;TXT等类型。</li>
-<li><code>success</code>：请求成功时的回调函数。</li>
-<li><code>error</code>：请求失败时的回调函数。</li>
-<li><code>complete</code>：请求完成后的回调函数，成功或失败之后都会调用。</li>
-<li><code>statusCode</code>：一组数值的HTTP代码和函数对象，当响应时调用了相应的代码。</li>
+<li><strong>url</strong>：发送请求的url地址。</li>
+<li><strong>type</strong>：请求方式，POST或者GET，默认为GET请求。</li>
+<li><strong>async</strong>：请求是同步还是异步，默认为true表示同步，设置为false表示异步。</li>
+<li><strong>cache</strong>：是否缓存页面，适用于GET请求，默认为true表示缓存，设置为false表示不缓存。</li>
+<li><strong>data</strong>：发送到服务器的数据，支持<code>k=v&amp;k=v</code>字符串和<code>&#123;k:v,k:v&#125;</code>对象两种格式。</li>
+<li><strong>processData</strong>：是否将对象类型的数据拼接为键值对字符串，默认为true表示拼接，设置为false表示不拼接。</li>
+<li><strong>contentType</strong>：发送到服务器的数据类型，默认为<code>application/x-www-form-urlencoded</code>类型，支持JSON&#x2F;XML&#x2F;HTML&#x2F;TXT等类型。</li>
+<li><strong>dataType</strong>：预期服务器返回的数据类型，支持JSON&#x2F;XML&#x2F;HTML&#x2F;TXT等类型。</li>
+<li><strong>success</strong>：请求成功时的回调函数。</li>
+<li><strong>error</strong>：请求失败时的回调函数。</li>
+<li><strong>complete</strong>：请求完成后的回调函数，成功或失败之后都会调用。</li>
+<li><strong>statusCode</strong>：一组数值的HTTP代码和函数对象，当响应时调用了相应的代码。</li>
 </ul>
 <p>示例：</p>
 <figure class="highlight js"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$.<span class="title function_">ajax</span>(&#123;</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&#x27;$&#123;pageContext.request.contextPath&#125;/getPassword&#x27;</span>,</span><br><span class="line">  <span class="attr">type</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">  <span class="attr">async</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">cache</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">data</span>: <span class="string">&#x27;id=1&amp;name=hello&#x27;</span>,</span><br><span class="line">  <span class="attr">dataType</span>: <span class="string">&#x27;json&#x27;</span>,</span><br><span class="line">  <span class="attr">success</span>: <span class="keyword">function</span> (<span class="params">data</span>) &#123;</span><br><span class="line">    $(<span class="string">&#x27;#password&#x27;</span>).<span class="title function_">html</span>(data);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">error</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;请求错误了&#x27;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">complete</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;请求完成了&#x27;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">statusCode</span>: &#123;</span><br><span class="line">    <span class="number">200</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="title function_">alert</span>(<span class="string">&#x27;操作完成&#x27;</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="number">500</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="title function_">alert</span>(<span class="string">&#x27;服务器错误&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -2675,7 +2661,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2026年6月22日</div>
+                <div class="license-meta-text">2026年9月27日</div>
               </div>
               
               
@@ -2706,10 +2692,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/B03/">前端</a>
+    <a class="category-link" href="/categories/B02/">前端</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/B03/" itemprop="url"><span itemprop="name">前端</span></a>
+        <a href="/categories/B02/" itemprop="url"><span itemprop="name">前端</span></a>
       </span>
     
   </div>
@@ -2724,8 +2710,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JQuery/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JQuery</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AJAX/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AJAX</p></a></div>
-  <span hidden itemprop="keywords">JS JQuery AJAX</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AJAX/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AJAX</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JQuery/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JQuery</p></a></div>
+  <span hidden itemprop="keywords">JS AJAX JQuery</span>
   
 
 
@@ -2749,13 +2735,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/20250121/102547/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>异步编程</p>
-          <p class='content'>摘要：本文学习了如何在JS中进行异步编程。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
       
         <a class='next' href='/posts/20250117/115122/'>
           <p class='title'>JQuery<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>摘要：本文学习了JQuery库，包括选择器、文档处理、事件、效果，以及AJAX调用。</p>
+          <p class='content'>摘要：无。</p>
         </a>
       
     </div>
@@ -2866,7 +2852,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <a href='/groups/B03003003/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:JS:扩展</span></a>
+      <a href='/groups/B02003003/'><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i><span class='name'>编程:前端:JS:扩展</span></a>
     
   </header>
 
@@ -3095,50 +3081,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。";
+    let placeholder = pdata.commentPlaceholder || "良言一句三冬暖，恶语伤人六月寒。" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"良言一句三冬暖，恶语伤人六月寒。","serverURL":"https://waline.momashanhe.com","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"visitor":true}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.momashanhe.com","placeholder":"良言一句三冬暖，恶语伤人六月寒。","visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.15.8/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 
@@ -3410,7 +3385,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B03/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250117/115818/","name":"AJAX"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"AJAX","description":"摘要：本文学习了AJAX的原理和使用。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250117/115818/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250117/115818/","wordCount":19,"datePublished":"2025-01-17T03:58:18.000Z","dateModified":"2026-06-22T02:05:53.696Z","articleSection":"前端","keywords":"JS,JQuery,AJAX","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","sameAs":["https://github.com/volantis-x"],"description":"代码改变世界"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://momashanhe.com/","name":"墨码山河"}},{"@type":"ListItem","position":2,"item":{"@id":"https://momashanhe.com/categories/B02/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://momashanhe.com/posts/20250117/115818/","name":"AJAX"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"墨码山河","url":"https://momashanhe.com/","keywords":"代码改变世界","description":"代码改变世界","author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/","description":"代码改变世界"},"publisher":{"@type":"Organization","name":"墨码山河","url":"https://momashanhe.com/","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://momashanhe.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"AJAX","description":"摘要：无。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://momashanhe.com/posts/20250117/115818/"},"author":{"@type":"Person","name":"墨码山河","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://momashanhe.com/"},"publisher":{"@type":"Organization","name":"墨码山河","logo":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://momashanhe.com/posts/20250117/115818/","wordCount":5,"datePublished":"2025-01-17T03:58:18.000Z","dateModified":"2026-09-26T23:29:37.710Z","articleSection":"前端","keywords":"JS,AJAX,JQuery","image":{"@type":"ImageObject","url":"/@static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
